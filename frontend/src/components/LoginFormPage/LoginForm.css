@@ -1,0 +1,133 @@
+ #root {
+    justify-content: center;
+    text-align: center;
+    -webkit-text-size-adjust: 100%;
+ }
+ 
+ .login {
+    background: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logoContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 6px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 18px;
+}
+
+#meiLogo {
+    height: 43px;
+}
+
+form {
+    display: block;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 4px;
+    position: relative;
+    border: 1px solid lightgray;
+    padding: 20px 26px;
+    box-sizing: border-box;
+    text-align: start;
+    font-family: rg-ember, Arial, sans-serif;
+}
+
+#signIn {
+    text-align: start;
+    margin-bottom: 10px ;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.2;
+    text-rendering: optimizeLegibility;
+    padding-bottom: 4px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: block;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    color: black;
+}
+
+#email-label, #password-label {
+    display: block;
+    padding: 0px 0px 2px 2px;
+    font-weight: 700;
+    box-sizing: border-box;
+    font-size: 15px;
+    line-height: 19px;
+    font-family: bolded-ember;
+}
+
+
+.signin_button, .login-create_button {
+    width: 100%;
+    font-family: rg-ember;
+    border-radius: 3px;
+    border: 0px;
+    height: 100%;
+    width: 100%;
+    outline: 0;
+    height: 31px;
+    /* box-sizing: border-box; */
+}
+
+
+#emailInput, #passwordInput {
+    width: 296px;
+    margin-right: 0;
+    background-color: #fff;
+    height: 31px;
+    padding: 3px 7px;
+    line-height: normal;
+    border-radius: 3px;
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgb(255 255 255 / 50%), 0 1px 0 rgb(0 0 0 / 7%) inset;
+    outline: 0;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+#email-label, #password-label {
+    height: 21px;
+
+}
+
+.signin_button {
+    margin-bottom: 8px;
+    background: #f0c14b;
+    background-color: #a88734 #9c7e31 #846a29; 
+
+}
+
+.login-create_button {
+    background: #e7e9e7;
+}
+
+button {
+    height: 29px;
+    cursor: pointer;
+}
+
+#signInDivider {
+    text-align: center;
+    font-family: ember, Arial, sans-serif;
+    color: #767676;
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+/* #divider-container {
+
+} */

@@ -1,1 +1,17 @@
 /* TODO Add site wide styles */
+@font-face {
+    font-family: ember;
+    src: url(../src/fonts/amazon_font/Ember/AmazonEmber_Lt.ttf);
+    /* this is the normal non-bolded font */
+}
+
+@font-face {
+    font-family: bolded-ember;
+    src: url(../src/fonts/amazon_font/Ember/AmazonEmber_Bd.ttf);
+}
+
+@font-face {
+    font-family: rg-ember;
+    src: url(../src/fonts/amazon_font/Ember/AmazonEmber_Rg.ttf);
+
+}

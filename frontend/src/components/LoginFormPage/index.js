@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import { Link, Redirect, useHistory } from 'react-router-dom';
 import './LoginForm.css';
+import meiLogo from '../../image/meiLogo.png';
 
 function LoginFormPage() {
   const dispatch = useDispatch();
@@ -10,6 +11,7 @@ function LoginFormPage() {
   const [credential, setCredential] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState([]);
+  const history = useHistory();
 
   if (sessionUser) return <Redirect to="/" />;
 
@@ -31,30 +33,55 @@ function LoginFormPage() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <ul>
-        {errors.map(error => <li key={error}>{error}</li>)}
-      </ul>
-      <label>
-        Email
-        <input
-          type="text"
-          value={credential}
-          onChange={(e) => setCredential(e.target.value)}
-          required
+    <div className='login'>
+      <div id="logoContainer">
+      <Link to='/'>
+        <img id='meiLogo'
+             src={meiLogo}
+             alt="ameizin_logo"
         />
-      </label>
-      <label>
-        Password
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-      </label>
-      <button type="submit" className="button">Sign In</button>
-    </form>
+      </Link>
+      </div>
+      <div className='login_container'>
+        <form onSubmit={handleSubmit}>
+          <h1 id='signIn'>Sign in</h1>
+          <ul>
+            {errors.map(error => <li key={error}>{error}</li>)}
+         </ul>
+         {/*going to have to refactor error for error handling*/}
+          <label id='email-label'>
+            Email
+          </label>
+        
+            <input
+              id='emailInput'
+              type="text"
+              value={credential}
+              onChange={(e) => setCredential(e.target.value)}
+              required
+            />
+          
+          <label id='password-label'>
+            Password
+          </label>
+     
+            <input
+              id='passwordInput'
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <br/>
+          <button type="submit" className="signin_button">Sign in</button>
+        </form>
+        <br/>
+        <div className='divider-container'>
+        <h5 id='signInDivider'>New to Ameizin'?</h5>
+        </div>
+        <button className='login-create_button' onClick={() => history.push('/signup')}>Create your Ameizin' account</button>
+      </div>
+    </div>
   );
 }
 
