@@ -1,0 +1,41 @@
+.header {
+    height: 60px;
+    display: flex;
+    position: fixed;
+    float: none;
+    flex-flow: row nowrap;
+    background-color: #131921;
+    color: white;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#homePageHeaderLogo {
+    height: 50px;
+    margin-right: auto;
+}
+
+#homePageSearchBar {
+    padding: 10px 4px 10px 3px;
+    height: 60px;
+    box-sizing: border-box;
+    width: auto;
+    margin: 0 auto;
+}
+
+.inputForHomePgSearch {
+    height: 38px;
+}
+
+#headerNavBar {
+    margin-left: auto;
+    display: flex;
+    float: right;
+}
+
+#cart {
+    display: flex;
+    flex-flow: row nowrap;
+}
