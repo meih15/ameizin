@@ -5,6 +5,7 @@ import * as sessionActions from "../../store/session";
 import './SignUpForm.css';
 import meiLogo from '../../image/meiLogo.png';
 
+
 function SignupFormPage() {
   const dispatch = useDispatch();
   const sessionUser = useSelector(state => state.session.user);
@@ -84,6 +85,7 @@ function SignupFormPage() {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
+      <div className="alertText"> <i id='alertIcon'className="fa-solid fa-circle-info"></i> Passwords must be at least 6 characters.</div>
       <label id="password-label-2">
         Re-enter password
         </label>
@@ -95,6 +97,10 @@ function SignupFormPage() {
           required
         />
       <button type="submit" className="signup_button">Continue</button>
+      <div className="signup_login_redirect">Already have an account?  
+          <Link id='signin-link-onlogin' to='/login'>Sign In</Link> 
+          <Link to='/login'><i className="fa-sharp fa-solid fa-caret-right"></i></Link>
+      </div>
     </form>
     </div>
     </div>

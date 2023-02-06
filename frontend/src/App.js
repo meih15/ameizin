@@ -8,8 +8,8 @@ import SignupFormPage from "./components/SignUpFormPage";
 function App() {
   return (
     <>
-  
       <Switch>
+        
         <Route path="/login">
           <LoginFormPage />
         </Route>

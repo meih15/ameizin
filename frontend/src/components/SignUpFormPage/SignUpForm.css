@@ -80,7 +80,7 @@
     background-color: #a88734 #9c7e31 #846a29;
  }
 
- #nameInput, #email_input, #password_input, #passwordInput2 {
+ #nameInput, #email_input, #passwordInput2 {
      width: 100%;
      margin-right: 0;
      background-color: #fff;
@@ -97,10 +97,51 @@
      margin-bottom: 20px;
  }
 
+ #password_input {
+    width: 100%;
+    margin-right: 0;
+    background-color: #fff;
+    height: 31px;
+    padding: 3px 7px;
+    line-height: normal;
+    border-radius: 3px;
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgb(255 255 255 / 50%), 0 1px 0 rgb(0 0 0 / 7%) inset;
+    outline: 0;
+    box-sizing: border-box;
+ }
+
  button {
      height: 29px;
      cursor: pointer;
  }
+ 
+ .alertText {
+    font-size: 12px;
+    font-family: rg-ember;
+    margin-bottom: 20px;
+    padding-left: 2px;
+ }
+
+ #alertIcon {
+    padding-right: 3px;
+ }
+
+ .signup_login_redirect {
+    font-size: 13px;
+    font-family: rg-ember;
+    margin-top: 5px;
+    padding-left: 2px;
+ }
+
+ #signin-link-onlogin {
+    padding-left: 5px;
+    padding-right: 4px;
+ }
+
+
 
  
 
