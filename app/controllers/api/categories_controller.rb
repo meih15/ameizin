@@ -1,3 +1,16 @@
 class Api::CategoriesController < ApplicationController
+    def index
+        @categories = Category.all 
+        render :index
     
+    def show
+        @category = Category.find_by(id: params[:id])
+        if @category
+            render :show
+        else
+            render {category: nil}
+        end
+    end
 end
+
+

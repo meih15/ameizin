@@ -20,10 +20,12 @@ class Product < ApplicationRecord
 
     validates :product_name, :description, :price, :inventory, presence: true
     validates :product_name, uniqueness: true
-    validates :bullets, array: true
+    validate :bullet_is_array
     validates :price, numericality: { greater_than_or_equal_to: 0, format: { with: /\A\d+\.\d{2}\z/ } }
     validates :inventory, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
     
-    
+    def bullet_is_array
+        errors.add(:bullets, 'must be an array') unless bullets.is_a?(Array)
+    end
 
 end
