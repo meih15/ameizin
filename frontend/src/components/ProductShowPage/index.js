@@ -19,14 +19,17 @@ function ProductShowPage() {
         <Header />
         <div className='top-of-page'>
             <div id="product-image"></div>
-            <div id='product-info-section'></div>
+            <div id='product-info-section'>
+                <div id='bullets'>{product.bullets}</div>
+            </div>
             <div id="add-to-cart"></div>
         </div>
         <div className='middle-of-page'>
-           <div id="product-description"></div> 
+           <div id="product-description">{product.description}</div> 
         </div>
         <div className='bottom-of-page'>
             <div id='customer-reviews'></div>
+            {/* add this when review component is made */}
         </div>
         </>
     )
