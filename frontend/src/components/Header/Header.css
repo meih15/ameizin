@@ -10,11 +10,18 @@
     top: 0;
     left: 0;
     width: 100%;
+    min-width: 1000px;
+    line-height: 1em;
 }
+
 
 #homePageHeaderLogo {
     height: 50px;
     margin-right: auto;
+    float: left;
+    padding-top: 3px;
+    padding-left: 2px;
+    padding-right: 10px;
 }
 
 #homePageSearchBar {
@@ -23,19 +30,33 @@
     box-sizing: border-box;
     width: auto;
     margin: 0 auto;
+    white-space: nowrap;
 }
 
 .inputForHomePgSearch {
     height: 38px;
+    min-width: 420px;
+    line-height: 15px;
 }
 
-#headerNavBar {
+.nav-bar-right {
     margin-left: auto;
     display: flex;
     float: right;
 }
 
-#cart {
+.hello_drop_down {
     display: flex;
+    position: relative;
+}
+
+.ordersLink {
+    display: flex;
+    position: relative;
+}
+
+.cart {
+    display: flex;
+    position: relative;
     flex-flow: row nowrap;
 }

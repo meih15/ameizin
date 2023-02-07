@@ -127,6 +127,7 @@
 
  #alertIcon {
     padding-right: 3px;
+    color: #0066C0;
  }
 
  .signup_login_redirect {
@@ -139,6 +140,16 @@
  #signin-link-onlogin {
     padding-left: 5px;
     padding-right: 4px;
+    color: #0066C0;
+    text-decoration: none;
+ }
+
+ #signin-link-onlogin:hover {
+    text-decoration: underline;
+ }
+
+ #triangleLogo {
+    color: #0066C0;
  }
 
 

@@ -99,7 +99,7 @@ function SignupFormPage() {
       <button type="submit" className="signup_button">Continue</button>
       <div className="signup_login_redirect">Already have an account?  
           <Link id='signin-link-onlogin' to='/login'>Sign In</Link> 
-          <Link to='/login'><i className="fa-sharp fa-solid fa-caret-right"></i></Link>
+          <Link id='triangleLogo' to='/login'><i className="fa-sharp fa-solid fa-caret-right"></i></Link>
       </div>
     </form>
     </div>
