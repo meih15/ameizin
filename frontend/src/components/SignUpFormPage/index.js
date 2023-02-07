@@ -8,7 +8,7 @@ import meiLogo from '../../image/meiLogo.png';
 
 function SignupFormPage() {
   const dispatch = useDispatch();
-  const sessionUser = useSelector(state => state.session.user);
+  const sessionUser = useSelector(state => state?.session ? state.session.user : null);
   const [email, setEmail] = useState("");
   const [user_name, setUsername] = useState("");
   const [password, setPassword] = useState("");

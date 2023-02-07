@@ -60,6 +60,7 @@ export const signup = user => async (dispatch) => {
 
   const data = await response.json();
   storeCurrentUser(data.user);
+  debugger
   dispatch(setCurrentUser(data.user));
   return response;
 };
