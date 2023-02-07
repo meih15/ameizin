@@ -32,6 +32,12 @@ function LoginFormPage() {
       });
   }
 
+  const handleDemoSubmit = () => {
+    return dispatch(sessionActions.login({ 
+      credential: 'demo@user.io', 
+      password: 'password' }
+  ))};
+
   return (
     <div className='login'>
       <div id="logoContainer">
@@ -43,6 +49,7 @@ function LoginFormPage() {
       </Link>
       </div>
       <div className='login_container'>
+        <div id='big_form'>
         <form onSubmit={handleSubmit}>
           <h1 id='signIn'>Sign in</h1>
           <ul>
@@ -75,6 +82,8 @@ function LoginFormPage() {
             <br/>
           <button type="submit" className="signin_button">Sign in</button>
         </form>
+            <button onClick={(e) => handleDemoSubmit()} className="demo_login">Demo Login</button>
+        </div>
         <br/>
         <div className='divider-container'>
         <h5 id='signInDivider'>New to Ameizin'?</h5>
