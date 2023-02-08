@@ -23,7 +23,7 @@ export const getCategory = categoryId => state => {
 
 
 export const fetchCategories = () => async (dispatch) => {
-    const response = await csrfFetch(`api/categories`);
+    const response = await csrfFetch(`/api/categories`);
 
     if (response.ok) {
         const categories = await response.json();
@@ -32,7 +32,7 @@ export const fetchCategories = () => async (dispatch) => {
 };
 
 export const fetchCategory = (categoryId) => async (dispatch) => {
-    const response = await csrfFetch(`api/categories/${categoryId}`);
+    const response = await csrfFetch(`/api/categories/${categoryId}`);
 
     if (response.ok) {
         const category = await response.json();

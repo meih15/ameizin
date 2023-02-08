@@ -4,7 +4,8 @@ import { useParams } from 'react-router-dom';
 import { getProduct, fetchProduct } from '../../store/products';
 import './ProductShowPage.css';
 import Header from '../Header';
-import switchPic from '../../image/oled-switch.jpeg';
+// import switchPic from '../../image/oled-model.avif';
+import switch2Pic from '../../image/oled-switch.jpeg';
 
 
 function ProductShowPage() {
@@ -26,7 +27,7 @@ function ProductShowPage() {
         <div className='pageElements'>
             <div className='top-of-page'>
                 <div id="productImage">
-                    <img id='fillerImage' src={switchPic} alt='filler-pic'/>
+                    <img id='fillerImage' src={switch2Pic} alt='filler-pic'/>
                 </div>
                 <div id='product-info-section'>
                     <div>{product.productName}</div>
@@ -34,7 +35,21 @@ function ProductShowPage() {
                     <div id="product_price'">{product.price}</div>
                 </div>
                 <div id='payment-section'>
+                    <div className='price'>
+                        <p id='price-symbol'>$</p>
+                        <p id='price-whole-number'>{Math.floor(product.price)}</p>
+                        <p id='price-cents'>{Math.floor((product.price%1)*100)}</p>
+                    </div>
+                    <div className='delivery-section'>
+
+                    </div>
+                    <div className='stock-left-section'>In Stock</div>
+                    <div className='dropdown-quantity'>dropdown</div>
                     <button id="add-to-cart">Add to Cart</button>
+                    <div className='secure-transaction'>
+                        <i id='lockIcon' className="fa-solid fa-lock"></i>
+                        <p id='secure-text'>Secure transaction</p>
+                    </div>
                 </div>
             </div>
             <div className='middle-of-page'>
