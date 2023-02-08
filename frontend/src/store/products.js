@@ -32,9 +32,11 @@ export const fetchProducts = () => async (dispatch) => {
 };
 
 export const fetchProduct = (productId) => async (dispatch) => {
-    const response = await csrfFetch(`api/products/${productId}`);
-
+   
+    const response = await csrfFetch(`/api/products/${productId}`);
+    
     if (response.ok) {
+        
         const product = await response.json();
         dispatch(receiveProduct(product));
     }
