@@ -48,7 +48,7 @@ function SignupFormPage() {
       </Link>
       </div>
     <div className="signupContainer">
-    <form onSubmit={handleSubmit}>
+    <form className='signup_form' onSubmit={handleSubmit}>
       <h1 id="createAccount">Create account</h1>
       <ul>
         {errors.map(error => <li key={error}>{error}</li>)}
