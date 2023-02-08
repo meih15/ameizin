@@ -9,7 +9,7 @@ class Api::ProductsController < ApplicationController
         if @product
             render :show
         else
-            render { product: nil } 
+            render json: { product: nil } 
         end
     end
 end

@@ -8,7 +8,7 @@ class Api::CategoriesController < ApplicationController
         if @category
             render :show
         else
-            render {category: nil}
+            render json: {category: nil}
         end
     end
 end
