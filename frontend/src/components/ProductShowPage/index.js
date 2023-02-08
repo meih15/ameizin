@@ -2,7 +2,7 @@ import './ProductShowPage.css';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from 'react-router-dom';
-import { getProduct, fetchProduct } from '../store/reports';
+import { getProduct, fetchProduct } from '../../store/products';
 import Header from '../Header';
 
 function ProductShowPage() {
