@@ -37,6 +37,7 @@
     box-sizing: border-box;
     text-align: start;
     font-family: rg-ember, Arial, sans-serif;
+    margin-bottom: 25px;
 }
 
 #signIn {
