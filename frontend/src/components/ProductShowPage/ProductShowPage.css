@@ -30,11 +30,32 @@ img#fillerImage {
     float: left;
     min-width: 250px;
     padding-right: 6.5%;
+   text-align: left;
+}
+
+
+
+#about-section {
+    margin-top: 25px;
+    margin-bottom: 16px;
+}
+
+#about-text {
+    padding-bottom: 8px;
+    font-family: bolded-ember;
+    font-size: 16px;
+}
+
+#bullets {
+    font-family: rg-ember;
+    font-size: 14px;
+    list-style: disc;
+    padding-left: 18px;
 }
 
 #payment-section {
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content: center;
     flex-direction: column;
     width: fit-content;
@@ -48,11 +69,57 @@ img#fillerImage {
     text-align: start;
     font-family: rg-ember;
     min-width: 240px;
+    text-align: left;
 }
+
+#product-title {
+    word-break: break-word;
+    font-family: rg-ember;
+    color: #565959;
+    font-size: 24px;
+    margin-bottom: 50px;
+    /* when add review div can lower the margin bottom */
+}
+
+#product-price {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#price-text-info {
+    padding-right: 6px;
+    padding-bottom: 3px;
+    font-size: 14px;
+    color: #565959;
+    font-family: rg-ember;
+}
+
+.break {
+    background-color: transparent;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top: 1px solid #e7e7e7;
+    display: block;
+    height: 1px;
+    line-height: 19px;
+    margin-bottom: 14px;
+    margin-top: 0;}
+
+#price-symbol-info, #price-cents-info, #price-whole-number-info {
+    font-size: 18px;
+    color: #B12704;
+    font-family: rg-ember;
+}
+
 
 .price {
     display: flex;
-    padding: 10px 18px;
+    padding-right: 10px;
+    padding-top: 18px;
+    padding-bottom: 18px;
 }
 
 #price-symbol, #price-cents {
@@ -89,13 +156,14 @@ img#fillerImage {
 }
 
 .dropdown-quantity {
-    margin: 5px;
+    margin-top: 5px;
+    margin-bottom: 8px;
 }
 
 .secure-transaction {
     display: flex;
     padding: 0px 0px;
-
+    margin-bottom: 5px;
     /* justify-content: space-between; */
 
 }

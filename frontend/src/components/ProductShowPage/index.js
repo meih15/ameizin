@@ -20,6 +20,8 @@ function ProductShowPage() {
     if (!product) return <h1>Loading..</h1>
 
 
+
+
     return (
         <>
        
@@ -30,15 +32,25 @@ function ProductShowPage() {
                     <img id='fillerImage' src={switch2Pic} alt='filler-pic'/>
                 </div>
                 <div id='product-info-section'>
-                    <div>{product.productName}</div>
-                    <div id='bullets'>{product.bullets}</div>
-                    <div id="product_price'">{product.price}</div>
+                    <div id='product-title'>{product.productName}</div>
+                    <div className='break'></div>
+                    <div id="product-price">
+                        <p id='price-text-info'>Price:</p>
+                        <p id='price-symbol-info'>$</p>
+                        <p id='price-whole-number-info'>{Math.floor(product.price)}.</p>
+                        <p id='price-cents-info'>{Math.floor((product.price % 1) * 100) === 0 ? '00' : Math.floor((product.price % 1) * 100)}</p>
+                    </div>
+                    <div className='break'></div>
+                    <div id='about-section'>
+                        <p id='about-text'>About this item</p>
+                        <ul id='bullets'>{product.bullets.map((bullet, i) => <li key={`${i}-bullet`}>{bullet}</li>)}</ul>
+                    </div>
                 </div>
                 <div id='payment-section'>
                     <div className='price'>
                         <p id='price-symbol'>$</p>
                         <p id='price-whole-number'>{Math.floor(product.price)}</p>
-                        <p id='price-cents'>{Math.floor((product.price%1)*100)}</p>
+                        <p id='price-cents'>{Math.floor((product.price % 1) * 100) === 0 ? '00' : Math.floor((product.price % 1) * 100)}</p>
                     </div>
                     <div className='delivery-section'>
 
