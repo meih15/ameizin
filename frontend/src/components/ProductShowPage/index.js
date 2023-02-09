@@ -55,7 +55,10 @@ function ProductShowPage() {
                     <div className='delivery-section'>
 
                     </div>
-                    <div className='stock-left-section'>In Stock</div>
+                    <div id='dynamic-stock'>
+                        <p className='stock-low'>{product.inventory < 21 ? `Only ${product.inventory} left in stock - order soon.` : ''}</p>
+                        <p className='stock-high'>{product.inventory >= 21 ? 'In Stock.' : ''}</p>
+                    </div>
                     <div className='dropdown-quantity'>dropdown</div>
                     <button id="add-to-cart">Add to Cart</button>
                     <div className='secure-transaction'>
@@ -65,6 +68,7 @@ function ProductShowPage() {
                 </div>
             </div>
             <div className='middle-of-page'>
+                <p id='description-title'>Product Description</p>
                 <div id="product-description">{product.description}</div> 
             </div>
             <div className='bottom-of-page'>
