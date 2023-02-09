@@ -69,7 +69,6 @@
 .signup_button {
     width: 100%;
     font-family: rg-ember;
-    font-size: 15px;
     border-radius: 3px;
     border: 0px;
     height: 100%;
@@ -123,6 +122,7 @@ button {
 }
 
 .alertText {
+    margin-top: 5px;
     font-size: 12px;
     font-family: rg-ember;
     margin-bottom: 20px;

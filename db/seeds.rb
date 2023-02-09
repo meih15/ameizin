@@ -58,7 +58,7 @@ ApplicationRecord.transaction do
     description: 'sun protection',              
     bullets: ['no white-cast'],    
     price: 10.00,          
-    inventory: 250,      
+    inventory: 0,      
     category_id: 2
   )
 

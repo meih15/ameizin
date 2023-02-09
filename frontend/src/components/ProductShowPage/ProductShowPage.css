@@ -1,6 +1,6 @@
 
 .pageElements {
-    padding-top: 70px;
+    padding-top: 18px;
     display: block;
     font-family: ember;
     margin: 20px 0px 0px;
@@ -42,14 +42,13 @@ img#fillerImage {
 }
 
 
-
 #about-section {
     margin-top: 25px;
     margin-bottom: 16px;
 }
 
 #about-text {
-    padding-bottom: 8px;
+    padding-bottom: 5px;
     font-family: bolded-ember;
     font-size: 16px;
 }
@@ -59,6 +58,10 @@ img#fillerImage {
     font-size: 14px;
     list-style: disc;
     padding-left: 18px;
+}
+
+#bullets li {
+    margin: 10px 0px;
 }
 
 #payment-section {
@@ -159,18 +162,18 @@ img#fillerImage {
     font-size: 18px;
     font-family: rg-ember;
     color: #329131;
-    /* padding-top: 10px;
-    padding-bottom: 10px;
-    margin: 0px 0px 12px; */
 }
 
 .stock-low {
     font-size: 18px;
     font-family: rg-ember;
     color: #B12704;
-    /* padding-top: 10px;
-    padding-bottom: 10px;
-    margin: 0px 0px 12px; */
+}
+
+.stock-none {
+    font-size: 18px;
+    font-family: rg-ember;
+    color: #c76032;
 }
 
 .dropdown-quantity {
