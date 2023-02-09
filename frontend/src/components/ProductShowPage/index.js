@@ -61,7 +61,6 @@ function ProductShowPage() {
                         <p className='stock-low'>{(product.inventory < 21 && product.inventory !== 0) ? `Only ${product.inventory} left in stock - order soon.` : ''}</p>
                         <p className='stock-high'>{(product.inventory >= 21) ? 'In Stock.' : ''}</p>
                         <p className='stock-none'>{product.inventory === 0 ? 'Temporarily out of stock.' : ''}</p>
-
                     </div>
                     <div className='dropdown-quantity'>dropdown</div>
                     <button id="add-to-cart">Add to Cart</button>

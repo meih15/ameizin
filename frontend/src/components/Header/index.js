@@ -36,8 +36,17 @@ function Header() {
                 </div>
             </div>
                 <div className='nav-bar-right'>
-                    {sessionUser ? <button onClick={logout}>Sign Out</button> : <button className='hello_drop_down' onClick={() => history.push('/login')} >Sign In</button>}
-                    <div className='ordersLink'>Returns & Orders</div>
+                    <div className='header-profile-dropdown'>
+                        <p className='hello-msg'>{ sessionUser ? `Hello, ${sessionUser.userName}` : 'Hello, sign in'}</p>
+                        <div className='header-profile-hover'>
+                            {sessionUser ? <button className='signout_drop_down' onClick={logout}>Sign Out</button> : <button className='signin_drop_down' onClick={() => history.push('/login')} >Sign In</button>}
+                        </div>  
+                    </div>
+                    <Link className='ordersLink'></Link>
+                        <div id='return-order'>
+                            <p className='return-word'>Returns</p>
+                            <p className='order-word'>& Orders</p>
+                        </div>
                     <Link className='cart-section' to=''>
                         <div className='cart-section'>
                             <div id='cart-display'>
