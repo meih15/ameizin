@@ -26,19 +26,28 @@ function Header() {
                 </div>
             </div>
             <div className='nav-bar-middle'>
-            <div id='homePageSearchBar'>
-                <input 
-                    className='inputForHomePgSearch'
-                    type='text' 
-                    placeholder="Search Ameizin'"
-                />
+                <div></div>
+                <div id='homePageSearchBar'>
+                    <input 
+                        className='inputForHomePgSearch'
+                        type='text' 
+                        placeholder="Search Ameizin'"
+                    />
+                </div>
             </div>
-            </div>
-            <div className='nav-bar-right'>
-                {sessionUser ? <button onClick={logout}>Sign Out</button> : <button className='hello_drop_down' onClick={() => history.push('/login')} >Sign In</button>}
-                <div className='ordersLink'>Returns & Orders</div>
-                <div className='cart'>Cart</div>
-            </div>
+                <div className='nav-bar-right'>
+                    {sessionUser ? <button onClick={logout}>Sign Out</button> : <button className='hello_drop_down' onClick={() => history.push('/login')} >Sign In</button>}
+                    <div className='ordersLink'>Returns & Orders</div>
+                    <Link className='cart-section' to=''>
+                        <div className='cart-section'>
+                            <div id='cart-display'>
+                                <div id='number-items'>1</div>
+                                <i id='cart-icon' className="fa-solid fa-cart-shopping"></i>
+                            </div>
+                            <p id='cart-text'>Cart</p>
+                        </div>
+                  </Link>
+                </div>
         </div>
     )
 };

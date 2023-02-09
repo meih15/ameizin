@@ -1,3 +1,6 @@
+/* .entire-product-page {
+    overflow: hidden;
+} */
 
 .pageElements {
     padding-top: 18px;
@@ -15,7 +18,9 @@
 }
 
 .middle-of-page {
+    margin: 0px 1%;
     padding-left: 18px;
+    box-sizing: border-box;
 }
 
 #productImage {
@@ -184,7 +189,7 @@ img#fillerImage {
 .secure-transaction {
     display: flex;
     padding: 0px 0px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     /* justify-content: space-between; */
 
 }
@@ -200,9 +205,37 @@ img#fillerImage {
     font-size: 14px;
 }
 
+.ships-from {
+    display: flex;
+    
+    font-size: 12px;
+    font-family: rg-ember;
+    margin: 3px 0px;
+}
+
+.sold-by {
+    display: flex;
+    font-size: 12px;
+    font-family: rg-ember;
+    margin: 3px 0px;
+}
+
+#ships, #sold {
+    color: #565959;
+}
+
+#ships {
+    margin-right: 15px;
+}
+
+#sold {
+    margin-right: 33px;
+}
+
 #description-title {
     text-align: left;
     margin-bottom: 4px;
+    margin-top: 20px;
     padding-bottom: 4px;
     color: #CC6600;
     font-family: bolded-ember;

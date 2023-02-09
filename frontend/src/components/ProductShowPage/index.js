@@ -17,13 +17,14 @@ function ProductShowPage() {
         dispatch(fetchProduct(productId))
     }, [dispatch, productId]);
 
+
     if (!product) return <h1>Loading..</h1>
 
 
 
 
     return (
-        <>
+        <div className='entire-product-page'>
        <div className='product-header'>
         <Header />
         </div>
@@ -68,9 +69,18 @@ function ProductShowPage() {
                         <i id='lockIcon' className="fa-solid fa-lock"></i>
                         <p id='secure-text'>Secure transaction</p>
                     </div>
+                    <div className='ships-from'>
+                        <p id='ships'>Ships from</p>
+                        <p id='company'>Ameizin'</p>
+                    </div>
+                    <div className='sold-by'>
+                        <p id='sold'>Sold by</p>
+                        <p id='company'>Ameizin'</p>
+                    </div>
                 </div>
             </div>
             <div className='middle-of-page'>
+                <div className='break'></div>
                 <p id='description-title'>Product Description</p>
                 <div id="product-description">{product.description}</div> 
             </div>
@@ -79,7 +89,7 @@ function ProductShowPage() {
                 {/* add this when review component is made */}
             </div>
         </div>
-        </>
+        </div>
     )
 }
 
