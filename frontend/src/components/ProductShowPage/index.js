@@ -24,8 +24,9 @@ function ProductShowPage() {
 
     return (
         <>
-       
+       <div className='header-product'>
         <Header />
+        </div>
         <div className='pageElements'>
             <div className='top-of-page'>
                 <div id="productImage">

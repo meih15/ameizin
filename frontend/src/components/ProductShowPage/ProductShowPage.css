@@ -1,3 +1,4 @@
+
 .pageElements {
     padding-top: 70px;
     display: block;
@@ -62,7 +63,6 @@ img#fillerImage {
 
 #payment-section {
     display: flex;
-    align-items: left;
     justify-content: center;
     flex-direction: column;
     width: fit-content;
@@ -77,12 +77,13 @@ img#fillerImage {
     font-family: rg-ember;
     min-width: 240px;
     text-align: left;
+
 }
 
 #product-title {
     word-break: break-word;
     font-family: rg-ember;
-    color: #565959;
+    color: #0F1111;
     font-size: 24px;
     margin-bottom: 50px;
     /* when add review div can lower the margin bottom */
