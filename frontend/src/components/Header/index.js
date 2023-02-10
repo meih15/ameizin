@@ -43,12 +43,12 @@ function Header() {
                             {sessionUser ? <button className='signout_drop_down' onClick={logout}>Sign Out</button> : <button className='signin_drop_down' onClick={() => history.push('/login')} >Sign In</button>}
                         </div>  
                     </div>
-                    <Link className='ordersLink'></Link>
+                    <Link to='' className='ordersLink'></Link>
                         <div id='return-order'>
                             <p className='return-word'>Returns</p>
                             <p className='order-word'>& Orders</p>
                         </div>
-                    <Link className='cart-section' to=''>
+                    <Link to='' className='cart-section' >
                         <div className='cart-section'>
                             <div id='cart-display'>
                                 <div id='number-items'>1</div>

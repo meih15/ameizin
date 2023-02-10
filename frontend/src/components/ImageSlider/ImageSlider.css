@@ -1,0 +1,34 @@
+.image-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.image-slider img {
+    max-width: 100%;
+    height: auto;
+}
+
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 18%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    background: none;
+    border: black;
+    outline: black;
+    color: white;
+    cursor: pointer;
+    font-family: ember;
+}
+
+.prev-button {
+    left: 20px;
+}
+
+.next-button {
+    right: 20px;
+}
+

@@ -2,6 +2,10 @@
     overflow: hidden;
 } */
 
+.product-header {
+    min-width: 1030px;
+}
+
 .pageElements {
     padding-top: 18px;
     display: block;
