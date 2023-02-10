@@ -130,11 +130,11 @@
     display: none;
     position: absolute;
     top: 60px;
-    right: 20px;
-    width: 100px;
-    height: 60px;
+    right: 0px;
+    width: 140px;
+    height: auto;
     background: #fff;
-    padding: 10px;
+    padding: 15px;
     z-index: 1;
     font-family: ember;
 }

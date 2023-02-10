@@ -12,6 +12,13 @@ function Header() {
         e.preventDefault(); 
         dispatch(sessionActions.logout());
         };
+
+    const signedout = (
+        <>
+            <button className='signin_drop_down' onClick={() => history.push('/login')} >Sign In</button>
+            {/* <p>New Customer? <Link to={'/signup'}>Start Here</Link></p> */}
+        </>
+    )
     
 
     return (
@@ -40,7 +47,7 @@ function Header() {
                     <div className='header-profile-dropdown'>
                         <p className='hello-msg'>{ sessionUser ? `Hello, ${sessionUser.userName}` : 'Hello, sign in'}</p>
                         <div className='header-profile-hover'>
-                            {sessionUser ? <button className='signout_drop_down' onClick={logout}>Sign Out</button> : <button className='signin_drop_down' onClick={() => history.push('/login')} >Sign In</button>}
+                            {sessionUser ? <button className='signout_drop_down' onClick={logout}>Sign Out</button> : signedout}
                         </div>  
                     </div>
                     <Link to='' className='ordersLink'></Link>
