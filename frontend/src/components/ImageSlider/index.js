@@ -15,18 +15,18 @@ const ImageSlider = ({images, imageLinks}) => {
 
      return (
         <div className="image-slider">
-            <div id='left-button'>
-            <button className="prev-button" onClick={handlePrevClick}>
-                {"<"}
-            </button>
+            <div id='slider-button'>
+                <button className="prev-button" onClick={handlePrevClick}>
+                    {"<"}
+                </button>
             </div>
                 <Link to={imageLinks[currentImage]}>
                     <img src={images[currentImage]} alt="slider" />
                 </Link>
-            <div id='left-button'>
-            <button className="next-button" onClick={handleNextClick}>
-                {">"}
-            </button>
+            <div id='slider-button'>
+                <button className="next-button" onClick={handleNextClick}>
+                    {">"}
+                </button>
             </div>
         </div>
   );

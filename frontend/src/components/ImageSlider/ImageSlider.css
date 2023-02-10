@@ -10,25 +10,68 @@
     height: auto;
 }
 
+#slider-button {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .prev-button,
 .next-button {
+    display: flex;
+    align-items: center;
+    border: 2px solid transparent;
+    padding: 100px 20px;
     position: absolute;
-    top: 18%;
-    transform: translateY(-50%);
     font-size: 50px;
+    background-color: transparent;
     background: none;
-    border: black;
     outline: black;
     color: white;
     cursor: pointer;
     font-family: ember;
 }
 
+.prev-button:focus {
+    border-color: white;
+    box-shadow: -2px -2px 2px solid white,
+    2px 2px 2px solid white;
+
+}
+
+.next-button:focus {
+    border-color: white;
+    box-shadow: -2px -2px 2px solid white,
+    2px 2px 2px solid white;
+
+}
+
 .prev-button {
-    left: 20px;
+    left: 0px;
 }
 
 .next-button {
-    right: 20px;
+    right: 0px;
 }
 
+#background img {
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide-enter {
+    transform: translateX(-100%);
+}
+
+.slide-enter-active {
+    transform: translateX(0);
+}
+
+.slide-exit {
+    transform: translateX(0);
+}
+
+.slide-exit-active {
+    transform: translateX(100%);
+}

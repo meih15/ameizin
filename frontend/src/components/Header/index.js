@@ -18,7 +18,7 @@ function Header() {
         <div className='header'>
             <div className='nav-bar-left'>
                 <div id="headerLogo">
-                    <Link to='/'>
+                    <Link className='headLogo' to='/'>
                         <img id='homePageHeaderLogo'
                         src={meiWhiteLogo}
                         alt="ameizin_logo"/>
@@ -33,8 +33,8 @@ function Header() {
                         type='text' 
                         placeholder="Search Ameizin'"
                     />
+                    <button id='searchSubmit'><i className="fa-solid fa-magnifying-glass"></i></button>
                 </div>
-                <button id='searchSubmit'><i className="fa-solid fa-magnifying-glass"></i></button>
             </div>
                 <div className='nav-bar-right'>
                     <div className='header-profile-dropdown'>

@@ -29,6 +29,14 @@
     box-sizing: border-box;
 }
 
+
+.nav-bar-left:hover {
+    border: 1px solid;
+    border-color: #fff;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
 .nav-bar-middle{
     display: flex;
     min-width: 420px;
@@ -56,6 +64,18 @@
     white-space: nowrap;
 }
 
+#searchSubmit {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    margin-top: 0.5px;
+    display: flex;
+    justify-content: center;
+    height: 37px;
+    width: 45px;
+    align-items: center;
+    background-color: #f7bd69;
+}
+
 .inputForHomePgSearch {
     height: 38px;
     min-width: 420px;
@@ -80,12 +100,29 @@
     padding-right: 9px;
     box-sizing: border-box;
     width: 140px;
+    /* border: 1px solid;
+    border-color: #fff; */
+}
+
+.header-profile-dropdown:hover, #return-order:hover {
+    border: 1px solid;
+    border-color: #fff;
+    cursor: pointer;
+    box-sizing: border-box;
 }
 
 
 .header-profile-dropdown:hover .header-profile-hover {
     display: block;
+    border-radius: 2px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 }
+
+
 
 .header-profile-hover {
     display: none;
@@ -94,9 +131,22 @@
     right: 20px;
     width: 100px;
     height: 60px;
-    background: red;
+    background: #fff;
     padding: 10px;
     z-index: 1;
+    font-family: ember;
+}
+
+.signin_drop_down, .signout_drop_down {
+    border-radius: 3px;
+    border: 0px;
+    height: 100%;
+    width: 100%;
+    outline: 0;
+    height: 31px;
+    font-size: 13px;
+    background: #f0c14b;
+    background-color: #a88734 #9c7e31 #846a29;
 }
 
 .hello-msg {
@@ -118,7 +168,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: left; 
-    padding: 0px 9px 10px;
+    padding: 0px 8px 9px;
     width: 86px;
 }
 
