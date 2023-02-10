@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect} from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from 'react-router-dom';
 import { getProduct, fetchProduct } from '../../store/products';
@@ -12,6 +12,7 @@ function ProductShowPage() {
     const dispatch = useDispatch();
     const { productId } = useParams();
     const product = useSelector(getProduct(productId));
+    // const { loading, setLoading} = useState(true);
 
     useEffect(() => {
         dispatch(fetchProduct(productId))
@@ -19,8 +20,6 @@ function ProductShowPage() {
 
 
     if (!product) return <h1>Loading..</h1>
-
-
 
 
     return (
@@ -39,7 +38,7 @@ function ProductShowPage() {
                     <div id="product-price">
                         <p id='price-text-info'>Price:</p>
                         <p id='price-symbol-info'>$</p>
-                        <p id='price-whole-number-info'>{Math.floor(product.price)}.</p>
+                        <p id='price-whole-number-info'>{(Math.floor(product.price)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.</p>
                         <p id='price-cents-info'>{Math.floor((product.price % 1) * 100) === 0 ? '00' : Math.floor((product.price % 1) * 100)}</p>
                     </div>
                     <div className='break'></div>
@@ -51,7 +50,7 @@ function ProductShowPage() {
                 <div id='payment-section'>
                     <div className='price'>
                         <p id='price-symbol'>$</p>
-                        <p id='price-whole-number'>{Math.floor(product.price)}</p>
+                        <p id='price-whole-number'>{(Math.floor(product.price)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
                         <p id='price-cents'>{Math.floor((product.price % 1) * 100) === 0 ? '00' : Math.floor((product.price % 1) * 100)}</p>
                     </div>
                     <div className='delivery-section'>
