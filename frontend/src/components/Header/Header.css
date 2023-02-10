@@ -104,7 +104,8 @@
     border-color: #fff; */
 }
 
-.header-profile-dropdown:hover, #return-order:hover {
+.header-profile-dropdown:hover, #return-order:hover,
+#add-hover:hover {
     border: 1px solid;
     border-color: #fff;
     cursor: pointer;
@@ -183,15 +184,16 @@
     font-family: bolded-ember;
 }
 
-.cart-section {
+.cart-section, #add-hover {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: nowrap;
     width: 84px;
-    margin-left: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
     box-sizing: border-box;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
 }
 
 .cart-display {
