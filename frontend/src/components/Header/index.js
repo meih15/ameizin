@@ -34,7 +34,7 @@ function Header() {
                         placeholder="Search Ameizin'"
                     />
                 </div>
-                <button id='searchSubmit'></button>
+                <button id='searchSubmit'><i className="fa-solid fa-magnifying-glass"></i></button>
             </div>
                 <div className='nav-bar-right'>
                     <div className='header-profile-dropdown'>
