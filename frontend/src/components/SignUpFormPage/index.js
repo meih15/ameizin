@@ -15,6 +15,11 @@ function SignupFormPage() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState([]);
 
+  const nameError = errors.find(error => error.includes('User'));
+  const emailError = errors.find(error => error.includes('Email'));
+  const passwordError = errors.find(error => error.includes('Password '));
+  const passMatchError = errors.find(error => error.includes('match'));
+
   if (sessionUser) return <Redirect to="/" />;
 
   const handleSubmit = (e) => {
@@ -36,6 +41,7 @@ function SignupFormPage() {
     }
     return setErrors(['Passwords must match']);
   };
+  
 
   return (
     <div className="signup">
@@ -50,9 +56,7 @@ function SignupFormPage() {
     <div className="signupContainer">
     <form className='signup_form' onSubmit={handleSubmit}>
       <h1 id="createAccount">Create account</h1>
-      <ul>
-        {errors.map(error => <li key={error}>{error}</li>)}
-      </ul>
+      
       <label id='name-label'>
         Your name
         </label>
@@ -62,8 +66,9 @@ function SignupFormPage() {
           value={user_name}
           placeholder='First and last name'
           onChange={(e) => setUsername(e.target.value)}
-          required
         />
+      {nameError ? <div id="error"><i id='exclamation' className="fa-solid fa-exclamation" />{nameError}</div> :
+      <i id='errors2' className="fa-solid fa-exclamation" />}
       <label id='emailText'>
         Email
         </label>
@@ -72,8 +77,10 @@ function SignupFormPage() {
           type="text"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          required
         />
+      {emailError ? <div id="error"><i id='exclamation' className="fa-solid fa-exclamation" />{emailError}</div> : 
+      <i id='errors2' className="fa-solid fa-exclamation" />}
+
       <label id="passwordText">
         Password
         </label>
@@ -83,9 +90,10 @@ function SignupFormPage() {
           placeholder="At least 6 characters"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          required
         />
-      <div className="alertText"> <i id='alertIcon'className="fa-solid fa-circle-info"></i> Passwords must be at least 6 characters.</div>
+
+      {passwordError ? <div id="error"><i id='exclamation' className="fa-solid fa-exclamation" />{passwordError}</div> : 
+      <div className="alertText"> <i id='alertIcon'className="fa-solid fa-circle-info"></i> Passwords must be at least 6 characters.</div>}
       <label id="password-label-2">
         Re-enter password
         </label>
@@ -94,8 +102,10 @@ function SignupFormPage() {
           type="password"
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
-          required
         />
+      {passMatchError ? <div id="error"><i id='exclamation' className="fa-solid fa-exclamation" />{passMatchError}</div> : 
+      <i id='errors2' className="fa-solid fa-exclamation" />}
+
       <button type="submit" className="signup_button">Continue</button>
       <div className="signup_login_redirect">Already have an account?  
           <Link id='signin-link-onlogin' to='/login'>Sign In</Link> 
