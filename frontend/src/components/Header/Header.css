@@ -1,6 +1,7 @@
 .header {
     height: 60px;
     display: flex;
+    flex-wrap: wrap;
     float: none;
     flex-flow: row nowrap;
     background-color: #131921;
@@ -17,34 +18,52 @@
 
 #homePageHeaderLogo {
     height: 50px;
-    margin-right: auto;
+    margin-left: 5px;
+    margin-right: 5px;
     float: left;
-    padding-top: 3px;
-    padding-left: 2px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    padding-left: 5px;
     padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.nav-bar-middle{
+    display: flex;
+}
+
+#searchDropDown {
+    height: 38px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    margin-top: 10px;
 }
 
 #homePageSearchBar {
-    padding: 10px 4px 10px 3px;
+    display: flex;
+    flex: 1 1 auto;
+    padding: 10px 4px 10px 0px;
     height: 60px;
     box-sizing: border-box;
-    width: auto;
-    margin: 0 auto;
+    min-width: 420px;
+    width: 100%;
     white-space: nowrap;
 }
 
 .inputForHomePgSearch {
     height: 38px;
     min-width: 420px;
+    width: 100%;
     line-height: 15px;
-    padding: 7px 10px 10px 0px;
+    padding: 10px 10px 10px 0px;
     box-sizing: border-box;
 }
 
 .nav-bar-right {
-    margin-left: auto;
     display: flex;
-    float: right;
+    align-items: right;
+    width: fit-content;
 }
 
 .header-profile-dropdown{
@@ -106,12 +125,6 @@
     font-size: 16px;
     font-family: bolded-ember;
 }
-
-/* .cart {
-    display: flex;
-    position: relative;
-    flex-flow: row nowrap;
-} */
 
 .cart-section {
     display: flex;

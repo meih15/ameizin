@@ -26,7 +26,7 @@ function Header() {
                 </div>
             </div>
             <div className='nav-bar-middle'>
-                <div></div>
+                <select id='searchDropDown'></select>
                 <div id='homePageSearchBar'>
                     <input 
                         className='inputForHomePgSearch'
@@ -34,6 +34,7 @@ function Header() {
                         placeholder="Search Ameizin'"
                     />
                 </div>
+                <button id='searchSubmit'></button>
             </div>
                 <div className='nav-bar-right'>
                     <div className='header-profile-dropdown'>
