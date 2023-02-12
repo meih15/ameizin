@@ -13,6 +13,10 @@ function LoginFormPage() {
   const [errors, setErrors] = useState([]);
   const history = useHistory();
 
+  const emailError = errors.find(error => error.includes('email'));
+  const passwordError = errors.find(error => error.includes('password'));
+
+
   if (sessionUser) return <Redirect to="/" />;
 
   const handleSubmit = (e) => {
@@ -38,6 +42,7 @@ function LoginFormPage() {
       password: 'password' }
   ))};
 
+
   return (
     <div className='login'>
       <div id="logoContainer">
@@ -52,33 +57,28 @@ function LoginFormPage() {
         <div id='big_form'>
         <form onSubmit={handleSubmit}>
           <h1 id='signIn'>Sign in</h1>
-          <ul>
-            {errors.map(error => <li key={error}>{error}</li>)}
-         </ul>
-         {/*going to have to refactor error for error handling*/}
           <label id='email-label'>
             Email
           </label>
-        
             <input
               id='emailInput'
               type="text"
               value={credential}
               onChange={(e) => setCredential(e.target.value)}
-              required
             />
-          
+          {emailError ? <div id="error"><i id='exclamation' className="fa-solid fa-exclamation" />{emailError}</div> : 
+            <i id='errors4' className="fa-solid fa-exclamation" />}
           <label id='password-label'>
             Password
           </label>
-     
             <input
               id='passwordInput'
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              required
             />
+            {passwordError ? <div id="error"><i id='exclamation' className="fa-solid fa-exclamation" />{passwordError}</div> : 
+             <i id='errors4' className="fa-solid fa-exclamation" />}
             <br/>
           <button type="submit" className="signin_button">Sign in</button>
         </form>
