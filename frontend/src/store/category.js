@@ -13,7 +13,7 @@ const receiveCategory = category => ({
     category
 });
 
-export const getCategries = state => {
+export const getCategories = state => {
     return state?.categories ? Object.values(state.categories) : [];
 };
 

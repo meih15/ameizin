@@ -56,22 +56,21 @@
     right: 0px;
 }
 
-#background img {
+#background-image img {
     transition: transform 0.5s ease-in-out;
 }
 
-.slide-enter {
-    transform: translateX(-100%);
-}
+@keyframes slideOut {
+    0% {
+        transform: translateX(0);
+    }
 
-.slide-enter-active {
-    transform: translateX(0);
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 .slide-exit {
     transform: translateX(0);
-}
-
-.slide-exit-active {
-    transform: translateX(100%);
+    animation: slideOut 0.5s ease-in-out;
 }

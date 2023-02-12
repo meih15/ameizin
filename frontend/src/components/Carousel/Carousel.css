@@ -1,0 +1,8 @@
+.product-box {
+    width: 25%;
+}
+
+.product-box img {
+    width: 300px;
+    height: auto;
+}

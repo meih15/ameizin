@@ -6,11 +6,11 @@ const ImageSlider = ({images, imageLinks}) => {
     const [currentImage, setCurrentImage] = useState(0);
 
     const handlePrevClick = () => {
-        setCurrentImage(currentImage === 0 ? 1 : 0);
+        setCurrentImage(currentImage === 0 ? images.length - 1 : currentImage - 1);
     };
 
     const handleNextClick = () => {
-        setCurrentImage(currentImage === 0 ? 1 : 0);
+        setCurrentImage(currentImage === images.length - 1 ? 0 : currentImage + 1);
     };
 
      return (
@@ -21,7 +21,7 @@ const ImageSlider = ({images, imageLinks}) => {
                 </button>
             </div>
                 <Link to={imageLinks[currentImage]}>
-                    <img src={images[currentImage]} alt="slider" />
+                    <img id='background-image' src={images[currentImage]} alt="slider" />
                 </Link>
             <div id='slider-button'>
                 <button className="next-button" onClick={handleNextClick}>
