@@ -27,7 +27,7 @@ function HomePage() {
     // const categories = categoriesList[categoriesList.length - 1] || [];
 
     const productsList = useSelector(getProducts);
-    const products = [...productsList] || [];
+    const products = [...productsList];
     const shuffledProducts = products.sort(() => Math.random() - 0.5).slice(0, 8);
     const firstFour = shuffledProducts.slice(0, 4);
     const lastFour = shuffledProducts.slice(-4);
@@ -47,15 +47,15 @@ function HomePage() {
                 <main id='main-page'>
                     <div className='splash-page'>
                         <ImageSlider images={homePageImages} imageLinks={homePageImageLinks} />
-                        {/* <div className='first-four-grid'>
-                            {firstFour.map(prdctId => <ProductContainer key={prdctId} productId={prdctId}/>)}
-                        </div> */}
+                        <div className='first-four-grid'>
+                            {firstFour.map(prdct => <ProductContainer key={prdct.id} productId={prdct.id}/>)}
+                        </div>
                         <div className='carouselOne'>
                             <Carousel products={productsList}/>
                         </div>
-                        {/* <div>
-                            {lastFour.map(prdctId => <ProductContainer key={prdctId} productId={prdctId}/>)}
-                        </div> */}
+                        <div className='last-four-grid'>
+                            {lastFour.map(prdct => <ProductContainer key={prdct.id} productId={prdct.id}/>)}
+                        </div>
                     </div>
                 </main>
             </div>

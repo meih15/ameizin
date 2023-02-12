@@ -5,10 +5,45 @@
     left: 0;
     width: 100%;
     min-width: 1000px;
+    background-color: #e3e6e6;
 }
 
 .header-home {
     min-width: 1000px;
 }
 
+.splash-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
+.first-four-grid, .last-four-grid {
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+}
+
+.first-four-grid img {
+    width: 300px;
+    height: auto;
+    /* width: 100%;
+    height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.last-four-grid img {
+    width: 300px;
+    height: auto;
+    /* width: 100%;
+    height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

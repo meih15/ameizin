@@ -6,3 +6,7 @@
     width: 300px;
     height: auto;
 }
+
+.carousel-container {
+    max-width: 1400px;
+}

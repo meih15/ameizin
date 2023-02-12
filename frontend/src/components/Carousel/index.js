@@ -18,7 +18,7 @@ const Carousel = ({products}) => {
             modules={[Navigation, A11y, Scrollbar]}
             slidesPerView={4}
             spaceBetween={0}
-            style={{ width: 'auto', height: '100%', background: '#f7f7f7' }}
+            style={{ width: 'auto', height: '100%', background: 'white' }}
             navigation
             scrollbar={{draggable: true}}
         >
