@@ -8,8 +8,8 @@ const CategoryNavBar = () => {
 
     const dispatch = useDispatch();
     const categoriesList = useSelector(getCategories);
-    const categories = [...categoriesList] || [];
-    // const [loading, setLoading] = useState(true);
+
+    const categories = [...categoriesList]
 
     useEffect(() => {
         dispatch(fetchCategories())

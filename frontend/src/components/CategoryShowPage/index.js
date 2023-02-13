@@ -1,7 +1,7 @@
 import './CategoryShowPage.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { fetchCategories, fetchCategory, getCategory } from '../../store/category';
+import { fetchCategory, getCategory } from '../../store/category';
 import { fetchProducts, getProducts } from '../../store/products';
 import { useEffect } from 'react';
 import Header from '../Header';
@@ -13,13 +13,12 @@ const CategoryShowPage = () => {
     const dispatch = useDispatch();
     const {categoryId} = useParams();
     const category = useSelector(getCategory(categoryId));
-
     const products = useSelector(getProducts);
     const allProducts = products ? [...products] : [];
 
 
     useEffect(() => {
-        dispatch(fetchCategories())
+        // dispatch(fetchCategories())
         dispatch(fetchProducts())
         dispatch(fetchCategory(categoryId))
     }, [dispatch, categoryId]);
@@ -32,9 +31,11 @@ const CategoryShowPage = () => {
 
     const filteredList = filtering(allProducts, categoryId);
 
+    debugger
     return (
         <div className='cat-show-page'>
-            <Header />
+
+           <Header />
             <CategoryNavBar />
             <h1 id='category-name'>{category.categoryName}</h1>
             <div id='cat-item-container'>

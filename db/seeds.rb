@@ -41,6 +41,8 @@ ApplicationRecord.transaction do
 
   Category.create!(category_name: 'Electronics');
   Category.create!(category_name: 'Beauty');
+  Category.create!(category_name: 'Toys');
+
 
   puts "Creating products..."
 

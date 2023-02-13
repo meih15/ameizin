@@ -5,7 +5,7 @@ import kindleBackground from '../../image/background1.jpg';
 import electronicsBackground from '../../image/background2.jpg';
 import Carousel from '../Carousel';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCategories, fetchCategories } from '../../store/category';
+// import { getCategories, fetchCategories } from '../../store/category';
 import {fetchProducts, getProducts} from '../../store/products';
 import { useEffect } from 'react';
 import ProductContainer from '../ProductContainer';
@@ -23,8 +23,8 @@ function HomePage() {
     ]
 
     const dispatch = useDispatch();
-    const categoriesList = useSelector(getCategories);
-    const categories = [...categoriesList] || [];
+    // const categoriesList = useSelector(getCategories);
+    // const categories = [...categoriesList] || [];
 
     const productsList = useSelector(getProducts);
     const products = [...productsList] || [];
@@ -33,9 +33,8 @@ function HomePage() {
     const lastFour = shuffledProducts.slice(-4);
 
     useEffect(() => {
-        dispatch(fetchCategories())
         dispatch(fetchProducts())
-    }, [dispatch])
+    }, [])
 
 
     return (

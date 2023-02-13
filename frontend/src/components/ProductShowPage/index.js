@@ -15,6 +15,7 @@ function ProductShowPage() {
     // const { loading, setLoading} = useState(true);
 
     useEffect(() => {
+        debugger
         dispatch(fetchProduct(productId))
     }, [dispatch, productId]);
 
