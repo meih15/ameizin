@@ -45,7 +45,6 @@ const categoriesReducer = (state = {}, action) => {
         case RECEIVE_CATEGORIES:
             return {...action.categories};
         case RECEIVE_CATEGORY:
-            debugger
             return {...state, [action.category.id]: action.category};
         default:
             return state;

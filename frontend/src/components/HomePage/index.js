@@ -34,7 +34,7 @@ function HomePage() {
 
     useEffect(() => {
         dispatch(fetchProducts())
-    }, [])
+    }, [dispatch])
 
 
     return (

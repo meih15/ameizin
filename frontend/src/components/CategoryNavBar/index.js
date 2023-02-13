@@ -9,19 +9,25 @@ const CategoryNavBar = () => {
     const dispatch = useDispatch();
     const categoriesList = useSelector(getCategories);
 
+    // return (<div>HI</div>)
+
     const categories = [...categoriesList]
 
     useEffect(() => {
         dispatch(fetchCategories())
     }, [dispatch]);
 
+    const categoryListIndex = categories.map(category => {
+                // debugger
+               
+                 return   <Link key={category.id} id='cat' to={`/categories/${category.id}`}>
+                        <p>{category.categoryName}</p>
+                    </Link>})
+
     return (
         <div className='catnavbar'>
             {
-                categories.map(category => 
-                    <Link key={category.id} id='cat' to={`/categories/${category.id}`}>
-                        <p>{category.categoryName}</p>
-                    </Link>)
+                categoryListIndex
             }
         </div>
     );

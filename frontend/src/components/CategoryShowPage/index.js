@@ -12,9 +12,9 @@ import CategoryItemContainer from '../CategoryItemContainer';
 const CategoryShowPage = () => {
     const dispatch = useDispatch();
     const {categoryId} = useParams();
+    
     const category = useSelector(getCategory(categoryId));
     const products = useSelector(getProducts);
-    const allProducts = products ? [...products] : [];
 
 
     useEffect(() => {
@@ -23,15 +23,22 @@ const CategoryShowPage = () => {
         dispatch(fetchCategory(categoryId))
     }, [dispatch, categoryId]);
 
-
-    const filtering = (allProducts, cId) => {
-        Object.freeze(allProducts);
-        return allProducts.filter(product => product.categoryId === cId);
+    const filtering = (products, cId) => {
+        // debugger
+        Object.freeze(products);
+        return products.filter(product => product.categoryId === parseInt(cId));
     };
 
-    const filteredList = filtering(allProducts, categoryId);
+    const filteredList = filtering(products, categoryId);
+    if (!category) return null;
 
-    debugger
+     const list =  filteredList.map(product => {
+        // debugger
+          return <div id='cat-item'>
+            <CategoryItemContainer product={product}/>
+                    </div>
+            } )
+    
     return (
         <div className='cat-show-page'>
 
@@ -39,11 +46,12 @@ const CategoryShowPage = () => {
             <CategoryNavBar />
             <h1 id='category-name'>{category.categoryName}</h1>
             <div id='cat-item-container'>
-                {filteredList.map(product => 
+                {/* {filteredList.map(product => 
                     <div id='cat-item'>
                         <CategoryItemContainer product={product}/>
                     </div>
-                    )}
+                    )} */}
+                    {list}
             </div>
         </div>
     );

@@ -18,6 +18,8 @@ class Product < ApplicationRecord
         foreign_key: :category_id,
         class_name: :Category
 
+    has_and_belongs_to_many :carts
+
     validates :product_name, :description, :price, :inventory, presence: true
     validates :product_name, uniqueness: true
     validate :bullet_is_array
