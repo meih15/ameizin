@@ -3,13 +3,13 @@ import Header from '../Header';
 import ImageSlider from '../ImageSlider';
 import kindleBackground from '../../image/background1.jpg';
 import electronicsBackground from '../../image/background2.jpg';
-// import BackgroundCarousel from '../HomeBackgroundCarousel';
 import Carousel from '../Carousel';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCategories, fetchCategories } from '../../store/category';
 import {fetchProducts, getProducts} from '../../store/products';
 import { useEffect } from 'react';
 import ProductContainer from '../ProductContainer';
+import CategoryNavBar from '../CategoryNavBar';
 
 function HomePage() {
     const homePageImages = [
@@ -23,17 +23,17 @@ function HomePage() {
     ]
 
     const dispatch = useDispatch();
-    // const categoriesList = useSelector(getCategories);
-    // const categories = categoriesList[categoriesList.length - 1] || [];
+    const categoriesList = useSelector(getCategories);
+    const categories = [...categoriesList] || [];
 
     const productsList = useSelector(getProducts);
-    const products = [...productsList];
+    const products = [...productsList] || [];
     const shuffledProducts = products.sort(() => Math.random() - 0.5).slice(0, 8);
     const firstFour = shuffledProducts.slice(0, 4);
     const lastFour = shuffledProducts.slice(-4);
 
     useEffect(() => {
-        // dispatch(fetchCategories())
+        dispatch(fetchCategories())
         dispatch(fetchProducts())
     }, [dispatch])
 
@@ -43,6 +43,7 @@ function HomePage() {
             <div className='whole-home-page'>
                 <div className='header-home'>
                 <Header />
+                <CategoryNavBar />
                 </div>
                 <main id='main-page'>
                     <div className='splash-page'>

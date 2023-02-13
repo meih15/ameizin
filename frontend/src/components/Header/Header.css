@@ -36,6 +36,7 @@
     border-color: #fff;
     cursor: pointer;
     box-sizing: border-box;
+    border-style: inset;
 }
 
 .nav-bar-middle{
@@ -111,6 +112,7 @@
     border-color: #fff;
     cursor: pointer;
     box-sizing: border-box;
+    border-style: inset;
 }
 
 
@@ -137,6 +139,7 @@
     padding: 15px;
     z-index: 1;
     font-family: ember;
+     border-style: inset;
 }
 
 .signin_drop_down, .signout_drop_down {
