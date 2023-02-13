@@ -32,12 +32,11 @@ const CategoryShowPage = () => {
     const filteredList = filtering(products, categoryId);
     if (!category) return null;
 
-     const list =  filteredList.map(product => {
-        // debugger
-          return <div id='cat-item'>
-            <CategoryItemContainer product={product}/>
-                    </div>
-            } )
+    const list =  filteredList.map(product => {
+        return <div id='cat-item'>
+        <CategoryItemContainer product={product}/>
+                </div>
+    })
     
     return (
         <div className='cat-show-page'>
