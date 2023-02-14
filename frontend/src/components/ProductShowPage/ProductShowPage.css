@@ -187,7 +187,12 @@ img#fillerImage {
 
 .dropdown-quantity {
     margin-top: 30px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    font-family: rg-ember;
+    font-size: 12px;
+}
+#hide-drop {
+    visibility: hidden;
 }
 
 .secure-transaction {

@@ -14,6 +14,7 @@ function ProductShowPage() {
     const product = useSelector(getProduct(productId));
     // const { loading, setLoading} = useState(true);
 
+
     useEffect(() => {
      
         dispatch(fetchProduct(productId))
@@ -21,6 +22,11 @@ function ProductShowPage() {
 
 
     if (!product) return <h1>Loading...</h1>
+
+    let dropQuantity = [...Array(Math.min(product.inventory, 30) + 1).keys()].slice(1);
+    const dropdown = <select className='dropdown-quantity'>
+                            {dropQuantity.map(qty => <option key={qty} id='dropdown-number' value={qty}>{`Qty: ${qty}`}</option> )}
+                        </select>
 
 
     return (
@@ -62,8 +68,10 @@ function ProductShowPage() {
                         <p className='stock-high'>{(product.inventory >= 21) ? 'In Stock.' : ''}</p>
                         <p className='stock-none'>{product.inventory === 0 ? 'Temporarily out of stock.' : ''}</p>
                     </div>
-                    <div className='dropdown-quantity'>dropdown</div>
-                    <button id="add-to-cart">Add to Cart</button>
+                    <form>
+                        {(product.inventory === 0) ? <p id='hide-drop'>dropdown</p> : dropdown} 
+                        <button id="add-to-cart">Add to Cart</button>
+                    </form>
                     <div className='secure-transaction'>
                         <i id='lockIcon' className="fa-solid fa-lock"></i>
                         <p id='secure-text'>Secure transaction</p>
