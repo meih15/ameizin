@@ -10,7 +10,6 @@ class Api::CartsController < ApplicationController
     def show
         if current_user
             @cart = current_user.cart
-            debugger
             render :show
         else
             if session[:cart] 

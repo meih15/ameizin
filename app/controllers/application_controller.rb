@@ -8,7 +8,6 @@ class ApplicationController < ActionController::API
         with: :invalid_authenticity_token
 
 
-
     def logged_in?
         !!current_user
     end
@@ -20,7 +19,7 @@ class ApplicationController < ActionController::API
             if session[:cart]
                 @cart = Cart.find_by(id: session[:cart])
             else
-                @cart = Cart.create
+                @cart = Cart.create!
                 session[:cart] = @cart.id
             end
         end
@@ -29,12 +28,16 @@ class ApplicationController < ActionController::API
     def persist_cart_items_through_login
         if session[:cart]
             guest_cart = Cart.find(session[:cart])
+            debugger
             guest_cart.cart_items.each {|item| CartItem.create(
                 cart_id: current_cart.id,
                 product_id: item.id
             )}
+            debugger
             cart_items = CartItem.all
+            debugger
             cart_items.each {|item| item.delete if item.user == nil}
+            debugger
             guest_cart.destroy
             session[:cart] = nil
         end
@@ -47,6 +50,7 @@ class ApplicationController < ActionController::API
     def login!(user)
         @current_user = user
         session[:session_token] = user.reset_session_token!
+    
         persist_cart_items_through_login
     end
 
