@@ -18,7 +18,7 @@ class ApplicationController < ActionController::API
             @cart = current_user.cart
         else
             if session[:cart]
-                @cart = Cart.find(session[:cart])
+                @cart = Cart.find_by(id: session[:cart])
             else
                 @cart = Cart.create
                 session[:cart] = @cart.id

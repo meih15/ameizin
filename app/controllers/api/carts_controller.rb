@@ -14,7 +14,7 @@ class Api::CartsController < ApplicationController
             render :show
         else
             if session[:cart] 
-                @cart = Cart.find(session[:cart])
+                @cart = Cart.find_by(id: session[:cart])
                 render :show
             else
                 @cart = Cart.create
