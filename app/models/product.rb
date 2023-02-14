@@ -18,7 +18,12 @@ class Product < ApplicationRecord
         foreign_key: :category_id,
         class_name: :Category
 
-    has_and_belongs_to_many :carts
+    has_many :cart_items, 
+        foreign_key: :product_id,
+        class_name: :CartItem,
+        dependent: :destroy
+
+    
 
     validates :product_name, :description, :price, :inventory, presence: true
     validates :product_name, uniqueness: true

@@ -12,6 +12,7 @@ ApplicationRecord.transaction do
   User.destroy_all
   Category.destroy_all
   Product.destroy_all
+  Cart.delete_all
 
   puts "Resetting primary keys..."
   # For easy testing, so that after seeding, the first `User` has `id` of 1

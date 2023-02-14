@@ -1,28 +1,55 @@
 class Api::CartsController < ApplicationController
-    def current_cart
-        
+
+
+    # def index
+    #     # @cart_items = current_user.cart
+    #     @cart_items = current_user.carts
+    #     render :index
+    # end
+
+    def show
+        if current_user
+            @cart = current_user.cart
+            render :show
+        else
+            if session[:cart] 
+                @cart = Cart.find(session[:cart])
+            else
+                @cart = Cart.create
+                session[:cart] = @cart.id
+            end
+            render :show
+        end
     end
 
-    def index
+    # def create
+    #     @cart_item = Cart.new(cart_params)
+    #     if @cart_item.save
+    #         render :show
+    #     else
+    #         render json: { errors: @cart_item.errors.full_messages }
+    #     end
+    # end
 
-    end
+    # def update
+    #     @cart_item = Cart.find_by(product_id: cart_params[:product_id], user_id: current_user.id)
+    #     if @cart_item
+    #         @cart_item.quantity = cart_params[:quantity].to_i
+    #         @cart_item.save
+    #         render :show
+    #     else
+    #         render json: {errors: 'Could not update quantity'}
+    #     end
+    # end
 
-    def create
+    # def destroy
+    #     @cart_item = Cart.find_by(id: params[:id])
+    #     if @cart_item.destroy
+    #         render json: {}
+    #     end
 
-    end
-
-    def updated
-
-    end
-
-    def destroy
-
-    end
+    # end
 
 
-    private
 
-    def cart_params 
-        params.require(:cart).permit(:product_id, :user_id, :quantity)
-    end
 end

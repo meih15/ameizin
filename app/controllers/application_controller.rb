@@ -1,11 +1,43 @@
 class ApplicationController < ActionController::API
     include ActionController::RequestForgeryProtection
     protect_from_forgery with: :exception
-    before_action :snake_case_params, :attach_authenticity_token
+    before_action :snake_case_params, :attach_authenticity_token, :current_cart
 
     rescue_from StandardError, with: :unhandled_error
     rescue_from ActionController::InvalidAuthenticityToken,
         with: :invalid_authenticity_token
+
+    helper_method :current_user
+
+    def logged_in?
+        !!current_user
+    end
+    
+    def current_cart
+        if logged_in?
+            @cart = current_user.cart
+        else
+            if session[:cart]
+                @cart = Cart.find(session[:cart])
+            else
+                @cart = Cart.create
+                session[:cart] = @cart.id
+            end
+        end
+    end
+
+    def persist_cart_items_through_login
+        if session[:cart]
+            guest_cart = Cart.find(session[:cart])
+            guest_cart.cart_items.each {|item| CartItem.create(
+                cart_id: current_cart.id,
+                product_id: item.id
+            )}
+            CartItem.where(user_id: nil).delete_all
+            guest_cart.destroy
+            session[:cart] = nil
+        end
+    end
 
     def current_user
         @current_user ||= User.find_by(session_token: session[:session_token])
@@ -14,6 +46,7 @@ class ApplicationController < ActionController::API
     def login!(user)
         @current_user = user
         session[:session_token] = user.reset_session_token!
+        persist_cart_items_through_login
     end
 
     def logout!
