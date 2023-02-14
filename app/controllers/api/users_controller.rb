@@ -6,6 +6,10 @@ class Api::UsersController < ApplicationController
     
     if @user.save
         login!(@user)
+        if @user.cart == nil
+            user_cart = Cart.create
+            @user.cart = user_cart
+        end
         render :show
     else
       render json: { errors: @user.errors.full_messages }, status: :unprocessable_entity

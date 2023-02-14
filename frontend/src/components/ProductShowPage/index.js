@@ -15,12 +15,12 @@ function ProductShowPage() {
     // const { loading, setLoading} = useState(true);
 
     useEffect(() => {
-        debugger
+     
         dispatch(fetchProduct(productId))
     }, [dispatch, productId]);
 
 
-    if (!product) return <h1>Loading..</h1>
+    if (!product) return <h1>Loading...</h1>
 
 
     return (

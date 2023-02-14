@@ -7,7 +7,7 @@ class ApplicationController < ActionController::API
     rescue_from ActionController::InvalidAuthenticityToken,
         with: :invalid_authenticity_token
 
-    helper_method :current_user
+
 
     def logged_in?
         !!current_user
@@ -33,7 +33,8 @@ class ApplicationController < ActionController::API
                 cart_id: current_cart.id,
                 product_id: item.id
             )}
-            CartItem.where(user_id: nil).delete_all
+            cart_items = CartItem.all
+            cart_items.each {|item| item.delete if item.user == nil}
             guest_cart.destroy
             session[:cart] = nil
         end

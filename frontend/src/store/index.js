@@ -2,12 +2,16 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import categoriesReducer from './category';
 import productsReducer from './products';
+import cartItemsReducer from './cartItems';
+import cartsReducer from './carts';
 import session from './session';
 
 const rootReducer = combineReducers({
   session,
   products: productsReducer,
-  categories: categoriesReducer
+  categories: categoriesReducer,
+  cart: cartsReducer,
+  cartItems: cartItemsReducer
 });
 
 let enhancer;

@@ -9,7 +9,7 @@
 #
 class Cart < ApplicationRecord
 
-    belongs_to :user,
+    belongs_to :user, optional: true,
         foreign_key: :user_id,
         class_name: :User
 
@@ -17,4 +17,6 @@ class Cart < ApplicationRecord
         foreign_key: :cart_id,
         class_name: :CartItem,
         dependent: :destroy
+
+    # validates :user_id, allow_nil: true, numericality: { greater_than: 0 }
 end
