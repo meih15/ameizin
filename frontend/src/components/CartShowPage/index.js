@@ -5,25 +5,37 @@ import Header from '../Header';
 import './CartShowPage.css'
 import CategoryNavBar from '../CategoryNavBar';
 import CartProductContainer from '../CartProductContainer';
+import { fetchCartItems, getCartItems } from '../../store/cartItems';
 
 
 const CartShowPage = () => {
     const dispatch = useDispatch();
     const cart = useSelector(getCart());
+    const allItems = useSelector(getCartItems);
     
     useEffect(() => {
         dispatch(fetchCart())
+        dispatch(fetchCartItems)
     }, [dispatch])
 
     if (!cart) return <h1>Loading...</h1>
 
-    // const emptyCart = <h2 className='empty-cart'>Your Ameizin' Cart is empty</h2>
+    const filteringItems = (items, cartId) => {
+        Object.freeze(items);
+        return items.filter(item => item.cartId === cartId)
+    }
 
-    // const itemList = cart.cartItems.map(item => {
-    //     return <div>
-    //         <CartProductContainer key={item.id} id={`cart-item-box-${item.id}`} cartItem={item}/>
-    //         </div>
-    // });
+    const filteredCartItems = filteringItems(allItems, cart.id)
+
+    const emptyCart = <h2 className='empty-cart'>Your Ameizin' Cart is empty</h2>
+
+    const itemList = filteredCartItems.map(item => {
+        return <div>
+            <CartProductContainer key={item.id} id={`cart-item-box-${item.id}`} cartItem={item}/>
+            </div>
+    });
+
+    
 
     return (
         <div className='entire-cart-page'>
@@ -31,15 +43,15 @@ const CartShowPage = () => {
                 <Header />
                 <CategoryNavBar />
             </div>
-            {/* <div id='middle-cart-page'>
+            <div id='middle-cart-page'>
                 <div id='cart-items-section'>
                     <h1 className='shopping-cart-text'>Shopping Cart</h1>
-                   {(cart.cartItems.length === 0) ? emptyCart : itemList}
+                   {(filteredCartItems.length === 0) ? emptyCart : itemList}
                 </div>
                 <div id='checkout-section'>
 
                 </div>
-            </div> */}
+            </div>
 
         </div>
     )

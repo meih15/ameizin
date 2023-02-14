@@ -56,7 +56,7 @@ function Header() {
                             <p className='order-word'>& Orders</p>
                         </div>
                     <div id='add-hover'>
-                    <Link to='' className='cart-section' >
+                    <Link to='/cart' className='cart-section' >
                         <div className='cart-section'>
                             <div id='cart-display'>
                                 <div id='number-items'>1</div>

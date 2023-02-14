@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::API
     include ActionController::RequestForgeryProtection
     protect_from_forgery with: :exception
-    before_action :snake_case_params, :attach_authenticity_token
+    before_action :snake_case_params, :attach_authenticity_token, :current_cart
     rescue_from StandardError, with: :unhandled_error
     rescue_from ActionController::InvalidAuthenticityToken,
         with: :invalid_authenticity_token
@@ -27,16 +27,12 @@ class ApplicationController < ActionController::API
     def persist_cart_items_through_login
         if session[:cart]
             guest_cart = Cart.find(session[:cart])
-            debugger
             guest_cart.cart_items.each {|item| CartItem.create(
                 cart_id: current_cart.id,
                 product_id: item.id
             )}
-            debugger
             cart_items = CartItem.all
-            debugger
             cart_items.each {|item| item.delete if item.user == nil}
-            debugger
             guest_cart.destroy
             session[:cart] = nil
         end
