@@ -21,7 +21,7 @@ const ProductContainer = ( {productId} ) => {
                 <Link to={`/products/${productId}`}>
                     <img id='' src={switch2Pic} alt=''></img>
                 </Link>
-                <Link to={`/products/${productId}`}>
+                <Link id='name-product-box' to={`/products/${productId}`}>
                     <h1 id='container-product-name'>{product.productName}</h1>
                 </Link>
             </div>

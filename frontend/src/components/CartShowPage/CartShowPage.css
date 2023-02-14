@@ -1,0 +1,18 @@
+.entire-cart-page {
+    background-color: #eaeded;
+    
+}
+
+.shopping-cart-text {
+    font-size: 28px;
+    color: black;
+    font-family: rg-ember;
+}
+
+#cart-item-section {
+    min-width: 640px;
+}
+
+#checkout-section {
+    width: 300px;
+}

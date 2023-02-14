@@ -1,12 +1,19 @@
+.adjust-carousel-width {
+        min-width: 1000px;
+        width: auto;
+}
+
 .product-box {
     width: 25%;
 }
 
 .product-box img {
-    width: 300px;
-    height: auto;
+    width: auto;
+    height: 300px;
 }
 
 .carousel-container {
     max-width: 1400px;
+    width: auto;
+    box-sizing: border-box;
 }

@@ -21,6 +21,7 @@ class Api::CartItemsController < ApplicationController
 
         if @cart_item.save
             render json: {success: "Item successfully added to cart" }, status: :created
+            # render :index
         else
             render json: {errors: @cart_item.errors.full_messages }, status: :unprocessable_entity
         end

@@ -28,7 +28,7 @@ export const fetchCart = () => async (dispatch) => {
 const cartsReducer = (state = {}, action) => {
     switch (action.type) {
         case RECEIVE_CART:
-            return {...state, [action.cart]: action.cart};
+            return {...state, [action.cart.id]: action.cart};
         default:
             return state;
     }

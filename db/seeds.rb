@@ -19,6 +19,7 @@ ApplicationRecord.transaction do
   ApplicationRecord.connection.reset_pk_sequence!('users')
   ApplicationRecord.connection.reset_pk_sequence!('categories')
   ApplicationRecord.connection.reset_pk_sequence!('products')
+  ApplicationRecord.connection.reset_pk_sequence!('carts')
 
   puts "Creating users..."
   # Create one user with an easy to remember username, email, and password:

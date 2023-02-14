@@ -12,7 +12,7 @@ const Carousel = ({products}) => {
     const productsList = [...products] || [];
 
     return (
-       <>
+       <div className="adjust-carousel-width">
         <Swiper
             className="carousel-container"
             modules={[Navigation, A11y, Scrollbar]}
@@ -31,7 +31,7 @@ const Carousel = ({products}) => {
             })}
             
         </Swiper>
-        </> 
+        </div> 
     )
 }
 

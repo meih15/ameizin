@@ -1,8 +1,7 @@
 class ApplicationController < ActionController::API
     include ActionController::RequestForgeryProtection
     protect_from_forgery with: :exception
-    before_action :snake_case_params, :attach_authenticity_token, :current_cart
-
+    before_action :snake_case_params, :attach_authenticity_token
     rescue_from StandardError, with: :unhandled_error
     rescue_from ActionController::InvalidAuthenticityToken,
         with: :invalid_authenticity_token
@@ -50,7 +49,6 @@ class ApplicationController < ActionController::API
     def login!(user)
         @current_user = user
         session[:session_token] = user.reset_session_token!
-    
         persist_cart_items_through_login
     end
 

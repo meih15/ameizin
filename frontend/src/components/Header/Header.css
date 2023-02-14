@@ -1,7 +1,7 @@
 .header {
     height: 60px;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     float: none;
     flex-flow: row nowrap;
     background-color: #131921;
