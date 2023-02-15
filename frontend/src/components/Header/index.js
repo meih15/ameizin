@@ -3,11 +3,17 @@ import './Header.css';
 import { Link, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import * as sessionActions from '../../store/session';
+import { fetchCart, getCart } from '../../store/carts';
+import { fetchCartItems, getCartItems } from '../../store/cartItems';
+import { useEffect } from 'react';
 
 function Header() {
     const history = useHistory();
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
+    const cart = useSelector(getCart());
+    const cartItems = useSelector(getCartItems);
+
     const logout = (e) => {
         e.preventDefault(); 
         dispatch(sessionActions.logout());
@@ -19,6 +25,19 @@ function Header() {
             {/* <p>New Customer? <Link to={'/signup'}>Start Here</Link></p> */}
         </>
     )
+
+    useEffect(() => {
+        dispatch(fetchCart())
+        dispatch(fetchCartItems)
+    }, [dispatch]);
+
+    const filteringItems = (items, cartId) => {
+        Object.freeze(items);
+        return items.filter(item => item.cartId === cartId)
+    }
+
+    const filteredCartItems = filteringItems(cartItems, cart.id)
+    const cartNumber = filteredCartItems.length
     
 
     return (
@@ -59,7 +78,7 @@ function Header() {
                     <Link to='/cart' className='cart-section' >
                         <div className='cart-section'>
                             <div id='cart-display'>
-                                <div id='number-items'>1</div>
+                                <div id='number-items'>{cartNumber}</div>
                                 <i id='cart-icon' className="fa-solid fa-cart-shopping"></i>
                             </div>
                             <p id='cart-text'>Cart</p>

@@ -1,5 +1,10 @@
 .entire-cart-page {
     background-color: #eaeded;
+    min-width: 1000px;
+}
+
+.cart-show-page {
+    display: flex;
     
 }
 
@@ -7,6 +12,13 @@
     font-size: 28px;
     color: black;
     font-family: rg-ember;
+}
+
+#middle-cart-page {
+    background-color: white;
+    width: auto;
+    min-width: 640px;
+    margin: 20px 20px;
 }
 
 #cart-item-section {

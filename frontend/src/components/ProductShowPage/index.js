@@ -51,20 +51,20 @@ function ProductShowPage() {
     const handleUpdateCart = e => {
         e.preventDefault();
  
-        const matchingCartItem = cartItems.find(item => item.product_id === product.id);
+        const matchingCartItem = cartItems.find(item => item.productId === product.id);
       
         const cart_item = {
+            id: matchingCartItem?.id,
             productId: product.id,
             cartId: cart.id,
             quantity: selectedQuantity + (matchingCartItem ? matchingCartItem.quantity : 0),
         };
-        console.log(cart_item);
-        console.log(cart);
-        console.log(cart.id);
-       debugger
+
         if (matchingCartItem) {
+          
             dispatch(updateCartItem(cart_item));
         } else {
+          
             dispatch(createCartItem(cart_item));
         }
     

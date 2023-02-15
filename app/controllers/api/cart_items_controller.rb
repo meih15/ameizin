@@ -1,5 +1,4 @@
 class Api::CartItemsController < ApplicationController
-    before_action :set_cart
 
     def index
         @cart_items = @cart.cart_items
@@ -7,7 +6,7 @@ class Api::CartItemsController < ApplicationController
     end
 
     def show
-       @cart_item = @cart.cart_items.find(params[:id])
+       @cart_item = CartItem.find(params[:id])
        if @cart_item 
         render :show
        else
@@ -16,8 +15,7 @@ class Api::CartItemsController < ApplicationController
     end
 
     def create
-        @product = Product.find(params[:product_id])
-        @cart_item = @cart.cart_items.create(quantity: params[:quantity], product: @product)
+        @cart_item = CartItem.create(cart_item_params)
 
         if @cart_item.save
             render :show
@@ -29,7 +27,7 @@ class Api::CartItemsController < ApplicationController
     end
 
     def update
-        @cart_item = @cart.cart_items.find(params[:id])
+        @cart_item = CartItem.find(params[:id])
         if @cart_item.update(cart_item_params)
             render :show
         else
@@ -38,7 +36,7 @@ class Api::CartItemsController < ApplicationController
     end
 
     def destroy
-        @cart_item = @cart.cart_items.find(params[:id])
+        @cart_item = CartItem.find(params[:id])
         if @cart_item.destroy
             render json: { success: "Cart item successfully removed" }, status: :ok
         else
@@ -49,15 +47,15 @@ class Api::CartItemsController < ApplicationController
     private
     
     def cart_item_params
-        params.require(:cart_item).permit(:quantity)
+        params.require(:cart_item).permit(:quantity, :cart_id, :product_id, :id)
     end
 
-    def set_cart
-        if current_user
-            @cart = current_user.cart
-        else
-            @cart = Cart.find(session[:cart]) if session[:cart]
-        end
-    end
+    # def set_cart
+    #     if current_user
+    #         @cart = current_user.cart
+    #     else
+    #         @cart = Cart.find(session[:cart]) if session[:cart]
+    #     end
+    # end
 
 end

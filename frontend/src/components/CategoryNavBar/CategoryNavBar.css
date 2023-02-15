@@ -6,6 +6,7 @@
     background-color: #232f3e;
     display: flex;
     justify-content: space-around;
+    min-width: 1000px;
 }
 
 #cat {

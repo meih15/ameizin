@@ -30,8 +30,8 @@ const CartShowPage = () => {
     const emptyCart = <h2 className='empty-cart'>Your Ameizin' Cart is empty</h2>
 
     const itemList = filteredCartItems.map(item => {
-        return <div>
-                    <CartProductContainer key={item.id} id={`cart-item-box-${item.id}`} cartItem={item}/>
+        return <div key={item.id}>
+                    <CartProductContainer id={`cart-item-box-${item.id}`} cartItem={item}/>
                 </div>
     });
 
@@ -43,13 +43,15 @@ const CartShowPage = () => {
                 <Header />
                 <CategoryNavBar />
             </div>
-            <div id='middle-cart-page'>
-                <div id='cart-items-section'>
+            <div className='cart-show-page'>
+                <div id='middle-cart-page'>
                     <h1 className='shopping-cart-text'>Shopping Cart</h1>
-                   {(filteredCartItems.length === 0) ? emptyCart : itemList}
-                </div>
-                <div id='checkout-section'>
-
+                    <div id='cart-items-section'>
+                    {(filteredCartItems.length === 0) ? emptyCart : itemList}
+                    </div>
+                    <div id='checkout-section'>
+                        <button>Checkout</button>
+                    </div>
                 </div>
             </div>
 
