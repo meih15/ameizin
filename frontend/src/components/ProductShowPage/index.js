@@ -1,4 +1,4 @@
-import { useEffect} from 'react';
+import { useEffect, useState} from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from 'react-router-dom';
 import { getProduct, fetchProduct } from '../../store/products';
@@ -6,6 +6,8 @@ import './ProductShowPage.css';
 import Header from '../Header';
 // import switchPic from '../../image/oled-model.avif';
 import switch2Pic from '../../image/oled-switch.jpeg';
+import { getCart, fetchCart } from '../../store/carts';
+import { getCartItems, fetchCartItems, updateCartItem, createCartItem } from '../../store/cartItems';
 
 
 function ProductShowPage() {
@@ -13,21 +15,73 @@ function ProductShowPage() {
     const { productId } = useParams();
     const product = useSelector(getProduct(productId));
     // const { loading, setLoading} = useState(true);
+    const cart = useSelector(getCart());
+    const cartItems = useSelector(getCartItems);
+    // const currentUser = useSelector(state => state.session.user);
+    const [selectedQuantity, setSelectedQuantity] = useState(1);
 
 
     useEffect(() => {
-     
         dispatch(fetchProduct(productId))
+        dispatch(fetchCart())
+        dispatch(fetchCartItems)
     }, [dispatch, productId]);
+
+    // const filteringItems = (items, cartId) => {
+    //     Object.freeze(items);
+    //     return items.filter(item => item.cartId === cartId)
+    // }
+
+    // const filteredCartItems = filteringItems(cartItems, cart.id)
 
 
     if (!product) return <h1>Loading...</h1>
 
+
+    // const handleAddtoCart = e => {
+    //     const cart_item = {
+    //         product_id: product.id,
+    //         cart_id: cart.id,
+    //         quantity: selectedQuantity
+    //     };
+
+    //    dispatch(createCartItem(cart_item))
+    // };
+
+    const handleUpdateCart = e => {
+        e.preventDefault();
+        debugger
+        const matchingCartItem = cartItems.find(item => item.product_id === product.id);
+        debugger
+        const cart_item = {
+            productId: product.id,
+            cartId: cart.id,
+            quantity: selectedQuantity + (matchingCartItem ? matchingCartItem.quantity : 0),
+        };
+        console.log(cart_item);
+        console.log(cart);
+        console.log(cart.id);
+        debugger
+        if (matchingCartItem) {
+            dispatch(updateCartItem(cart_item));
+        } else {
+            dispatch(createCartItem(cart_item));
+        }
+    
+    };
+
+    // can just combine the two functions
+
+    // const itemExists = filteredCartItems.some(item => item.productId === product.id);
+
+    const handleQuantityChange = e => {
+         setSelectedQuantity(parseInt(e.target.value));
+    };
+
     let dropQuantity = [...Array(Math.min(product.inventory, 30) + 1).keys()].slice(1);
-    const dropdown = <select className='dropdown-quantity'>
+    const dropdown = <select className='dropdown-quantity' value={selectedQuantity} onChange={handleQuantityChange}>
                             {dropQuantity.map(qty => <option key={qty} id='dropdown-number' value={qty}>{`Qty: ${qty}`}</option> )}
                         </select>
-
 
     return (
         <div className='entire-product-page'>
@@ -70,7 +124,7 @@ function ProductShowPage() {
                     </div>
                     <form>
                         {(product.inventory === 0) ? <p id='hide-drop'>dropdown</p> : dropdown} 
-                        <button id="add-to-cart">Add to Cart</button>
+                        <button id="add-to-cart" onClick={handleUpdateCart}>Add to Cart</button>
                     </form>
                     <div className='secure-transaction'>
                         <i id='lockIcon' className="fa-solid fa-lock"></i>

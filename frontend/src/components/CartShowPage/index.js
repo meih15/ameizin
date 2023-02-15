@@ -31,8 +31,8 @@ const CartShowPage = () => {
 
     const itemList = filteredCartItems.map(item => {
         return <div>
-            <CartProductContainer key={item.id} id={`cart-item-box-${item.id}`} cartItem={item}/>
-            </div>
+                    <CartProductContainer key={item.id} id={`cart-item-box-${item.id}`} cartItem={item}/>
+                </div>
     });
 
     
