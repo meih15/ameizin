@@ -50,9 +50,9 @@ function ProductShowPage() {
 
     const handleUpdateCart = e => {
         e.preventDefault();
-        debugger
+ 
         const matchingCartItem = cartItems.find(item => item.product_id === product.id);
-        debugger
+      
         const cart_item = {
             productId: product.id,
             cartId: cart.id,
@@ -61,7 +61,7 @@ function ProductShowPage() {
         console.log(cart_item);
         console.log(cart);
         console.log(cart.id);
-        debugger
+       debugger
         if (matchingCartItem) {
             dispatch(updateCartItem(cart_item));
         } else {

@@ -21,14 +21,16 @@ export const fetchCart = () => async (dispatch) => {
     if (response.ok) {
         
         const cart = await response.json();
+     
         dispatch(receiveCart(cart));
+    
     }
 };
 
 const cartsReducer = (state = {}, action) => {
     switch (action.type) {
         case RECEIVE_CART:
-            return {...state, [action.cart.id]: action.cart};
+            return {...state,  ...action.cart};
         default:
             return state;
     }
