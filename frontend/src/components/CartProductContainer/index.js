@@ -3,14 +3,14 @@ import switch2Pic from '../../image/oled-switch.jpeg';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProduct, getProduct } from '../../store/products';
 import { useEffect, useState } from 'react';
-import { updateCartItem } from '../../store/cartItems';
+import { deleteCartItem, updateCartItem } from '../../store/cartItems';
 
 
 
 const CartProductContainer = ({cartItem}) => {
     const dispatch = useDispatch();
     const product = useSelector(getProduct(cartItem.productId));
-    const [selectedQuantity, setSelectedQuantity] = useState(1);
+    const [selectedQuantity, setSelectedQuantity] = useState(cartItem.quantity);
 
 
 
@@ -28,6 +28,13 @@ const CartProductContainer = ({cartItem}) => {
         dispatch(updateCartItem(cart_item));
         setSelectedQuantity(newQuantity);
     };
+
+    const handleDelete = e => {
+        e.preventDefault();
+        dispatch(deleteCartItem(cartItem.id));
+    };
+
+    const productPrice = cartItem.quantity * product.price
 
     let dropQuantity = [...Array(Math.min(product.inventory, 30) + 1).keys()].slice(1);
     const dropdown = <select className='cart-dropdown-quantity' value={selectedQuantity} onChange={handleQuantityChange}>
@@ -47,10 +54,10 @@ const CartProductContainer = ({cartItem}) => {
                         </div>
                         <div id='updating-cart-section'>
                             {(product.inventory === 0) ? <p id='hide-cart-drop'>dropdown</p> : dropdown} 
+                            <button id='cart-delete-button' onClick={handleDelete}>Delete</button>
                         </div>
                     </div>
-                    <p id='cart-item-price-amount'></p>
-
+                    <p id='cart-item-price-amount'>${productPrice}</p>
                 </div>
             </div>
                
