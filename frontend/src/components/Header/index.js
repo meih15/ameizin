@@ -14,10 +14,19 @@ function Header() {
     const cart = useSelector(getCart());
     const cartItems = useSelector(getCartItems);
 
+    const filteringItems = (items, cartId) => {
+        Object.freeze(items);
+        return items.filter(item => item.cartId === cartId)
+    };
+    const filteredCartItems = filteringItems(cartItems, cart.id)
+    const cartNumber = filteredCartItems.length
+
     const logout = (e) => {
         e.preventDefault(); 
         dispatch(sessionActions.logout());
+        history.push('/login')
         };
+
 
     const signedout = (
         <>
@@ -28,17 +37,9 @@ function Header() {
 
     useEffect(() => {
         dispatch(fetchCart())
-        dispatch(fetchCartItems)
+        dispatch(fetchCartItems())
     }, [dispatch]);
 
-    const filteringItems = (items, cartId) => {
-        Object.freeze(items);
-        return items.filter(item => item.cartId === cartId)
-    }
-
-    const filteredCartItems = filteringItems(cartItems, cart.id)
-    const cartNumber = filteredCartItems.length
-    
 
     return (
         <div className='header'>

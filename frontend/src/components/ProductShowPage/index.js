@@ -1,6 +1,6 @@
 import { useEffect, useState} from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import { getProduct, fetchProduct } from '../../store/products';
 import './ProductShowPage.css';
 import Header from '../Header';
@@ -19,12 +19,12 @@ function ProductShowPage() {
     const cartItems = useSelector(getCartItems);
     // const currentUser = useSelector(state => state.session.user);
     const [selectedQuantity, setSelectedQuantity] = useState(1);
-
+    const history = useHistory();
 
     useEffect(() => {
         dispatch(fetchProduct(productId))
         dispatch(fetchCart())
-        dispatch(fetchCartItems)
+        dispatch(fetchCartItems())
     }, [dispatch, productId]);
 
     // const filteringItems = (items, cartId) => {
@@ -63,11 +63,13 @@ function ProductShowPage() {
         if (matchingCartItem) {
           
             dispatch(updateCartItem(cart_item));
+            history.push("/cart")
         } else {
-          
-            dispatch(createCartItem(cart_item));
-        }
     
+            dispatch(createCartItem(cart_item));
+            history.push("/cart")
+        }
+        
     };
 
     // can just combine the two functions
@@ -124,7 +126,7 @@ function ProductShowPage() {
                     </div>
                     <form>
                         {(product.inventory === 0) ? <p id='hide-drop'>dropdown</p> : dropdown} 
-                        <button id="add-to-cart" onClick={handleUpdateCart}>Add to Cart</button>
+                        {(product.inventory === 0) ? <p id='hide-drop'>dropdown</p> : <button id="add-to-cart" onClick={handleUpdateCart}>Add to Cart</button>}
                     </form>
                     <div className='secure-transaction'>
                         <i id='lockIcon' className="fa-solid fa-lock"></i>

@@ -15,7 +15,7 @@ const CartShowPage = () => {
     
     useEffect(() => {
         dispatch(fetchCart())
-        dispatch(fetchCartItems)
+        dispatch(fetchCartItems())
     }, [dispatch])
 
     if (!cart) return <h1>Loading...</h1>
