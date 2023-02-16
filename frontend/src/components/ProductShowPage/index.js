@@ -1,6 +1,6 @@
 import { useEffect, useState} from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory, useParams } from 'react-router-dom';
+import { Redirect, useHistory, useParams } from 'react-router-dom';
 import { getProduct, fetchProduct } from '../../store/products';
 import './ProductShowPage.css';
 import Header from '../Header';
@@ -8,6 +8,7 @@ import Header from '../Header';
 import switch2Pic from '../../image/oled-switch.jpeg';
 import { getCart, fetchCart } from '../../store/carts';
 import { getCartItems, fetchCartItems, updateCartItem, createCartItem } from '../../store/cartItems';
+import CategoryNavBar from '../CategoryNavBar';
 
 
 function ProductShowPage() {
@@ -17,7 +18,6 @@ function ProductShowPage() {
     // const { loading, setLoading} = useState(true);
     const cart = useSelector(getCart());
     const cartItems = useSelector(getCartItems);
-    // const currentUser = useSelector(state => state.session.user);
     const [selectedQuantity, setSelectedQuantity] = useState(1);
     const history = useHistory();
 
@@ -27,26 +27,9 @@ function ProductShowPage() {
         dispatch(fetchCartItems())
     }, [dispatch, productId]);
 
-    // const filteringItems = (items, cartId) => {
-    //     Object.freeze(items);
-    //     return items.filter(item => item.cartId === cartId)
-    // }
-
-    // const filteredCartItems = filteringItems(cartItems, cart.id)
-
 
     if (!product) return <h1>Loading...</h1>
 
-
-    // const handleAddtoCart = e => {
-    //     const cart_item = {
-    //         product_id: product.id,
-    //         cart_id: cart.id,
-    //         quantity: selectedQuantity
-    //     };
-
-    //    dispatch(createCartItem(cart_item))
-    // };
 
     const handleUpdateCart = e => {
         e.preventDefault();
@@ -61,20 +44,18 @@ function ProductShowPage() {
         };
 
         if (matchingCartItem) {
-          
-            dispatch(updateCartItem(cart_item));
-            history.push("/cart")
+            if ((selectedQuantity + matchingCartItem.quantity) > product.inventory) {
+                alert("Not enough inventory!");
+            } else {
+                dispatch(updateCartItem(cart_item));
+                history.push("/cart")}
         } else {
-    
             dispatch(createCartItem(cart_item));
             history.push("/cart")
         }
         
     };
 
-    // can just combine the two functions
-
-    // const itemExists = filteredCartItems.some(item => item.productId === product.id);
 
     const handleQuantityChange = e => {
          setSelectedQuantity(parseInt(e.target.value));
@@ -89,6 +70,7 @@ function ProductShowPage() {
         <div className='entire-product-page'>
        <div className='product-header'>
         <Header />
+        <CategoryNavBar />
         </div>
         <div className='pageElements'>
             <div className='top-of-page'>

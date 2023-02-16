@@ -24,7 +24,6 @@ const CategoryShowPage = () => {
     }, [dispatch, categoryId]);
 
     const filtering = (products, cId) => {
-        // debugger
         Object.freeze(products);
         return products.filter(product => product.categoryId === parseInt(cId));
     };

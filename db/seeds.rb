@@ -145,7 +145,7 @@ The Paldea Region is home to a prestigious school where people from all sorts of
 "Contoured Comfort: Logitech Wireless Mouse with a comfy, compact, and sculpted design features thumb rest, gliding feet, and lightweight maneuverability at only 85 g",
 "Play On: Rechargeable wireless gaming mouse with a long-lasting battery (with full lighting) for up to 40 gaming-hours, Logitech LIGHTSPEED wireless technology and Bluetooth enabled"],    
     price: 269.98,          
-    inventory: 1000,      
+    inventory: 100,      
     category_id: 1
   )
 
@@ -190,7 +190,7 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
 "Find new stories – With Kindle Unlimited, get unlimited access to over 2 million titles, thousands of audiobooks, and more.",
 "Designed with sustainability in mind. This Kindle uses 30-75% recycled plastics and 90% recycled magnesium and has 100% recyclable device packaging."],    
     price: 99.99,          
-    inventory: 10000,      
+    inventory: 100,      
     category_id: 1
   )
 
@@ -205,7 +205,7 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
 "Supports HDMI ARC - Sends audio directly from the HDMI jack to a compatible soundbar or AV receiver, removing the need for an extra cable."],
     description: "Access live over-the-air channels and streaming with this 24-inch TV—and control it all with your voice. Ask Alexa to launch apps, search for titles and more. An HD experience in 720p provides crystal clear images. You won’t miss a second with the Insignia NS-24F201NA23 24 inches Class F20 Series LED HD Smart Fire TV.",
     price: 89.99,
-    inventory: 20000,
+    inventory: 200,
     category_id: 1
   )
 
@@ -222,7 +222,7 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
 "Designed to protect your privacy - Amazon is not in the business of selling your personal information to others. Built with multiple layers of privacy controls including a mic/camera off button and a built-in camera shutter."],
     description: "Echo Show 5",
     price: 84.99,
-    inventory: 40000,
+    inventory: 400,
     category_id: 1
   )
 
@@ -237,7 +237,7 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
 "【All-day Battery life】 Tackle assignments or binge watch your favorite show with up to 10 hours of battery life. All day long. Designed for all-day productivity with extended battery life.",
 "【Operating System】 Windows 11 Home in S mode comes with advanced security features built right in, which can protect your rights and interests when you are online."],
     price: 299.99,
-    inventory: 4000000,
+    inventory: 400,
     category_id: 1
   )
 
@@ -253,7 +253,7 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
     "Blends Seamlessly into Skin: The thin sticker with a translucent matte finish keeps your pimple under wraps day or night. You might just forget you’re even wearing it.",
     " Peace-Of-Mind Design: Our hydrocolloid patches are UV sterilized, and allergy tested. Each box comes with 36 medium dots (12 millimeters) on easy-peel perforated sheets."],
     price: 12.99,
-    inventory: 99999,
+    inventory: 99,
     category_id: 2
   )
   # 2
@@ -329,7 +329,7 @@ You can use your ice roller both morning and evening. It is great for helping th
     "[ DERMATOLOGIST RECOMMENDED ] CeraVe Skincare is developed with dermatologists and has products suitable for dry skin, sensitive skin, oily skin, acne-prone, and more. This skin care product comes with a lid seal",
     "[ GENTLE DAILY MOISTURIZER ] For face and body or can be used as a hand cream for dry skin relief. Holds National Eczema Association (NEA) Seal of Acceptance. Fragrance free, paraben free, allergy-tested, and non-comedogenic."],
     price: 15.48,
-    inventory: 9999,
+    inventory: 99,
     category_id: 2
   )
 
@@ -343,7 +343,7 @@ You can use your ice roller both morning and evening. It is great for helping th
     "Sunscreen lotion formula uses Avobenzone for optimal broad-spectrum protection from skin-aging UVA rays and skin-burning UVB rays for both your body and face",
     "Both PABA-free and non-comedogenic, this lightweight sunscreen is suitable for all skin types and provides powerful face and body sun protection without the heavy finish"],
     price: 8.97,
-    inventory: 9999,
+    inventory: 99,
     category_id: 2
   )
 
@@ -358,7 +358,7 @@ You can use your ice roller both morning and evening. It is great for helping th
     "Way Better than Loofahs or Chemical Exfoliants - Loofahs and chemical exfoliants don’t have the skin-gripping power of our viscose shower exfoliators, meaning they’re not as good at removing dead skin. Our mitts are rough enough to exfoliate deep, while soft enough to buff and smooth.",
     "Reveal a Heavenly Glow - Use our Korean scrub mitts to fight back against dry, bumpy skin caused by keratosis pilaris. Your arms, legs, and body will look smoother and fresher than ever before."],
     price: 9.99,
-    inventory: 99999,
+    inventory: 99,
     category_id: 2
   )
 
@@ -373,7 +373,7 @@ You can use your ice roller both morning and evening. It is great for helping th
     "Free From: Drying Alcohols, Artificial Colorants, Artificial Fragrance, Lanolin, Mineral Oil, Parabens, Petrolatum, Phthalates, Propylene Glycol, Sulfates, Talc, Formaldehydes, Oxybenzone, Coal Tar, Triclocarbon, Ethanol",
     "Dermatologist Tested: Our vegan & cruelty-free exfoliating body scrub is also gluten-free, nut-free, oil-free, soy-free, silicone-free, safe for sensitive skin and nano-free"],
     price: 12.00,
-    inventory: 9999,
+    inventory: 99,
     category_id: 2
   )
 
@@ -387,7 +387,7 @@ You can use your ice roller both morning and evening. It is great for helping th
     "The full-pigment formula delivers high color payoff and buildable intensity",
     "Includes a dual-ended brush and a large mirror housed inside travel-friendly packaging"],
     price: 45.00,
-    inventory: 9999,
+    inventory: 120,
     category_id: 2
   )
 
@@ -427,7 +427,7 @@ You can use your ice roller both morning and evening. It is great for helping th
     "SAFE FOR ALL HAIR TYPES: Our versatile Rosemary Mint Scalp & Hair Strengthening Oil promotes radiant hair for all hair types and deeply nourishes types 3A to 4C, chemically-treated hair, braids, weaves, and both low and high porosity level hair",
     "BY WOMEN FOR WOMEN: Mielle Organics aims to empower women of all hair types and styles with powerful products and gentle, organic ingredients that amplify your natural beauty and are the “root to results” that leave you looking and feeling your best"],
     price: 9.99,
-    inventory: 99999,
+    inventory: 200,
     category_id: 2
   )
 
@@ -441,7 +441,7 @@ You can use your ice roller both morning and evening. It is great for helping th
     "A Versatile Hair Band - Wearing this while washing your face is just one way of using it. It may also come in handy for absorbing sweat during yoga or keeping your hair in place while applying makeup.",
     "A Great Self Care Gift - Looking to prepare a self care package for a friend or loved one? Make sure you include this sponge face wash headband! It'll make an great present on any special occasion"],
     price: 6.99,
-    inventory: 99999,
+    inventory: 100,
     category_id: 2
   )
 
@@ -457,7 +457,7 @@ They are suitable for men, women, kids and the people who have thick heavy hair.
     "【WIDELY USED】The 100pcs brown hair ties with 1.5 inch diameter make it great for thin hair, thick hair, straight hair, heavy hair and curly hair, easy to form beautiful low or high ponytails, elegant and stylish to perfectly match all kinds of outfits or hairstyles.",
     "【Great for Kids and Women】The brown hair ties are simple but practical, they can hold your ponytail well for your daily use. They can be applied in various occasions such as school, home, office or using them when you are working out."],
     price: 5.94,
-    inventory: 99999,
+    inventory: 100,
     category_id: 2
   )
 
@@ -472,7 +472,7 @@ They are suitable for men, women, kids and the people who have thick heavy hair.
     "Maybelline Has What You Need: To create any look foundation, BB creams, concealers, and highlighters for the perfect canvas, eye shadows, brow pencils, and eyeliners for any eye look and lip products, from showstopping matte lipstick to a natural lip balm",
     "Remove Maybelline Makeup With Micellar Water: Use Garnier Micellar Water as a gentle makeup remover at night, and as a facial cleanser in the morning to prep skin for Maybelline makeup"],
     price: 8.80,
-    inventory: 9999,
+    inventory: 100,
     category_id: 2
   )
 
@@ -486,7 +486,7 @@ They are suitable for men, women, kids and the people who have thick heavy hair.
     "Easy to carry and convenient for travel.",
     "Cruelty-free, vegan and 100% free from Phthalates, Parabens, Nonylphenol, Ethoxylates, Triclosan, triclocarban."],
     price: 9.99,
-    inventory: 9999,
+    inventory: 100,
     category_id: 2
   )
 
@@ -500,7 +500,7 @@ They are suitable for men, women, kids and the people who have thick heavy hair.
     "MORE COVERAGE, MORE GLOW: For sheer coverage mix our Daily Hydration Moisturizer with the foundation, or for added glow, mix our Beautifully Bare Natural Glow Lotion with the foundation.",
     "SKIN-LOVING INGREDIENTS: All e.l.f. products are made from skin-loving ingredients you want, minus the toxins you don’t—all at good-for-you prices. All e.l.f. products are 100% cruelty-free and Vegan."],
     price: 6.00,
-    inventory: 9999,
+    inventory: 100,
     category_id: 2
   )
 
@@ -559,7 +559,7 @@ They are suitable for men, women, kids and the people who have thick heavy hair.
     "Dry down: sensual musk's creamy blond woods",
     "Note: Apply to pulse points: wrist, chest and neck."],
     price: 65.00,
-    inventory: 9999,
+    inventory: 100,
     category_id: 2
   )
 
@@ -574,7 +574,7 @@ They are suitable for men, women, kids and the people who have thick heavy hair.
     "Perfume begins with fruity notes of grapefruit, raspberry & pear",
     "The heart is enhanced with floral notes of violet, rose, apple blossom & jasmine"],
     price: 72.99,
-    inventory: 9999,
+    inventory: 100,
     category_id: 2
   )
 
@@ -586,7 +586,7 @@ They are suitable for men, women, kids and the people who have thick heavy hair.
       "Introduced in the year 2000, by the design house of Kenzo. Flower is a floral, powdery fragrance with a blend of wild hawthorne, bulgarian rose, parma violet, cassia, hedione, cyclosal, opoponax, white musk and vanilla. It is recommended for casual wear",
     "Ships same day.", "International Shipping Available"],
     price: 66.92,
-    inventory: 99999,
+    inventory: 100,
     category_id: 2
   )
 
@@ -601,7 +601,7 @@ They are suitable for men, women, kids and the people who have thick heavy hair.
     "Cruelty Free Cosmetics: We believe animals belong in our arms, not in a lab; All of our makeup is certified and acknowledged by PETA as a cruelty free brand; We don't test any of our products on animals",
     "Discover NYX Professional Makeup: Try all of our professional makeup products today from eyeshadow, eyeliner, and false lashes to liquid lipstick, lip gloss, primer, concealer, setting sprays and eyebrow makeup"],
     price: 4.97,
-    inventory: 9999,
+    inventory: 100,
     category_id: 2
   )
 
@@ -613,7 +613,7 @@ They are suitable for men, women, kids and the people who have thick heavy hair.
     "Item Condition: 100% authentic, new and unused. The Dreamer by Versace for Men 3.4 oz Eau de Toilette Spray.",
     "Type: Eau De Toilette"],
     price: 34.99,
-    inventory: 99999,
+    inventory: 100,
     category_id: 2
   )
 
@@ -639,7 +639,7 @@ They are suitable for men, women, kids and the people who have thick heavy hair.
     "Pulse points give off more body heat as this is where blood vessels are closest to the skin, therefore continually warming and releasing your fragrance",
     "The package dimension of the product is 8.9cmL x 8.9cmW x 18.1cmH"],
     price: 77.24,
-    inventory: 7999,
+    inventory: 100,
     category_id: 2
   )
 
@@ -666,7 +666,7 @@ They are suitable for men, women, kids and the people who have thick heavy hair.
     "Stock up with BIC Soleil Smooth Colors disposable razors bulk packs, so you always have dependable BIC razors",
     "100% recyclable packaging"],
     price: 19.99,
-    inventory: 9999,
+    inventory: 100,
     category_id: 2
   )
 
@@ -676,7 +676,7 @@ They are suitable for men, women, kids and the people who have thick heavy hair.
     description: "James Clear is a writer and speaker focused on habits, decision making, and continuous improvement. He is the author of the #1 New York Times bestseller, Atomic Habits. The book has sold over 5 million copies worldwide and has been translated into more than 50 languages. Clear is a regular speaker at Fortune 500 companies and his work has been featured in places like Time magazine, the New York Times, the Wall Street Journal and on CBS This Morning. His popular '3-2-1' email newsletter is sent out each week to more than 1 million subscribers.",
     bullets: ["Atomic Habits will reshape the way you think about progress and success, and give you the tools and strategies you need to transform your habits--whether you are a team looking to win a championship, an organization hoping to redefine an industry, or simply an individual who wishes to quit smoking, lose weight, reduce stress, or achieve any other goal."],
     price: 14.11,
-    inventory: 9999,
+    inventory: 100,
     category_id: 3
   )
 
@@ -745,7 +745,7 @@ Summoned to Evelyn’s luxurious apartment, Monique listens in fascination as th
 
 From the New York Times bestselling author of Daisy Jones & the Six—an entrancing and “wildly addictive journey of a reclusive Hollywood starlet” (PopSugar) as she reflects on her relentless rise to the top and the risks she took, the loves she lost, and the long-held secrets the public could never imagine."],
     price: 9.42,
-    inventory: 9999,
+    inventory: 99,
     category_id: 3
   )
 
@@ -760,7 +760,7 @@ From the New York Times bestselling author of Daisy Jones & the Six—an entranc
 “The perfect cure for toxic positivity.”—ADAM GRANT, author of Think Again",
     "LONGLISTED FOR THE PORCHLIGHT BUSINESS BOOK AWARD • ONE OF THE BEST BOOKS OF THE YEAR: The Wall Street Journal, Mashable"],
     price: 14.34,
-    inventory: 9999,
+    inventory: 100,
     category_id: 3
   ) 
 
@@ -774,7 +774,7 @@ From the New York Times bestselling author of Daisy Jones & the Six—an entranc
     "Celebrate your little cuddle bug with this sweet and colorful rhyming board book! With chunky pages for little hands and die-cut cuddle bugs to add depth and interest, children will love the interactive features alongside the story.",
     "From Valentine’s Day to Christmas Day and every day in between, the bestselling You’re My Little series is cute as can be—and festive too! Each spread of these chunky board books shows a child and parent pair with adorable illustrations by Natalie Marshall, as well as shaped cut-outs and raised elements. Perfect for cuddling up with your little one, these sweet rhyming stories celebrates a parent’s love for their child."],
     price: 7.74,
-    inventory: 9999,
+    inventory: 100,
     category_id: 3
   ) 
 
@@ -786,7 +786,7 @@ From the New York Times bestselling author of Daisy Jones & the Six—an entranc
     bullets: ["Show a child just how strong your love is every minute of the day! Features a 'To' and 'From' personalization page, making this sweet offering an ideal gift for baby showers, birthdays, and new parents.",
     "The sun rises, and a bear and cub begin their day together. They splash in the water, climb mountains, watch the colorful lights in the shimmering sky, and play with friends. They show their love for each other by touching noses, chasing each other, and, of course, hugging and snuggling before bed. A sweet, gentle rhyme, perfect for sharing with a special little one that also includes a 'To' and 'From' personalization page in the front of the book, making this heartwarming book an ideal gift."],
     price: 4.76,
-    inventory: 9999,
+    inventory: 99,
     category_id: 3
   ) 
 
@@ -860,7 +860,7 @@ At least, that’s the plan until the trouble turns to real danger."],
 
 Too bad Lina's got secrets of her own, and if Nash finds out the real reason she's in town, he'll never forgive her. Besides, she doesn't do relationships. Ever. A hot, short-term fling with a local cop? Absolutely. Sign her up. A relationship with a man who expects her to plant roots? No freaking way. Once she gets what she's after, she has no intention of sticking around. But Knockemout has a way of getting under people's skin. And once Nash decides to make Lina his, he's not about to be dissuaded…even if it means facing the danger that nearly killed him."],
     price: 13.52,
-    inventory: 9999,
+    inventory: 100,
     category_id: 3
   ) 
 
@@ -887,7 +887,7 @@ Too bad Lina's got secrets of her own, and if Nash finds out the real reason she
     "In a great green room, tucked away in bed, is a little bunny. 'Goodnight room, goodnight moon.' And to all the familiar things in the softly lit room—to the picture of the three little bears sitting on chairs, to the clocks and his socks, to the mittens and the kittens, to everything one by one—the little bunny says goodnight.",
     "One of the most beloved books of all time, Goodnight Moon is a must for every bookshelf. This board book edition is the right size for little hands and is the perfect gift for baby showers, toddler birthday parties, and holidays."],
     price: 5.36,
-    inventory: 9999,
+    inventory: 99,
     category_id: 3
   ) 
 
@@ -903,7 +903,7 @@ Too bad Lina's got secrets of her own, and if Nash finds out the real reason she
     "Dale Carnegie’s rock-solid, time-tested advice has carried countless people up the ladder of success in their business and personal lives.",
     "chieve your maximum potential—a must-read for the twenty-first century with more than 15 million copies sold!"],
     price: 10.40,
-    inventory: 9999,
+    inventory: 99,
     category_id: 3
   ) 
 
@@ -916,7 +916,7 @@ Too bad Lina's got secrets of her own, and if Nash finds out the real reason she
     bullets: ["Give your child a head start in reading with these colorful, double-sided Sight Words Flash Cards that feature the first 100 words from the Fry List. An essential tool in building reading fluency!",
     "includes 54 cards"],
     price: 2.88,
-    inventory: 9999,
+    inventory: 99,
     category_id: 3
   ) 
 
@@ -931,7 +931,7 @@ Too bad Lina's got secrets of her own, and if Nash finds out the real reason she
     "Manson makes the argument, backed both by academic research and well-timed poop jokes, that improving our lives hinges not on our ability to turn lemons into lemonade, but on learning to stomach lemons better. Human beings are flawed and limited—'not everybody can be extraordinary, there are winners and losers in society, and some of it is not fair or your fault.' Manson advises us to get to know our limitations and accept them. Once we embrace our fears, faults, and uncertainties, once we stop running and avoiding and start confronting painful truths, we can begin to find the courage, perseverance, honesty, responsibility, curiosity, and forgiveness we seek.",
     "There are only so many things we can give a f**k about so we need to figure out which ones really matter, Manson makes clear. While money is nice, caring about what you do with your life is better, because true wealth is about experience. A much-needed grab-you-by-the-shoulders-and-look-you-in-the-eye moment of real-talk, filled with entertaining stories and profane, ruthless humor, The Subtle Art of Not Giving a F**k is a refreshing slap for a generation to help them lead contented, grounded lives."],
     price: 25.99,
-    inventory: 9999,
+    inventory: 99,
     category_id: 3
   ) 
 

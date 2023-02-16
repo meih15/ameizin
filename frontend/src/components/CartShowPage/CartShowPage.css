@@ -46,6 +46,11 @@
 .entire-cart-page {
     background-color: #eaeded;
     min-width: 1000px;
+    background-color: #eaeded;
+    min-height: 100vh;
+    /* min-width: 100%; */
+    overflow: auto;
+        
 }
 
 .cart-show-page {
@@ -60,10 +65,13 @@
 }
 
 #middle-cart-page {
+
     background-color: white;
     width: auto;
     min-width: 640px;
     margin: 20px 20px;
+    padding: 20px 20px 20px 20px;
+    text-align: left;
 }
 
 #cart-item-section {
@@ -71,5 +79,7 @@
 }
 
 #checkout-section {
+    /* display: flex; */
+
     width: 300px;
 }

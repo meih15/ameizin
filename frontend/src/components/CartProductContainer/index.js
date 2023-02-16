@@ -17,7 +17,8 @@ const CartProductContainer = ({cartItem}) => {
 
     useEffect(() => {
         dispatch(fetchProduct(cartItem.productId))
-    }, [dispatch])
+        setSelectedQuantity(cartItem.quantity)
+    }, [dispatch, cartItem])
 
     if (!product) return <p>Loading</p>
 
@@ -38,7 +39,7 @@ const CartProductContainer = ({cartItem}) => {
 
     const productPrice = cartItem.quantity * product.price
 
-    let dropQuantity = [...Array(Math.min(product.inventory, 30) + 1).keys()].slice(1);
+    let dropQuantity = [...Array(product.inventory + 1).keys()].slice(1);
     const dropdown = <select className='cart-dropdown-quantity' value={selectedQuantity} onChange={handleQuantityChange}>
                             {dropQuantity.map(qty => <option key={qty} id='dropdown-number' value={qty}>{`Qty: ${qty}`}</option> )}
                         </select>

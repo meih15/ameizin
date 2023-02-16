@@ -1,14 +1,12 @@
 .cart-left-side {
     background-color: white;
-}
-
-.cart-right-side {
-    width: 300px;
+    display: flex;
 }
 
 #cart-product-image {
     width: 200px;
     height: 200px;
+    display: flex;
 }
 
 #cart-product-name {
