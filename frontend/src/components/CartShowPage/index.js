@@ -26,6 +26,7 @@ const CartShowPage = () => {
     }
 
     const filteredCartItems = filteringItems(allItems, cart.id)
+    const totalItems = filteredCartItems.length
 
     const emptyCart = <h2 className='empty-cart'>Your Ameizin' Cart is empty</h2>
 
@@ -50,7 +51,30 @@ const CartShowPage = () => {
                     {(filteredCartItems.length === 0) ? emptyCart : itemList}
                     </div>
                     <div id='checkout-section'>
-                        <button>Checkout</button>
+                        <h2>Order Summary</h2>
+                        <div className='cart-summary-text'>
+                            <div id='total-items'>
+                                { totalItems > 1 ? <p id='item-nums'>Items ({totalItems}):</p> : <p id='one-item'>Items:</p>}
+                                {/* order total */}
+                            </div>
+                            <div id='shipping-section'>
+                                <p id='s-and-h'>Shipping & handling:</p>
+                                <p id='s-and-h-price'>$0.00</p>
+                            </div>
+                            <div id='tax-section'>
+                                <p id='total'>Total before tax:</p>
+                                {/* order total */}
+                            </div>
+                            <div id='tax-collected'>
+                                <p id='tax-text'>Estimated tax to be collected:</p>
+                                <p id='tax-price'>$0.00</p>
+                            </div>
+                        </div>
+                        <div className='order-total-section'>
+                            <p id='order-text'>Order total:</p>
+                            {/* order total */}
+                        </div>
+                        <button id='checkout-button'>Checkout</button>
                     </div>
                 </div>
             </div>
