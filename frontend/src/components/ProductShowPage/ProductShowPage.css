@@ -1,5 +1,5 @@
 /* .entire-product-page {
-    overflow: hidden;
+    overflow: auto;
 } */
 
 .product-header {
@@ -126,7 +126,8 @@ img#fillerImage {
     height: 1px;
     line-height: 19px;
     margin-bottom: 14px;
-    margin-top: 0;}
+    margin-top: 0;
+}
 
 #price-symbol-info, #price-cents-info, #price-whole-number-info {
     font-size: 18px;

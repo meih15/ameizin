@@ -47,6 +47,7 @@ const CartProductContainer = ({cartItem}) => {
     return(
             <div id='cart-left-side'>
                 <div className='cart-product-box'>
+                    <div className='left-pls'>
                     <Link to={`/products/${product.id}`}>
                         <img src={switch2Pic} id='cart-product-image' alt='cart-product'/>
                     </Link>
@@ -66,6 +67,7 @@ const CartProductContainer = ({cartItem}) => {
                             <button id='cart-delete-button' onClick={handleDelete}>Delete</button>
                         </div>
                     </div>
+                </div>
                     <div className='cart-item-price'>
                         <p id='cart-item-price-symbol'>$</p>
                         <p id='cart-item-price-whole-number-info'>{(Math.floor(productPrice)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.</p>

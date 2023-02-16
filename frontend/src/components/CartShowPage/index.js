@@ -7,6 +7,7 @@ import CategoryNavBar from '../CategoryNavBar';
 import CartProductContainer from '../CartProductContainer';
 import { fetchCartItems, getCartItems } from '../../store/cartItems';
 import { Link } from 'react-router-dom';
+import { fetchProducts, getProducts } from '../../store/products';
 
 
 
@@ -14,10 +15,12 @@ const CartShowPage = () => {
     const dispatch = useDispatch();
     const cart = useSelector(getCart());
     const allItems = useSelector(getCartItems);
+    const products = useSelector(getProducts);
     
     useEffect(() => {
         dispatch(fetchCart())
         dispatch(fetchCartItems())
+        dispatch(fetchProducts())
     }, [dispatch])
 
     if (!cart) return <h1>Loading...</h1>
@@ -28,7 +31,7 @@ const CartShowPage = () => {
     }
 
     const filteredCartItems = filteringItems(allItems, cart.id)
-    const totalItems = filteredCartItems.length
+    const totalItems = allItems.reduce((total, item) => item.cartId === cart.id ? total + item.quantity : total, 0);
 
     const emptyCart = <h2 className='empty-cart'>Your Ameizin' Cart is empty</h2>
 
@@ -38,6 +41,15 @@ const CartShowPage = () => {
                 </div>
     });
 
+
+    const cartTotal = filteredCartItems.reduce((total, item) => {
+        const product = products.find(product => product.id === item.productId);
+        if (product) {
+            return total + (item.quantity * product.price);
+        }
+            return total;
+        }, 0);
+        
     
     if (filteredCartItems.length === 0) {
         return (
@@ -62,34 +74,61 @@ const CartShowPage = () => {
                 </div>
                 <div className='cart-show-page'>
                     <div id='middle-cart-page'>
-                        <h1 className='shopping-cart-text'>Shopping Cart</h1>
+                        <div id='top-of-middle-section'>
+                            <h1 className='shopping-cart-text'>Shopping Cart</h1>
+                            <p id='middle-section-price'>Price</p>
+                        </div>
+                        <div id='cart-break'/>
                         <div id='cart-items-section'>
                             {itemList}
                         </div>
+                        <div id='bottom-cart-break'/>
+                        <div id='subtotal-section'>
+                            { totalItems > 1 ? <p id='subtotals'>Subtotal ({totalItems} items): </p> : <p id='subtotals'>Subtotal (1 item): </p>}
+                             <div className='subtotal-price'>
+                                <p id='subtotal-price-symbol'>$</p>
+                                <p id='subtotal-price-whole-number-info'>{(Math.floor(cartTotal)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.</p>
+                                <p id='subtotal-price-cents-info'>{Math.floor((cartTotal % 1) * 100) === 0 ? '00' : Math.floor((cartTotal % 1) * 100)}</p>
+                            </div>
+                        </div>
                     </div>
                     <div id='checkout-section'>
-                        <h2>Order Summary</h2>
+                        <h2 id='order-text'>Order Summary</h2>
                         <div className='cart-summary-text'>
                             <div id='total-items'>
-                                { totalItems > 1 ? <p id='item-nums'>Items ({totalItems}):</p> : <p id='one-item'>Items:</p>}
-                                {/* order total */}
+                                { totalItems > 1 ? <p id='item-nums'>Items ({totalItems}):</p> : <p id='item-nums'>Items:</p>}
+                                <div className='summary-price'>
+                                    <p id='summary-price-symbol'>$</p>
+                                    <p id='summary-price-whole-number-info'>{(Math.floor(cartTotal)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.</p>
+                                    <p id='summary-price-cents-info'>{Math.floor((cartTotal % 1) * 100) === 0 ? '00' : Math.floor((cartTotal % 1) * 100)}</p>
+                                </div>
                             </div>
                             <div id='shipping-section'>
                                 <p id='s-and-h'>Shipping & handling:</p>
-                                <p id='s-and-h-price'>$0.00</p>
+                                <p id='s-and-h-price'>--</p>
                             </div>
+                            <div id='order-top-break'/>
                             <div id='tax-section'>
                                 <p id='total'>Total before tax:</p>
-                                {/* order total */}
+                                <div className='summary-price'>
+                                    <p id='summary-price-symbol'>$</p>
+                                    <p id='summary-price-whole-number-info'>{(Math.floor(cartTotal)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.</p>
+                                    <p id='summary-price-cents-info'>{Math.floor((cartTotal % 1) * 100) === 0 ? '00' : Math.floor((cartTotal % 1) * 100)}</p>
+                                </div>
                             </div>
                             <div id='tax-collected'>
                                 <p id='tax-text'>Estimated tax to be collected:</p>
-                                <p id='tax-price'>$0.00</p>
+                                <p id='tax-price'>--</p>
                             </div>
+                            <div id='order-top-break'/>
                         </div>
                         <div className='order-total-section'>
-                            <p id='order-text'>Order total:</p>
-                            {/* order total */}
+                            <p id='order-total-text'>Order total:</p>
+                            <div className='total-price'>
+                                <p id='total-price-symbol'>$</p>
+                                <p id='total-price-whole-number-info'>{(Math.floor(cartTotal)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.</p>
+                                <p id='total-price-cents-info'>{Math.floor((cartTotal % 1) * 100) === 0 ? '00' : Math.floor((cartTotal % 1) * 100)}</p>
+                            </div>
                         </div>
                         <button id='checkout-button'>Checkout</button>
                     </div>
@@ -99,5 +138,7 @@ const CartShowPage = () => {
         )}
 
 };
+
+
 
 export default CartShowPage;

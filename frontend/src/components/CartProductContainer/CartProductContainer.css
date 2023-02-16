@@ -7,8 +7,10 @@
     display: flex;
     justify-content: space-between;
     font-family: rg-ember;
-    margin-top: 5px;
-        margin-bottom: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* width: auto; */
+    
 }
 
 #cart-product-image {
@@ -20,7 +22,14 @@
 #cart-product-middle-section {
     display: flex;
     flex-direction: column;
-    width: 380px;
+    min-width: 380px;
+    text-align: left;
+    justify-content: left;
+}
+
+.left-pls {
+    display: flex;
+
 }
 
 #cart-product-name {
@@ -62,6 +71,7 @@
 
 .cart-item-price{
     display: flex;
+    justify-content: right;
     font-family: bolded-ember;
     font-size: 18px;
     padding-top: 10px;
@@ -98,12 +108,11 @@
 }
 
 #separator-vertical {
-        display: inline-block;
-        margin: -2px 0.67375em 0;
-        width: 1px;
-        background-color: #ddd;
-        line-height: 0;
-        height: 14px;
-        vertical-align: middle;
+    display: inline-block;
+    margin: -2px 0.67375em 0;
+    width: 1px;
+    background-color: #ddd;
+    line-height: 0;
+    height: 14px;
+    vertical-align: middle;
 }
-
