@@ -14,12 +14,7 @@ function Header() {
     const cart = useSelector(getCart());
     const cartItems = useSelector(getCartItems);
 
-    const filteringItems = (items, cartId) => {
-        Object.freeze(items);
-        return items.filter(item => item.cartId === cartId)
-    };
-    const filteredCartItems = filteringItems(cartItems, cart.id)
-    const cartNumber = filteredCartItems.length
+    const cartNumber = cartItems.reduce((total, item) => item.cartId === cart.id ? total + item.quantity : total, 0);
 
     const logout = (e) => {
         e.preventDefault(); 
