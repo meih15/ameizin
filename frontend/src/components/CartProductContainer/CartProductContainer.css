@@ -5,3 +5,8 @@
 .cart-right-side {
     width: 300px;
 }
+
+#cart-product-image {
+    width: 200px;
+    height: 200px;
+}
