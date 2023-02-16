@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchProduct, getProduct } from '../../store/products';
 import { useEffect, useState } from 'react';
 import { deleteCartItem, updateCartItem } from '../../store/cartItems';
+import { Link } from 'react-router-dom';
 
 
 
@@ -23,10 +24,11 @@ const CartProductContainer = ({cartItem}) => {
     const handleQuantityChange = e => {
         e.preventDefault();
         const newQuantity = (parseInt(e.target.value));
+        setSelectedQuantity(newQuantity);
 
         const cart_item = {...cartItem, quantity: newQuantity};
         dispatch(updateCartItem(cart_item));
-        setSelectedQuantity(newQuantity);
+        // setSelectedQuantity(newQuantity);
     };
 
     const handleDelete = e => {
@@ -44,9 +46,13 @@ const CartProductContainer = ({cartItem}) => {
     return(
             <div id='cart-left-side'>
                 <div className='cart-product-box'>
-                    <img src={switch2Pic} id='cart-product-image' alt='cart-product'/>
+                    <Link to={`/products/${product.id}`}>
+                        <img src={switch2Pic} id='cart-product-image' alt='cart-product'/>
+                    </Link>
                     <div id='cart-product-middle-section'>
-                        <p id='cart-product-name'>{product.productName}</p>
+                        <Link id='name-link' to={`/products/${product.id}`}>
+                            <p id='cart-product-name'>{product.productName}</p>
+                        </Link>
                         <div id='cart-dynamic-stock'>
                             <p className='cart-stock-low'>{(product.inventory < 21 && product.inventory !== 0) ? `Only ${product.inventory} left in stock - order soon.` : ''}</p>
                             <p className='cart-stock-high'>{(product.inventory >= 21) ? 'In Stock' : ''}</p>
