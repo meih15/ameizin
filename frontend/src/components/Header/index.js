@@ -26,7 +26,6 @@ function Header() {
     const signedout = (
         <>
             <button className='signin_drop_down' onClick={() => history.push('/login')} >Sign In</button>
-            {/* <p>New Customer? <Link to={'/signup'}>Start Here</Link></p> */}
         </>
     )
 
