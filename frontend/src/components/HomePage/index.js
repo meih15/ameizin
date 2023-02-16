@@ -47,14 +47,16 @@ function HomePage() {
                 <main id='main-page'>
                     <div className='splash-page'>
                         <ImageSlider images={homePageImages} imageLinks={homePageImageLinks} />
-                        <div className='first-four-grid'>
-                            {firstFour.map(prdct => <ProductContainer key={prdct.id} productId={prdct.id}/>)}
-                        </div>
-                        <div className='carouselOne'>
-                            <Carousel products={productsList}/>
-                        </div>
-                        <div className='last-four-grid'>
-                            {lastFour.map(prdct => <ProductContainer key={prdct.id} productId={prdct.id}/>)}
+                        <div className='product-show-home'>
+                            <div className='first-four-grid'>
+                                {firstFour.map(prdct => <ProductContainer key={prdct.id} productId={prdct.id}/>)}
+                            </div>
+                            <div className='carouselOne'>
+                                <Carousel products={productsList}/>
+                            </div>
+                            <div className='last-four-grid'>
+                                {lastFour.map(prdct => <ProductContainer key={prdct.id} productId={prdct.id}/>)}
+                            </div>
                         </div>
                     </div>
                 </main>

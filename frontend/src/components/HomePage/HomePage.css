@@ -32,7 +32,10 @@
     width: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1rem;
+    gap: 1px;
+    /* place-items: center; */
+    text-align: center;
+
 }
 
 .first-four-grid img {
@@ -44,6 +47,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
 }
 
 .last-four-grid img {
@@ -55,4 +59,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
+}
+
+
+.product-show-home {
+    width: auto;
+    height: auto;
+    top: -200px;
+    position: relative;
 }
