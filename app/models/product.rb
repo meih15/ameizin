@@ -23,7 +23,11 @@ class Product < ApplicationRecord
         class_name: :CartItem,
         dependent: :destroy
 
-    
+    has_many :order_history_items,
+        foreign_key: :product_id,
+        class_name: :OrderHistoryItem,
+        dependent: :destroy
+
 
     validates :product_name, :description, :price, :inventory, presence: true
     validates :product_name, uniqueness: true

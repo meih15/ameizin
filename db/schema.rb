@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_14_005622) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_27_221322) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -36,6 +36,20 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_14_005622) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_name"], name: "index_categories_on_category_name", unique: true
+  end
+
+  create_table "order_history_items", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "product_id", null: false
+    t.integer "quantity", default: 1, null: false
+    t.string "order_confirmation", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.float "item_total", null: false
+    t.float "order_total", null: false
+    t.index ["order_confirmation"], name: "index_order_history_items_on_order_confirmation"
+    t.index ["product_id"], name: "index_order_history_items_on_product_id"
+    t.index ["user_id"], name: "index_order_history_items_on_user_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -66,5 +80,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_14_005622) do
   add_foreign_key "cart_items", "carts"
   add_foreign_key "cart_items", "products"
   add_foreign_key "carts", "users"
+  add_foreign_key "order_history_items", "products"
+  add_foreign_key "order_history_items", "users"
   add_foreign_key "products", "categories"
 end

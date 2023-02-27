@@ -35,6 +35,11 @@ class User < ApplicationRecord
       through: :cart,
       source: :cart_items
 
+    has_many :order_history_items,
+      foreign_key: :user_id,
+      class_name: :OrderHistoryItem,
+      dependent: :destroy
+
   def self.find_by_credentials(credentials, password)
     user = self.find_by(email: credentials)
 

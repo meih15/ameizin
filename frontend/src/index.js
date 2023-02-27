@@ -11,7 +11,8 @@ import * as sessionActions from './store/session';
 import * as cartActions from './store/carts';
 import * as cartItemActions from './store/cartItems';
 import * as productActions from './store/products';
-import * as categoryActions from './store/category'
+import * as categoryActions from './store/category';
+import * as orderHistoryItemActions from './store/orderHistoryItems'
 
 
 const store = configureStore();
@@ -24,6 +25,7 @@ if (process.env.NODE_ENV !== 'production') {
   window.categoryActions = categoryActions;
   window.cartActions = cartActions;
   window.cartItemActions = cartItemActions;
+  window.orderHistoryItemActions = orderHistoryItemActions;
 };
 
 
