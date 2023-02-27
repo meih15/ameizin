@@ -10,7 +10,6 @@ import { Link } from 'react-router-dom';
 import { fetchProducts, getProducts } from '../../store/products';
 
 
-
 const CartShowPage = () => {
     const dispatch = useDispatch();
     const cart = useSelector(getCart());
@@ -49,6 +48,13 @@ const CartShowPage = () => {
         }
             return total;
         }, 0);
+
+    // const handleCheckout = e => {
+    //     e.preventDefault();
+    //     filteredCartItems.map(item => {   
+            
+    //     })
+    // }
         
     
     if (filteredCartItems.length === 0) {
@@ -130,7 +136,8 @@ const CartShowPage = () => {
                                 <p id='total-price-cents-info'>{Math.floor((cartTotal % 1) * 100) === 0 ? '00' : Math.floor((cartTotal % 1) * 100)}</p>
                             </div>
                         </div>
-                        <button id='checkout-button'>Checkout</button>
+                        <button id='checkout-button' >Checkout</button>
+                        {/* <button id='checkout-button' onClick={handleCheckout}>Checkout</button> */}
                     </div>
                 </div>
 

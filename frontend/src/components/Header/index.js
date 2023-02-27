@@ -24,9 +24,7 @@ function Header() {
 
 
     const signedout = (
-        <>
-            <button className='signin_drop_down' onClick={() => history.push('/login')} >Sign In</button>
-        </>
+        <button className='signin_drop_down' onClick={() => history.push('/login')} >Sign In</button>
     )
 
     useEffect(() => {
