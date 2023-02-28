@@ -14,7 +14,6 @@ const CartProductContainer = ({cartItem}) => {
     const [selectedQuantity, setSelectedQuantity] = useState(cartItem.quantity);
 
 
-
     useEffect(() => {
         dispatch(fetchProduct(cartItem.productId))
         setSelectedQuantity(cartItem.quantity)

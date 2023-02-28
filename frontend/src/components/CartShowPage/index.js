@@ -6,8 +6,9 @@ import './CartShowPage.css'
 import CategoryNavBar from '../CategoryNavBar';
 import CartProductContainer from '../CartProductContainer';
 import { fetchCartItems, getCartItems } from '../../store/cartItems';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { fetchProducts, getProducts } from '../../store/products';
+import { createOrderHistoryItem, deleteCartItem } from '../../store/orderHistoryItems';
 
 
 const CartShowPage = () => {
@@ -15,6 +16,9 @@ const CartShowPage = () => {
     const cart = useSelector(getCart());
     const allItems = useSelector(getCartItems);
     const products = useSelector(getProducts);
+    const history = useHistory();
+    const loggedIn = useSelector(state => !!state.session.user);
+
     
     useEffect(() => {
         dispatch(fetchCart())
@@ -48,14 +52,30 @@ const CartShowPage = () => {
         }
             return total;
         }, 0);
-
-    // const handleCheckout = e => {
-    //     e.preventDefault();
-    //     filteredCartItems.map(item => {   
-            
-    //     })
-    // }
         
+
+
+    const handleCheckout = e => {
+        e.preventDefault();
+        if (loggedIn) {
+            const confirmationNumber = Math.floor(Math.random() * 999999999999);
+            
+            filteredCartItems.forEach(item => {   
+                dispatch(createOrderHistoryItem({
+                    userId: cart.userId,
+                    productId: item.productId,
+                    quantity: item.quantity,
+                    itemTotal: (item.quantity * item.price),
+                    orderTotal: cartTotal,
+                    orderConfirmation: confirmationNumber
+                }));
+                dispatch(deleteCartItem(item.id))
+            });
+            history.replace(`/order-confirmation?confirmationNumber=${confirmationNumber}`);
+        } else {
+            history.push('/login');
+        }
+    };
     
     if (filteredCartItems.length === 0) {
         return (
@@ -136,8 +156,7 @@ const CartShowPage = () => {
                                 <p id='total-price-cents-info'>{Math.floor((cartTotal % 1) * 100) === 0 ? '00' : Math.floor((cartTotal % 1) * 100)}</p>
                             </div>
                         </div>
-                        <button id='checkout-button' >Checkout</button>
-                        {/* <button id='checkout-button' onClick={handleCheckout}>Checkout</button> */}
+                        <button id='checkout-button' onClick={handleCheckout}>Checkout</button>
                     </div>
                 </div>
 
