@@ -228,3 +228,8 @@
     font-family: bolded-ember;
     color: white;
 }
+
+.ordersLink, .cart-section {
+    text-decoration: none;
+    color: white;
+}

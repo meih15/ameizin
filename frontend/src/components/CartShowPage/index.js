@@ -5,10 +5,10 @@ import Header from '../Header';
 import './CartShowPage.css'
 import CategoryNavBar from '../CategoryNavBar';
 import CartProductContainer from '../CartProductContainer';
-import { fetchCartItems, getCartItems } from '../../store/cartItems';
+import { deleteCartItem, fetchCartItems, getCartItems } from '../../store/cartItems';
 import { Link, useHistory } from 'react-router-dom';
-import { fetchProducts, getProducts } from '../../store/products';
-import { createOrderHistoryItem, deleteCartItem } from '../../store/orderHistoryItems';
+import { fetchProducts, getProducts, updateProduct } from '../../store/products';
+import { createOrderHistoryItem } from '../../store/orderHistoryItems';
 
 
 const CartShowPage = () => {
@@ -17,7 +17,7 @@ const CartShowPage = () => {
     const allItems = useSelector(getCartItems);
     const products = useSelector(getProducts);
     const history = useHistory();
-    const loggedIn = useSelector(state => !!state.session.user);
+    const currentUser = useSelector(state => state.session.user);
 
     
     useEffect(() => {
@@ -57,18 +57,20 @@ const CartShowPage = () => {
 
     const handleCheckout = e => {
         e.preventDefault();
-        if (loggedIn) {
+        if (currentUser) {
             const confirmationNumber = Math.floor(Math.random() * 999999999999);
-            
-            filteredCartItems.forEach(item => {   
+
+            filteredCartItems.forEach(item => { 
+                const product = products.find(product => product.id === item.productId);  
                 dispatch(createOrderHistoryItem({
                     userId: cart.userId,
                     productId: item.productId,
                     quantity: item.quantity,
-                    itemTotal: (item.quantity * item.price),
+                    itemTotal: (item.quantity * product.price),
                     orderTotal: cartTotal,
                     orderConfirmation: confirmationNumber
                 }));
+                dispatch(updateProduct({...product, inventory: (product.inventory - item.quantity)}))
                 dispatch(deleteCartItem(item.id))
             });
             history.replace(`/order-confirmation?confirmationNumber=${confirmationNumber}`);

@@ -13,6 +13,9 @@ const ConfirmedProductContainer = ({item}) => {
         dispatch(fetchProduct(item.productId))
     }, [dispatch])
 
+    if (!item) return <p>Loading</p>
+    if(!product) return <p>Loading</p>
+
     return (
         <div className='confirmed-item-container'>
             <div id='confirmed-item-left-side'>

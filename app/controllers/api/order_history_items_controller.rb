@@ -22,9 +22,18 @@ class Api::OrderHistoryItemsController < ApplicationController
         if @order_history_item.save
             render :show
         else
-            render json: {errors: @order_history_item.error.full_messages}, status: :unprocessable_entity
+            render json: {errors: @order_history_item.errors.full_messages}, status: :unprocessable_entity
         end
     end
+
+    # def destroy
+    #     @order_history_item = OrderHistoryItem.find(params[:id])
+    #     if @order_history_item.destroy
+    #         render json: { success: "Order history item item successfully removed" }, status: :ok        
+    #     else
+    #         render json: {errors: 'Cart item could not be removed'}, status: :unprocessable_entity
+    #     end
+    # end
 
     private
 

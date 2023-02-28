@@ -32,6 +32,20 @@ function Header() {
         dispatch(fetchCartItems())
     }, [dispatch]);
 
+    const loggedInOrder =   (<Link to='/orderhistory' className='ordersLink'>
+                                <div id='return-order'>
+                                    <p className='return-word'>Order</p>
+                                    <p className='order-word'>History</p>
+                                </div>
+                            </Link>)
+
+    const loggedOutOrder =  (<Link to='/login' className='ordersLink'>
+                                <div id='return-order'>
+                                    <p className='return-word'>Order</p>
+                                    <p className='order-word'>History</p>
+                                </div>
+                            </Link>)
+
 
     return (
         <div className='header'>
@@ -62,11 +76,7 @@ function Header() {
                             {sessionUser ? <button className='signout_drop_down' onClick={logout}>Sign Out</button> : signedout}
                         </div>  
                     </div>
-                    <Link to='' className='ordersLink'></Link>
-                        <div id='return-order'>
-                            <p className='return-word'>Returns</p>
-                            <p className='order-word'>& Orders</p>
-                        </div>
+                    {sessionUser ? loggedInOrder : loggedOutOrder}
                     <div id='add-hover'>
                     <Link to='/cart' className='cart-section' >
                         <div className='cart-section'>

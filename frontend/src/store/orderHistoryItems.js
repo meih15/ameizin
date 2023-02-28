@@ -49,10 +49,11 @@ export const fetchOrderHistoryItem = (orderHistoryItem) => async (dispatch) => {
 };
 
 export const createOrderHistoryItem = orderHistoryItem => async (dispatch) => {
+
     const response = await csrfFetch(`/api/order_history_items`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify(orderHistoryItem)
+        body: JSON.stringify({orderHistoryItem: orderHistoryItem})
     });
 
     if (response.ok) {
@@ -62,7 +63,7 @@ export const createOrderHistoryItem = orderHistoryItem => async (dispatch) => {
 };
 
 
-export const updateCartItem = orderHistoryItem => async (dispatch) => {
+export const updateOrderHistoryItem = orderHistoryItem => async (dispatch) => {
     const response = await csrfFetch(`/api/order_history_items/${orderHistoryItem.id}`,{
         method: 'PATCH',
         headers: {'Content-Type': 'application/json'},
@@ -75,7 +76,7 @@ export const updateCartItem = orderHistoryItem => async (dispatch) => {
     }
 };
 
-export const deleteCartItem = orderHistoryItemId => async (dispatch) => {
+export const deleteOrderHistoryItem = orderHistoryItemId => async (dispatch) => {
     const response = await csrfFetch(`/api/order_history_items/${orderHistoryItemId}`, {
         method: 'DELETE'
     });

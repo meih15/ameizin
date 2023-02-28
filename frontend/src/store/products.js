@@ -42,6 +42,19 @@ export const fetchProduct = (productId) => async (dispatch) => {
     }
 };
 
+export const updateProduct = product => async (dispatch) => {
+    const response = await csrfFetch(`/api/products/${product.id}`,{
+        method: 'PATCH',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(product)
+    });
+
+    if (response.ok) {
+        const product = await response.json();
+        dispatch(receiveProduct(product))
+    }
+};
+
 const productsReducer = (state = {}, action) => {
     switch (action.type) {
         case RECEIVE_PRODUCTS:

@@ -20,9 +20,10 @@ const ConfirmationPage = () => {
 
     if (!confirmedItems) return <h1>Loading...</h1>
 
+
     const filteringConfirmedItems = (items, confirmationNumber) => {
         Object.freeze(items);
-        return items.filter(item => item.orderConfirmation === parseInt(confirmationNumber))
+        return items.filter(item => item.orderConfirmation === (confirmationNumber))
     }
 
     const filteredConfirmedItems = filteringConfirmedItems(confirmedItems, confirmationNumber);
@@ -46,7 +47,6 @@ const ConfirmationPage = () => {
             </div>
         </div>
     )
-
 };
 
 
