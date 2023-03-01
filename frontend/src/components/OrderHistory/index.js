@@ -4,6 +4,7 @@ import { fetchOrderHistoryItems, getOrderHistoryItems } from '../../store/orderH
 import CategoryNavBar from '../CategoryNavBar';
 import Header from '../Header';
 import './OrderHistory.css';
+import OrderHistoryContainer from './OrderHistoryContainer';
 
 const OrderHistoryShowPage = () => {
     const dispatch = useDispatch();
@@ -13,10 +14,21 @@ const OrderHistoryShowPage = () => {
         dispatch(fetchOrderHistoryItems())
     }, [dispatch])
 
-
     if (!orders) return <p>Loading...</p>
 
-    // const orderExist = (orders.length === 0)
+    const orderExist = (orders.length === 0)
+    const orderConfirmations = [...new Set(orders.map(order => order.orderConfirmation))];
+
+    const filteringItems = (items, orderConfirmation) => {
+        Object.freeze(items);
+        return items.filter(item => item.orderConfirmation === orderConfirmation)
+    }
+
+    const placedOrder = orderConfirmations.map(confirmation => {
+        const filtered = filteringItems(orders, confirmation)
+        const orderItemInfo = filtered.first
+        return <OrderHistoryContainer filteredItems={filtered} confirmationNumber={confirmation} total={orderItemInfo?.orderTotal} date={orderItemInfo?.createdAt}/>
+    })
 
         return (
             <div className='order-history-page'>
@@ -25,7 +37,8 @@ const OrderHistoryShowPage = () => {
                     <CategoryNavBar />
                 </div>
                 <div id='order-history-section'>
-                    {/* {!orderExist ? <p>Looks like you haven't placed an order yet.</p> : {}} */}
+                    <h1>Your Orders</h1>
+                    {orderExist ? <p>Looks like you haven't placed an order yet.</p> : placedOrder}
                 </div>
             </div>
         )

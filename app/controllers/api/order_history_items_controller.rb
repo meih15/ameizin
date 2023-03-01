@@ -2,7 +2,7 @@ class Api::OrderHistoryItemsController < ApplicationController
 
     def index
         if current_user
-            @order_history_items = current_user.order_history_items
+            @order_history_items = current_user.order_history_items.order(created_at: :desc)
             render :index
         end
     end
