@@ -1,1 +1,0 @@
-  json.extract! @order_history_item, :id, :product_id, :user_id, :quantity, :item_total, :order_total, :order_confirmation, :created_at
