@@ -7,6 +7,7 @@ import './ConfirmedProductContainer.css';
 
 const ConfirmedProductContainer = ({item}) => {
     const dispatch = useDispatch();
+
     const product = useSelector(getProduct(item.productId));
 
     useEffect(() => {
@@ -19,25 +20,23 @@ const ConfirmedProductContainer = ({item}) => {
     return (
         <div className='confirmed-item-container'>
             <div id='confirmed-item-left-side'>
-
-                <div className='confirmed-product-box'>
-                    <div className='left-side'>
-                        <Link to={`/products/${product.id}`}>
-                            <img src={switch2Pic} id='confirmed-product-image' alt='confirmed-product'/>
+                <Link to={`/products/${product.id}`}>
+                    <img src={switch2Pic} id='confirmed-product-image' alt='confirmed-product'/>
+                </Link>
+                <div id='confirmed-product-middle-section'>
+                    <div id='product-name-confirmed'>
+                        <Link id='confirmed-name-link' to={`/products/${product.id}`}>
+                            <p id='confirmed-product-name'>{product.productName}</p>
                         </Link>
-                        <div id='confirmed-product-middle-section'>
-                            <Link id='confirmed-name-link' to={`/products/${product.id}`}>
-                                <p id='confirmed-product-name'>{product.productName}</p>
-                            </Link>
-                            <p id='sold-by-text'>Sold by Ameizin'</p>
-                        </div>
-                        <div className='confirmed-item-price'>
-                            <p id='confirmed-item-price-symbol'>$</p>
-                            <p id='confirmed-item-price-whole-number-info'>{(Math.floor(item.itemTotal)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.</p>
-                            <p id='confirmed-item-price-cents-info'>{Math.floor((item.itemTotal % 1) * 100) === 0 ? '00' : Math.floor((item.itemTotal % 1) * 100)}</p>
-                        </div>
+                        <p id='confirmed-item-qty'>x{item.quantity}</p>
                     </div>
+                    <p id='sold-by-text'>Sold by Ameizin'</p>
                 </div>
+            </div>
+            <div className='confirmed-item-price'>
+                <p id='confirmed-item-price-symbol'>$</p>
+                <p id='confirmed-item-price-whole-number-info'>{(Math.floor(item.itemTotal)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.</p>
+                <p id='confirmed-item-price-cents-info'>{Math.floor((item.itemTotal % 1) * 100) === 0 ? '00' : Math.floor((item.itemTotal % 1) * 100)}</p>
             </div>
         </div>
     )
