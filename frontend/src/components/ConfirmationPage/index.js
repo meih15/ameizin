@@ -63,7 +63,7 @@ const ConfirmationPage = () => {
                                 <h6 id='zero-tax'>$0.00</h6>
                             </div>
                             <div id='total-confirm'>
-                                <h7 id='total-text-confirm'>Total</h7>
+                                <p id='total-text-confirm'>Total</p>
                                 <div className='confirmed-total-item-price'>
                                     <p id='confirmed-total-symbol'>$</p>
                                     <p id='confirmed-total-whole-number-info'>{(Math.floor(placedProduct?.orderTotal)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.</p>

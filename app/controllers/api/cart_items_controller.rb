@@ -6,7 +6,9 @@ class Api::CartItemsController < ApplicationController
         else
             @cart = Cart.find(session[:cart]) if session[:cart]
         end
+
         @cart_items = @cart.cart_items
+        
         render :index
     end
 

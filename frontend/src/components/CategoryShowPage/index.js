@@ -33,7 +33,7 @@ const CategoryShowPage = () => {
 
     const list =  filteredList.map(product => {
         return <div id='cat-item'>
-        <CategoryItemContainer product={product}/>
+        <CategoryItemContainer key={product.id} product={product}/>
                 </div>
     })
     
