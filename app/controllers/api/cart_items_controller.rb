@@ -1,15 +1,19 @@
 class Api::CartItemsController < ApplicationController
 
     def index
-        if current_user
-            @cart = current_user.cart
+        if current_user&.cart
+            @cart_items = current_user.cart.cart_items 
+            render :index
         else
-            @cart = Cart.find(session[:cart]) if session[:cart]
+            if session[:cart]
+                @cart = Cart.find(session[:cart])
+                @cart_items = @cart.cart_items
+                render :index
+            else
+                @cart_items = []
+                render :index
+            end
         end
-
-        @cart_items = @cart.cart_items
-        
-        render :index
     end
 
     def show

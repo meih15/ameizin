@@ -14,10 +14,6 @@ const ItemHistoryContainer = ({item}) => {
         dispatch(fetchProduct(item.productId))
     }, [dispatch])
 
-    const handleViewClick = e => {
-        e.preventDefault();
-        history.push(`/order-confirmation?confirmationNumber=${item.orderConfirmation}`);
-    }
 
     if (!product) return <p>Loading...</p>
 
@@ -30,7 +26,7 @@ const ItemHistoryContainer = ({item}) => {
                 <p id='history-product-name'>{product.productName}</p>
             </Link>
             <div className='button-section'>
-                <button onClick={handleViewClick}>View Order</button>
+                <button id='product-review'>Write a product review</button>
                 {/* write reviews button */}
             </div>
         </div>

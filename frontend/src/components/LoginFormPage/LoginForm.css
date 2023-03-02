@@ -107,14 +107,61 @@
 }
 
 .signin_button, .demo_login {
+    font-family: rg-ember;
     margin-bottom: 8px;
     background: #f0c14b;
-    background-color: #a88734 #9c7e31 #846a29; 
+    background-color: #f0c14b;
+    background-image: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+    border: 1px solid #a88734;
+    border-radius: 3px;
+    color: #111;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 32px;
+    padding: 0 12px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #f3d3a4;
+    white-space: nowrap;
+}
+
+.signin_button:hover, .demo_login:hover {
+    background-color: #e5b741;
+    background-image: linear-gradient(to bottom, #f5d78e, #e5b741);
+    border-color: #9c7e31 #a88734 #846a29;
+    text-decoration: none;
+}
+
+.login-create_button:hover {
+    background-color: #d9dde2;
+    background-image: linear-gradient(to bottom, #eef0f3, #d9dde2);
 
 }
 
+.signin_button:focus, .demo_login:focus, .login-create_button:focus,
+#passwordInput:focus, #emailInput:focus {
+    outline: none;
+    border-color: #e77600;
+    box-shadow: 0 0 3px 2px rgb(228 121 17 / 50%);
+}
+
+.signin_button:active, .demo_login:active{
+    background: linear-gradient(to top, #f8e3ad, #EEBA37);
+}
+
 .login-create_button {
-    background: #e7e9e7;
+    background: #e7e9ec;
+    border-radius: 3px;
+    border-color: #adb1b8 #a2a6ac #8d9096;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0;
+    text-align: center;
+    text-decoration: none !important;
+    vertical-align: middle
 }
 
 button {

@@ -1,0 +1,36 @@
+#history-product-image {
+    height: 100px;
+    width: 100px;
+}
+
+.placed-product-section {
+    display: flex;
+    font-family: rg-ember;
+}
+
+#name-link {
+    text-decoration: none;
+    color: #007185;
+    font-size: 14px;
+}
+
+#name-link:hover {
+    text-decoration: underline;
+    color: #C45500;
+}
+
+#product-review {
+    font-size: 13px;
+    background-color: transparent;
+    border: 0;
+    display: block;
+    font-size: 13px;
+    line-height: 29px;
+    margin: 0;
+    outline: 0;
+    padding: 0 10px 0 11px;
+    text-align: center;
+    white-space: nowrap;
+    border: 1px solid black;
+  
+}

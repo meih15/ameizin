@@ -26,7 +26,7 @@ const OrderHistoryShowPage = () => {
 
     const placedOrder = orderConfirmations.map(confirmation => {
         const filtered = filteringItems(orders, confirmation)
-        const orderItemInfo = filtered.first
+        const orderItemInfo = filtered[0]
         return <OrderHistoryContainer filteredItems={filtered} confirmationNumber={confirmation} total={orderItemInfo?.orderTotal} date={orderItemInfo?.createdAt}/>
     })
 
@@ -36,9 +36,12 @@ const OrderHistoryShowPage = () => {
                     <Header />
                     <CategoryNavBar />
                 </div>
-                <div id='order-history-section'>
-                    <h1>Your Orders</h1>
-                    {orderExist ? <p>Looks like you haven't placed an order yet.</p> : placedOrder}
+                <div id='order-div'>
+                    <div id='order-history-section'>
+                        <h1 id='order-title'>Your Orders</h1>
+                        <div id='history-break'/>
+                        {orderExist ? <p>Looks like you haven't placed an order yet.</p> : placedOrder}
+                    </div>
                 </div>
             </div>
         )
