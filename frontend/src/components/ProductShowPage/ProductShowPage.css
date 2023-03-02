@@ -1,0 +1,261 @@
+/* .entire-product-page {
+    overflow: auto;
+} */
+
+.product-header {
+    min-width: 1030px;
+}
+
+.pageElements {
+    padding-top: 18px;
+    display: block;
+    font-family: ember;
+    margin: 20px 0px 0px;
+    box-sizing: border-box;
+}
+
+.top-of-page {
+    padding-left: 18px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.middle-of-page {
+    margin: 0px 1%;
+    padding-left: 18px;
+    box-sizing: border-box;
+}
+
+#productImage {
+    float: left;
+    display: block;
+    width: 40%;
+    max-width: fit-content;
+    min-width: max-content;
+    margin-right: 2%;
+}
+
+img#fillerImage {
+    max-width: 500px;
+    min-width: 300px;
+    height: auto;
+    object-fit: contain;
+}
+
+#product-info-section {
+    float: left;
+    min-width: 250px;
+    padding-right: 6.5%;
+   text-align: left;
+}
+
+
+#about-section {
+    margin-top: 25px;
+    margin-bottom: 16px;
+}
+
+#about-text {
+    padding-bottom: 5px;
+    font-family: bolded-ember;
+    font-size: 16px;
+}
+
+#bullets {
+    font-family: rg-ember;
+    font-size: 14px;
+    list-style: disc;
+    padding-left: 18px;
+}
+
+#bullets li {
+    margin: 10px 0px;
+}
+
+#payment-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 8px;
+    position: relative;
+    border: 1px solid lightgray;
+    padding: 14px 18px;
+    margin-right: 20px;
+    box-sizing: border-box;
+    text-align: start;
+    font-family: rg-ember;
+    min-width: 240px;
+    text-align: left;
+
+}
+
+#product-title {
+    word-break: break-word;
+    font-family: rg-ember;
+    color: #0F1111;
+    font-size: 24px;
+    margin-bottom: 50px;
+    /* when add review div can lower the margin bottom */
+}
+
+#product-price {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#price-text-info {
+    padding-right: 6px;
+    padding-bottom: 3px;
+    font-size: 14px;
+    color: #565959;
+    font-family: rg-ember;
+}
+
+.break {
+    background-color: transparent;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top: 1px solid #e7e7e7;
+    display: block;
+    height: 1px;
+    line-height: 19px;
+    margin-bottom: 14px;
+    margin-top: 0;
+}
+
+#price-symbol-info, #price-cents-info, #price-whole-number-info {
+    font-size: 18px;
+    color: #B12704;
+    font-family: rg-ember;
+}
+
+
+.price {
+    display: flex;
+    padding-right: 10px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    margin-bottom: 10px;
+}
+
+#price-symbol, #price-cents {
+    font-size: 13px;
+}
+
+#price-whole-number {
+    font-size: 28px;
+}
+
+#add-to-cart {
+    font-size: 14px;
+    float: right;
+    width: 100%;
+    font-family: rg-ember;
+    border-radius: 15px;
+    border: 0px;
+    height: 100%;
+    width: 100%;
+    outline: 0;
+    height: 31px;
+    margin-bottom: 8px;
+    background: #f0c14b;
+    margin-top: 10px;
+}
+
+.stock-high{
+    font-size: 18px;
+    font-family: rg-ember;
+    color: #329131;
+}
+
+.stock-low {
+    font-size: 18px;
+    font-family: rg-ember;
+    color: #B12704;
+}
+
+.stock-none {
+    font-size: 18px;
+    font-family: rg-ember;
+    color: #c76032;
+}
+
+.dropdown-quantity {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-family: rg-ember;
+    font-size: 12px;
+}
+#hide-drop {
+    visibility: hidden;
+}
+
+.secure-transaction {
+    display: flex;
+    padding: 0px 0px;
+    margin-bottom: 10px;
+    /* justify-content: space-between; */
+
+}
+
+#lockIcon {
+    color: gray;
+    height: 12px;
+    margin-right: 10px;
+}
+
+#secure-text {
+    padding-top: 1px;
+    font-size: 14px;
+}
+
+.ships-from {
+    display: flex;
+    
+    font-size: 12px;
+    font-family: rg-ember;
+    margin: 3px 0px;
+}
+
+.sold-by {
+    display: flex;
+    font-size: 12px;
+    font-family: rg-ember;
+    margin: 3px 0px;
+}
+
+#ships, #sold {
+    color: #565959;
+}
+
+#ships {
+    margin-right: 15px;
+}
+
+#sold {
+    margin-right: 33px;
+}
+
+#description-title {
+    text-align: left;
+    margin-bottom: 4px;
+    margin-top: 20px;
+    padding-bottom: 4px;
+    color: #CC6600;
+    font-family: bolded-ember;
+}
+
+#product-description {
+    margin-top: 6px;
+    word-wrap: break-word;
+    text-align: left;
+    margin-left: 38px;
+    font-size: 13px;
+    font-family: rg-ember;
+}

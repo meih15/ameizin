@@ -1,0 +1,19 @@
+#category-product-name {
+    text-decoration: none;
+    font-family: rg-ember;
+    color: black;
+    font-size: 13px;
+}
+
+.cat-price {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: rg-ember;
+    font-size: 13px;
+}
+
+#image-box{
+    width: 300px;
+    height: auto;
+}

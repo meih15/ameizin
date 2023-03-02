@@ -1,0 +1,194 @@
+#root {
+    justify-content: center;
+    text-align: center;
+    -webkit-text-size-adjust: 100%;
+}
+
+.signup {
+    background: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logoContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 6px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 18px;
+}
+
+#meiLogo {
+    height: 43px;
+}
+
+.signup_form {
+    display: block;
+    align-items: center;
+    width: 360px;
+    height: fit-content;
+    border-radius: 4px;
+    position: relative;
+    border: 1px solid lightgray;
+    padding: 20px 26px;
+    box-sizing: border-box;
+    text-align: start;
+    font-family: rg-ember, Arial, sans-serif;
+}
+
+#createAccount {
+    text-align: start;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.2;
+    text-rendering: optimizeLegibility;
+    padding-bottom: 4px;
+    box-sizing: border-box;
+    display: block;
+    color: black;
+}
+
+#name-label,
+#emailText,
+#passwordText,
+#password-label-2 {
+    display: block;
+    padding: 0px 0px 2px 2px;
+    font-weight: 700;
+    box-sizing: border-box;
+    font-size: 15px;
+    line-height: 19px;
+    font-family: bolded-ember;
+    height: 21px;
+}
+
+.signup_button {
+    width: 100%;
+    font-family: rg-ember;
+    border-radius: 3px;
+    border: 0px;
+    height: 100%;
+    width: 100%;
+    outline: 0;
+    height: 31px;
+    /* box-sizing: border-box; */
+    margin-bottom: 8px;
+    background: #f0c14b;
+    background-color: #a88734 #9c7e31 #846a29;
+}
+
+#nameInput,
+#email_input {
+    width: 100%;
+    margin-right: 0;
+    background-color: #fff;
+    height: 31px;
+    padding: 3px 7px;
+    line-height: normal;
+    border-radius: 3px;
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgb(255 255 255 / 50%), 0 1px 0 rgb(0 0 0 / 7%) inset;
+    outline: 0;
+    box-sizing: border-box;
+    /* margin-bottom: 20px; */
+}
+
+#passwordInput2 {
+    width: 100%;
+    margin-right: 0;
+    background-color: #fff;
+    height: 31px;
+    padding: 3px 7px;
+    line-height: normal;
+    border-radius: 3px;
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgb(255 255 255 / 50%), 0 1px 0 rgb(0 0 0 / 7%) inset;
+    outline: 0;
+    box-sizing: border-box;
+    /* margin-bottom: 20px; */
+}
+
+#password_input {
+    width: 100%;
+    margin-right: 0;
+    background-color: #fff;
+    height: 31px;
+    padding: 3px 7px;
+    line-height: normal;
+    border-radius: 3px;
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgb(255 255 255 / 50%), 0 1px 0 rgb(0 0 0 / 7%) inset;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+button {
+    height: 29px;
+    cursor: pointer;
+}
+
+.alertText {
+    margin-top: 5px;
+    font-size: 12px;
+    font-family: rg-ember;
+    margin-bottom: 20px;
+    padding-left: 2px;
+}
+
+#alertIcon {
+    padding-right: 3px;
+    color: #0066C0;
+}
+
+.signup_login_redirect {
+    font-size: 13px;
+    font-family: rg-ember;
+    margin-top: 5px;
+    padding-left: 2px;
+}
+
+#signin-link-onlogin {
+    padding-left: 5px;
+    padding-right: 4px;
+    color: #0066C0;
+    text-decoration: none;
+}
+
+#signin-link-onlogin:hover {
+    text-decoration: underline;
+}
+
+#triangleLogo {
+    color: #0066C0;
+}
+
+#error {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    padding-left: 2px;
+    font-family: ember;
+    font-size: 12px;
+    color: #C40000;
+    font-style: italic;
+}
+
+#exclamation {
+    padding-right: 4px;
+    padding-left: 2px;
+}
+
+#errors2 {
+    margin-bottom: 15px;
+    padding-left: 2px;
+    visibility: hidden;
+}

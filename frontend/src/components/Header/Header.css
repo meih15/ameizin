@@ -1,0 +1,235 @@
+.header {
+    height: 60px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    float: none;
+    flex-flow: row nowrap;
+    background-color: #131921;
+    color: white;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 1000px;
+    line-height: 1em;
+    justify-content: space-between;
+    /* overflow: hidden; */
+}
+
+
+#homePageHeaderLogo {
+    height: 50px;
+    margin-top: 3px;
+    margin-left: 8px;
+    margin-right: 8px;
+    float: left;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    box-sizing: border-box;
+}
+
+
+.nav-bar-left:hover {
+    border: 1px solid;
+    border-color: #fff;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-style: inset;
+}
+
+.nav-bar-middle{
+    display: flex;
+    min-width: 420px;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#searchDropDown {
+    height: 38px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+#homePageSearchBar {
+    display: flex;
+    flex: 1 1 auto;
+    padding: 10px 4px 10px 0px;
+    height: 60px;
+    box-sizing: border-box;
+    min-width: 420px;
+    width: 100%;
+    white-space: nowrap;
+}
+
+#searchSubmit {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    margin-top: 0.5px;
+    display: flex;
+    justify-content: center;
+    height: 37px;
+    width: 45px;
+    align-items: center;
+    background-color: #f7bd69;
+}
+
+.inputForHomePgSearch {
+    height: 38px;
+    min-width: 420px;
+    width: 100%;
+    line-height: 15px;
+    padding: 10px 10px 10px 0px;
+    box-sizing: border-box;
+}
+
+.nav-bar-right {
+    display: flex;
+    align-items: right;
+    width: fit-content;
+    justify-content: space-between;
+}
+
+.header-profile-dropdown{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-left: 9px;
+    padding-right: 9px;
+    box-sizing: border-box;
+    width: 140px;
+    /* border: 1px solid;
+    border-color: #fff; */
+}
+
+.header-profile-dropdown:hover, #return-order:hover,
+#add-hover:hover {
+    border: 1px solid;
+    border-color: #fff;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-style: inset;
+}
+
+
+.header-profile-dropdown:hover .header-profile-hover {
+    display: block;
+    border-radius: 2px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+
+.header-profile-hover {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    width: 140px;
+    height: auto;
+    background: #fff;
+    padding: 15px;
+    z-index: 1;
+    font-family: ember;
+     border-style: inset;
+}
+
+.signin_drop_down, .signout_drop_down {
+    border-radius: 3px;
+    border: 0px;
+    height: 100%;
+    width: 100%;
+    outline: 0;
+    height: 31px;
+    font-size: 13px;
+    background: #f0c14b;
+    background-color: #a88734 #9c7e31 #846a29;
+}
+
+.hello-msg {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    justify-content: center;
+    font-family: bolded-ember;
+    font-size: 16px;
+}
+
+.ordersLink {
+    display: flex;
+    position: relative;
+}
+
+#return-order {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left; 
+    padding: 0px 8px 9px;
+    width: 86px;
+}
+
+.return-word {
+    margin-top: 5px;
+    font-size: 12px;
+    font-family: rg-ember;
+}
+
+.order-word {
+    font-size: 16px;
+    font-family: bolded-ember;
+}
+
+.cart-section, #add-hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: nowrap;
+    width: 84px;
+    margin-left: 2px;
+    margin-right: 2px;
+    box-sizing: border-box;
+    margin-bottom: 3px;
+}
+
+.cart-display {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    box-sizing: border-box;
+}
+
+#cart-icon {
+    padding-top: 2px;
+   font-size: 1.1em;
+   color: white;
+   
+}
+
+#number-items {
+    font-family: rg-ember;
+    font-size: 21px;
+    color: #f0893b;
+}
+
+#cart-text {
+    display: flex;
+    margin-left: 5px;
+    margin-top: 22px;
+    font-size: 15px;
+    font-family: bolded-ember;
+    color: white;
+}
+
+.ordersLink, .cart-section {
+    text-decoration: none;
+    color: white;
+}
