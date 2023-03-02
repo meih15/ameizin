@@ -1,5 +1,5 @@
 .entire-confirmation-page {
-    background-color: #EAEDED;
+    background-color: #eaeded;
     min-height: 100vh;
     /* min-width: 100%; */
     overflow: auto;
@@ -23,7 +23,7 @@
 
 #order-placed-check {
     display: flex;
-    color: #067D62;
+    color: #067d62;
     font-family: bolded-ember;
     font-size: 18px;
     margin-top: 10px;
@@ -39,7 +39,7 @@
     border-bottom-width: 0;
     border-left-width: 0;
     border-right-width: 0;
-    border-top: 1px solid #E7E7E7;
+    border-top: 1px solid #e7e7e7;
     display: block;
     height: 1px;
     line-height: 19px;
@@ -67,7 +67,7 @@
     margin-right: 5px;
 }
 
-#order-number {
+#order-number{
     font-family: bolded-ember;
 }
 
@@ -77,16 +77,11 @@
     margin-bottom: 30px;
 }
 
-#confirm-order-subtotal,
-.confirmed-subtotal-item-price,
-#tax-confirm-section,
-#total-confirm,
-.confirmed-total-item-price {
+#confirm-order-subtotal, .confirmed-subtotal-item-price, #tax-confirm-section, #total-confirm, .confirmed-total-item-price {
     display: flex;
 }
 
-#confirm-order-subtotal,
-#tax-confirm-section {
+#confirm-order-subtotal, #tax-confirm-section {
     font-family: rg-ember;
     color: #565959;
 }
@@ -95,25 +90,24 @@
     font-family: bolded-ember;
 }
 
-#confirm-order-subtotal,
-#tax-confirm-section,
-#total-confirm {
+#confirm-order-subtotal, #tax-confirm-section, #total-confirm {
     margin-bottom: 6px;
     display: flex;
     justify-content: space-between;
 }
 
+
 #review-confirm {
     text-decoration: none;
     font-family: rg-ember;
-    color: #2B7186;
+    color: #2b7186;
     font-size: 14px;
     margin-right: 2px;
 }
 
 #greater-than {
     font-size: 8px;
-    color: #2B7186;
+    color: #2b7186;
 }
 
 #confirm-button {
@@ -132,8 +126,8 @@
     outline: 0;
     margin-top: 10px;
     margin-bottom: 8px;
-    background: #FCD94B;
-    background-color: #A88734 #9C7E31 #846A29;
+    background: #fcd94b;
+    background-color: #a88734 #9c7e31 #846a29;
 }
 
 #confirm-review {
@@ -165,21 +159,13 @@
     font-family: rg-ember;
 }
 
-#github-link,
-#linkedin-link,
-#js-link,
-#m-link,
-#portfolio-link {
+#github-link, #linkedin-link, #js-link, #m-link, #portfolio-link {
     text-decoration: none;
-    color: #2B7190;
+    color: #2b7190;
     font-size: 15px;
 }
 
-#github-link:hover,
-#linkedin-link:hover,
-#js-link:hover,
-#m-link:hover,
-#portfolio-link:hover {
+#github-link:hover, #linkedin-link:hover, #js-link:hover, #m-link:hover, #portfolio-link:hover {
     text-decoration: underline;
 }
 
@@ -193,3 +179,6 @@
     color: #565959;
     margin-left: 2px;
 }
+
+
+

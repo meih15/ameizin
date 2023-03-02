@@ -47,26 +47,26 @@ const CartProductContainer = ({cartItem}) => {
             <div id='cart-left-side'>
                 <div className='cart-product-box'>
                     <div className='left-pls'>
-                    <Link to={`/products/${product.id}`}>
-                        <img src={switch2Pic} id='cart-product-image' alt='cart-product'/>
-                    </Link>
-                    <div id='cart-product-middle-section'>
-                        <Link id='name-link' to={`/products/${product.id}`}>
-                            <p id='cart-product-name'>{product.productName}</p>
+                        <Link to={`/products/${product.id}`}>
+                            <img src={switch2Pic} id='cart-product-image' alt='cart-product'/>
                         </Link>
-                        <div id='cart-dynamic-stock'>
-                            <p className='cart-stock-low'>{(product.inventory < 21 && product.inventory !== 0) ? `Only ${product.inventory} left in stock - order soon.` : ''}</p>
-                            <p className='cart-stock-high'>{(product.inventory >= 21) ? 'In Stock' : ''}</p>
-                            <p className='cart-stock-none'>{product.inventory === 0 ? 'Temporarily out of stock' : ''}</p>
-                        </div>
-                        <p id='cart-item-free-shipping'>Eligible for FREE Shipping</p>
-                        <div id='updating-cart-section'>
-                            {(product.inventory === 0) ? <p id='hide-cart-drop'>dropdown</p> : dropdown} 
-                            <div id='separator-vertical'/>
-                            <button id='cart-delete-button' onClick={handleDelete}>Delete</button>
+                        <div id='cart-product-middle-section'>
+                            <Link id='name-link' to={`/products/${product.id}`}>
+                                <p id='cart-product-name'>{product.productName}</p>
+                            </Link>
+                            <div id='cart-dynamic-stock'>
+                                <p className='cart-stock-low'>{(product.inventory < 21 && product.inventory !== 0) ? `Only ${product.inventory} left in stock - order soon.` : ''}</p>
+                                <p className='cart-stock-high'>{(product.inventory >= 21) ? 'In Stock' : ''}</p>
+                                <p className='cart-stock-none'>{product.inventory === 0 ? 'Temporarily out of stock' : ''}</p>
+                            </div>
+                            <p id='cart-item-free-shipping'>Eligible for FREE Shipping</p>
+                            <div id='updating-cart-section'>
+                                {(product.inventory === 0) ? <p id='hide-cart-drop'>dropdown</p> : dropdown} 
+                                <div id='separator-vertical'/>
+                                <button id='cart-delete-button' onClick={handleDelete}>Delete</button>
+                            </div>
                         </div>
                     </div>
-                </div>
                     <div className='cart-item-price'>
                         <p id='cart-item-price-symbol'>$</p>
                         <p id='cart-item-price-whole-number-info'>{(Math.floor(productPrice)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.</p>

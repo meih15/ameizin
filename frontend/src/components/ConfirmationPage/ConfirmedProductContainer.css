@@ -17,8 +17,7 @@
     display: flex;
 }
 
-#product-name-confirmed,
-.confirmed-item-price {
+#product-name-confirmed, .confirmed-item-price {
     display: flex;
 }
 
@@ -50,6 +49,18 @@
 #sold-by-text {
     font-size: 12px;
 }
+
+#confirmed-product-middle-section {
+    display: flex;
+    flex-direction: column;
+    min-width: 380px;
+    text-align: left;
+    justify-content: left;
+}
+
+
+
+
 
 #confirmed-product-middle-section {
     display: flex;

@@ -26,7 +26,9 @@ const ConfirmationPage = () => {
                     <ConfirmedProductContainer id={`confirmed-item-box-${item.id}`} item={item}/>
                 </div>
     });
+
     const placedProduct = filteredConfirmedItems[0];
+
     const handleContinueShoppingClick = e => {
         e.preventDefault();
         history.push('/')
