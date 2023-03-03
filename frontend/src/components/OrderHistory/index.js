@@ -27,8 +27,9 @@ const OrderHistoryShowPage = () => {
     const placedOrder = orderConfirmations.map(confirmation => {
         const filtered = filteringItems(orders, confirmation)
         const orderItemInfo = filtered[0]
-        return <OrderHistoryContainer filteredItems={filtered} confirmationNumber={confirmation} total={orderItemInfo?.orderTotal} date={orderItemInfo?.createdAt}/>
+        return <OrderHistoryContainer key={confirmation} filteredItems={filtered} confirmationNumber={confirmation} total={orderItemInfo?.orderTotal} date={orderItemInfo?.createdAt}/>
     })
+
 
         return (
             <div className='order-history-page'>
