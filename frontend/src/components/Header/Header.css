@@ -118,7 +118,8 @@
 
 .header-profile-dropdown:hover .header-profile-hover {
     display: block;
-    border-radius: 2px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -139,7 +140,9 @@
     padding: 15px;
     z-index: 1;
     font-family: ember;
-     border-style: inset;
+    border-style: inset;
+    border: 1px solid #d4d9db;
+    border-color: #ced1d6 #d5d8dd #c4c9d1;
 }
 
 .signin_drop_down,
