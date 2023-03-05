@@ -40,6 +40,11 @@ class User < ApplicationRecord
       class_name: :OrderHistoryItem,
       dependent: :destroy
 
+    has_many :reviews,
+      foreign_key: :user_id,
+      class_name: :Review,
+      dependent: :destroy
+
   def self.find_by_credentials(credentials, password)
     user = self.find_by(email: credentials)
 

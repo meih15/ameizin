@@ -28,6 +28,12 @@ class Product < ApplicationRecord
         class_name: :OrderHistoryItem,
         dependent: :destroy
 
+    has_many :reviews,
+        foreign_key: :product_id, 
+        class_name: :Review,
+        dependent: :destroy
+
+
 
     validates :product_name, :description, :price, :inventory, presence: true
     validates :product_name, uniqueness: true

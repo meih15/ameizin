@@ -8,11 +8,11 @@ class Api::OrderHistoryItemsController < ApplicationController
     end
 
     def show 
-        @order_history_items = OrderHistoryItem.find(params[:id])
-        if @order_history_items
+        @order_history_item = OrderHistoryItem.find(params[:id])
+        if @order_history_item
             render :show
         else
-            render json: { order_history_items: nil }
+            render json: { order_history_item: nil }
         end
     end
 
@@ -29,9 +29,9 @@ class Api::OrderHistoryItemsController < ApplicationController
     def destroy
         @order_history_item = OrderHistoryItem.find(params[:id])
         if @order_history_item.destroy
-            render json: { success: "Order history item item successfully removed" }, status: :ok        
+            render json: { success: "Order history item successfully removed" }, status: :ok        
         else
-            render json: {errors: 'Cart item could not be removed'}, status: :unprocessable_entity
+            render json: {errors: 'Order history item could not be removed'}, status: :unprocessable_entity
         end
     end
 
