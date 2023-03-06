@@ -12,8 +12,9 @@ import * as cartActions from './store/carts';
 import * as cartItemActions from './store/cartItems';
 import * as productActions from './store/products';
 import * as categoryActions from './store/category';
-import * as orderHistoryItemActions from './store/orderHistoryItems'
-import * as reviewActions from './store/reviews'
+import * as orderHistoryItemActions from './store/orderHistoryItems';
+import * as reviewActions from './store/reviews';
+import * as userActions from './store/users'
 
 
 const store = configureStore();
@@ -27,7 +28,8 @@ if (process.env.NODE_ENV !== 'production') {
   window.cartActions = cartActions;
   window.cartItemActions = cartItemActions;
   window.orderHistoryItemActions = orderHistoryItemActions;
-  window.reviewActions = reviewActions
+  window.reviewActions = reviewActions;
+  window.userActions = userActions;
 };
 
 
