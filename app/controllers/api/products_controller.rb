@@ -24,7 +24,6 @@ class Api::ProductsController < ApplicationController
 
     private
     def product_params
-        puts params.inspect
         params.require(:product).permit(:product_name, :description, :bullets, :price, :inventory, :category_id, :id)
     end
 end

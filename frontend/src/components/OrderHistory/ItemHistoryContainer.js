@@ -17,6 +17,11 @@ const ItemHistoryContainer = ({item}) => {
 
     if (!product) return <p>Loading...</p>
 
+    const handleWriteReview = e => {
+        e.preventDefault();
+        history.push(`/createreview?productId=${product.id}`);
+    }
+
     return (
         <>
             <div className='placed-product-section'>
@@ -29,8 +34,7 @@ const ItemHistoryContainer = ({item}) => {
                     </Link>
                 </div>
                 <div className='button-section'>
-                    <button id='product-review'>Write a product review</button>
-                    {/* write reviews button */}
+                    <button id='product-review' onClick={handleWriteReview}>Write a product review</button>
                 </div>
             </div>
             <div id='history-item-break'/>

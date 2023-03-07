@@ -9,8 +9,8 @@ import CategoryShowPage from './components/CategoryShowPage';
 import CartShowPage from './components/CartShowPage';
 import ConfirmationPage from './components/ConfirmationPage';
 import OrderHistoryShowPage from './components/OrderHistory';
-// import Header from "./components/HomePage";
-// import Navigation from "./components/Navigation";
+import CreateReview from './components/Reviews/CreateReview';
+
 
 
 function App() {
@@ -23,6 +23,7 @@ function App() {
         <Route path='/categories/:categoryId'><CategoryShowPage /></Route>
         <Route path='/orderhistory'><OrderHistoryShowPage /></Route> 
         <Route path='/order-confirmation'><ConfirmationPage /></Route>
+        <Route path='/createreview'><CreateReview /></Route>
         <Route path='/cart'><CartShowPage /></Route>
         <Route exact path='/'><HomePage /></Route>
         <Route path="*"><PageNotFound /></Route>
