@@ -129,7 +129,7 @@ function ProductShowPage() {
                     <div id="product-description">{product.description}</div> 
                 </div>
                 <div className='bottom-of-page'>
-                    <ReviewShowPage productId={product.id}/>
+                    <ReviewShowPage productId={productId}/>
                 </div>
             </div>
         </div>

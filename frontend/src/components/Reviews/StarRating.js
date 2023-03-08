@@ -1,7 +1,6 @@
-import { useState } from 'react';
 
-const StarRating = () => {
-  const [rating, setRating] = useState(0);
+
+const StarRating = ({rating, setRating}) => {
 
   const handleClick = (newRating) => {
     setRating(newRating);

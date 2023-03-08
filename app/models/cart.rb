@@ -18,5 +18,4 @@ class Cart < ApplicationRecord
         class_name: :CartItem,
         dependent: :destroy
 
-    # validates :user_id, allow_nil: true, numericality: { greater_than: 0 }
 end

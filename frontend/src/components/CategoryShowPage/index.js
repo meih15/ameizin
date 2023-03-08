@@ -32,7 +32,7 @@ const CategoryShowPage = () => {
     if (!category) return null;
 
     const list =  filteredList.map(product => {
-        return <div id='cat-item'>
+        return <div id='cat-item' key={product.id}>
         <CategoryItemContainer key={product.id} product={product}/>
                 </div>
     })

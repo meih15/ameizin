@@ -6,7 +6,7 @@ class Api::ReviewsController < ApplicationController
     end
 
     def show
-        @review = OrderHistoryItem.find(params[:id])
+        @review = Review.find(params[:id])
         if @review
             render :show
         else

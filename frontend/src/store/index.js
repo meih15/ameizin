@@ -7,6 +7,7 @@ import cartsReducer from './carts';
 import session from './session';
 import orderHistoryItemsReducer from './orderHistoryItems';
 import reviewsReducer from './reviews';
+import usersReducer from './users';
 
 const rootReducer = combineReducers({
   session,
@@ -15,7 +16,8 @@ const rootReducer = combineReducers({
   cart: cartsReducer,
   cartItems: cartItemsReducer,
   orderHistoryItems: orderHistoryItemsReducer,
-  reviews: reviewsReducer
+  reviews: reviewsReducer,
+  users: usersReducer
 });
 
 let enhancer;

@@ -6,10 +6,10 @@ import './SingleReview.css'
 const SingleReview = ({review}) => {
     const dispatch = useDispatch();
     const user = useSelector(getUser(review.userId));
-
+    debugger
     useEffect (() => {
         dispatch(fetchUser(review.userId))
-    }, [dispatch]);
+    }, [dispatch, review.userId]);
 
     const reviewDate = new Date(review.createdAt).toLocaleDateString('en-US', {
         month: 'long',
@@ -17,18 +17,21 @@ const SingleReview = ({review}) => {
         year: 'numeric'
     });
 
+    if (!user) return null;
+
+
     return (
         <div className='review-component'>
             <div id='user-info'>
                 {/* user pfp */}
-                <p>{user.userName}</p>
+                <p>{user.user_name}</p>
             </div>
             <div id='review-rating-headline'>
                 {/* rating */}
-                <p id='headline'>{review.headline}</p>
+                <p id='headline'>{review?.headline}</p>
             </div>
             <div id='reviewed-time'>Reviewed in the United States on {reviewDate}</div>
-            <p id='comment'>{review.comment}</p>
+            <p id='comment'>{review?.comment}</p>
             {/* picture */}
             {/* helpful */}
         </div>

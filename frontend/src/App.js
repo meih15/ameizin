@@ -10,6 +10,7 @@ import CartShowPage from './components/CartShowPage';
 import ConfirmationPage from './components/ConfirmationPage';
 import OrderHistoryShowPage from './components/OrderHistory';
 import CreateReview from './components/Reviews/CreateReview';
+import ReviewConfirmation from './components/Reviews/ReviewConfirmation';
 
 
 
@@ -24,6 +25,7 @@ function App() {
         <Route path='/orderhistory'><OrderHistoryShowPage /></Route> 
         <Route path='/order-confirmation'><ConfirmationPage /></Route>
         <Route path='/createreview'><CreateReview /></Route>
+        <Route path='/review-confirmation'><ReviewConfirmation /></Route>
         <Route path='/cart'><CartShowPage /></Route>
         <Route exact path='/'><HomePage /></Route>
         <Route path="*"><PageNotFound /></Route>

@@ -14,11 +14,13 @@ const ReviewShowPage = ({productId}) => {
 
     const filteringReviews = (reviews, productId) => {
         Object.freeze(reviews);
-        return reviews.filter(review => review.productId === productId)
+        return reviews.filter(review => review.productId === parseInt(productId))
     };
 
-    const filteredReviews = filteringReviews(reviews, productId);
+    if (!reviews) return null;
 
+
+    const filteredReviews = filteringReviews(reviews, productId);
     const singleReview = filteredReviews.map(review => <SingleReview key={review.id} review={review}/>)
 
     return (

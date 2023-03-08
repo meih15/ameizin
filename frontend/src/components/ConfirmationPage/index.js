@@ -12,25 +12,33 @@ const ConfirmationPage = () => {
     const history = useHistory();
     const confirmedItems = useSelector(getOrderHistoryItems);
     const confirmationNumber = new URLSearchParams(location.search).get('confirmationNumber');
+
     useEffect(() => {
         dispatch(fetchOrderHistoryItems())
     }, [dispatch])
-    if (!confirmedItems) return <h1>Loading...</h1>
+
+
     const filteringConfirmedItems = (items, confirmationNumber) => {
         Object.freeze(items);
         return items.filter(item => item.orderConfirmation === (confirmationNumber))
     }
+
     const filteredConfirmedItems = filteringConfirmedItems(confirmedItems, confirmationNumber);
     const confirmedList = filteredConfirmedItems.map(item => {
         return <div key={item.id}>
                     <ConfirmedProductContainer id={`confirmed-item-box-${item.id}`} item={item}/>
                 </div>
     });
+
     const placedProduct = filteredConfirmedItems[0];
     const handleContinueShoppingClick = e => {
         e.preventDefault();
         history.push('/')
     };
+
+    if (!confirmationNumber) return null;
+    if (!confirmedItems) return <h1>Loading...</h1>
+    
     return (
         <div className='entire-confirmation-page'>
             <div id='top-of-confirm-page'>
@@ -55,7 +63,7 @@ const ConfirmationPage = () => {
                                 <div className='confirmed-subtotal-item-price'>
                                     <p id='confirmed-subtotal-symbol'>$</p>
                                     <p id='confirmed-subtotal-whole-number-info'>{(Math.floor(placedProduct?.orderTotal)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.</p>
-                                    <p id='confirmed-subtotal-cents-info'>{Math.floor((placedProduct?.orderTotal % 1) * 100) === 0 ? '00' : Math.floor((placedProduct?.orderTotal % 1) * 100)}</p>
+                                    <p id='confirmed-subtotal-cents-info'>{Math.floor((placedProduct?.orderTotal % 1) * 100) === 0 ? '00' : Math.floor((placedProduct?.orderTotal % 1) * 100).toString()}</p>
                                 </div>
                             </div>
                             <div id='tax-confirm-section'>
@@ -67,7 +75,7 @@ const ConfirmationPage = () => {
                                 <div className='confirmed-total-item-price'>
                                     <p id='confirmed-total-symbol'>$</p>
                                     <p id='confirmed-total-whole-number-info'>{(Math.floor(placedProduct?.orderTotal)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}.</p>
-                                    <p id='confirmed-total-cents-info'>{Math.floor((placedProduct?.orderTotal % 1) * 100) === 0 ? '00' : Math.floor((placedProduct?.orderTotal % 1) * 100)}</p>
+                                    <p id='confirmed-total-cents-info'>{Math.floor((placedProduct?.orderTotal % 1) * 100) === 0 ? '00' : Math.floor((placedProduct?.orderTotal % 1) * 100).toString()}</p>
                                 </div>
                             </div>
                         </div>
