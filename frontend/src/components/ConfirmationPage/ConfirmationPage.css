@@ -181,6 +181,7 @@
 #m-link:hover,
 #portfolio-link:hover {
     text-decoration: underline;
+    color: #C45500;
 }
 
 .description-link {
