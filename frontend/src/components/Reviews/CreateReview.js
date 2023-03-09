@@ -34,7 +34,7 @@ const CreateReview = () => {
             comment: comment,
             rating: rating
         }));
-        history.push('/review-confirmation');
+        history.push(`/review-confirmation?productId=${productId}`);
     }
 
     if (!product) return null;

@@ -1,0 +1,54 @@
+.middle-confirmation-review {
+    display: flex;
+    justify-content: center;
+    min-width: 700px;
+    margin-top: 3rem;
+}
+
+.checkmark-submitted {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    border-color: #067D62;
+    position: relative;
+    border-style: solid;
+    border-width: 2px;
+    border-left-width: 12px;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 25px 40px 25px;
+    box-sizing: border-box;
+}
+
+#check-review {
+    color: #007600;
+    margin-right: 8px;
+    font-size: 19px;
+}
+
+#review-submit-word {
+    text-align: left;
+}
+
+.review-submitted-thank {
+    margin-top: 3px;
+    color: #007600;
+    font-size: 15px;
+    margin-bottom: 5px;
+    font-family: bolded-ember;
+}
+
+.processed-review {
+    font-size: 12px;
+    font-family: rg-ember;
+}
+
+#link-product-confirmation {
+    text-decoration: none;
+    color: #007185;
+}
+
+#link-product-confirmation:hover {
+    text-decoration: underline;
+    color: #C45500;
+}

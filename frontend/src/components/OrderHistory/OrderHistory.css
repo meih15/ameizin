@@ -29,3 +29,9 @@
     margin-bottom: 30px;
     margin-top: 0;
 }
+
+.empty-order-history{
+    font-family: rg-ember;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
