@@ -21,6 +21,24 @@ const ReviewConfirmation = () => {
                     </div>
                 </div>
             </div>
+            <div id="review-submit-break" />
+            <div id='done-reviewing-section'>
+                        <p className='done-review'>Done Reviewing?</p>
+                        <p className='check-it-review'>Check out these Ameizin' links:</p>
+                        <div className='done-links-review'>
+                            <p id='portfolio-link-review'>Portfolio</p>
+                            <a id='github-link-review' href='https://github.com/meih15' >Github</a>
+                            <a id='linkedin-link-review' href='https://www.linkedin.com/in/mei-huang-ba967a159'>Linkedin</a>
+                            <div className='description-link-review'>
+                                <a id='js-link-review' href='https://meih15.github.io/bobabreak/'>bobabreak</a>
+                                <p id='des-review'>Javascript Project</p>
+                            </div>
+                            <div className='description-link-review'>
+                                <a id='m-link-review' href='https://puppy-play-dates.onrender.com/'>Puppy Play Dates</a>
+                                <p id='des-review'>MERN Stack Project</p>
+                            </div>
+                        </div>
+                    </div>
         </div>
     )
 };
