@@ -22,7 +22,17 @@ class Api::ReviewsController < ApplicationController
         else
             render json: {errors: @review.errors.full_messages}, status: :unprocessable_entity
         end
-    end        
+    end 
+
+
+    def update
+        @review = Review.find(params[:id])
+        if @review.update(review_params)
+            render :show
+        else
+            render json: { errors: @review.errors.full_messages }, status: :unprocessable_entity
+        end
+    end
 
 
     def destroy

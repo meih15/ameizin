@@ -31,7 +31,7 @@ const ReviewShowPage = ({productId}) => {
             </div>
             <div className='written-review-section'>
                 {/* reviews with images */}
-                <p>From the United States</p>
+                <p id='from-us'>From the United States</p>
                 {singleReview}
             </div>
         </div>

@@ -1,0 +1,29 @@
+.review-show-page{
+    display: flex;
+    margin-top: 20px;
+}
+
+#bar-section {
+    margin-left: 30px;
+    width: 300px;
+    text-align: left;
+    margin-right: 10px;
+}
+
+#customer-reviews-text {
+    font-size: 24px;
+    width: 250px;
+    font-family: bolded-ember;
+}
+
+.written-review-section {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+#from-us {
+    font-family: 18px;
+    font-family: bolded-ember;
+    margin-bottom: 20px;
+}

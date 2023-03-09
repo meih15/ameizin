@@ -7,7 +7,7 @@ import CategoryNavBar from '../CategoryNavBar';
 import StarRating from "./StarRating";
 import switch2Pic from '../../image/oled-switch.jpeg';
 import { createReview } from "../../store/reviews";
-
+import './CreateReview.css'
 
 const CreateReview = () => {
     const dispatch = useDispatch();
@@ -47,21 +47,31 @@ const CreateReview = () => {
                 <CategoryNavBar/>
             </div>
             {/* have name option */}
-            <form className="middle-of-review-form">
-                <h1>Create Reviews</h1>
-                <div className="review-form-product-info">
-                    <img id='fillerReviewImage' src={switch2Pic} alt='filler-pic'/>
-                    <h2>{product.productName}</h2>
-                </div>
-                <h3>Overall Rating</h3>
-                <StarRating rating={rating} setRating={setRating}/>
-                <h4>Add a headline</h4>
-                <input type="text" value={headline} onChange={(e) => setHeadline(e.target.value)} />
-                {/* photo section */}
-                <h5>Add a written review</h5>
-                <textarea value={comment} onChange={(e) => setComment(e.target.value)} />
-                <button onClick={handleCreateReview}>Submit</button>
-            </form>
+            <div className="center-form-pls">
+                <form className="middle-of-review-form">
+                    <h1 id="create-review">Create Reviews</h1>
+                    <div className="review-form-product-info">
+                        <img id='fillerReviewImage' src={switch2Pic} alt='filler-pic'/>
+                        <h2 id="review-product-name">{product.productName}</h2>
+                    </div>
+                    <div className='create-review-break'></div>
+                    <h3 id="overall-rating">Overall Rating</h3>
+                    <div id="stars">
+                        <StarRating rating={rating} setRating={setRating}/>
+                    </div>
+                    <div className='create-review-break'></div>
+                    <h4 id="add-headline">Add a headline</h4>
+                    <input id='headline-input' type="text" placeholder="What's important to know?" value={headline} onChange={(e) => setHeadline(e.target.value)} />
+                    {/* photo section */}
+                    <div className='create-review-break'></div>
+                    <h5 id="add-written-review">Add a written review</h5>
+                    <textarea id='written-input' placeholder='What did you like or dislike? What did you use this product for?' value={comment} onChange={(e) => setComment(e.target.value)} />
+                    <div className='create-review-break'></div>
+                    <div className="submit-move-right">
+                        <button id='create-review-submit' onClick={handleCreateReview}>Submit</button>
+                    </div>
+                </form>
+            </div>
         </div>
     )
 };

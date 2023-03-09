@@ -127,6 +127,7 @@ function ProductShowPage() {
                     <div className='break'></div>
                     <p id='description-title'>Product Description</p>
                     <div id="product-description">{product.description}</div> 
+                    <div className='break'></div>
                 </div>
                 <div className='bottom-of-page'>
                     <ReviewShowPage productId={productId}/>

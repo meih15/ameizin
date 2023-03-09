@@ -1,0 +1,76 @@
+.review-component {
+    min-width: 600px;
+    max-width: 1000px;
+    margin-bottom: 25px;
+}
+
+#review-user-info{
+    display: flex;
+    padding-bottom: 8px;
+}
+
+#review-pfp-icon {
+    font-size: 34px;
+    color: #a9b7b8;
+    margin-right: 8px;
+}
+
+#review-user-name {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    font-family: rg-ember;
+}
+
+#review-rating-headline {
+    display: flex;
+    padding-bottom: 5px;
+}
+
+.single-review-stars {
+    margin-right: 10px;
+}
+
+#filled-star-single-review {
+    color: #ffa41c;
+}
+
+#empty-star-single-review {
+    color: #e47911;
+}
+
+#headline {
+    font-size: 14px;
+    font-family: bolded-ember;
+}
+
+#reviewed-time {
+    font-size: 14px;
+    font-family: rg-ember;
+    color: #767676;
+    padding-bottom: 5px;
+}
+
+#comment {
+    font-family: rg-ember;
+    font-size: 14px;
+}
+
+.single-review-buttons {
+    display: flex;
+    font-size: 12px;
+    color: #007185;
+}
+
+#update-single-review, #delete-single-review {
+    text-decoration: none;
+    color: #007185;
+}
+
+#update-single-review:hover, #delete-single-review:hover {
+    text-decoration: underline;
+}
+
+#update-single-review {
+    margin-right: 8px;
+}
