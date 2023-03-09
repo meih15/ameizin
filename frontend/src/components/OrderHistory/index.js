@@ -17,7 +17,8 @@ const OrderHistoryShowPage = () => {
     if (!orders) return <p>Loading...</p>
 
     const orderExist = (orders.length === 0)
-    const orderConfirmations = [...new Set(orders.map(order => order.orderConfirmation))];
+    const sortedOrders = [...orders].sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+    const orderConfirmations = [...new Set(sortedOrders.map(order => order.orderConfirmation))];
 
     const filteringItems = (items, orderConfirmation) => {
         Object.freeze(items);
@@ -41,7 +42,7 @@ const OrderHistoryShowPage = () => {
                     <div id='order-history-section'>
                         <h1 id='order-title'>Your Orders</h1>
                         <div id='history-break'/>
-                        {orderExist ? <p>Looks like you haven't placed an order yet.</p> : placedOrder}
+                        {orderExist ? <p className='empty-order-history'>Looks like you haven't placed an order yet.</p> : placedOrder}
                     </div>
                 </div>
             </div>
