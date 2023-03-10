@@ -76,14 +76,14 @@ const CreateReview = () => {
                     <div id="stars">
                         <StarRating rating={rating} setRating={setRating}/>
                     </div>
-                    {ratingError ? <div id="error"><i id='exclamation' className="fa-solid fa-exclamation" />Please select a star rating</div> : 
-                    <i id='errors4' className="fa-solid fa-exclamation" />}
+                    {ratingError ? <div id="error-review"><i id='exclamation-review' className="fa-solid fa-circle-exclamation" />Please select a star rating</div> : 
+                    <i id='errors-reviews' className="fa-solid fa-circle-exclamation" />}
                     <div className='create-review-break'></div>
                     <h4 id="add-headline">Add a headline</h4>
                     <input id='headline-input' type="text" placeholder="What's important to know?" value={headline} onChange={(e) => setHeadline(e.target.value)} />
                     {/* photo section */}
-                    {headlineError ? <div id="error"><i id='exclamation' className="fa-solid fa-exclamation" />Please enter your headline.</div> : 
-                    <i id='errors4' className="fa-solid fa-exclamation" />}
+                    {headlineError ? <div id="error-review"><i id='exclamation-review' className="fa-solid fa-circle-exclamation" />Please enter your headline.</div> : 
+                    <i id='errors-review' className="fa-solid fa-exclamation" />}
                     <div className='create-review-break'></div>
                     <h5 id="add-written-review">Add a written review</h5>
                     <textarea id='written-input' placeholder='What did you like or dislike? What did you use this product for?' value={comment} onChange={(e) => setComment(e.target.value)} />
