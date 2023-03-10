@@ -68,16 +68,20 @@ const SingleReview = ({review}) => {
                 </div>
                 <form>
                     <div className='review-edit-labels'>
-                        <div>
-                            <StarRating rating={rating} setRating={setRating}/>
-                            <label>Headline: <input type='text' value={updatedReview.headline} onChange={e => setUpdatedReview({ ...updatedReview, headline: e.target.value })} /></label>
+                        <StarRating rating={rating} setRating={setRating}/>
+                        <div id='review-update-headline-section'>
+                            <label id='update-headline-text'>Headline:</label>
+                            <input id='update-headline-input' type='text' value={updatedReview.headline} onChange={e => setUpdatedReview({ ...updatedReview, headline: e.target.value })} />
                         </div>
-                        <label>Written Review: <textarea value={updatedReview.comment} onChange={(e) => setUpdatedReview({ ...updatedReview, comment: e.target.value })} /></label>
+                        <div id='review-update-written-section'>
+                            <label id='update-written-text'>Written Review:</label>
+                            <textarea id='update-written-input' value={updatedReview.comment} onChange={(e) => setUpdatedReview({ ...updatedReview, comment: e.target.value })} />
+                        </div>
                     </div>
                     <div className="update-buttons-div">
                         <div className="update-buttons">
-                            <button className="button update-button" type='button' onClick={handleUpdateSubmit}>Update</button>
-                            <button className="button grey-button update-button" type='button' onClick={handleCancel}>Cancel</button>
+                            <button className="review-update-button" type='button' onClick={handleUpdateSubmit}>Update</button>
+                            <button className="review-cancel-button" type='button' onClick={handleCancel}>Cancel</button>
                         </div>
                     </div>
                 </form>
