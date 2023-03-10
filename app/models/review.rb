@@ -21,4 +21,12 @@ class Review < ApplicationRecord
         class_name: :Product
 
     validates :rating, :headline, presence: true
+    validate :rating_cannot_be_zero
+
+    private
+    
+    def rating_cannot_be_zero
+        errors.add(:rating, "must be greater than 0") if rating && rating <= 0
+    end
+
 end

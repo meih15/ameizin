@@ -168,6 +168,10 @@ img#fillerImage {
     margin-top: 10px;
 }
 
+#add-to-cart:hover {
+    
+}
+
 .stock-high{
     font-size: 18px;
     font-family: rg-ember;

@@ -19,22 +19,39 @@ const CreateReview = () => {
     const [headline, setHeadline] = useState('');
     const [comment, setComment] = useState('');
     const [rating, setRating] = useState(0);
+    const [errors, setErrors] = useState([]);
 
+    console.log(errors)
+    const headlineError = errors.find(error => error.toLowerCase().includes('headline'));
+    const ratingError = errors.find(error => error.toLowerCase().includes('rating'))
 
     useEffect(() => {
         dispatch(fetchProduct(productId))
     }, [dispatch, productId]);
 
-    const handleCreateReview = e => {
+    const handleCreateReview = async (e) => {
         e.preventDefault();
-        dispatch(createReview({
-            userId: currrentUser.id,
-            productId: productId,
-            headline: headline,
-            comment: comment,
-            rating: rating
-        }));
-        history.push(`/review-confirmation?productId=${productId}`);
+        setErrors([]);
+        try {
+            await dispatch(createReview({
+                userId: currrentUser.id,
+                productId: productId,
+                headline: headline,
+                comment: comment,
+                rating: rating
+            }));
+            history.push(`/review-confirmation?productId=${productId}`);
+        } catch (err) {
+            let data;
+            try {
+                data = await err.clone().json();
+            } catch {
+                data = await err.text();
+            }
+            if (data?.errors) setErrors(data.errors);
+            else if (data) setErrors([data]);
+            else setErrors([err.statusText]);
+        }
     }
 
     if (!product) return null;
@@ -59,10 +76,14 @@ const CreateReview = () => {
                     <div id="stars">
                         <StarRating rating={rating} setRating={setRating}/>
                     </div>
+                    {ratingError ? <div id="error"><i id='exclamation' className="fa-solid fa-exclamation" />Please select a star rating</div> : 
+                    <i id='errors4' className="fa-solid fa-exclamation" />}
                     <div className='create-review-break'></div>
                     <h4 id="add-headline">Add a headline</h4>
                     <input id='headline-input' type="text" placeholder="What's important to know?" value={headline} onChange={(e) => setHeadline(e.target.value)} />
                     {/* photo section */}
+                    {headlineError ? <div id="error"><i id='exclamation' className="fa-solid fa-exclamation" />Please enter your headline.</div> : 
+                    <i id='errors4' className="fa-solid fa-exclamation" />}
                     <div className='create-review-break'></div>
                     <h5 id="add-written-review">Add a written review</h5>
                     <textarea id='written-input' placeholder='What did you like or dislike? What did you use this product for?' value={comment} onChange={(e) => setComment(e.target.value)} />
