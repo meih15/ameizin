@@ -1,15 +1,15 @@
-#half-filled-star-total, #filled-star-total{
+#half-filled-star-total, #filled-star-total, #empty-star-total{
     color: #ffa41c;
 }
-
+/* 
 #empty-star-total {
     color: #e47911;
-}
+} */
 
 #average-rating-section {
     display: flex;
     flex-direction: row;
-
+    margin-bottom: 20px;
 }
 
 #rounded-rating {

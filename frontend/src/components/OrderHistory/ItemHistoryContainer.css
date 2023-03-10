@@ -62,7 +62,7 @@
     text-decoration: none;
 }
 
-#product-review:focus {
+#product-review:active {
     outline: none;
     text-decoration: none;
     background: #e8f2f3;

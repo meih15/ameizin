@@ -46,10 +46,10 @@ const TotalRating = ({ filteredReviews }) => {
 
     return (
         <div>
-        <div id="average-rating-section">
-            {averageStarRating}
-            <p id="rounded-rating">{roundedRating} out of 5</p>
-        </div>
+            <div id="average-rating-section">
+                {averageStarRating}
+                <p id="rounded-rating">{roundedRating} out of 5</p>
+            </div>
         </div>
     );
 };

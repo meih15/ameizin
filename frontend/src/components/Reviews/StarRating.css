@@ -1,9 +1,4 @@
-#edit-filled-star-single-review {
+#edit-filled-star-single-review, #edit-empty-star-single-review {
     color: #ffa41c;
-    cursor: pointer;
-}
-
-#edit-empty-star-single-review {
-    color: #e47911;
     cursor: pointer;
 }

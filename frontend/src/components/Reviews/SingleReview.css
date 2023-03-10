@@ -31,13 +31,13 @@
     margin-right: 10px;
 }
 
-#filled-star-single-review {
+#filled-star-single-review, #empty-star-single-review {
     color: #ffa41c;
 }
 
-#empty-star-single-review {
+/* #empty-star-single-review {
     color: #e47911;
-}
+} */
 
 #headline {
     font-size: 14px;
