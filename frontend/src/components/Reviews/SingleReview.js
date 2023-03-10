@@ -15,7 +15,7 @@ const SingleReview = ({review}) => {
 
     useEffect (() => {
         dispatch(fetchUser(review.userId))
-    }, [dispatch, review.userId]);
+    }, [dispatch, review]);
 
     const reviewDate = new Date(review.createdAt).toLocaleDateString('en-US', {
         month: 'long',
@@ -27,7 +27,7 @@ const SingleReview = ({review}) => {
         <div className='single-review-stars'> 
             {[1, 2, 3, 4, 5].map((num) => (
                 <span key={num}>
-                    {num <= review.rating ? (
+                    {num <= rating ? (
                         <i id='filled-star-single-review' className="fa-solid fa-star"></i>
                     ) : (
                         <i id='empty-star-single-review' className="fa-regular fa-star"></i>
@@ -48,7 +48,7 @@ const SingleReview = ({review}) => {
     };
 
     const handleUpdateSubmit = () => {
-        dispatch(updateReview({...review, ...updatedReview, ...rating}));
+        dispatch(updateReview({...review, ...updatedReview, rating}));
         setEditMode(false);
     }
 

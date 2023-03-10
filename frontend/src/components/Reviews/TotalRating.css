@@ -1,0 +1,24 @@
+#half-filled-star-total, #filled-star-total{
+    color: #ffa41c;
+}
+
+#empty-star-total {
+    color: #e47911;
+}
+
+#average-rating-section {
+    display: flex;
+    flex-direction: row;
+
+}
+
+#rounded-rating {
+    margin-top: 2px;
+    font-size: 18px;
+    font-family: rg-ember;
+}
+
+.total-stars {
+    font-size: 18px;
+    margin-right: 8px;
+}
