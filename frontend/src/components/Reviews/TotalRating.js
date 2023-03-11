@@ -61,11 +61,13 @@ const TotalRating = ({ filteredReviews }) => {
                     <p id="rounded-rating">{roundedRatingFormatted} out of 5</p>
                 </div>
             ) : (
-                <div className="total-stars">
-                    {Array(5).fill().map((_, index) => (
-                        <i key={index} id="empty-star-total" className="fa-regular fa-star"></i>
-                    ))}
-                    <p>No ratings yet</p>
+                <div id="average-rating-section">
+                    <div className='total-stars'>
+                        {Array(5).fill().map((_, index) => (
+                            <i key={index} id="empty-star-total" className="fa-regular fa-star"></i>
+                        ))}
+                    </div>
+                    <p id="rounded-rating">No ratings yet</p>
                 </div>
             )}
         </div>

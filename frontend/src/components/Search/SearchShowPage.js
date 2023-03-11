@@ -45,9 +45,11 @@ const SearchShowPage = () => {
             <Header/>
             <CategoryNavBar/>
             {totalResults > 1 ? <div id='number-result-container'>{totalResults} results for <p id='searchword'>"{searchQuery}"</p></div> : <div id='number-result-container'>{totalResults} result for <p id='searchword'>"{searchQuery}"</p></div>}
-            <div className='search-results-section'>
-                <h1 id='search-result-text'>RESULTS</h1>
-                {searchProducts}
+            <div id='search-result-with-text'>
+                <div className='search-results-section'>
+                    <h1 id='search-result-text'>RESULTS</h1>
+                    {searchProducts}
+                </div>
             </div>
         </div>
     )

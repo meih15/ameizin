@@ -1,0 +1,17 @@
+#entire-search-rating, #search-average-rating-section {
+    display: flex;
+    flex-direction: row;
+}
+
+#search-rounded-rating {
+    font-family: rg-ember;
+    margin-right: 6px;
+    font-size: 14px;
+    display: flex;
+    align-items: flex-end;
+}
+
+#half-filled-star-search, #empty-star-search, #filled-star-search {
+    font-size: 14px;
+    color: #ffa41c;
+}

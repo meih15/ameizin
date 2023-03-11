@@ -1,4 +1,5 @@
 import { useEffect, useState} from "react";
+import './ProductRating.css'
 
 const ProductRating = ({filteredReviews}) => {
     const [averageRating, setAverageRating] = useState(0);
@@ -50,20 +51,21 @@ const ProductRating = ({filteredReviews}) => {
 
 
     return (
-        <div>
+        <div id="entire-search-rating">
             {filteredReviews && filteredReviews.length > 0 ? (
                 <div id="search-average-rating-section">
                     <p id="search-rounded-rating">{roundedRatingFormatted}</p>
                     {averageStarRating}
                 </div>
             ) : (
-                <div className="total-search-stars">
-                    <p>No ratings yet</p>
+                <div id="search-average-rating-section">
+                    <p id="search-rounded-rating">No ratings yet</p>
                     {Array(5).fill().map((_, index) => (
                         <i key={index} id="empty-star-search" className="fa-regular fa-star"></i>
                     ))}
                 </div>
             )}
+            {/* total ratings */}
         </div>
     );
 };

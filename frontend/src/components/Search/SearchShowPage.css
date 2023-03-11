@@ -22,8 +22,22 @@
 }
 
 #search-result-text {
+    display: flex;
+    text-align: left;
     font-size: 20px;
     font-family: rg-ember;
+    margin-bottom: 8px;
+}
+
+.search-results-section {
+    display: flex;
+    flex-direction: column;
+}
+
+#search-result-with-text {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
 }
 
 
