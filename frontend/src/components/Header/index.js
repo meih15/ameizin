@@ -26,12 +26,17 @@ function Header() {
 
     const signedout = (
         <button className='signin_drop_down' onClick={() => history.push('/login')} >Sign In</button>
-    )
+    );
 
     const handleSearchSubmit = e => {
         e.preventDefault();
-        history.push(`/search?searchQuery=${searchValue}`);
-    }
+        
+      if (searchValue === "") {
+            window.location.reload();
+        } else {
+            history.push(`/search?searchQuery=${searchValue}`);
+        }
+    };
 
     useEffect(() => {
         dispatch(fetchCart())
@@ -43,14 +48,14 @@ function Header() {
                                     <p className='return-word'>Order</p>
                                     <p className='order-word'>History</p>
                                 </div>
-                            </Link>)
+                            </Link>);
 
     const loggedOutOrder =  (<Link to='/login' className='ordersLink'>
                                 <div id='return-order'>
                                     <p className='return-word'>Order</p>
                                     <p className='order-word'>History</p>
                                 </div>
-                            </Link>)
+                            </Link>);
 
 
     return (
@@ -65,7 +70,7 @@ function Header() {
                 </div>
             </div>
             <div className='nav-bar-middle'>
-                <select id='searchDropDown'></select>
+                    <select id='searchDropDown'></select>
                 <div id='homePageSearchBar'>
                     <input 
                         className='inputForHomePgSearch'
