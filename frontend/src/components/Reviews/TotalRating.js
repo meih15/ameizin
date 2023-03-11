@@ -7,6 +7,13 @@ const TotalRating = ({ filteredReviews }) => {
     const [hasHalfStar, setHasHalfStar] = useState(false);
 
     useEffect(() => {
+        if (!filteredReviews || filteredReviews.length === 0) {
+            setAverageRating(0);
+            setRoundedRating(0);
+            setHasHalfStar(false);
+            return;
+        }
+
         const totalNumberReviews = filteredReviews?.length;
 
         const ratingTotal = filteredReviews.reduce((total, review) => {
@@ -42,14 +49,25 @@ const TotalRating = ({ filteredReviews }) => {
         </div>
     );
 
+    const roundedRatingFormatted = roundedRating % 1 === 0 ? `${roundedRating.toFixed(1)}` : `${roundedRating}`;
+
     if (!filteredReviews) return null;
 
     return (
         <div>
-            <div id="average-rating-section">
-                {averageStarRating}
-                <p id="rounded-rating">{roundedRating} out of 5</p>
-            </div>
+            {filteredReviews && filteredReviews.length > 0 ? (
+                <div id="average-rating-section">
+                    {averageStarRating}
+                    <p id="rounded-rating">{roundedRatingFormatted} out of 5</p>
+                </div>
+            ) : (
+                <div className="total-stars">
+                    {Array(5).fill().map((_, index) => (
+                        <i key={index} id="empty-star-total" className="fa-regular fa-star"></i>
+                    ))}
+                    <p>No ratings yet</p>
+                </div>
+            )}
         </div>
     );
 };

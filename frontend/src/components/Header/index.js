@@ -72,6 +72,11 @@ function Header() {
                         type='text' 
                         placeholder="Search Ameizin'"
                         onChange={(e) => setSearchValue(e.target.value)}
+                        onKeyDown={(e) => {
+                            if (e.key === 'Enter') {
+                                handleSearchSubmit(e);
+                            }
+                        }}
                     />
                     <button id='searchSubmit' onClick={handleSearchSubmit}><i className="fa-solid fa-magnifying-glass"></i></button>
                 </div>
