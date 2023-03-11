@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import * as sessionActions from '../../store/session';
 import { fetchCart, getCart } from '../../store/carts';
 import { fetchCartItems, getCartItems } from '../../store/cartItems';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 function Header() {
     const history = useHistory();
@@ -13,6 +13,7 @@ function Header() {
     const sessionUser = useSelector(state => state.session.user);
     const cart = useSelector(getCart());
     const cartItems = useSelector(getCartItems);
+    const [searchValue, setSearchValue] = useState("");
 
     const cartNumber = cartItems.reduce((total, item) => item.cartId === cart.id ? total + item.quantity : total, 0);
 
@@ -26,6 +27,11 @@ function Header() {
     const signedout = (
         <button className='signin_drop_down' onClick={() => history.push('/login')} >Sign In</button>
     )
+
+    const handleSearchSubmit = e => {
+        e.preventDefault();
+        history.push(`/search?searchQuery=${searchValue}`);
+    }
 
     useEffect(() => {
         dispatch(fetchCart())
@@ -65,8 +71,9 @@ function Header() {
                         className='inputForHomePgSearch'
                         type='text' 
                         placeholder="Search Ameizin'"
+                        onChange={(e) => setSearchValue(e.target.value)}
                     />
-                    <button id='searchSubmit'><i className="fa-solid fa-magnifying-glass"></i></button>
+                    <button id='searchSubmit' onClick={handleSearchSubmit}><i className="fa-solid fa-magnifying-glass"></i></button>
                 </div>
             </div>
                 <div className='nav-bar-right'>

@@ -1,0 +1,29 @@
+#number-result-container {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 0 10px #ddd;
+    background-color: #fff;
+    position: relative;
+    text-align: left;
+    padding: 8px;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: rg-ember;
+    width: 100%;
+    min-width: 1000px;
+}
+
+#searchword {
+    font-family: bolded-ember;
+    margin-left: 5px;
+    color: #c45500;
+}
+
+#search-result-text {
+    font-size: 20px;
+    font-family: rg-ember;
+}
+
+

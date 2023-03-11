@@ -11,6 +11,7 @@ import ConfirmationPage from './components/ConfirmationPage';
 import OrderHistoryShowPage from './components/OrderHistory';
 import CreateReview from './components/Reviews/CreateReview';
 import ReviewConfirmation from './components/Reviews/ReviewConfirmation';
+import SearchShowPage from './components/Search/SearchShowPage';
 
 
 
@@ -26,6 +27,7 @@ function App() {
         <Route path='/order-confirmation'><ConfirmationPage /></Route>
         <Route path='/createreview'><CreateReview /></Route>
         <Route path='/review-confirmation'><ReviewConfirmation /></Route>
+        <Route path='/search'><SearchShowPage /></Route>
         <Route path='/cart'><CartShowPage /></Route>
         <Route exact path='/'><HomePage /></Route>
         <Route path="*"><PageNotFound /></Route>

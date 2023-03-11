@@ -31,7 +31,6 @@ const ReviewShowPage = ({productId}) => {
     const filteredReviews = filteringReviews(reviews, productId);
     const sortedReviews = [...filteredReviews].sort((a, b) => b.createdAt.localeCompare(a.createdAt));
     const singleReview = sortedReviews.map(review => <SingleReview key={review.id} review={review}/>)
-    // still need to order these reviews liek i did orderhistory items
 
 
     return (
