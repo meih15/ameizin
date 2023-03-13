@@ -302,9 +302,9 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
 
   #15
 
-  Product.create! (
+  Product.create!(
     product_name: "Microsoft Surface Laptop Go 12.4 inches Touchscreen Laptop PC, Intel Quad-Core i5-1035G1, 4GB RAM, 64GB eMMC, Webcam, Win 10 Pro, Bluetooth, Online Class Ready - Platinum",
-    description: ,
+    description: "We sell computers with professional upgrade and customization. The manufacturer box will be opened by our engineers for customizing and testing. Defects & blemishes are significantly reduced by our in depth inspection & testing.",
     bullets: ["Intel Core i5 10th Gen 1035G1 (1.00GHz) 4 GB LPDDR4X Memory 64 GB eMMC",
     "Windows 10 Pro to bring you the powerful Windows features you use most at exceptional value.",
     "Make the most of every day with the sleek style, performance, and all-day battery life you need in our lightest Surface Laptop, all at an exceptional value.",
@@ -622,7 +622,7 @@ They are suitable for men, women, kids and the people who have thick heavy hair.
 
   #37
 
-  Product.create! (
+  Product.create!(
     product_name: "[Beauty of Joseon] Relief Sun (50ml, 1.69fl.oz)",
     description: "Relief sun is a chemical sunscreen that helps protect your skin from ultraviolet rays.
 
@@ -638,9 +638,9 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
   )
 
   #38
-  Product.create! (
+  Product.create!(
     product_name: "Aveeno Protect + Hydrate Moisturizing Body Sunscreen Lotion With Broad Spectrum Spf 60 & Prebiotic Oat, Weightless, Paraben-free, Oil-free & Oxybenzone-free, Pump Bottle, 12.0 ounces",
-    description: ,
+    description: "Moisturize and protect your skin from the sun with Aveeno Protect + Hydrate body sunscreen lotion. From Aveeno, A dermatologist-recommended brand for over 65 years, This weightless sunscreen lotion contains SPF 60 to protect from harmful UVA and UVB rays and combat sun-induced free radicals that accelerate skin aging. Made with nourishing prebiotic oat, the daily sunscreen deeply hydrates skin all day, leaving it feeling soft and moisturized. And, when used as directed along with other skin protection measures, the hydrating sunscreen helps prevent sunburn and decreases the risk of skin cancer. The non-greasy, hypoallergenic formula dries clear, so it won't stain skin. It's also Paraben-, phthalate-, oil-, Oxybenzone-, and dye-free. Water- and sweat-resistant for up to 80 minutes, The moisturizing SPF 60 sunscreen lotion is perfect for outdoor activities. For best results, apply the sunblock 15 minutes before sun exposure and reapply every two hours or more often as needed.",
     bullets: ["12-Fluid Ounce pump bottle of Aveeno Protect + hydrate sunscreen Broad Spectrum SPF 60 Body lotion to help protect and provide all-day hydration to skin",
     "Made with nourishing prebiotic oat, this lightweight daily sunscreen helps leave skin feeling soft and moisturized all day as it combats sun induced free radicals that accelerate skin-aging",
     "With a refreshing and weightless formula and a non-greasy feel, the invisible sunscreen lotion also provides broad spectrum SPF 60 protection from harmful UVA and UVB rays",
@@ -1125,7 +1125,7 @@ Product Features
 -Its powerful and energy-efficient motor produces smooth and seamless operation and the anti-slip belt and soft-grip handlebar make your session a comfortable and controlled experience.
 -Other great features include safety tether key, smooth wheels for easy mobility and tablet holder.",
     bullets: ["☆ The treadmill is equipped with 5 inch LCD display and 15 pre-set programs, one-touch operation helps you to enjoy the running at home. You can monitor real-time data for each exercise, including speed, time, calories, distance and pulse.",
-    "☆The treadmill is equipped with a 2.5HP peak power motor and one set intelligent electronic controllers which can not only bring you a silent running experience but also keep the stable running speed from 0.6 MPH to 7.5 MPH (1 - 12 KM/H)."
+    "☆The treadmill is equipped with a 2.5HP peak power motor and one set intelligent electronic controllers which can not only bring you a silent running experience but also keep the stable running speed from 0.6 MPH to 7.5 MPH (1 - 12 KM/H).",
     "☆Fast Control Handle ：There are three manually adjustable tilt buttons.You can press the BUTTON on the handle to start or stop at any moment. Good for multiple running styles combining running & jogging & walking.",
     "☆Foldable design (by air spring) helps the end user to assemble the treadmill easily and effectively,it's also easy to move and store the treadmill.Electric treadmill use the large Multi-layer Tread Belt , which provides extra space for comfortable running, making running safer and more comfortable, more importantly, a wide walking belt, better footsteps, less prone to touching your feet.",
     "☆Foldable Design & Low Noise Motor and Safety Emergency: Foldable designand transportation wheels allow for easy move and storage. This foldable treadmill comes with built in safety key to ensure instant shut-off under emergency situation.The 2.5HP motor ensures perfect performance for walking, jogging, running and cardio workout at home. Provide safe and quiet workout experience."],
@@ -1245,7 +1245,7 @@ This is the perfect set for your home gym and for fitness enthusiasts.",
     "Extra thick mat for yoga, gym, and everyday exercise",
     "Textured foam construction provides traction and stability",
     "1/2 inch thick mat provides extra support, shock-absorption, and comfort",
-    "Elastic straps secure rolled-up mat; includes shoulder strap for easy carrying",,
+    "Elastic straps secure rolled-up mat; includes shoulder strap for easy carrying",
     "Please check the mat will not slip on the floor before using",
     "Dimensions: 74 x 24 x .5 inches"],
     price: 25.56,
@@ -1390,7 +1390,7 @@ Built to last, our solid core massage roller with EVA tread is made from top gra
     bullets: ["【Durable & Adjustable Rope】 This jump rope is made of steel wires that are coated with strong PVC material, making it durable even after a long time exercising. Its adjustable length design enables you to customize the length according to your needs, making it suitable for everyone, no matter for kids or adults.",
     "【Jump Fast, Jump easily】 Built-in with high-quality ball bearings, the skipping rope provides you with comfortable jump exercises. It supports fast jumps while protecting you from any potential tangles, satisfying your needs for safety and convenience at the same time.",
     "【Ergonomic Foam Handles】 The ergonomic handles are well designed for your safety and convenience: they are covered with soft sponges, which makes the handles comfortable to hold. And the non-slip & moisture-wicking features also keep your palms dry, making your every exercise comfortable and safe!",
-    "【Get Fitness Anytime & Anywhere】 No matter you’re women or men, kids or adults, beginner or an experienced person, you can start jumping ropes anytime and anywhere. It’s easy and efficient, and it helps to strengthen your body, lose weight, and increase stamina."
+    "【Get Fitness Anytime & Anywhere】 No matter you’re women or men, kids or adults, beginner or an experienced person, you can start jumping ropes anytime and anywhere. It’s easy and efficient, and it helps to strengthen your body, lose weight, and increase stamina.",
     "【Portable & Easy to Carry】 You can easily carry jump ropes for fitness with you. Put it in your pocket and jump rope for workout with it when needed, it’s that convenient. We are also happy to serve you! If you have any questions, please contact us and we’ll give a satisfying solution."],
     price: 8.99,
     inventory: 8,
@@ -1457,8 +1457,8 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
     "Special design: the black beads are matte agate stone, while the white beads are white turquoise (howlite), and the bracelets could help to release stress and gain you some inside peace",
     "Wear it in daily life: the bracelets are decorative and applicable, and the interlacing of black and white beads is also meaningful for couples, friends and families",
     "Easy to match: 2 different styles are available, you can select your favorite style to match with your outfits, giving a nice feeling with you all day"],
-    price: 8,
-    inventory: 8.99,
+    price: 8.99,
+    inventory: 6,
     category_id: 5
   ) 
 
@@ -1621,7 +1621,7 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
 
   Product.create!(
     product_name: "HZMAN Genuine Leather Tree of life Bracelets Men Women, Tiger Eye Natural Stone Lava Rock Beads Ethnic Tribal Elastic Bracelets Wristbands",
-    description: ,
+    description: "#1 in Men's Cuff Bracelets",
     bullets: ["Designed for personal wearing or to be the christmas, halloween, birthday, anniversary gifts for father, mother, friends, lovers, couples, motorcyclists bikers, tattoo fans... or just yourself",
     "Unisex multilayer fashion bracelet,Wonderful gift for you and your friends.",
     "Dimension:Length from 21.5CM(8.5 inch)",
@@ -2081,14 +2081,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
 
   #125
 
-  Product.create!(
-    product_name: "",
-    description: ,
-    bullets: [],
-    price: ,
-    inventory: ,
-    category_id:
-  ) 
+  # Product.create!(
+  #   product_name: "",
+  #   description: ,
+  #   bullets: [],
+  #   price: ,
+  #   inventory: ,
+  #   category_id:
+  # ) 
 
 
   #126
@@ -2231,7 +2231,7 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
 
   Product.create!(
     product_name: "Dunkin' Original Blend Medium Roast Ground Coffee, 30 Ounce",
-    description: ,
+    description: "Start your day off right with a nice cup of this Dunkin' Donuts Original Blend 30-ounce-canister medium-roast coffee. Wake up to the rich aroma of this medium-roast coffee. Made with 100 percent premium Arabica beans, this roast produces a bold flavor and nice finish. This Dunkin' Donuts Original Blend coffee comes in a 30-ounce canister and can be used for both hot and iced beverages, making it a great option for warm and cold climates. Ground coffee is ready for brewing. Medium roast coffee with Original Blend flavor. 30 oz. can. Caffeinated coffee provides an instant pick-me-up when you take a sip. Made with 100% arabica beans, sourced, and selected worldwide. The product is kosher.",
     bullets: ["Contains 1 - 30 ounce canister of ground coffee",
     "Original Blend is the coffee that made Dunkin' famous, featuring a rich, smooth taste unmatched by others",
     "Medium roast coffee, specially blended and roasted to deliver the same great taste as the brewed Dunkin' coffee available in Dunkin' shops",
@@ -2261,7 +2261,7 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
 
   Product.create!(
     product_name: "Starbucks K-Cup Coffee Pods—Medium Roast Coffee—Pike Place Roast for Keurig Brewers—100% Arabica—4 boxes (96 pods total)",
-    description: ,
+    description: "Named for our first store in Seattle’s Pike Place Market, this coffee is served fresh every day in Starbucks cafés around the world. A smooth, well-rounded blend of Latin American beans with subtly rich flavors of cocoa and praline, it’s the perfect brewed coffee—a consistently delicious cup you can really look forward to. Enjoy the spirit of Pike Place in every sip. Pike Place is a registered trademark of The Pike Place Market PDA, used under license. Nestlé uses Starbucks trademarks under license",
     bullets: ["PREMIUM COFFEE IN KEURIG K-CUPS—Starbucks delivers exceptional coffee cup after cup with Pike Place Roast medium roast coffee K-Cups—96 total coffee pods for Keurig coffee makers",
     "STARBUCKS PIKE PLACE ROAST COFFEE—A smooth, well-rounded blend of Latin American coffees with subtly rich notes of cocoa and rich praline, it’s perfect for every day",
     "FRESH TASTE—Starbucks adheres to the highest quality standards—shipping you the same carefully roasted 100% arabica coffee beans we brew in our cafés",
@@ -2293,7 +2293,7 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
 
   Product.create!(
     product_name: "PopCorners Popped Corn Snacks, 6 Flavor Variety Pack, 1oz Bags (20 Pack)",
-    description: ,
+    description: "Let’s play truth or dare. We’ll go first. A great bag of PopCorners Popped Corn chips is hard to beat. Our popped-corn chips are combined with sunflower oil, cane sugar, and salt. It’s a sweet and salty experience. It’s balanced enough to eat every day. Trust us. Your taste buds will thank you. So, go ahead. We dare you.",
     bullets: ["20 Pack of 1 oz PopCorners variety snack pack chips: (3) White Cheddar, (4) Kettle Corn, (4) Sea Salt, (3) Spicy Queso, (3) Sweet Chili, (3) Sour Cream & Onion single serve snack chips",
     "Wholesome snacks: popcorner's delicious popped corn snacks are drizzled in sunflower oil with a pinch of sea salt, our chips are never fried. No nuts. Just simple ingredients for better flavor",
     "PopCorners delicious popped corn snacks are never fried",
@@ -2529,7 +2529,7 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
 
   Product.create!(
     product_name: "Vita Coco Coconut Water, Pure Organic | Refreshing Coconut Taste | Natural Electrolytes | Vital Nutrients | 16.9 Oz (Pack Of 12)",
-    description:,
+    description: "Not so long ago, you had to use a machete if you wanted a sip of pure coconut water. We’ve taken the machete out of the equation, which is good, because those things are dangerous. Now all that’s left is mother nature’s most hydrating, refreshing, vitamin- and mineral-rich nectar. Vita Coco is never made from concentrate. That means we pick, crack, and pack fresh young coconuts directly at the source. After the coconuts are cleaned, the delicate water inside is flash pasteurized (and occasionally mixed with all-natural fruit puree) then poured into a shelf-stable Tetra Pak. The entire process from tree to Pak doesn't exceed 72 hours. We hear the end result is a lot like sticking a straw in a coconut.",
     bullets: ["TASTE OF THE TROPICS | Not long ago you needed a ladder and a machete to get great-tasting coconut water. Now all you have to do is crack open a Vita Coco, the WORLD'S BEST-SELLING coconut water",
     "NATURAL HYDRATION | Refreshing and jam-packed with vitamins, nutrients, and ELECTROLYTES (including MORE POTASSIUM than a banana) — our coconut water helps keep your body properly hydrated",
     "REFRESH YOURSELF | Coconut water is the natural choice for everyday, on-the-go refreshment — DRINK VITA COCO before a gym workout, with a meal, as an afternoon pick me up, or after a night out",
@@ -2594,7 +2594,7 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
 
   Product.create!(
     product_name: "MeoHui Cat Toys, 2PCS Retractable Cat Wand Toy and 9PCS Cat Feather Toys Cat Teaser Toy Refills, Interactive Cat Toy Wand Kitten Toys for Indoor Cats to Play Chase Exercise",
-    description: ,
+    description: "As this is a interactive cat toy, we kindly suggest that supervise your cat when playing this toy all the time, in case they bite the toy. Keep it in a safe place that pets can’t reach it. Never leave your cat alone with this toy, because cats like to chew things like string and soft things.",
     bullets: ["1. EXCITING ENTERTAINMENT FOR CATS: Cats are crazy about chaser games! Combine string and feather into a great cat toys, this cat feather toys is an irresistible lure for cats! Swing the feathers 'lure' will get your cats excited and bring out the 'hunt instinct', making them running and jumping like a wild animal, driving your cats crazy with joy! Even adult cat play like a kitten again!",
     "2. CLASSIC PRACTICAL INTERACTIVE CAT TOY: This cat wand toy will help your Indoor cats to flip, jump, pounce, chase. Great way to get your cats energy out and do more exercise, making your cat be released and happy! Suitable for kittens and cats of all ages and sizes! A great kitten toys to spend some quality time with your feline friend. This is a CLASSIC interactive cat toys for indoor cats, give your fur baby a try!",
     "3. TELESCOPIC FISHING POLE DESIGN: This cat fishing pole toy extends from 15” in to 38.9”. It's very light, flexible, durable and easy to store. The fully extend cat toy wand is long enough( 38.9 in) plus the string (23.6in) which can cover a large space for playing, it can really get your cats exercise. And it's very light so that cat-teasing is no longer a tough job for you. You can even sit on the couch watching TV while teasing cats with this feather cat toys.",
@@ -2633,7 +2633,7 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
 
   Product.create!(
     product_name: "Legendog 5Pcs Catnip Toy, Cat Chew Toy Bite Resistant Catnip Toys for Cats,Catnip Filled Cartoon Mice Cat Teething Chew Toy",
-    description: ,
+    description: "#654 in Pet Supplies ",
     bullets: ["Perfect Gift: The cat chew toy is filled with catnip and we choose the more breathable fabric to allow your cats smell the catnip easily and make your cats be more interested in palying with them.",
     "Bite resistant: Fine suture of this cat toy makes it durable for biting. Don't worry it will be chewed up.",
     "Safe and High Quality Material: More Durable Cotton Linen; Stuffed with Soft PP Cotton and Natural Catnip",
@@ -2694,14 +2694,14 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
 
   #162
 
-  Product.create!(
-    product_name: "",
-    description: ,
-    bullets: [],
-    price: ,
-    inventory: ,
-    category_id: 8
-  )
+  # Product.create!(
+  #   product_name: "",
+  #   description: ,
+  #   bullets: [],
+  #   price: ,
+  #   inventory: ,
+  #   category_id: 8
+  # )
 
 
   #163

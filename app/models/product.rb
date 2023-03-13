@@ -33,7 +33,7 @@ class Product < ApplicationRecord
         class_name: :Review,
         dependent: :destroy
 
-
+    has_one_attached :photo
 
     validates :product_name, :description, :price, :inventory, presence: true
     validates :product_name, uniqueness: true
