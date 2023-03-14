@@ -9,7 +9,9 @@ import switch2Pic from '../../image/oled-switch.jpeg';
 
 const ProductContainer = ( {productId} ) => {
     // const dispatch = useDispatch();
+
     const product = useSelector(getProduct(productId));
+
 
     useEffect(()=>{
         // dispatch(fetchProduct(productId))
@@ -19,7 +21,7 @@ const ProductContainer = ( {productId} ) => {
         <>
             <div className='product-container'>
                 <Link to={`/products/${productId}`}>
-                    <img id='' src={switch2Pic} alt=''></img>
+                    <img id='home-page-photos' src={switch2Pic} alt='homepg-products'></img>
                 </Link>
                 <Link id='name-product-box' to={`/products/${productId}`}>
                     <h1 id='container-product-name'>{product.productName}</h1>

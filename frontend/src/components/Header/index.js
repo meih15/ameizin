@@ -7,7 +7,7 @@ import { fetchCart, getCart } from '../../store/carts';
 import { fetchCartItems, getCartItems } from '../../store/cartItems';
 import { useEffect, useState } from 'react';
 
-function Header() {
+function Header({placeholder}) {
     const history = useHistory();
     const dispatch = useDispatch();
     const sessionUser = useSelector(state => state.session.user);
@@ -70,8 +70,20 @@ function Header() {
                 </div>
             </div>
             <div className='nav-bar-middle'>
-                    <select id='searchDropDown'></select>
+                    {/* <select id='searchDropDown'></select> */}
                 <div id='homePageSearchBar'>
+                    {placeholder ? 
+                    <input 
+                        className='inputForHomePgSearch'
+                        type='text' 
+                        placeholder={placeholder}
+                        onChange={(e) => setSearchValue(e.target.value)}
+                        onKeyDown={(e) => {
+                            if (e.key === 'Enter') {
+                                handleSearchSubmit(e);
+                            }
+                        }}
+                    /> :
                     <input 
                         className='inputForHomePgSearch'
                         type='text' 
@@ -82,7 +94,7 @@ function Header() {
                                 handleSearchSubmit(e);
                             }
                         }}
-                    />
+                    />}
                     <button id='searchSubmit' onClick={handleSearchSubmit}><i className="fa-solid fa-magnifying-glass"></i></button>
                 </div>
             </div>

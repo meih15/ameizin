@@ -36,20 +36,17 @@ const CategoryShowPage = () => {
         <CategoryItemContainer key={product.id} product={product}/>
                 </div>
     })
+
+    const totalResults = filteredList.length
     
     return (
         <div className='cat-show-page'>
 
-           <Header />
+           <Header placeholder={category.categoryName}/>
             <CategoryNavBar />
-            <h1 id='category-name'>{category.categoryName}</h1>
+            {totalResults > 1 ? <div id='category-number-result-container'>{totalResults} results for <p id='category-name'>"{category.categoryName}"</p></div> : <div id='category-number-result-container'>{totalResults} result for <p id='category-name'>"{category.categoryName}"</p></div>}
             <div id='cat-item-container'>
-                {/* {filteredList.map(product => 
-                    <div id='cat-item'>
-                        <CategoryItemContainer product={product}/>
-                    </div>
-                    )} */}
-                    {list}
+                {list}
             </div>
         </div>
     );

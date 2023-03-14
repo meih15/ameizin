@@ -90,6 +90,8 @@
     line-height: 15px;
     padding: 10px 10px 10px 8px;
     box-sizing: border-box;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
 }
 
 .inputForHomePgSearch:focus {
@@ -100,13 +102,14 @@
     border-left: 3px solid #ff9900; */
 }
 
-/* .inputForHomePgSearch:focus+#searchSubmit {
-    border-top: 3px solid #ff9900;
+/* .inputForHomePgSearch:focus+#searchSubmit { */
+    /* border-top: 3px solid #ff9900;
     border-right: 3px solid #ff9900;
-    border-bottom: 3px solid #ff9900;
-}
+    border-bottom: 3px solid #ff9900; */
+    /* outline: 3px solid #ff9900; */
+/* } */
 
-.inputForHomePgSearch:focus+#searchDropDown  {
+/* .inputForHomePgSearch:focus+#searchDropDown  {
     border-top: 3px solid #ff9900;
     border-left: 3px solid #ff9900;
     border-bottom: 3px solid #ff9900;
