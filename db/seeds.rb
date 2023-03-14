@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+require "open-uri"
 
 ApplicationRecord.transaction do 
   puts "Destroying tables..."
@@ -58,7 +59,7 @@ ApplicationRecord.transaction do
 
   #1
 
-  Product.create!(
+  1 = Product.create!(
     product_name: 'Nintendo Switch – OLED Model w/ White Joy-Con',       
     description: "Introducing the newest member of the Nintendo Switch family
 
@@ -76,9 +77,14 @@ Play at home on the TV or on-the-go with a vibrant 7-inch OLED screen with the N
     category_id: 1 
   )
 
+  1.photo.attach(
+    io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/nintendo-switch-white-joycon.jpg'),
+    filename: "white-nintendo"
+  )
+
   #2
 
-  Product.create!(
+  2 = Product.create!(
     product_name: 'Xbox Series X',       
     description: "Introducing Xbox Series X, the fastest, most powerful Xbox ever. Play thousands of titles from four Generations of Consoles - all games look and play best on Xbox Series X. At the heart of Series X is the Xbox Velocity architecture, which pairs a custom SSD with integrated software for faster, streamlined gameplay with significantly reduced load times. Seamlessly move between multiple games in a Flash with quick resume. Explore rich new worlds and enjoy the action like never before with the unmatched 12 Teraflops of raw graphic processing power. Enjoy 4K gaming at up to 120 frames per second, advanced 3D spatial sound, and more. Get started with an instant library of 100+ high-quality games, including all new Xbox Game Studios titles the day they launch like Halo Infinite, with Xbox Game Pass Ultimate (membership sold separately).",              
     bullets: ['Introducing Xbox Series X, the fastest, most powerful Xbox ever. Play thousands of titles from four generations of consoles-all games look and play best on Xbox Series X.', "Experience next-gen speed and performance with the Xbox velocity architecture, powered by a custom SSD and integrated software.", 
@@ -90,9 +96,14 @@ Play at home on the TV or on-the-go with a vibrant 7-inch OLED screen with the N
     category_id: 1
   )
 
+  2.photo.attach(
+    io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/xbox-series-x.jpg'),
+    filename: "xbox"
+  )
+
   #3
 
-    Product.create!(
+    3 = Product.create!(
     product_name: 'Pokémon Violet - Nintendo Switch',       
     description: "The newest chapters in the Pokémon series are coming to the Nintendo Switch system later this year. Catch, battle, and train Pokémon in the Paldea Region, a vast land filled with lakes, towering peaks, wastelands, small towns, and sprawling cities. There is no set path, so you can adventure freely through three grand stories. In one such story, you can challenge Pokémon Gyms in any order you desire as you aim for the Champion Rank! Explore a wide-open world at your own pace and traverse land, water, and air by riding on the form-shifting Legendary Pokémon Miraidon. Choose either Sprigatito, Fuecoco, or Quaxly, to be your first partner Pokémon before setting off on your journey through Paldea.
 
@@ -109,9 +120,13 @@ The Paldea Region is home to a prestigious school where people from all sorts of
     category_id: 1
   )
 
+  3.photo.attach(
+    io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/pokemon-violet.jpg'),
+    filename: "pokemon-violet"
+  )
 
   #4
-    Product.create!(
+  4 = Product.create!(
     product_name: 'Pokémon Scarlet - Nintendo Switch',       
     description: "The newest chapters in the Pokémon series are coming to the Nintendo Switch system later this year. Catch, battle, and train Pokémon in the Paldea Region, a vast land filled with lakes, towering peaks, wastelands, small towns, and sprawling cities. There is no set path, so you can adventure freely through three grand stories. In one such story, you can challenge Pokémon Gyms in any order you desire as you aim for the Champion Rank! Explore a wide-open world at your own pace and traverse land, water, and air by riding on the form-shifting Legendary Pokémon Miraidon. Choose either Sprigatito, Fuecoco, or Quaxly, to be your first partner Pokémon before setting off on your journey through Paldea.
 
@@ -128,9 +143,13 @@ The Paldea Region is home to a prestigious school where people from all sorts of
     category_id: 1
   )  
 
+  4.photo.attach(
+    io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/pokemon-scarlet.jpg'),
+    filename: 'pokemon-scarlet'
+  )
 
   #5
-  Product.create!(
+  5 = Product.create!(
     product_name: 'PlayStation 5 Console CFI-1215A01X',       
     description: 'The PS5 console unleashes new gaming possibilities that you never anticipated. Experience lightning fast loading with an ultra-high speed SSD, deeper immersion with support for haptic feedback, adaptive triggers, and 3D Audio, and an all-new generation of incredible PlayStation games.',              
     bullets: ["Model Number CFI-1215A01X", 
@@ -142,8 +161,13 @@ The Paldea Region is home to a prestigious school where people from all sorts of
     category_id: 1 
   )
 
+  5.photo.attach(
+    io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/playstation-5.jpg'),
+    filaname: "playstation-5"
+  )
+
     #6
-    Product.create!(
+  6 = Product.create!(
     product_name: 'Logitech G713 Wired Mechanical Gaming Keyboard Clicky + Logitech G705 Wireless Gaming Mouse - White Mist',       
     description: 'Keyboard, Mouse, Wrist Rest',              
     bullets: ["Cloud-soft Comfort: Float away with G713’s dreamy white design and comfy, cloud-shaped palm rest; compact mechanical TKL keyboard layout and adjustable height give that good game feeling, all-day long",
@@ -157,9 +181,14 @@ The Paldea Region is home to a prestigious school where people from all sorts of
     category_id: 1
   )
 
+  6.photo.attach(
+    io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/logitech-white.jpg'),
+    filename: "logitech-white"
+  )
+
 
   #7
-    Product.create!(
+  7 = Product.create!(
     product_name: "Kirby’s Return to Dream Land™ Deluxe - Nintendo Switch",       
     description: "Adventure through Dream Land with Kirby and his allies—solo or with friends!
 
@@ -185,9 +214,15 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
     category_id: 1
   )
 
+  7.photo.attach(
+    io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kirby-switch.jpg'),
+    filename: "kirby-switch"
+  )
+
+
   # 8
 
-  Product.create!(
+  8 = Product.create!(
     product_name: 'The lightest and most compact Kindle, now with a 6” 300 ppi high-resolution display, and 2x the storage - Black',       
     description: 'All-new Kindle (2022 release)',              
     bullets: ["The lightest and most compact Kindle, now with a 300 ppi high-resolution display for sharp text and images.",
@@ -202,9 +237,14 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
     category_id: 1
   )
 
+  8.photo.attach(
+    io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kindle.jpg'),
+    filename: "kindle"
+  )
+
   # 9
 
-  Product.create!(
+  9 = Product.create!(
     product_name: "INSIGNIA All-New 24-inch Class F20 Series Smart HD 720p Fire TV (NS-24F201NA23, 2022 Model)",
     bullets: ["720p resolution - View your favorite movies, shows and games in high definition.",
     "Alexa voice control - The Alexa Voice Remote lets you easily control your entertainment, search across apps, switch inputs, and more using just your voice. Press and hold the voice button and ask Alexa to easily find, launch, and control content, and even switch to cable.",
@@ -217,9 +257,15 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
     category_id: 1
   )
 
+  9.photo.attach(
+    io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/insignia-tv.jpg'),
+    filename: "insignia-tv"
+  )
+
+
   #10
 
-  Product.create!(
+  10 = Product.create!(
     product_name: "Echo Show 5 (2nd Gen, 2021 release) | Smart display with Alexa and 2 MP camera | Deep Sea Blue",
     bullets: ["See your day clearly with Alexa at the ready - Set alarms and timers, check your calendar or the news, make video calls with the 2 MP camera, and stream music or shows - all with your voice.",
     "Add Alexa to your nightstand - Ease into the day with a routine that turns compatible lights on gradually. Or wake up to your news update, the weather forecast, and your favorite music.",
@@ -234,9 +280,15 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
     category_id: 1
   )
 
+  10.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/echo-dot-5.jpg"),
+    filename: "echo-5"
+  )
+
+
   #11
 
-  Product.create!(
+  11 = Product.create!(
     product_name: "Lenovo 2023 Newest Ideapad 1i Laptop, 14 inch HD Display, Intel Quad-Core Processor, 4GB RAM, 256GB Storage, Wi-Fi 6, Bluetooth, Cloud Grey, Windows 11 Home in S Mode, Bundle with JAWFOAL",
     description: "Laptop, JAWFOAL Accessories",
     bullets: ["【Processor】 Powered by Intel Pentium N5030 Quad-Core Processor (up to 2.4 GHz) for fast and snappy performance. Perfect for running lots of tabs and apps.",
@@ -249,9 +301,15 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
     category_id: 1
   )
 
+  11.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/lenovo-2023.jpg"),
+    filename: "lenovo-2023"
+  )
+
+
   #12
 
-   Product.create!(
+  12 = Product.create!(
     product_name: "Ring Video Doorbell 3 – enhanced wifi, improved motion detection, easy installation",
     description: "Ring Video Doorbell 3, rechargeable battery pack, corner mount, USB charging cable, mounting bracket, installation tools and hardware, user manual, and security sticker. Ships with a Satin Nickel faceplate. After device set up, you will receive a digital coupon for one free additional faceplate. Select colors apply.",
     bullets: ["【1080p HD video doorbell with enhanced features that let you see, hear, and speak to anyone from your phone, tablet, or PC.",
@@ -266,8 +324,14 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
     category_id: 1
   )
 
+  12.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/ring-doorbell-3.jpg"),
+    filename: "ring-doorbell-3"
+  )
+
+
   #13
-  Product.create!(
+  13 = Product.create!(
     product_name: "2021 HP Stream 14inches HD SVA Laptop Computer, Intel Celeron N4000 Processor, 4GB RAM, 64GB eMMC flash memory, Intel UHD Graphics 600, 1-Year Office, Bluetooth, Win 10S, Rose Pink, 128GB SnowBell USB Card",
     description: "#47 in Traditional Laptop Computers",
     bullets: ["14 inches diagonal HD SVA BrightView Display, 1366 x 768 resolution boasts impressive color and clarity, Anti-glare Energy-efficient WLED screen.",
@@ -280,9 +344,14 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
     category_id: 1
   )
 
+  13.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/2021-hp-stream.jpg"),
+    filename: "2021-hp-stream"
+  )
+
   #14
 
-  Product.create!(
+  14 = Product.create!(
     product_name: "ASUS TUF Dash 15 (2022) Gaming Laptop, 15.6inches 144Hz FHD Display, Intel Core i7-12650H, GeForce RTX 3060, 16GB DDR5, 512GB SSD, Thunderbolt 4, Windows 11 Home, Off Black, FX517ZM-AS73",
     description: "Always ready for action, the TUF Dash F15 darts with ease between gaming, streaming, and more with Windows 11. Stream and multitask with ease thanks to a 12th Gen Intel Core i7-12650H CPU and blisteringly fast 4800MHz DDR5 RAM. Leverage the full gaming performance of the GeForce RTX 3060 GPU with a dedicated MUX Switch.",
     bullets: ["SUPERCHARGED RTX GRAPHICS - Gameplay graphics are silky smooth with the NVIDIA GeForce RTX 3060 6GB GDDR6 at 1050W with Dynamic Boost, with cutting-edge AI features like NVIDIA DLSS and Ray-Tracing",
@@ -300,9 +369,15 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
     category_id: 1
   )
 
+  14.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/asus-laptop-2022.jpg"),
+    filename: "asus-2022"
+  )
+
+
   #15
 
-  Product.create!(
+  15 = Product.create!(
     product_name: "Microsoft Surface Laptop Go 12.4 inches Touchscreen Laptop PC, Intel Quad-Core i5-1035G1, 4GB RAM, 64GB eMMC, Webcam, Win 10 Pro, Bluetooth, Online Class Ready - Platinum",
     description: "We sell computers with professional upgrade and customization. The manufacturer box will be opened by our engineers for customizing and testing. Defects & blemishes are significantly reduced by our in depth inspection & testing.",
     bullets: ["Intel Core i5 10th Gen 1035G1 (1.00GHz) 4 GB LPDDR4X Memory 64 GB eMMC",
@@ -315,9 +390,14 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
     category_id: 1
   )
 
+  15.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/microsoft-laptop.jpg"),
+    filename: "microsoft-laptop"
+  )
+
   # 16
 
-    Product.create!(
+  16 = Product.create!(
     product_name: "Mighty Patch Original from Hero Cosmetics - Hydrocolloid Acne Pimple Patch for Covering Zits and Blemishes, Spot Stickers for Face and Skin, Vegan-friendly and FSA Eligible (36 Count)",
     description: "Works best on whiteheads. Not suitable for cystic acne or blackheads. For external use only. Do not use on open wounds. Consult your doctor if you have sensitive skin or any known skin allergies. Do not use if allergic to pectin or rubber. Stop using and ask a doctor if a rash and/or irritation occurs. Keep out of reach of children. Please send us a message if you have any questions before usage.",
     bullets: ["The Original Award-Winning Acne Patch: Mighty Patch is a hydrocolloid sticker that improves the look of pimples overnight without the popping. Just stick it on, get some sleep, and wake up with clearer-looking skin.",
@@ -330,9 +410,15 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
     category_id: 2
   )
 
+  16.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/mighty-patches.jpg"),
+    filename: "mighty-patches"
+  )
+
+
   # 17
   
-  Product.create!(
+  17 = Product.create!(
     product_name: "Paula's Choice Skin Perfecting 2% BHA Liquid Salicylic Acid Exfoliant, Gentle Facial Exfoliator for Blackheads, Large Pores, Wrinkles & Fine Lines, Travel Size, 1 Fluid Ounce - PACKAGING MAY VARY",
     description: "GENTLE NON-ABRASIVE LEAVE-ON",
     bullets: ["GENTLE NON-ABRASIVE LEAVE-ON EXFOLIANT: with 2% BHA (Beta hydroxy acid), to unclog & diminish enlarged pores, exfoliate dead skin cells, smooth wrinkles, and brighten and even out skin tone. Combats redness, wrinkles, aging, enlarged pores, and blackheads. PACKAGING MAY VARY.",
@@ -345,9 +431,15 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
     category_id: 2
   )
 
+  17.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/paulas-choice-exfoliant.jpg"),
+    filename: "paula-exfoliant"
+  )
+
+
   # 18
 
-  Product.create!(
+  18 = Product.create!(
     product_name: "COSRX Snail Mucin 96% Power Repairing Essence 3.38 fl.oz, 100ml, Hydrating Serum for Face with Snail Secretion Filtrate for Dark Spots and Fine Lines, Not Tested on Animals, No Parabens, No Sulfates, No Phthalates, Korean Skincare",
     description: "#12 in Beauty & Personal Care",
     bullets: ["The Real Snail Essence: Formulated with 96.3% Snail Secretion Filtrate, this essence repairs and rejuvenates the skin from dryness and aging. It improves skin vitality by reducing dullness and soothing dehydrated skin.",
@@ -360,8 +452,14 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
     category_id: 2
   )
 
+  18.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/snail-mucin-essence.jpg"),
+    filename: "snail-mucin"
+  )
+
+
   # 19
-  Product.create!(
+  19 = Product.create!(
     product_name: "Celavi Essence Facial Sheet Face Mask Variety Set Classic Authentic Korean Moisturizing Skincare (12-Packs)",
     description: "Keep your face clean and clear while reversing the signs of aging, balancing your natural skin tone, and infusing it with essential hydration with Celavi Face Mask Sheets infused with powerful antioxidants, natural botanicals, and vital nutrients that nourish and protect your skin while leaving behind beautiful radiance.",
     bullets: ["12 Essence Set Includes - Collagen, Seaweed, Honey, pomegranate, Aloe Vera, Vitamin C, Acai Berry, Tea Tree, Avocado, Ginseng, Cucumber, Charcoal",
@@ -373,8 +471,14 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
     category_id: 2
   )
 
+  19.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/celavi-face-mask.jpg"),
+    filename: "celavi-mask"
+  )
+
+
   #20
-  Product.create!(
+  20 = Product.create!(
     product_name: "Dr. Pure Ice Roller for Face Massage, Face Roller for Reduce Puffiness Anti Wrinkle Migraine Pain Relief Tighten Skin, Face Icing Massager Cooling Facial Roller, Women Gifts Skin Care Tool",
     description: "Enjoy a home facial spa with face icer.
 
@@ -393,8 +497,15 @@ You can use your ice roller both morning and evening. It is great for helping th
     category_id: 2
   )
 
+  20.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/ice-roller.jpg"),
+    filename: "ice-roller"
+  )
+
+
+
   # 21
-  Product.create!(
+  21 = Product.create!(
     product_name: "CeraVe Moisturizing Cream | Body and Face Moisturizer for Dry Skin | Body Cream with Hyaluronic Acid and Ceramides | Normal | Fragrance Free | 19 Oz | Packages May Vary",
     description: "Developed with dermatologists, CeraVe Moisturizing Cream has a unique formula that provides 24-hour hydration and helps restore the protective skin barrier with three essential ceramides (1,3,6-II) and hyaluronic acid. This rich, non-greasy, fast-absorbing formula is ideal for sensitive skin on both the face and body  Featuring our patented MVE Technology to release a steady stream of moisturizing ingredients throughout the day and night.",
     bullets: ["[ HYALURONIC ACID MOISTURIZER ] With hyaluronic acid, ceramides and MVE technology for 24 hour hydration. Rich, velvety texture that leaves skin feeling smooth, it is absorbed quickly for softened skin without greasy, sticky, feel.",
@@ -407,8 +518,15 @@ You can use your ice roller both morning and evening. It is great for helping th
     category_id: 2
   )
 
+  21.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/cerave-cream.jpg"),
+    filename: "cerave-moisturizing-cream"
+  )
+
+
+
   #22
-  Product.create!(
+  22 = Product.create!(
     product_name: "Neutrogena Ultra Sheer Dry-Touch Water Resistant and Non-Greasy Sunscreen Lotion with Broad Spectrum SPF 70, 3 Fl Oz (Pack of 1)",
     description: "Neutrogena Ultra Sheer Dry-Touch Sunscreen SPF 70 with Helioplex technology helps prevent damaging UVA rays from penetrating deep under skin's surface.",
     bullets: ["3-fluid ounce bottles of Neutrogena Ultra Sheer Dry-Touch Non-Greasy Sunscreen with SPF 70 that helps defend against the signs of sun and decrease the risk of skin cancer when used as directed",
@@ -421,9 +539,15 @@ You can use your ice roller both morning and evening. It is great for helping th
     category_id: 2
   )
 
+  22.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/neutragena-sunscreen.jpg"),
+    filename: "neutrogena-sunscreen"
+  )
+
+
   #23
 
-  Product.create!(
+  23 = Product.create!(
     product_name: "Seraphic Skincare Korean Exfoliating Mitts (2pcs) Microdermabrasion at Home Exfoliating Gloves Visibly Lift Away Dead Skin, Great for Spray Tan Removal or Keratosis Pilaris, Made of 100% Viscose Fiber",
     description: "#156 in Beauty & Personal Care",
     bullets: ["Shower Exfoliator for Home Use - Experience Korean spa treatment at home. Our body-exfoliating scrub mitts provide full microdermabrasion to visibly lift away dead skin. Packaging may vary.",
@@ -436,9 +560,15 @@ You can use your ice roller both morning and evening. It is great for helping th
     category_id: 2
   )
 
+  23.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/seraphic-exfoliating-mitts.jpg"),
+    filename: "seraphic-exfoliating-mitts"
+  )
+
+
   #24
 
-  Product.create!(
+  24 = Product.create!(
     product_name: "First Aid Beauty KP Bump Eraser Body Scrub Exfoliant for Keratosis Pilaris with 10% AHA 2 oz.",
     description: "#184 in Beauty & Personal Care",
     bullets: ["Exfoliating Body Scrub: Made with chemical and physical exfoliators that sweep away dry, rough bumps to reveal healthier looking skin that feels exceptionally smooth",
@@ -451,9 +581,15 @@ You can use your ice roller both morning and evening. It is great for helping th
     category_id: 2
   )
 
+  24.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/first-aid-exfoliant.jpg"),
+    filename: "first-aid-exfoliant"
+  )
+
+
   #25
 
-  Product.create!(
+  25 = Product.create!(
     product_name: "Anastasia Beverly Hills - Eyeshadow Palette - Soft Glam",
     description: "Anastasia Beverly Hills Soft Glam Eye Shadow Palette is an essential neutral palette, with 14 shades ranging from warm and cool mattes to glamorous shimmers. Each shade features ABH’s highly pigmented, easy-to-blend formula so you can create seamless neutral eye looks for both day and night.",
     bullets: ["An essential neutral palette that will take you from day to night, featuring 14 shades ranging from warm and cool mattes to glamorous shimmers.",
@@ -465,8 +601,14 @@ You can use your ice roller both morning and evening. It is great for helping th
     category_id: 2
   )
 
+  25.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/soft-glam-eyeshadow.jpg"),
+    filename: "soft-glam-eyeshadow"
+  )
+
+
   #26
-  Product.create!(
+  26 = Product.create!(
     product_name: "NYX PROFESSIONAL MAKEUP Ultimate Shadow Palette, Eyeshadow Palette - Ultimate Queen",
     description: "We named this collection the Ultimate Shadow Palette because that's exactly what it is-a pro-level palette packed with 16 high-performance eyeshadows and pressed pigments in a rainbow of inspired shades. Available in various striking color combinations - Ultimate Queen, Cool or Warm Neutrals, Bright and Smokey/Highlight - each set features a vivid mix of velvety-rich textures and mesmerizing finishes that range from mattes and satins to shimmers and metallics. .",
     bullets: ["Eyeshadow Palette: This ultimate makeup palette features 16 highly pigmented shadows that glide onto lids and make eyes pop with color; Use with NYX Professional Makeup eyeshadow primer for bolder, longer lasting color",
@@ -479,8 +621,14 @@ You can use your ice roller both morning and evening. It is great for helping th
     category_id: 2
   )
 
+  26.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/nyx-ultimate-queen-eyeshadow.jpg"),
+    filename: "nyx-ultimate-queen-eyeshadow"
+  )
+
+
   #27
-   Product.create!(
+  27 = Product.create!(
     product_name: "Wet n Wild MegaGlo Contour Palette, Dulce De Leche | Contouring Powder Face Kit | Flawlessly Sculpted Face",
     description: 'Duo that gives you flawless skin',
     bullets: ["This duo of perfectly complementary contouring powders delivers a flawlessly sculpted face in no time flat",
@@ -491,8 +639,14 @@ You can use your ice roller both morning and evening. It is great for helping th
     category_id: 2
   )
 
+  27.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/wet-n-wild-contouring.jpg"),
+    filename: "wet-n-wild-contouring"
+  )
+
+
   #28
-  Product.create!(
+  28 = Product.create!(
     product_name: "Mielle Organics Rosemary Mint Scalp & Hair Strengthening Oil With Biotin & Essential Oils, Nourishing Treatment for Split Ends and Dry Scalp for All Hair Types, 2-Fluid Ounces",
     description: "#4 in Beauty & Personal Care",
     bullets: ["NOURISH & STRENGTHEN: Our nutrient-rich, biotin-infused treatment can be used as part of your everyday hair care routine or as an intensive deep treatment to prevent damage for strong, lustrous hair with a fresh, invigorating scent",
@@ -505,8 +659,15 @@ You can use your ice roller both morning and evening. It is great for helping th
     category_id: 2
   )
 
+  28.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/mielle-hair.jpg"),
+    filename: "mielle-hair"
+  )
+
+
+
   #29
-  Product.create!(
+  29 = Product.create!(
     product_name: "ORIGINAL Mimi and Co Spa Headband - Sponge & Terry Towel Cloth Fabric Head Band for Skincare, Face Washing, Makeup Removal, Shower, Facial Mask - Hair Accessories, Padded Headband, Croissant Headband",
     description: "ORIGINAL Mimi and Co Spa Headband - Sponge & Terry Towel Cloth Fabric Head Band for Skincare, Face Washing, Makeup Removal, Shower, Facial Mask - Hair Accessories, Padded Headband, Croissant Headband",
     bullets: ["Extra Absorbent - Thanks to their sponge-covered terry cloth make, these skincare headbands are highly absorbent and can soak up moisture as you wash your face or apply your skincare creams and serums.",
@@ -519,8 +680,15 @@ You can use your ice roller both morning and evening. It is great for helping th
     category_id: 2
   )
 
+  29.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/mimi-headband.jpg"),
+    filename: "mimi-headband"
+  )
+
+
+
   #30
-  Product.create!(
+  30 = Product.create!(
     product_name: "100 Pcs Thick Seamless Brown Hair Ties, Ponytail Holders Hair Accessories No Damage for Thick Hair (Natural Colors)",
     description: "Our seamless hair ties are fit for different kinds of outfits and hair types, they are simple and fashion, you can use them on any occasion.
 
@@ -535,9 +703,15 @@ They are suitable for men, women, kids and the people who have thick heavy hair.
     category_id: 2
   )
 
+  30.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/hairties.jpg"),
+    filename: "hairties"
+  )
+
+
   #31
 
-  Product.create!(
+  31 = Product.create!(
     product_name: "Maybelline Instant Age Rewind Eraser Dark Circles Treatment Multi-Use Concealer, 110, 1 Count (Packaging May Vary)",
     description: "This dark circle eraser concealer instantly creates a radiant, refreshed looking eye area. Infused with goji berry and Haloxyl. Packaging may vary, what you receive may not be what is reflected on site. â€¢ Instantly erases the appearance of dark circles and fine lines â€¢ Under eye concealer visibly diminishes the appearance of puffiness â€¢ Eye area looks radiant and refreshed â€¢ Anti-aging dark circle treatment contains goji berry and haloxyl to help erase appearance of dark circles and fine lines Step 1. Twist collar of the applicator until the concealer is visible on the sponge (may take some turns on first use). Step 2. Apply concealer to the under-eye area and blend. Step 3. For extreme dark circles, apply the Neutralizer under concealer. Step 4. To add luminosity, apply the Brightener to the inner corner of eyes, cheek, brow bones and bridge of the nose. The Dark Circles Eraser is protected by an anti-microbial system. Do not wet applicator. Wipe off excess eye concealer with dry tissue. By MAYBELLINE.",
     bullets: ["Maybelline Instant Age Rewind Concealer: America's Number 1 Concealer; Erase the look of dark circles, correct the appearance of redness and brighten the look of dull skin with Instant Age Rewind Eraser multi-use concealer",
@@ -550,8 +724,14 @@ They are suitable for men, women, kids and the people who have thick heavy hair.
     category_id: 2
   )
 
+  31.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/maybellione-rewind.jpg"),
+    filename: "maybelline-rewind"
+  )
+
+
   #32
-  Product.create!(
+  32 = Product.create!(
     product_name: "e.l.f. Poreless Putty Primer, Silky, Skin-Perfecting, Lightweight, Long Lasting, Smooths, Hydrates, Minimizes Pores, Flawless Base, All-Day Wear, Flawless Finish, Ideal for All Skin Types, 0.74 Fl Oz",
     description: "#116 in Beauty & Personal Care",
     bullets: ["Infused with Squalane for optimal hydration, perfect for all skin types.",
@@ -564,8 +744,14 @@ They are suitable for men, women, kids and the people who have thick heavy hair.
     category_id: 2
   )
 
+  32.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/elf-primer.jpg"),
+    filename: "elf-primer"
+  )
+
+
   #33
-  Product.create!(
+  33 = Product.create!(
     product_name: "e.l.f. Flawless Finish Foundation, Improves Uneven Skin Tone, Lightweight, Medium Coverage & Semi-Matte, Vegan & Cruelty-Free, Buff, 0.68 Fl Oz",
     description: "e.l.f. Flawless Finish Foundation, Improves Uneven Skin Tone, Lightweight, Medium Coverage & Semi-Matte, Vegan & Cruelty-Free, Buff, 0.68 Fl Oz",
     bullets: ["RESTORE & ILLUMINATE: e.l.f. Flawless Finish Foundation is a lightweight liquid foundation that naturally blends into skin (and hydrates while you’re at it) to help improve uneven skin tone and texture. The shade Buff is light with peachy undertones.",
@@ -578,8 +764,14 @@ They are suitable for men, women, kids and the people who have thick heavy hair.
     category_id: 2
   )
 
+  33.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/elf-foundation.jpg"),
+    filename: "elf-foundation"
+  )
+
+
   #34
-  Product.create!(
+  34 = Product.create!(
     product_name: "Physicians Formula Murumuru Butter Bronzer | Bronzer Face Powder Makeup | Dermatologist Approved",
     description: "Ultra-luxurious bronzer, infused with Murumuru Butter, delivers a radiant Brazilian goddess glow. Moisturizing wonder features ultra-refined pearl and soft-focus pigments that smooth skin texture, brighten skin tone and deliver a gorgeous bronze finish. May Contain: Iron Oxides, Red 7 Lake, Titanium Dioxide.",
     bullets: ["WARM ISLAND GLOW - Give your face the radiant goddess glow of the tropics Pick your color and watch your look gently transform as the refined pearls and soft-focus pigments smooth and brighten your skin tone with a subtle shimmer finish",
@@ -592,8 +784,15 @@ They are suitable for men, women, kids and the people who have thick heavy hair.
     category_id: 2
   )
 
+  34.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/physician-bronzer.jpg"),
+    filename: "physicians-bronzer"
+  )
+
+
+
   #35
-  Product.create!(
+  35 = Product.create!(
     product_name: "NYX PROFESSIONAL MAKEUP Slim Lip Pencil, Long-Lasting Creamy Lip Liner - Peakaboo Neutral",
     description: "NYX PROFESSIONAL MAKEUP Slim Lip Pencil, Long-Lasting Creamy Lip Liner - Peakaboo Neutral",
     bullets: ["Lip Liner In All Shades: NYX Professional Makeup Slim Lip Pencil natural lip liner pencils come in a variety of dashing shades from auburn to orange and traffic stopping red to line and define your lips",
@@ -606,8 +805,14 @@ They are suitable for men, women, kids and the people who have thick heavy hair.
     category_id: 2
   )
 
+  35.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/nyx-pencil.jpg"),
+    filename: "nyx-pencil"
+  )
+
+
   #36
-  Product.create!(
+  36 = Product.create!(
     product_name: "Peripera Ink the Velvet Lip Tint | High Pigment Color, Longwear, Weightless, Not Animal Tested, Gluten-Free, Paraben-Free | #017 ROSY NUDE, 0.14 fl oz",
     description: "#329 in Beauty & Personal Care",
     bullets: ["[STAY ALL DAY - BOLD AND LONG LASTING COLORS] Stay a bold lip with our Ink the Velvet Tint! Our tints use a breakthrough formula with high intensity color pigments that naturally stain your lips. The color goes on smooth and will last throughout the day.",
@@ -620,9 +825,15 @@ They are suitable for men, women, kids and the people who have thick heavy hair.
     category_id: 2
   )
 
+  36.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/peripera-ink-velet-rosy-nude.jpg"),
+    filename: "peripera-lip"
+  )
+
+
   #37
 
-  Product.create!(
+  37 = Product.create!(
     product_name: "[Beauty of Joseon] Relief Sun (50ml, 1.69fl.oz)",
     description: "Relief sun is a chemical sunscreen that helps protect your skin from ultraviolet rays.
 
@@ -637,8 +848,14 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
     category_id: 2
   )
 
+  37.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/joseon-sunscreen.jpg"),
+    filename: "joseon-sunscreen"
+  )
+
+
   #38
-  Product.create!(
+  38 = Product.create!(
     product_name: "Aveeno Protect + Hydrate Moisturizing Body Sunscreen Lotion With Broad Spectrum Spf 60 & Prebiotic Oat, Weightless, Paraben-free, Oil-free & Oxybenzone-free, Pump Bottle, 12.0 ounces",
     description: "Moisturize and protect your skin from the sun with Aveeno Protect + Hydrate body sunscreen lotion. From Aveeno, A dermatologist-recommended brand for over 65 years, This weightless sunscreen lotion contains SPF 60 to protect from harmful UVA and UVB rays and combat sun-induced free radicals that accelerate skin aging. Made with nourishing prebiotic oat, the daily sunscreen deeply hydrates skin all day, leaving it feeling soft and moisturized. And, when used as directed along with other skin protection measures, the hydrating sunscreen helps prevent sunburn and decreases the risk of skin cancer. The non-greasy, hypoallergenic formula dries clear, so it won't stain skin. It's also Paraben-, phthalate-, oil-, Oxybenzone-, and dye-free. Water- and sweat-resistant for up to 80 minutes, The moisturizing SPF 60 sunscreen lotion is perfect for outdoor activities. For best results, apply the sunblock 15 minutes before sun exposure and reapply every two hours or more often as needed.",
     bullets: ["12-Fluid Ounce pump bottle of Aveeno Protect + hydrate sunscreen Broad Spectrum SPF 60 Body lotion to help protect and provide all-day hydration to skin",
@@ -651,8 +868,15 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
     category_id: 2
   )
 
+  38.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/aveno-sunscreen.jpg"),
+    filename: "aveeno-sunscreen"
+  )
+
+
+
   #39
-  Product.create!(
+  39 = Product.create!(
     product_name: "Ariana Grande Cloud Eau de Parfum Spray ,clear ,3.4 Fl oz",
     description: "Ariana Grande fragrance cloud is the uplifting new scent that imbues a thoughtful, artistic expression of positivity and happiness from Ariana to her fans. This addictive scent opens with a dreamy blend of alluring lavender blossom, forbidden juicy Pear and mouth-watering bergamot. The heart of the fragrance is a whipped touch of creme de coconut, indulgent praline and exotic, vanilla orchid. Sensual musk's and creamy woods add cashmere like feel that seduces the senses.",
     bullets: ["Ariana Grande fragrance Cloud is the uplifting new scent that imbues a thoughtful, artistic expression of positivity and happiness from Ariana to her fans.",
@@ -667,9 +891,14 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
     category_id: 2
   )
 
+  39.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/ariana-cloud.jpg"),
+    filename: "ariana-cloud"
+  )  
+
 
   #40
-  Product.create!(
+  40 = Product.create!(
     product_name: "Women's Daisy by Marc Jacobs Eau So Fresh Eau De Toilette Spray, 4.2 Fl Oz",
     description: "Daisy Eau So Fresh by Marc Jacobs for Women Eau De Toilette Spray 4.25 Oz / 125 Ml.",
     bullets: ["Marc Jacobs Daisy Eau So Fresh Eau De Toilette Spray - 125ml/4.25oz",
@@ -682,8 +911,14 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
     category_id: 2
   )
 
+  40.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/daisy.jpg"),
+    filename: "daisy-perfume"
+  )  
+
+
   #41
-  Product.create!(
+  41 = Product.create!(
     product_name: "Kenzo FlowerbyKenzo 3.4 oz Eau de Parfum Spray",
     description: "Flower by Kenzo for Women - 3.4 oz EDP Spray",
     bullets: ["EDP Spray", "3.4 oz - Retail", 
@@ -694,9 +929,14 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
     category_id: 2
   )
 
+  41.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kenzo.jpg"),
+    filename: "kenzo-flower"
+  )   
+
 
   #42
-  Product.create!(
+  42 = Product.create!(
     product_name: "NYX PROFESSIONAL MAKEUP Butter Gloss, Non-Sticky Lip Gloss - Creme Brulee (Natural)",
     description: "Buttery soft and silky smooth, our decadent Butter Gloss is now available in sumptuous shades! Each glossy color delivers sheer to medium coverage that melts onto your lips and is never sticky, leaving your lips soft, supple and kissable.",
     bullets: ["Butter Gloss: Buttery soft and silky smooth, our decadent Butter Gloss is available in a wide variety of sumptuous shades; Each glossy color delivers sheer to medium coverage that melts onto your lips",
@@ -709,8 +949,14 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
     category_id: 2
   )
 
+  42.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/nyx-butter-gloss.jpg"),
+    filename: "nyx-butter-lip"
+  )   
+
+
   #43
-  Product.create!(
+  43 = Product.create!(
     product_name: "The Dreamer by Versace for Men 3.4 oz Eau de Toilette Spray",
     description: "Design House: Juicy Couture Fragrance Notes: Mandarin Orange, Green Apple, Black Currant, Guava, Rose Petals. Year Introduced: 2013. Add a touch of Hollywood glamour to your daily beauty routine with Couture La Malibu for women. This youthful fragrance from Juicy Couture effortlessly blends citrus and sweet elements together for an unforgettable aroma. Hints of apple, guava, red currant and mandarin are mingled with aquatic notes for a fresh, light fragrance. Designed to capture the carefree spirit of Southern California, this scent is best suited for daytime wear in the spring or summer.",
     bullets: ["Dreamer by Versace for Men 3.4 oz Eau de Toilette Spray: Buy Versace Colognes - Versace, the Dreamer, is an innovative clear and smooth blend between wild and aromatic plants including juniper, mugwort, and tarragon. An essential beginning allowing an almost immediate glimpse of the richness, refinement, highest quality of reach.",
@@ -721,8 +967,14 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
     category_id: 2
   )
 
+  43.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/dreamer-versace.jpg"),
+    filename: "dreamer-versace"
+  )   
+
+
   #44
-  Product.create!(
+  44 = Product.create!(
     product_name: "Nautica Voyage Eau De Toilette for Men - Fresh, Romantic, Fruity Scent - Woody, Aquatic Notes of Apple, Water Lotus, Cedarwood, and Musk - Ideal for Day Wear - 3.3 Fl Oz",
     description: "Nautica Voyage Eau De Toilette for Men - Fresh, Romantic, Fruity Scent - Woody, Aquatic Notes of Apple, Water Lotus, Cedarwood, and Musk - Ideal for Day Wear - 3.3 Fl Oz",
     bullets: ["ROMANTIC AND FRUITY: For an active and romantic man who lives by his own rules.",
@@ -734,8 +986,14 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
     category_id: 2
   )
 
+  44.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/nautica.jpg"),
+    filename: "nautica"
+  )   
+
+
   #45
-  Product.create!(
+  45 = Product.create!(
     product_name: "Le Male by Jean Paul Gaultier for Men - 4.2 Ounce EDT Spray, Eau De Toilette Spray",
     description: "#5,507 in Beauty & Personal Care",
     bullets: ["How-to-Use: For long-lasting effects fragrance should be applied to the body’s pulse points",
@@ -747,8 +1005,14 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
     category_id: 2
   )
 
+  45.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/jean-paul-perfume.jpg"),
+    filename: "jean-paul-perfume"
+  )  
+
+
   #46
-  Product.create!(
+  46 = Product.create!(
     product_name: "Armaf Club De Nuit Intense Man EDT Men New in Box, Black , 3.6 Fl Oz",
     description: "Club de Nuit Intense Man by Armaf is a Woody Spicy fragrance for men. Club de Nuit Intense Man was launched in 2015",
     bullets: ["Top Notes: Bergamot , Lemon , Pineapple , Black Current",
@@ -759,8 +1023,14 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
     category_id: 2
   )
 
+  46.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/armaf.jpg"),
+    filename: "armaf-perfume"
+  )  
+
+
   #47
-  Product.create!(
+  47 = Product.create!(
     product_name: "BIC Soleil Smooth Colors Women's Disposable Razors With Aloe Vera and vitamin E Lubricating Strip for Enhanced Glide, With 3 Blades, 14 Count",
     description: "Experience a closer shave when you choose BIC Soleil Smooth Colors Women's Disposable Razors. With 14 shaving razors, this pack lets you stock up on your favorite razors easily. These convenient razors for women feature three blades that adjust to your curves for a smooth shave. The lubricating strip enriched with aloe vera and vitamin E enhances the razor’s glide and is ideal for sensitive skin. Plus, the head adjusts to your curves as you shave, even around your knees and ankles. The comfortable anti-slip grip handle helps provide added confidence and control while shaving. With a variety of colorful hues, these women's razor handles add a refreshing pop of color to your everyday care routine. Add a pack of these ladies razors to your beauty or gym bag to keep your BIC Soleil women’s razors close, so you can achieve a smooth shave – wherever you are! Enjoy a fantastic shave with BIC Soleil Smooth Colors Women’s Razors for shaving.",
     bullets: ["One 14-count pack of BIC Soleil Smooth Colors Women's Disposable Razors with brightly colored handles",
@@ -774,8 +1044,14 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
     category_id: 2
   )
 
+  47.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/razor-bic.jpg"),
+    filename: "razor-bic"
+  )  
+
+
   #48
-  Product.create!(
+  48 = Product.create!(
     product_name: "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones",
     description: "James Clear is a writer and speaker focused on habits, decision making, and continuous improvement. He is the author of the #1 New York Times bestseller, Atomic Habits. The book has sold over 5 million copies worldwide and has been translated into more than 50 languages. Clear is a regular speaker at Fortune 500 companies and his work has been featured in places like Time magazine, the New York Times, the Wall Street Journal and on CBS This Morning. His popular '3-2-1' email newsletter is sent out each week to more than 1 million subscribers.",
     bullets: ["Atomic Habits will reshape the way you think about progress and success, and give you the tools and strategies you need to transform your habits--whether you are a team looking to win a championship, an organization hoping to redefine an industry, or simply an individual who wishes to quit smoking, lose weight, reduce stress, or achieve any other goal."],
@@ -784,8 +1060,14 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
     category_id: 3
   )
 
+  48.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/atomic-habits.jpg"),
+    filename: "atomic-habits"
+  )  
+
+
   #49
-  Product.create!(
+  49 = Product.create!(
     product_name: "Lessons in Chemistry: A Novel",
     description: "Chemist Elizabeth Zott is not your average woman. In fact, Elizabeth Zott would be the first to point out that there is no such thing as an average woman. But it’s the early 1960s and her all-male team at Hastings Research Institute takes a very unscientific view of equality. Except for one: Calvin Evans; the lonely, brilliant, Nobel–prize nominated grudge-holder who falls in love with—of all things—her mind. True chemistry results. 
 
@@ -800,9 +1082,14 @@ Laugh-out-loud funny, shrewdly observant, and studded with a dazzling cast of su
     category_id: 3
   )
 
+  49.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/lessons-in-chem.jpg"),
+    filename: "lesson-chemistry"
+  )    
+
 
   #50
-  Product.create!(
+  50 = Product.create!(
     product_name: "It Starts with Us: A Novel (2) (It Ends with Us)",
     description: "Lily and her ex-husband, Ryle, have just settled into a civil coparenting rhythm when she suddenly bumps into her first love, Atlas, again. After nearly two years separated, she is elated that for once, time is on their side, and she immediately says yes when Atlas asks her on a date.
 
@@ -815,9 +1102,14 @@ Switching between the perspectives of Lily and Atlas, It Starts with Us picks up
     category_id: 3
   )
 
+  50.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/It-Starts-with-Us-2.jpg"),
+    filename: "starts-with-us-2"
+  )      
+
 
   #51
-  Product.create!(
+  51 = Product.create!(
     product_name: "It Ends with Us: A Novel (1)",
     description: "Lily hasn’t always had it easy, but that’s never stopped her from working hard for the life she wants. She’s come a long way from the small town where she grew up—she graduated from college, moved to Boston, and started her own business. And when she feels a spark with a gorgeous neurosurgeon named Ryle Kincaid, everything in Lily’s life seems too good to be true.
 
@@ -832,9 +1124,14 @@ An honest, evocative, and tender novel, It Ends with Us is “a glorious and tou
     category_id: 3
   )
 
+  51.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/it-ends-with-us-2.jpg"),
+    filename: "ends-with-us-1"
+  )     
+
 
   #52
-   Product.create!(
+  52 = Product.create!(
     product_name: "The Seven Husbands of Evelyn Hugo: A Novel",
     description: "Aging and reclusive Hollywood movie icon Evelyn Hugo is finally ready to tell the truth about her glamorous and scandalous life. But when she chooses unknown magazine reporter Monique Grant for the job, no one is more astounded than Monique herself. Why her? Why now?
 
@@ -853,9 +1150,14 @@ From the New York Times bestselling author of Daisy Jones & the Six—an entranc
     category_id: 3
   )
 
+  52.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/7-husbands.jpg"),
+    filename: "7-husband"
+  )       
+
 
   #53
-   Product.create!(
+  53 = Product.create!(
     product_name: "Bittersweet",
     description: "Named one of the top ten influencers in the world by LinkedIn, Susan Cain is a renowned speaker and author of the award-winning books Quiet Power, Quiet Journal, and Quiet: The Power of Introverts in a World That Can’t Stop Talking. Translated into more than forty languages, Quiet hasappeared on many best-of lists, spent more than seven years on the New York Times bestseller list, and was named the #1 best book of the year by Fast Company, which also named Cain one of its Most Creative People in Business. Her TED Talk on the power of introverts has been viewed over forty million times.",
     bullets: ["#1 NEW YORK TIMES BESTSELLER • Sadness is your superpower. In her new masterpiece, the author of the bestselling phenomenon Quiet explores the power of the bittersweet personality, revealing a misunderstood side of mental health and creativity while offering a roadmap to facing grief in order to live life to the fullest.",
@@ -868,9 +1170,14 @@ From the New York Times bestselling author of Daisy Jones & the Six—an entranc
     category_id: 3
   ) 
 
+  53.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/bittersweet.jpg"),
+    filename: "bittersweet"
+  )      
+
 
   #54
-   Product.create!(
+  54 = Product.create!(
     product_name: "You're My Little Cuddle Bug",
     description: "From Valentine’s Day to Christmas Day and every day in between, the bestselling You’re My Little series is cute as can be—and festive too! Each spread of these chunky board books shows a child and parent pair with adorable illustrations by Natalie Marshall, as well as shaped cut-outs and raised elements. Perfect for cuddling up with your little one, these sweet rhyming stories celebrates a parent’s love for their child.",
     bullets: ["Celebrate your little cuddle bug with this colorful, rhyming interactive board book!",
@@ -882,9 +1189,14 @@ From the New York Times bestselling author of Daisy Jones & the Six—an entranc
     category_id: 3
   ) 
 
+  54.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/cuddlebug.jpg"),
+    filename: "cuddlebug"
+  )      
+
 
   #55
-   Product.create!(
+  55 = Product.create!(
     product_name: "I Love You to the Moon and Back",
     description: "Amelia Hepworth lives in London with her family and two elderly sausage dogs. When she is not writing stories, she enjoys spending time with her little boy and daydreaming in the garden. Usually not at the same time.",
     bullets: ["Show a child just how strong your love is every minute of the day! Features a 'To' and 'From' personalization page, making this sweet offering an ideal gift for baby showers, birthdays, and new parents.",
@@ -892,11 +1204,16 @@ From the New York Times bestselling author of Daisy Jones & the Six—an entranc
     price: 4.76,
     inventory: 99,
     category_id: 3
-  ) 
+  )
+
+  55.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/moon-n-back.jpg"),
+    filename: "moon-n-back"
+  )     
 
 
   #56
-   Product.create!(
+  56 = Product.create!(
     product_name: "The 5 Love Languages: The Secret to Love that Lasts",
     description: "#33 in Books",
     bullets: ["Over 20 million copies sold!",
@@ -910,9 +1227,14 @@ From the New York Times bestselling author of Daisy Jones & the Six—an entranc
     category_id: 3
   ) 
 
+  56.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/5-love-languages.jpg"),
+    filename: "5-love-languages"
+  )    
+
 
   #57
-   Product.create!(
+  57 = Product.create!(
     product_name: "The Four Agreements: A Practical Guide to Personal Freedom (A Toltec Wisdom Book)",
     description: "#26 in Books",
     bullets: ["In The Four Agreements, bestselling author don Miguel Ruiz reveals the source of self-limiting beliefs that rob us of joy and create needless suffering. Based on ancient Toltec wisdom, The Four Agreements offer a powerful code of conduct that can rapidly transform our lives to a new experience of freedom, true happiness, and love.",
@@ -923,9 +1245,14 @@ From the New York Times bestselling author of Daisy Jones & the Six—an entranc
     category_id: 3
   ) 
 
+  57.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/4-agreememts.jpg"),
+    filename: "4-agreements"
+  )  
+
 
   #58
-   Product.create!(
+  58 = Product.create!(
     product_name: "The Very Hungry Caterpillar",
     description: "Eric Carle is acclaimed and beloved as the creator of brilliantly illustrated and innovatively designed picture books for very young children. His best-known work, The Very Hungry Caterpillar, has been translated into 70 languages and sold over 55 million copies. Carle illustrated more than seventy books, many best sellers, most of which he also wrote, and more than 170 million copies of his books have sold around the world. In 2003, Carle received the Laura Ingalls Wilder Award (now called the Children’s Literature Legacy Award) for lifetime achievement in children's literature. In 2002, Eric and his wife, Barbara, cofounded The Eric Carle Museum of Picture Book Art (www.carlemuseum.org) in Amherst, Massachusetts, a 40,000-square-foot space dedicated to the celebration of picture books and picture book illustrations from around the world, underscoring the cultural, historical, and artistic significance of picture books and their art form. Eric Carle passed away in May 2021 at the age of 91. His work remains an important influence on artists and illustrators at work today. www.eric-carle.com",
     bullets: ["THE all-time classic picture book, from generation to generation, sold somewhere in the world every 30 seconds! A sturdy and beautiful book to give as a gift for new babies, baby showers, birthdays, and other new beginnings!",
@@ -935,9 +1262,14 @@ From the New York Times bestselling author of Daisy Jones & the Six—an entranc
     category_id: 3
   ) 
 
+  58.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/caterpillar.jpg"),
+    filename: "hungry-caterpillar"
+  )   
+
 
   #59
-   Product.create!(
+  59 = Product.create!(
     product_name: "Things We Never Got Over (Knockemout)",
     description: "Lucy Score is a New York Times, USA Today and Wall Street Journal bestselling author. She grew up in a literary family who insisted that the dinner table was for reading and earned a degree in journalism. She writes full-time from the Pennsylvania home she and Mr. Lucy share with their obnoxious cat, Cleo. When not spending hours crafting heartbreaker heroes and kick-ass heroines, Lucy can be found on the couch, in the kitchen, or at the gym. She hopes to someday write from a sailboat, oceanfront condo, or tropical island with reliable Wi-Fi.",
     bullets: ["Bearded, bad-boy barber Knox prefers to live his life the way he takes his coffee: Alone. Unless you count his basset hound, Waylon.",
@@ -954,9 +1286,14 @@ At least, that’s the plan until the trouble turns to real danger."],
     category_id: 3
   ) 
 
+  59.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/things-we-never-got-over.jpg"),
+    filename: "things-we-never-got-over"
+  )  
+
 
   #60
-   Product.create!(
+  60 = Product.create!(
     product_name: "Things We Hide from the Light (Knockemout Series, 2)",
     description: "#23 in Books",
     bullets: ["New York Times and USA Today bestselling author Lucy Score returns to Knockemout, Virginia, following fan-favorite Things We Never Got Over with Knox's brother Nash's story.",
@@ -968,9 +1305,14 @@ Too bad Lina's got secrets of her own, and if Nash finds out the real reason she
     category_id: 3
   ) 
 
+  60.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/things-we-hide.jpg"),
+    filename: "things-we-hide"
+  )    
+
 
   #61
-   Product.create!(
+  61 = Product.create!(
     product_name: "Tomorrow, and Tomorrow, and Tomorrow: A novel",
     description: "#20 in Books",
     bullets: ["NEW YORK TIMES BEST SELLER •WINNER OF THE GOODREADS CHOICE AWARD • Sam and Sadie—two college friends, often in love, but never lovers—become creative partners in a dazzling and intricately imagined world of video game design, where success brings them fame, joy, tragedy, duplicity, and, ultimately, a kind of immortality. It is a love story, but not one you have read before.",
@@ -982,9 +1324,13 @@ Too bad Lina's got secrets of her own, and if Nash finds out the real reason she
     category_id: 3
   ) 
 
+  61.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/tomorrow.webp"),
+    filename: "tomorrow"
+  )     
 
   #62
-   Product.create!(
+  62 = Product.create!(
     product_name: "Goodnight Moon",
     description: "#3 in Children's Classics",
     bullets: ["In this classic of children's literature, beloved by generations of readers and listeners, the quiet poetry of the words and the gentle, lulling illustrations combine to make a perfect book for the end of the day.",
@@ -995,10 +1341,13 @@ Too bad Lina's got secrets of her own, and if Nash finds out the real reason she
     category_id: 3
   ) 
 
-
+  62.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/goodnight-moon.jpg"),
+    filename: "goodnight-moon"
+  )  
 
   #63
-   Product.create!(
+  63 = Product.create!(
     product_name: "How to Win Friends & Influence People",
     description: "#42 in Books",
     bullets: ["You can go after the job you want—and get it!",
@@ -1011,10 +1360,14 @@ Too bad Lina's got secrets of her own, and if Nash finds out the real reason she
     category_id: 3
   ) 
 
+  63.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/win-friends.jpg"),
+    filename: "win-friends"
+  )  
 
 
   #64
-   Product.create!(
+  64 = Product.create!(
     product_name: "Flash Cards: Sight Words",
     description: "#38 in Books",
     bullets: ["Give your child a head start in reading with these colorful, double-sided Sight Words Flash Cards that feature the first 100 words from the Fry List. An essential tool in building reading fluency!",
@@ -1024,8 +1377,14 @@ Too bad Lina's got secrets of her own, and if Nash finds out the real reason she
     category_id: 3
   ) 
 
+  64.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/flas-cards.jpg"),
+    filename: "flash-cards"
+  )  
+
+
   #65 
-   Product.create!(
+  65 = Product.create!(
     product_name: "The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life",
     description: "#1 New York Times Bestseller",
     bullets: ["#1 New York Times Bestseller",
@@ -1039,11 +1398,15 @@ Too bad Lina's got secrets of her own, and if Nash finds out the real reason she
     category_id: 3
   ) 
 
+  65.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/subtle-art.jpg"),
+    filename: "subtle-art"
+  )  
+
 
   #66 
 
-  
-   Product.create!(
+  66 = Product.create!(
     product_name: "Exercise Bike, CHAOKE Stationary Bike for Home, Indoor Cycling Bike with Heavy Flywheel, Comfortable Seat Cushion, Digital Monitor, Multi-Grips Handlebar1",
     description: "CHAOKE indoor exercise bike equipped with resistance system and silent belt drive for home cardio or gym workout.",
     bullets: ["【Strong and Stable】CHAOKE exercise bike is made of thickened frame tube, which give this indoor cycling bike a rock solid build, overcomes the unsteady issue of most stationary bikes on the market. There was no shaking or squeaking whether you are riding standing or riding.",
@@ -1057,9 +1420,14 @@ Too bad Lina's got secrets of her own, and if Nash finds out the real reason she
     category_id: 4
   ) 
 
+  66.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/chaoke-bike.jpg"),
+    filename: "chaoke-art"
+  )    
+
   #67
   
-   Product.create!(
+  67 = Product.create!(
     product_name: "Mini Exercise Bike, himaly Under Desk Bike Pedal Exerciser Portable Foot Cycle Arm & Leg Peddler Machine with LCD Screen Displays",
     description: "Innovative Spacesaver Design With Easylift Assist Means Your Treadmill Can Fold Up After Your Run For Compact, Simple Storage; Auxiliary Music Port And Dual 2-Inch Speakers Provide Entertainment",
     bullets: ["【Home Pedal Exerciser】: Combined with Arm & Leg exercise by adjustable multi-level resistance , this mini bike trainer can target at providing different exercising level to train your muscle group, upper & lower body exercises with best effect to keep fit.",
@@ -1072,10 +1440,14 @@ Too bad Lina's got secrets of her own, and if Nash finds out the real reason she
     category_id: 4
   ) 
 
+  67.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/mini-bike-himaly.jpg"),
+    filename: "mini-bike-himaly"
+  )   
   
   #68
 
-   Product.create!(
+  68 = Product.create!(
     product_name: "YOSUDA Indoor Cycling Bike/Magnetic Resistance Stationary Bike - Cycle Bike with Ipad Mount & Comfortable Seat Cushion",
     description: "#2 in Exercise Bikes",
     bullets: ["EXERCISE BIKE",
@@ -1089,10 +1461,15 @@ Too bad Lina's got secrets of her own, and if Nash finds out the real reason she
     category_id: 4
   ) 
 
+  68.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/yosuda-bike.jpg"),
+    filename: "yosuda-bike"
+  )   
+
 
   #69
   
-   Product.create!(
+  69 = Product.create!(
     product_name: "NordicTrack T Series Treadmills",
     description: "himaly Mini Exercise Bike Indoor Portable Home Pedal Exerciser",
     bullets: ["30-Day Ifit Membership Included; Stream Live & On-Demand Workouts On Your Equipment With Global Workouts & Studio Classes; Elite Trainers Adjust Your Equipment (15 Dollar Value)",
@@ -1105,10 +1482,15 @@ Too bad Lina's got secrets of her own, and if Nash finds out the real reason she
     category_id: 4
   ) 
 
+  69.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/nordic-treadmill.jpg"),
+    filename: "nordic-treadmill"
+  )  
+
 
   #70
   
-   Product.create!(
+  70 = Product.create!(
     product_name: "Home Foldable Treadmill with Incline, Folding Treadmill for Home Workout, Electric Walking Treadmill Machine 15 Preset or Adjustable Programs 250 LB Capacity MP3",
     description: "Why choose our foldable treadmill?
 
@@ -1134,9 +1516,15 @@ Product Features
     category_id: 4
   ) 
 
+  70.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/home-foldable-treadmill.jpg"),
+    filename: "home-foldable-treadmill"
+  )  
+
+
   #71
 
-   Product.create!(
+  71 = Product.create!(
     product_name: "Amazon Basics Rubber Encased Hex Dumbbell Hand Weight",
     description: "Amazon Basics Rubber Encased Hex Dumbbell Hand Weight",
     bullets: ["Dumbbell hand weight for exercise and strength training; ideal for use in fitness classes, home gym, or workout area",
@@ -1149,10 +1537,15 @@ Product Features
     category_id: 4
   ) 
 
+  71.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/weight-training-dumbbell.jpg"),
+    filename: "amazon-dumbbell"
+  )  
+
 
   #72
 
-  Product.create!(
+  72 = Product.create!(
     product_name: "Adjustable Dumbbell 25/55LB 5 In 1 Single Dumbbell for Men and Women Multiweight Options Dumbbell with Anti-Slip Nylon Handle Fast Adjust Weight for Home Gym Full Body Workout Fitness",
     description: "#1,097 in Sports & Outdoors",
     bullets: ["【5 In 1 Weights Training】: 5/10/15/20/25LB, you only need single dumbbells, you can have 5 sets of dumbbell training experience, the weight can be adjusted according to your own level, this cleverly designed product meets fitness hobbies the needs of practitioners and professional weight trainers.",
@@ -1165,11 +1558,14 @@ Product Features
     category_id: 4
   ) 
 
-
+  72.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/adjustable-dumbbell.jpg"),
+    filename: "adjustable-dumbbell"
+  )  
 
   #73
 
- Product.create!(
+  73 = Product.create!(
     product_name: "CAP Barbell 150 LB Coated Hex Dumbbell Weight Set and Storage Rack | Multiple Handle Option",
     description: "The CAP 150-Pound Rubber Dumbbell Set with Rack is a great addition to your home gym for toning and sculpting your arms, shoulders, back, and legs.
 
@@ -1186,10 +1582,15 @@ This is the perfect set for your home gym and for fitness enthusiasts.",
     category_id: 4
   ) 
 
+  73.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/dumbbell-storage-rack.jpg"),
+    filename: "dumbbell-storage-rack"
+  )  
+
 
   #74
 
-  Product.create!(
+  74 = Product.create!(
     product_name: "Alllvocles Resistance Band, Pull Up Bands, Pull Up Assistance Bands, Workout Bands, Exercise Bands, Resistance Bands Set for Legs, Working Out, Muscle Training, Physical Therapy, Shape Body, Men Women",
     description: "No latex Resistance Bands are the perfect tool for resistance exercise in the clinic, at the gym, at home, or on the go. elastic resistance has been proven to increase strength, mobility, and function, as well as reduce joint pain.",
     bullets: ["High Quality Material: Resistance bands made from 100% high-grade natural rubber to prevents bands snapping and provide longer durability.",
@@ -1202,10 +1603,15 @@ This is the perfect set for your home gym and for fitness enthusiasts.",
     category_id: 4
   ) 
 
+  74.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/alllvocles.jpg"),
+    filename: "alllvocles"
+  )  
+
 
   #75
 
-  Product.create!(
+  75 = Product.create!(
     product_name: "Fit Simplify Resistance Loop Exercise Bands with Instruction Guide and Carry Bag, Set of 5",
     description: "Resistance Bands - 5 Loop Fitness Bands Set - Loop Exercise Resistance Bands - Exercise Bands For Legs And Arms - Carry Bag",
     bullets: ["High End Exercise Bands. Our 12 inch By 2 inch Heavy Duty Loop Resistance Bands Come In 5 Varying Resistance Levels. This Makes Them Perfect Whether You Are Just Starting To Workout Or A Seasoned Workout Warrior. Our Extra Light And Light Bands Are Great For Beginners, While Our Medium, Heavy And Extra Heavy Exercise Bands Are Targeted For More Intermediate And Advanced Strength Training.",
@@ -1218,10 +1624,15 @@ This is the perfect set for your home gym and for fitness enthusiasts.",
     category_id: 4
   ) 
 
+  75.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/fit-simplify-band.jpg"),
+    filename: "fit-simplify-band"
+  )  
+
 
   #76
 
-  Product.create!(
+  76 = Product.create!(
     product_name: "Resistance Bands Set, Exercise Bands for Physical Therapy, Yoga, Pilates, Rehab and Home Workout, Non-Latex Elastic Bands Set of 3",
     description: "Physical Therapy Bands, Resistance Bands, Exercise Bands",
     bullets: ["【Good Quality Exercise Bands】: Never snap or tear. Not sticky and latex-free material, eco-friendly, elastic and durable. RENRANRING bands have very good elasticity which provides the proper amount of tension needed to really work your muscles, best choice for upper & lower body exercises.",
@@ -1234,10 +1645,15 @@ This is the perfect set for your home gym and for fitness enthusiasts.",
     category_id: 4
   ) 
 
+  76.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/resistance-band-set.jpg"),
+    filename: "resistance-band-set"
+  )  
+
 
   #77
 
-  Product.create!(
+  77 = Product.create!(
     product_name: "Amazon Basics 1/2-Inch Extra Thick Exercise Yoga Mat",
     description: "Amazon Basics 1/2-Inch Extra Thick Exercise Yoga Ma",
     bullets: ["100% NBR foam",
@@ -1253,10 +1669,15 @@ This is the perfect set for your home gym and for fitness enthusiasts.",
     category_id: 4
   ) 
 
+  77.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/amazon-basic-mat.jpg"),
+    filename: "amazon-basic-mat"
+  )  
+
 
   #78
   
-  Product.create!(
+  78 = Product.create!(
     product_name: "ProsourceFit Exercise Puzzle Mat, EVA Foam Interlocking Tiles Protective and Cushion Flooring for Gym Equipment, Exercise and Play Area",
     description: "The Prosource Fit Exercise Puzzle Mat allows you to piece together a protective floor wherever you need. The foam mat tiles provide an impact-absorbing space for working out, and a durable surface for equipment that covers 24 square feet.",
     bullets: ["PROTECTIVE EXERCISE FLOORING - Durable, non-skid textured squares and tiles that cover and protect your floor or even carpet while creating a comfortable workout room with exercise accessories or as a playmat for children",
@@ -1269,9 +1690,15 @@ This is the perfect set for your home gym and for fitness enthusiasts.",
     category_id: 4
   ) 
 
+  78.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/prosource-puzzle-mat.jpg"),
+    filename: "prosource-puzzle-mat"
+  )  
+
+
   #79
   
-  Product.create!(
+  79 = Product.create!(
     product_name: "ProsourceFit Tri-Fold Folding Thick Exercise Mat 6’x2’ with Carrying Handles for Tumbling, MMA, Martial Arts, Gymnastics, Stretching, Core Workouts",
     description: "Prosource Fit Tri-Fold Folding Exercise Mats make various forms of training possible to do anywhere, anytime. Ideal for stretching, martial arts, yoga, gymnastics, and core and strengthening workouts.",
     bullets: ["EASY TO CARRY - Tri-fold design is compact for storage, and two carrying handles makes fitness on-the-go convenient",
@@ -1284,10 +1711,15 @@ This is the perfect set for your home gym and for fitness enthusiasts.",
     category_id: 4
   ) 
 
+  79.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/tri-fold-mat.jpg"),
+    filename: "prosource-tri-fold-mat"
+  )  
+
 
   #80
 
-  Product.create!(
+  80 = Product.create!(
     product_name: "Retrospec Solana 1 inch Yoga Mat",
     description: "Our premier, thick yoga and exercise mat is available in two sizes (1” and ½”) for the utmost support and balance during your practice. Alleviate pain and stress on joints, neck, back, and knees while finding balance on Solana’s ribbed, no-slip, thick material. BPA free and free of harsh chemicals that ruin the vibe. Solana is your go-to mat from salutations, meditations, and wherever your practice lands from sun up to sundown.",
     bullets: ["EXTRA THICK FOR COMFORT & BALANCE: Solana firm 1-inch extra thick fitness mat w/ mat strap alleviates stress on pressure points such as joints, hips, hands, and knees. Solana measures 72 inch X 24 inch X ½ inch.",
@@ -1300,9 +1732,15 @@ This is the perfect set for your home gym and for fitness enthusiasts.",
     category_id: 4
   ) 
 
+  80.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/retrospec-mat.jpg"),
+    filename: "retrospec-mat"
+  )  
+
+
   #81
   
-  Product.create!(
+  81 = Product.create!(
     product_name: "321 STRONG Foam Roller - Medium Density Deep Tissue Massager for Muscle Massage and Myofascial Trigger Point Release, with 4K eBook",
     description: "The 321 STRONG solid core, medium density foam roller uses patented technology to deliver a therapeutic self massage comparable to a professional massage from a physical therapist. The 3 unique massage zones replicate the thumbs, fingers, and palms so you can get the exact massage you’re looking for. These 3 massage zones help to increase blood flow and circulation to problem areas, decreasing recovery time, and increasing mobility, flexibility, and range of motion.
 
@@ -1319,9 +1757,15 @@ Built to last, our solid core massage roller with EVA tread is made from top gra
     category_id: 4
   ) 
 
+  81.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/321-roller.jpg"),
+    filename: "321-foam-roller"
+  ) 
+
+
   #82
   
-  Product.create!(
+  82 = Product.create!(
     product_name: "Chirp Wheel Foam Roller - Targeted Muscle Roller for Deep Tissue Massage, Back Stretcher with Foam Padding",
     description: "The Chirp Wheels are made with a rigid ABS plastic core and soft EVA compression sensitive mat so that the wheel can support up to 500 pounds! It is also light to travel with and comfortable to roll on",
     bullets: ["INNOVATIVE & FUNCTIONAL DESIGN: Chirp Wheel+ is designed with trigger points in mind to break up tight muscle fibers and hard-to-reach parts in your back instead of putting undue pressure on your spine, so you can focus on deeper stretches without worries. Our 12 inch wheel back stretcher gives gentle pressure massage and specifically targets the area in contact with the muscles at any given point providing a satisfying amount of pressure in general.",
@@ -1334,9 +1778,15 @@ Built to last, our solid core massage roller with EVA tread is made from top gra
     category_id: 4
   ) 
 
+  82.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/wheel-roller.jpg"),
+    filename: "wheel-roller"
+  ) 
+
+
   #83
 
-  Product.create!(
+  83 = Product.create!(
     product_name: "Neck and Shoulder Relaxer, Cervical Traction Device for TMJ Pain Relief and Cervical Spine Alignment, Chiropractic Pillow, Neck Stretcher (Purple)",
     description: "#74 in Health & Household",
     bullets: ["Relief neck pain in just 10 mins per day.",
@@ -1349,9 +1799,15 @@ Built to last, our solid core massage roller with EVA tread is made from top gra
     category_id: 4
   ) 
 
+  83.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/neck-relaxer.jpg"),
+    filename: "neck-relaxer"
+  ) 
+
+
   #84
 
-  Product.create!(
+  84 = Product.create!(
     product_name: "Yes4All Vinyl Coated Kettlebell Weights, Weight Available: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 Lb - Strength Training Kettlebells for Weightlifting, Conditioning, Strength & Core Training",
     description: "SWING AWAY PAIN WITH YES4ALL KETTLEBELL- LET’S SWING IN MORE POWER AND ENERGY High-quality Vinyl Coated Cast Iron Kettlebell: Built to last without wear and tear - constructed of solid cast iron with no welds, weak spots, or seams. Great for training indoor & outdoor, whether at home or in the gym. Shiny Vinyl Coating: Encased nice shiny vinyl coating for an appealing look and floor –damage prevention. Solid Steel Handle: The vinyl kettlebells are manufactured with SOLID STEEL HANDLE to give you the best experience while practicing. The handle is slightly textured to help you perform slow controlled movements without destroying your hands. Flat Bottom: Our kettlebells feature flat bottoms making it easy to store and expand your exercises that a regular kettlebell does not offer. Available in different weights: Yes4All Vinyl Coated Kettlebell: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 Lb Yes4All Vinyl Coated Kettlebells With Protective Rubber Base: 5, 10, 12, 15, 20, 25, 30, 35, 40, 45, 50 Lb HAVE A LIFETIME OF HEALTH BENEFITS WITH YOUR KETTLEBELLS Improve strength, stamina and coordination Increase lung and heart capacity Prevent cardiovascular diseases, heart attack or strokes Total body cardio workout, burn fat and effective toning Works great for your stabilizing muscles - for active recovery Improve movement, agility and speed USE FOR FITNESS IMPROVEMENTS AND CHALLENGES Turkish Get Up Single Dead Lift Two Handed Kettlebell Swing Kettlebell Squat and Lunges WARRANTY 1-year warranty and 30-day return.",
     bullets: ["Cast Iron",
@@ -1366,10 +1822,16 @@ Built to last, our solid core massage roller with EVA tread is made from top gra
     category_id: 4
   ) 
 
+  84.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kettleball.jpg"),
+    filename: "kettleball"
+  ) 
+
+
 
   #85
 
-  Product.create!(
+  85 = Product.create!(
     product_name: "Amazon Basics Vinyl Coated Cast Iron Kettlebell Weight",
     description: "Amazon Basics Vinyl Coated Cast Iron Kettlebell Weight",
     bullets: ["Kettlebell for fitness exercises, including agility training, cardio, endurance, squats, lunges, and more",
@@ -1382,9 +1844,16 @@ Built to last, our solid core massage roller with EVA tread is made from top gra
     category_id: 4
   ) 
 
+  85.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/amazon-kettleball.jpg"),
+    filename: "amazon-kettleball"
+  ) 
+
+
+
   #86
 
-  Product.create!(
+  86 = Product.create!(
     product_name: "Jump Rope, Tangle-Free Rapid Speed Jumping Rope Cable with Ball Bearings for Women, Men, and Kids, Adjustable Steel Jump Rope Workout with Foam Handles for Fitness, Home Exercise & Slim Body",
     description: "#1 in Jump Ropes",
     bullets: ["【Durable & Adjustable Rope】 This jump rope is made of steel wires that are coated with strong PVC material, making it durable even after a long time exercising. Its adjustable length design enables you to customize the length according to your needs, making it suitable for everyone, no matter for kids or adults.",
@@ -1397,10 +1866,16 @@ Built to last, our solid core massage roller with EVA tread is made from top gra
     category_id: 4
   ) 
 
+  86.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/jumprope.jpg"),
+    filename: "jumprope"
+  ) 
+
+
 
   #87
 
-  Product.create!(
+  87 = Product.create!(
     product_name: "Reoxvo Dainty Gold Chain Bracelets Set for Women 14K Real Gold Plated Link Chain Bracelets for Women Trendy Gold Stackable Bracelets for Women Adjustable 7 inch + 2 inch",
     description: "#6,447 in Clothing, Shoes & Jewelry ",
     bullets: ["【Perfect for sensitive skin】100% won't make your wrist green, these 14k gold bracelets are made of high quality material with 14k real gold plating which is durable enough to ensure no tarnish. lead-free, nickel-free and hypoallergenic,friendly to sensitive skin.",
@@ -1413,9 +1888,15 @@ Built to last, our solid core massage roller with EVA tread is made from top gra
     category_id: 5
   ) 
 
-  #89
+  87.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/Reoxvo+bracelets.jpg"),
+    filename: "reoxvo-bracelets"
+  ) 
 
-  Product.create!(
+
+  #88
+
+  88 = Product.create!(
     product_name: "Ross-Simons Jade 'Good Fortune' Bracelet in 18kt Gold Over Sterling",
     description: "To find your bracelet size, use a flexible measuring tape and gently wrap it around the wrist below the wrist bone. Don’t have a measuring tape? Use a flat ribbon or string and check your measurement against a ruler. Add approximately ½” to the measurement for children’s bracelets. For teens and adults, add ½” to 1” and choose the closest size. In between sizes? If you like a closer fit, size down. If you like a more generous drape, size up. Expert tip: Measure a favorite bracelet to easily determine your ideal size!",
     bullets: ["18kt yellow gold over sterling silver, green jade bracelet for women. 3/8 inch wide. 7.5 inch long. Box clasp provides security that blends seamlessly into the design.  Includes jewelry presentation box and 30-day, 100% money-back guarantee.",
@@ -1428,10 +1909,16 @@ Built to last, our solid core massage roller with EVA tread is made from top gra
     category_id: 5
   ) 
 
-  
-  #90
 
-  Product.create!(
+  88.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/jade-ross.jpg"),
+    filename: "jade-ross"
+  ) 
+
+  
+  #89
+
+  89 = Product.create!(
     product_name: "[Healing Trust] Green Jade Bracelet for Men Women Entrepreneur Business Luck, MONEY ATTRACTION Chakra Bracelets for Women, Bead Bracelets for Women, Maximum Money Wealth Abundance Bracelet, Prosperity Good Luck Feng Shui, Jade Bracelet Goals Manifestation Chakra Bracelet, HAPPY MOOD BRACELET, MONEY Bracelet, Jade Green Healing Crystal Bracelet, Chakra Bracelet Healing Meditation, Spiritual gifts for women and men, Pulseras Para Hombres",
     description: "HEALING TRUST is a Canadian brand committed to designing styles made with positive intentions and purpose. The combination of A+ high-quality healing crystals in each Healing Trust bracelet is thought out with love to give the destined wearer its life-changing effects.
 
@@ -1446,10 +1933,14 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
     category_id: 5
   ) 
 
+  89.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/healing-jade.jpg"),
+    filename: "healing-jade"
+  ) 
 
-  #91
+  #90
 
-  Product.create!(
+  90 = Product.create!(
     product_name: "BBTO Howlite Bracelet Black Matte Agate Bracelet Couples Bracelet Distance Bracelet Energy Beads Bracelet for Valentine's Day Present",
     description: "The black beads are matte agate stone, while the white beads are white turquoise (howlite), and the bracelets could help to release stress and gain you some inside peace.",
     bullets: ["General size: the beads is approx. 8 mm/ 0.31 inch in diameter, and the bracelet is approx. 18 cm/ 7.09 inches in circumstance",
@@ -1462,9 +1953,14 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
     category_id: 5
   ) 
 
-  #92
+  90.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/howlite-bracelet.jpg"),
+    filename: "howlite-jade"
+  ) 
 
-  Product.create!(
+  #91
+
+  91 = Product.create!(
     product_name: "2-20 Carat Certified Classic Diamond Tennis Bracelet Value Collection",
     description: "2-20 Carat Classic Diamond Tennis Bracelet Value Collection",
     bullets: ["Houston Diamond District offers a 30 day return policy on all of its products",
@@ -1475,10 +1971,15 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
     category_id: 5
   ) 
 
+  91.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/expensive-bracelets.jpg"),
+    filename: "diamond-tennis-bracelet"
+  )   
 
-  #93
 
-  Product.create!(
+  #92
+
+  92 = Product.create!(
     product_name: "1/4-2 Carat Total Weight GIA Certified Round Diamond Stud Earrings 4 Prong Push Back (D-E Color VS1-VS2 Clarity)",
     description: "1/4 - 2 Carat Total Weight GIA Certified Round Diamond Stud Earrings 4 Prong Push Back (D-E Color VS1-VS2 Clarity)",
     bullets: ["Diamond Weight Variance can be +/- 6% as we try to get you the best looking stone",
@@ -1491,9 +1992,15 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
     category_id: 5
   ) 
 
-  #94
 
-  Product.create!(
+  92.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/earring-expensive-1.jpg"),
+    filename: "diamond-stud-earrings"
+  )    
+
+  #93
+
+  93 = Product.create!(
     product_name: "PAVOI 14K Gold Colored Lightweight Chunky Open Hoops | Gold Hoop Earrings for Women",
     description: "#148 in Clothing, Shoes & Jewelry",
     bullets: ["PAVOI 4.5mm Thick 20mm Diameter Yellow Gold Earrings for Women",
@@ -1507,9 +2014,14 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
   ) 
 
 
-  #95
+  93.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/gold-earring.jpg"),
+    filename: "gold-hoop-earrings"
+  )    
+
+  #94
   
-  Product.create!(
+  94 = Product.create!(
     product_name: "Kendra Scott Elisa Pendant Necklace for Women, Fashion Jewelry, 14k Gold-Plated",
     description: "14K gold plated over brass necklace with stationary pendant.",
     bullets: ["Delicate and Dainty: If you love to layer or gravitate towards simpler styles, this piece is perfect for you. You won’t get tired of the Elisa Pendant Necklace, because it was made with everyday wear in mind.",
@@ -1523,9 +2035,14 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
   ) 
 
 
-  # 96
+  94.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kendra-pink-necklace.jpg"),
+    filename: "kendra-pendant-necklace"
+  )    
+
+  # 95
   
-  Product.create!(
+  95 = Product.create!(
     product_name: "Miabella Solid 18K Gold Over Sterling Silver Italian 5mm Diamond-Cut Cuban Link Curb Chain Necklace for Women Men, 925 Sterling Silver Made in Italy",
     description: "PURE 925 STERLING SILVER & NICKEL-FREE/HYPOALLERGENIC - Made of 92.5% pure sterling silver, this jewelry is a great choice for individuals with very sensitive skin. One of the brightest metals in the world, sterling silver gives your jewelry a brilliant shine. Available in 16”, 18”, 20”, 22”, 24”, 26”, 30”. Necklace, 5/16” wide (7mm). Lobster-claw clasp with spring mechanism for sturdy security.",
     bullets: ["MODERN CLASSIC - Add style to a basic look with this solid 18K gold over sterling silver 5mm Curb chain. Our flat diamond-cut beveled links are much more reflective than the standard curb chain for a rich, perfect shine. It is strong and durable for daily wear yet not too thick for a comfortable fit. Wear alone with casual or formal attire for everyday modern elegance, with a favorite pendant for a personal statement or as a great layering chain. Visit our store for a full selection of chains.",
@@ -1539,9 +2056,15 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
   ) 
 
 
+  95.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/chain-necklace.jpg"),
+    filename: "miabella-necklace"
+  )    
+
+
   #96
 
-  Product.create!(
+  96 = Product.create!(
     product_name: "Paxcoo CN-01 Black Velvet Choker Necklaces with Storage Bag for Women Girls, Pack of 10",
     description: "#12 in Women's Choker Necklaces",
     bullets: ["Quantity: The choker set comes with 10 different chokers including classic, velvet, pendant with, gothic tattoo, lace, vintage Lolita styles to fit your different outfits",
@@ -1554,10 +2077,16 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
     category_id: 5
   ) 
 
+  96.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/black-velvet-choker.jpg"),
+    filename: "choker-necklaces"
+  )    
+
+
 
   #97
 
-  Product.create!(
+  97 = Product.create!(
     product_name: "70 PCS Silver Vintage Goth Punk Rings Set for Men Girls Women, Cool Gothic Ring Pack, Trendy Stackable Boho Chunky Knuckle Emo Full Finger Rings, Adjustable Open Snake Butterfly Ace Eboy Y2k Ring",
     description: "#12,659 in Clothing, Shoes & Jewelry",
     bullets: ["✿COOL PUNK RING PACK✿: These rings set comes in many different styles, include snake, mushroom, feather, butterflies, roses, star, flower, spade ace, Chinese dragon ring, heart and so on...The unique design jewelry is very suitable for those who have a changeable daily style, make you look cool, masculine and accentuate your alluring charm.Bonus points for your overall styling.If you are punk or retro Gothic style rings lover, you're gonna love this ring set!",
@@ -1570,10 +2099,15 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
     category_id: 5
   ) 
 
+  97.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/rings.jpg"),
+    filename: "silver-rings"
+  )    
+
 
   #98
 
-  Product.create!(
+  98 = Product.create!(
     product_name: "15 Pairs Earrings for Men, Black Stainless Steel Earrings Stud Kit for Men Women Fashion Piercing Jewelry Cross Dangle Hoop Earrings Set",
     description: "#6,953 in Clothing, Shoes & Jewelry",
     bullets: ["Earring Set Include - 15 pairs of men's earrings and ear studs come with a beautiful box, 4 pairs of circle earring hoops, 3 pairs of black dangle-hinged hoop earrings, and 8 pairs of different shapes of black ear studs. More wearing choice, suitable for men and women.",
@@ -1586,9 +2120,15 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
     category_id: 5
   ) 
 
+  98.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/men-earrings.jpg"),
+    filename: "men-earrings"
+  )    
+
+
   #99
 
-  Product.create!(
+  99 = Product.create!(
     product_name: "MOZETO Tie Clips for Men, Black Gold Blue Gray Silver Tie Bar Set for Regular Ties, Luxury Box Gift Ideas (Elegant Style)",
     description: "#7,900 in Clothing, Shoes & Jewelry",
     bullets: ["【Elegant Tie Clips for Men】- MOZETO tie clip goes well with your different ties, basic length and colors are suitable for various occasions, such as valentine's day, christmas, easter, anniversary, engagement, party, meeting, dating, wedding, daily wear, etc.",
@@ -1601,9 +2141,16 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
     category_id: 5
   ) 
 
+
+  99.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/mozeto-tie-clips.jpg"),
+    filename: "mozeto-tie-clips"
+  )    
+
+
   #100
 
-  Product.create!(
+  100 = Product.create!(
     product_name: "ThunderFit Silicone Ring Men, Step Edge Rubber Wedding Band, 10mm Wide, 2.5mm Thick",
     description: "#2 in Men's Rings",
     bullets: ["True Commitment - Any Place, Any Time - Maximum Safety - workout, gym, weight lifting, water sports, trekking, climbing or any other physical activity? Our silicone wedding bands will be great in replacing your formal wedding band to keep it safe from being scratched or damaged. It is also perfect for extreme duties & manual labor work such as - constructions, military duties, renovation, painting and more.",
@@ -1616,10 +2163,15 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
     category_id: 5
   ) 
 
+  100.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/men-ring.jpg"),
+    filename: "silicone-ring-men"
+  )     
+
 
   #101
 
-  Product.create!(
+  101 = Product.create!(
     product_name: "HZMAN Genuine Leather Tree of life Bracelets Men Women, Tiger Eye Natural Stone Lava Rock Beads Ethnic Tribal Elastic Bracelets Wristbands",
     description: "#1 in Men's Cuff Bracelets",
     bullets: ["Designed for personal wearing or to be the christmas, halloween, birthday, anniversary gifts for father, mother, friends, lovers, couples, motorcyclists bikers, tattoo fans... or just yourself",
@@ -1632,10 +2184,15 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
     category_id: 5
   ) 
 
+  101.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/men-bracelet.jpg"),
+    filename: "genuine-leather-men"
+  )     
+
 
   #102
 
-  Product.create!(
+  102 = Product.create!(
     product_name: "BTFBM Women 2023 Summer Sleeveless Tank Dresses Crew Neck Slim Fit Short Casual Ruched Bodycon Party Club Mini Dress",
     description: "The Tank Sleeveless Dress Enchants With A Great Slim Fit Cut And Perfect Decent High Quality Fabric, Attractive Fresh Color Makes You Want Summer, Sun And Beach. The Elastic Shirt Dress Is Given A Feminine Attention By And Enchantingly Round Neckline And Sleeveless Shape. With Sneakers For A Fresh Girlie Look, With Pumps As A Highlight In The Office Or With Boots And Biker Jacket For A Skilful Change In Style. The Casual Solid Color Mini Dress Embodies Femininity With Charm And Chic",
     bullets: ["60% Polyester/35% Viscose /5% Elastane",
@@ -1651,10 +2208,15 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
     category_id: 6
   ) 
 
+  102.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/btfbm-dress.jpg"),
+    filename: "btfbm-dress"
+  )    
+
 
   #103
 
-  Product.create!(
+  103 = Product.create!(
     product_name: "Cosonsen Women's Dress Deep V-Neck Long Sleeve Waist Tie Ruffle Mini Swing Skater Dresses",
     description: "#485 in Clothing, Shoes & Jewelry ",
     bullets: ["Dacron",
@@ -1670,10 +2232,15 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
     category_id: 6
   ) 
 
+  103.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/consonen-dress.jpg"),
+    filename: "cosonsen-dress"
+  )    
+
 
   #104
 
-  Product.create!(
+  104 = Product.create!(
     product_name: "ECOWISH Womens V-Neck Spaghetti Strap Bowknot Backless Sleeveless Lace Mini Swing Skater Dress",
     description: "This dress has spaghetti straps and a deep V neckline.
 There’s a stunning lace on the chest with an eyelet-style trim, as well as a wide panel high up on the natural waist.
@@ -1691,10 +2258,16 @@ This panel accentuates the waist beautifully, and because it’s higher up on th
     category_id: 6
   ) 
 
+  104.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/ecowish-dress.jpg"),
+    filename: "ecowish-dress"
+  )    
+
+
 
   #105
 
-  Product.create!(
+  105 = Product.create!(
     product_name: "MEROKEETY Women's Sleeveless Lace Floral Elegant Cocktail Dress Crew Neck Knee Length for Party",
     description: "The MEROKEETY lace cocktail dress is a classic piece that belongs in every woman’s closet.",
     bullets: ["65% Rayon, 35% Polyester",
@@ -1711,10 +2284,15 @@ This panel accentuates the waist beautifully, and because it’s higher up on th
     category_id: 6
   ) 
 
+  105.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/lace-dress.jpg"),
+    filename: "merokeety-lace-dress"
+  ) 
+
 
   #106
 
-  Product.create!(
+  106 = Product.create!(
     product_name: "MakeMeChic Women's High Waist Pockets Straight Leg Jeans Leather Look Pants",
     description: "#1,712 in Clothing, Shoes & Jewelry",
     bullets: ["60% Viscose, 33% Polyamide, 7% Spandex",
@@ -1730,10 +2308,16 @@ This panel accentuates the waist beautifully, and because it’s higher up on th
     category_id: 6
   ) 
 
+  106.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/leather-women-pants.jpg"),
+    filename: "leather-jeans-women"
+  ) 
+
+
 
   #107
 
-  Product.create!(
+  107 = Product.create!(
     product_name: "Democracy Women's Ab Solution High Rise Ankle Jean",
     description: "Built from the bottoms up, Democracy blends a universal fit for all shapes and sizes with an effortless aesthetic. Inspired by this multitasking woman with an ageless mindset, Democracy introduces emerging trends in an accessible and affordable way that meets all of her lifestyle needs. Through unparalleled value that fits her body and her wallet. Democracy embraces who she is, enhances what she’s got, elevates her confidence, and evolves her personal style.",
     bullets: ["52% Cotton, 34% Modal, 12% Polyester, 2% Spandex",
@@ -1747,9 +2331,16 @@ This panel accentuates the waist beautifully, and because it’s higher up on th
     category_id: 6
   ) 
 
+
+  107.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/democracy-jeans.jpg"),
+    filename: "democracy-high-rise-jeans"
+  ) 
+
+
   #108
 
-  Product.create!(
+  108 = Product.create!(
     product_name: "Levi's Women's Wedgie Straight Jeans",
     description: "The cheekiest jeans in your closet, inspired by vintage Levi's jeans. Special construction lifts backside with iconic leather patch at back waist.",
     bullets: ["85.5% Cotton, 13.5% Polyester, 1% Elastane",
@@ -1763,12 +2354,18 @@ This panel accentuates the waist beautifully, and because it’s higher up on th
     price: 47.10,
     inventory: 66,
     category_id: 6
+  )
+
+  108.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/levi-jean-straight.jpg"),
+    filename: "levi-women-straight-jeans"
   ) 
+
 
 
   #109
 
-  Product.create!(
+  109 = Product.create!(
     product_name: "Gloria Vanderbilt Women's Classic Amanda High Rise Tapered Jean",
     description: "Gloria Vanderbilt's # 1 selling women's jean in America with over 60 million sold nationwide the Amanda Classic High Rise Tapered Jean. This pant sits at your natural waistline with fully functional pockets, easy front zipper fly, belt loops for your favorite belt and contoured hips for that comfort fit you've come to love. Pairs great with all tops from fashionable to your basic tee shirt and all footwear from stylish heels and trendy boot to your favorite flats! The Amanda high rise Jean gives you the mid section confidence you want and versatility you need in any wardrobe, perfect to wear to work, attending a class or spending time with friends for family. Available in various colors, prints, embroidery and embellishments. Effortlessly fun and stylish. A versatile yet classic look that attracts and connects with the modern sensibility of consumers of all ages.",
     bullets: ["98% Cotton, 2% Elastane",
@@ -1784,10 +2381,16 @@ This panel accentuates the waist beautifully, and because it’s higher up on th
     category_id: 6
   ) 
 
+  109.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/gloria-jean.jpg"),
+    filename: "gloria-vanderbilt-jean"
+  ) 
+
+
 
   #110
 
-  Product.create!(
+  110 = Product.create!(
     product_name: "AUTOMET Womens Casual Plaid Shacket Wool Blend Button Down Long Sleeve Shirt Fall Jacket Shackets",
     description: "#1,048 in Clothing, Shoes & Jewelry",
     bullets: ["Fabric: 55% Nylon/45% Spandex",
@@ -1804,10 +2407,16 @@ This panel accentuates the waist beautifully, and because it’s higher up on th
     category_id: 6
   ) 
 
+  110.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/automet-plaid.jpg"),
+    filename: "automet-plaid"
+  ) 
+
+
 
   #111
 
-  Product.create!(
+  111 = Product.create!(
     product_name: "Womens Strapless Crop Top Sexy Sweetheart Neck Ribbed Knit Twisted Knot Front Sleeveless Y2K CamisoleTanks Top",
     description: "#1,675 in Clothing, Shoes & Jewelry",
     bullets: ["95% Polyester and 5% Elastane",
@@ -1824,10 +2433,16 @@ This panel accentuates the waist beautifully, and because it’s higher up on th
     category_id: 6
   ) 
 
+  111.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/sweetheart+crop+top.jpg"),
+    filename: "sweetheart-crop-top"
+  ) 
+
+
 
   #112
 
-  Product.create!(
+  112 = Product.create!(
     product_name: "Hanes Sport Women's Polo Shirt, Women’s Cool DRI Moisture-Wicking Performance Polo Shirt, Women’s Jersey Knit Polo Shirt",
     description: "Want to stay dry no sweat. Our Cool DRI sport shirt's technology keeps you cool and comfortable, even when the competition heats up.",
     bullets: ["100% Polyester",
@@ -1846,9 +2461,15 @@ This panel accentuates the waist beautifully, and because it’s higher up on th
     category_id: 6
   ) 
 
+  112.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/hanes-polo-shirt.jpg"),
+    filename: "hanes-polo-shirt"
+  ) 
+
+
   #113
 
-  Product.create!(
+  113 = Product.create!(
     product_name: "CHICWISH Women's Classy Light Tan/Black Open Front Knit Coat Cardigan",
     description: "#1 in Women's Cardigans",
     bullets: ["100% Acrylic",
@@ -1863,10 +2484,15 @@ This panel accentuates the waist beautifully, and because it’s higher up on th
     category_id: 6
   ) 
 
+  113.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/chiwish-jacket.jpg"),
+    filename: "chicwish-coat"
+  )   
+
 
   #114
 
-  Product.create!(
+  114 = Product.create!(
     product_name: "Ugerlov Women's Oversized Sweaters Batwing Sleeve Mock Neck Jumper Tops Chunky Knit Pullover Sweater",
     description: "You are going to look amazing in this fabulous pullover sweater and we are here for it! This sweater has such a comfy generous fit and that ribbed chunky knit fabric is gorgeous! This sweater features batwing sleeves, a very generous fit, and loose knit fabric.
 
@@ -1885,10 +2511,15 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     category_id: 6
   ) 
 
+  114.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/ugerlov-sweater.jpg"),
+    filename: "ugerlov-sweater"
+  )   
+
 
   #115
 
-  Product.create!(
+  115 = Product.create!(
     product_name: "Womens Turtleneck Sweaters Long Sleeve Pullover Cable Knit Sweaters Soft Jumper",
     description: "#9,015 in Clothing, Shoes & Jewelry",
     bullets: ["51% Viscose, 28% Polyester, 21% Nylon",
@@ -1904,10 +2535,15 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     category_id: 6
   ) 
 
+  115.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/womens-turtleneckl.jpg"),
+    filename: "turtleneck-sweater"
+  )   
+
 
   #116
 
-  Product.create!(
+  116 = Product.create!(
     product_name: "shermie Women's Cute Heart Pattern Elbow Patchwork Casual Crewneck Knitted Sweaters Pullover",
     description: "#20,372 in Clothing, Shoes & Jewelry",
     bullets: ["100% knitted Acrylic/Polyester",
@@ -1923,10 +2559,15 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     category_id: 6
   ) 
 
+  116.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/shermie-heart-sweater.jpg"),
+    filename: "shermie-sweater"
+  )   
+
 
   #117
 
-  Product.create!(
+  117 = Product.create!(
     product_name: "MEROKEETY Women's Winter Long Sleeve Zip Puffer Jacket Pockets Baggy Short Down Coats",
     description: "What a good puffer down coat, not only warm but also cute and trendy! It's suitable to wear in the snow, wind, rain days. The ribbed cuffs are really windproof and warm. There is enough room for a bulky sweater underneath.",
     bullets: ["Full Polyester",
@@ -1943,10 +2584,15 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     category_id: 6
   ) 
 
+  117.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/puffer-jacket-merokeety.jpg"),
+    filename: "puffer-merokeety-jacket"
+  )     
+
 
   #118
 
-  Product.create!(
+  118 = Product.create!(
     product_name: "KEOMUD Women's Winter Crop Vest Lightweight Sleeveless Warm Outerwear Puffer Vest Padded Gilet",
     description: "The women's crop puffer vest will be folded and compacted inside of the package when delivered, when it is taken out, the Vest will have wrinkles and the effect is not beautiful, but the vacuum packaging can achieve the effect of dust and moisture-proof.",
     bullets: ["Hand Wash in Cold Water/ Recommend Towel Wipe",
@@ -1964,10 +2610,15 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     category_id: 6
   ) 
 
+  118.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/crop-vest.jpg"),
+    filename: "crop-vest"
+  )     
+
 
   #119
 
-  Product.create!(
+  119 = Product.create!(
     product_name: "Amazon Essentials Women's Casual Crew Socks, 6 Pairs",
     description: "Amazon Essentials is focused on creating affordable, high-quality, and long-lasting everyday clothing you can rely on. Our line of women's apparel includes cashmere sweaters, fleece and down jackets, and more, including plus-size options. Our consistent sizing takes the guesswork out of shopping, and each piece is put to the test to maintain the highest s in quality and comfort.",
     bullets: ["73% Cotton, 19% Polyester, 5% Nylon, 3% Elastane",
@@ -1984,10 +2635,15 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     category_id: 6
   ) 
 
+  119.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/women-amazon-socks.jpg"),
+    filename: "amazon-socks"
+  )  
+
 
   #120
 
-  Product.create!(
+  120 = Product.create!(
     product_name: "Performance Lightweight Crew Training Socks (3 Pair) (Medium, White/Black)",
     description: "#4,134 in Clothing, Shoes & Jewelry",
     bullets: ["58% Cotton, 40% Polyester, 2% Elastane",
@@ -1999,12 +2655,18 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     price: 19.90,
     inventory: 55,
     category_id: 6
-  ) 
+  )
+
+  120.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/nike-socks.jpg"),
+    filename: "nike-socks"
+  )  
+
 
 
   #121
 
-  Product.create!(
+  121 = Product.create!(
     product_name: "Gildan Men's Crew T-Shirts, Multipack, Style G1100",
     description: "Gildan is one of the world's largest vertically integrated manufacturers of apparel and socks. Gildan uses cotton grown in the USA, which represents the best combination of quality and value for Gildan's cotton and cotton blended products. Since 2009, Gildan has proudly displayed the Cotton USA mark, licensed by Cotton Council International, on consumer's product packaging and shipping materials. Gildan's environmental program accomplishes two core objectives: Reduce our environmental impact and preserve the natural resources being used in our manufacturing process. At all operating levels, Gildan is aware of the fact that we operate as a part of a greater unit: The environment in which we live and work.",
     bullets: ["100% Cotton",
@@ -2023,9 +2685,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
   ) 
 
 
+  121.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/men-crew-pack.jpg"),
+    filename: "crew-pack"
+  )    
+
   #122
 
-  Product.create!(
+  122 = Product.create!(
     product_name: "Coofandy Men's Hawaiian Floral Shirts Cotton Linen Button Down Tropical Holiday Beach Shirts",
     description: "#301 in Clothing, Shoes & Jewelry",
     bullets: ["100% Cotton",
@@ -2042,10 +2709,15 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     category_id: 6
   ) 
 
+  122.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/tropical-green-shirt.jpg"),
+    filename: "hawaiian-floral-shirt"
+  )    
+
 
   #123
 
-  Product.create!(
+  123 = Product.create!(
     product_name: "J.Ver Men's Dress Shirts Solid Long Sleeve Stretch Wrinkle-Free Formal Shirt Business Casual Button Down Shirts",
     description: "#72 in Clothing, Shoes & Jewelry",
     bullets: ["62% Cotton, 35% Polyester, 3% Spandex",
@@ -2061,9 +2733,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     category_id: 6
   ) 
 
+  123.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/white-jver-shirt.jpg"),
+    filename: "jver-white-shirt"
+  )  
+
   #124
 
-  Product.create!(
+  124 = Product.create!(
     product_name: "Dickies Men's Heavyweight Crew Neck Short Sleeve Tee",
     description: "Hard-working men everywhere will be comfort and comfortable with their time in Dickies' Short sleeve heavyweight heathered crew neck t-shirt. Made of a jersey knit material, this heavyweight cotton blend will remain durable, while designed with cotton comfort. On top of the fabric durability, The taped neck and shoulder seams up the ante on strength for longer wear.",
     bullets: ["100% Cotton",
@@ -2078,22 +2755,42 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     category_id: 6
   ) 
 
+  124.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/dickies-tee.jpg"),
+    filename: "dickies-tee"
+  )  
+
 
   #125
 
-  # Product.create!(
-  #   product_name: "",
-  #   description: ,
-  #   bullets: [],
-  #   price: ,
-  #   inventory: ,
-  #   category_id:
-  # ) 
+  125 = Product.create!(
+    product_name: "Champion Men's T-Shirt, Classic Cotton Tee, Crewneck Tee, Men's Mid-Weight T-Shirt, Script Logo",
+    description: "Here’s a go-to classic cotton tee from Champion®, with Champion® quality built into every detail. This classic crewneck T-shirt is made of traceable, US-grown, ring spun cotton yielding an ultra-soft feel. And it’s constructed with a higher stitch count and reinforced shoulder seams for superb quality. The ribbed crewneck looks great and helps hold the shape, with tonal back neck tape for no-chafe comfort. The iconic script logo emblazoned across the chest celebrates the brand’s athletic heritage. Wear this basic cotton crewneck tee on its own or as a layer, and enjoy its quality for a long, long time.",
+    bullets: ["100% Cotton",
+    "Imported",
+    "Pull On closure",
+    "Machine Wash",
+    "FEEL-GOOD COTTON TO FEEL GOOD ABOUT - This men's T-shirt is made with traceable, US-grown, ring spun cotton, produced using much less water while yielding an ultra-soft feel.",
+    "MADE TO LAST - Higher stitch count and reinforced shoulder seams for superb quality.",
+    "COMFORT IN THE DETAILS - Tonal back neck tape for no-chafe comfort.",
+    "CLASSIC CREWNECK STYLE - Sturdy ribbed crewneck helps hold the shape at the neck.",
+    "COLORS FROM BRIGHT TO BASIC - Buy a bunch to beef up your tee-shirt wardrobe.",
+    "QUALITY FABRIC - Champion's short-sleeve crewneck tee is made of mid-weight, 5.5-oz. 100% cotton (granite heather: 60% cotton/40% polyester; oxford gray: 90% cotton/10% polyester).",
+    "EASY MACHINE WASHING - Throw in the washer, tumble dry low."],
+    price: 13.56,
+    inventory: 66,
+    category_id: 6
+  ) 
+
+  125.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/champion-shirt.jpg"),
+    filename: "champion-shirt"
+  )    
 
 
   #126
 
-  Product.create!(
+  126 = Product.create!(
     product_name: "vineyard vines Men's Saltwater 1/4-Zip Pullover",
     description: "We wear Saltwaters nonstop – literally wherever we go, they go. From the office to wearing them as a mens golf pullover 1/4 zip, it’s one of our favorite men’s vineyard vines go-tos. That’s why we want them to be the best. So, we introduced a new, softer fabric, added new colors, and kept the moisture-wicking and wrinkle resistant fabric that you love. This must-have quarter zip sweater pullover has a subtle stripe, our signature whale embroidered logo on the chest, is easy to care for, and makes a great gift for any occasion. Make sure it’s vineyard vines quality. At vineyard vines, we think every day should feel this good! We are family owned and operated since 1998. For over 20 years, we’ve been sharing the gift of the Vineyard with everyone we can. Care Instructions: machine wash.",
     bullets: ["55% Cotton, 45% Polyester",
@@ -2110,10 +2807,15 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     category_id: 6
   ) 
 
+  126.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/vineyard-pullover.jpg"),
+    filename: "vineyard-pullover"
+  )    
+
 
   #127
 
-  Product.create!(
+  127 = Product.create!(
     product_name: "Aelfric Eden Mens Long Sleeve Van Gogh Printed Cable Knit Sweaters Casual Oversized Sweater Pullover",
     description: "#14,799 in Clothing, Shoes & Jewelry",
     bullets: ["99.99% cotton",
@@ -2129,10 +2831,15 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     category_id: 6
   ) 
 
+  127.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/vineyard-pullover.jpg"),
+    filename: "vineyard-pullover"
+  )    
+
 
   #128
 
-  Product.create!(
+  128 = Product.create!(
     product_name: "Kallspin Men's Cashmere Wool Blended Relaxed Fit Sweater Vests Knit V-Neck Sleeveless Sweater",
     description: "#9,462 in Clothing, Shoes & Jewelry",
     bullets: ["30% Wool, 20% Viscose, 20% Polyester, 15% Nylon, 15% Cashmere",
@@ -2147,10 +2854,16 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     category_id: 6
   ) 
 
+  128.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kallspin-sweater.jpg"),
+    filename: "kallspin-sweater"
+  )    
+
+
 
   #129
 
-  Product.create!(
+  129 = Product.create!(
     product_name: "Haggar Men's Premium No Iron Khaki Classic Fit Expandable Waist Flat Front Pant Reg. and Big & Tall Sizes",
     description: "STYLE TIPS: These Premium No Iron Khakis are ultra-versatile and are perfect for any occasion. For a more laid back look, pair these classic fit khakis with your favorite crewneck and sneakers. For a more elevated look, consider pairing the khaki's with your favorite Haggar sport coat.",
     bullets: ["61% Cotton, 37% Polyester, 2% Spandex",
@@ -2167,10 +2880,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     category_id: 6
   ) 
 
+  129.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/haggar-men-pants.jpg"),
+    filename: "haggar-men-pants"
+  )    
 
   #130
 
-  Product.create!(
+  130 = Product.create!(
     product_name: "Match Men's Wild Cargo Pants",
     description: "#54 in Clothing, Shoes & Jewelry ",
     bullets: ["100% Cotton",
@@ -2189,9 +2906,15 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
   ) 
 
 
+  130.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/match-men-cargo-pants.jpg"),
+    filename: "match-man-cargo"
+  )    
+
+
   #131
 
-  Product.create!(
+  131 = Product.create!(
     product_name: "Levi's Men's 559 Relaxed Straight Jeans",
     description: "Relaxed, straight fit jeans. Made with +Levi's Flex: Our most advanced stretch technology engineered to deliver maximum flex and optimum comfort.",
     bullets: ["100% Cotton",
@@ -2207,10 +2930,15 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     category_id: 6
   ) 
 
+  131.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/levi-men.jpg"),
+    filename: "levi-men"
+  )      
+
 
   #132
 
-  Product.create!(
+  132 = Product.create!(
     product_name: "Lee Men's Extreme Motion Straight Fit Tapered Leg Jean",
     description: "Just like our founder, H.D. Lee, our passion is helping can-do people do more. We are committed to designing clothing that conforms to your body, allowing you to move through life freely. We help you chase the things that bring you joy and laughter. The things that make you fearless and hopefully because your passion is what makes you unique. And what moves you, moves us. Move your Lee.",
     bullets: ["97% Cotton, 3% Spandex",
@@ -2227,9 +2955,15 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     category_id: 6
   ) 
 
+  132.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/lee-tan-jean.jpg"),
+    filename: "lee-tan-jean"
+  )  
+
+
   #133
 
-  Product.create!(
+  133 = Product.create!(
     product_name: "Dunkin' Original Blend Medium Roast Ground Coffee, 30 Ounce",
     description: "Start your day off right with a nice cup of this Dunkin' Donuts Original Blend 30-ounce-canister medium-roast coffee. Wake up to the rich aroma of this medium-roast coffee. Made with 100 percent premium Arabica beans, this roast produces a bold flavor and nice finish. This Dunkin' Donuts Original Blend coffee comes in a 30-ounce canister and can be used for both hot and iced beverages, making it a great option for warm and cold climates. Ground coffee is ready for brewing. Medium roast coffee with Original Blend flavor. 30 oz. can. Caffeinated coffee provides an instant pick-me-up when you take a sip. Made with 100% arabica beans, sourced, and selected worldwide. The product is kosher.",
     bullets: ["Contains 1 - 30 ounce canister of ground coffee",
@@ -2242,9 +2976,15 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     category_id: 7
   ) 
 
+  133.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/dunkin-coffee.jpg"),
+    filename: "dunkin"
+  ) 
+
+
   #134
 
-  Product.create!(
+  134 = Product.create!(
     product_name: "Two Rivers Coffee Flavored Coffee Pods Compatible with Keurig K Cup Brewers, Assorted Variety Pack Flavored Coffee, 40 Count",
     description: "No need for 40 different boxes just to have variety in your flavored coffees. This Two Rivers Coffee box is the #1 selling Flavored Coffee sampler pack! Just one box, 40 delicious flavored coffees. Choice tastes better.",
     bullets: ["Contains maple, chocolate, cinnamon, Chocolate Vanilla, vanilla, Hazelnut and other flavored coffees. Individual flavor may vary!",
@@ -2257,9 +2997,15 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     category_id: 7
   ) 
 
+  134.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/keurig-coffee.jpg"),
+    filename: "keurig-coffee"
+  ) 
+
+
   #135
 
-  Product.create!(
+  135 = Product.create!(
     product_name: "Starbucks K-Cup Coffee Pods—Medium Roast Coffee—Pike Place Roast for Keurig Brewers—100% Arabica—4 boxes (96 pods total)",
     description: "Named for our first store in Seattle’s Pike Place Market, this coffee is served fresh every day in Starbucks cafés around the world. A smooth, well-rounded blend of Latin American beans with subtly rich flavors of cocoa and praline, it’s the perfect brewed coffee—a consistently delicious cup you can really look forward to. Enjoy the spirit of Pike Place in every sip. Pike Place is a registered trademark of The Pike Place Market PDA, used under license. Nestlé uses Starbucks trademarks under license",
     bullets: ["PREMIUM COFFEE IN KEURIG K-CUPS—Starbucks delivers exceptional coffee cup after cup with Pike Place Roast medium roast coffee K-Cups—96 total coffee pods for Keurig coffee makers",
@@ -2273,9 +3019,15 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
   ) 
 
 
+  135.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/starbucks.jpg"),
+    filename: "starbucks-coffee"
+  )   
+
+
   #136
 
-  Product.create!(
+  136 = Product.create!(
     product_name: "Welch's Fruit Snacks, Mixed Fruit, Gluten Free, Bulk Pack, 0.9 oz Individual Single Serve Bags 40 Count (Pack of 1)",
     description: "Welch's Fruit Snacks Mixed Fruit. Family farmer owned.80 Calorie pouches. Fruit is our 1st ingredient. Natural & artificial flavors. Made with real fruit. DV per serving: 100% Vitamin C. 25% Vitamins A & E. Fat free. Gluten free. No preservatives.",
     bullets: ["Includes (40) 0.9 oz single serving bags",
@@ -2288,10 +3040,15 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     category_id: 7
   ) 
 
+  136.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/welch.jpg"),
+    filename: "welch-fruit-snacks"
+  )  
+
 
   #137
 
-  Product.create!(
+  137 = Product.create!(
     product_name: "PopCorners Popped Corn Snacks, 6 Flavor Variety Pack, 1oz Bags (20 Pack)",
     description: "Let’s play truth or dare. We’ll go first. A great bag of PopCorners Popped Corn chips is hard to beat. Our popped-corn chips are combined with sunflower oil, cane sugar, and salt. It’s a sweet and salty experience. It’s balanced enough to eat every day. Trust us. Your taste buds will thank you. So, go ahead. We dare you.",
     bullets: ["20 Pack of 1 oz PopCorners variety snack pack chips: (3) White Cheddar, (4) Kettle Corn, (4) Sea Salt, (3) Spicy Queso, (3) Sweet Chili, (3) Sour Cream & Onion single serve snack chips",
@@ -2304,10 +3061,16 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     category_id: 7
   ) 
 
+  137.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/popcorners.jpg"),
+    filename: "popcorners"
+  )  
+
+
 
   #138
 
-  Product.create!(
+  138 = Product.create!(
     product_name: "OREO Original, OREO Golden, CHIPS AHOY! & Nutter Butter Cookie Snacks Variety Pack, 56 Snack Packs (2 Cookies Per Pack)",
     description: "Milk’s Favorite Cookie - Chocolate and Golden OREO Sandwich Cookies are the perfect anytime treat. Everyone loves the classic taste of creme sandwiched between two wafer cookies. Put a sweet twist on party favors, goodie jars, gift bags, care packages, and more! - The Crunchy Side of CHIPS AHOY! - Baked until crunchy and made with real chocolate chips, Original CHIPS AHOY! cookies have been a household favorite since 1963. These treats are perfect for on-the-go, the office, parties, or simple sweet snacks. - Peanut Butter Lovers’ Cookie - Made with real peanut butter, these cookies have a crunchy texture and a smooth, creamy filling between two round crispy wafers for a sweet and savory snack. - This bulk variety package contains 56 snack packs: 14 packs each (2 regular size cookies per pack) OREO Chocolate Sandwich Cookies, OREO Golden Sandwich Cookies, CHIPS AHOY! Chocolate Chip Cookies, and round Nutter Butter Sandwich Cookies. - Add this bulk variety package of OREO cookies, CHIPS AHOY! cookies, and Nutter Butter cookies to your cart for sweet treats.",
     bullets: ["This bulk variety package contains 56 snack packs: 14 each of OREO Chocolate Sandwich Cookies, OREO Golden Sandwich Cookies, CHIPS AHOY. Chocolate Chip Cookies, and Nutter Butter Sandwich Cookies (packaging may vary)",
@@ -2321,9 +3084,16 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
   ) 
 
 
+  138.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/oreo.jpg"),
+    filename: "oreos"
+  )  
+
+
+
   #139
 
-  Product.create!(
+  139 = Product.create!(
     product_name: "Wonderful Pistachios, No Shells, Roasted & Salted Nuts, 24 Ounce Resealable Bag, Good Source of Protein, Gluten Free, On the Go Snack",
     description: "One 24 Ounce Resealable Bag of our Roasted & Salted No Shells Wonderful Pistachios. Wonderful Pistachios have literally come out of their shells. Same delicious taste, but with a little less work for you. Still great for snacking, they’re also a wonderful addition to your culinary creations. Wonderful Pistachios are a smart, healthy choice for folks around the world. Wonderful Pistachios grows all of its pistachios in California’s fertile San Joaquin Valley. The warm days and cool nights work in harmony with the region’s natural soils to create the perfect growing climate. We then carefully tend and harvest each pistachio using the latest in sustainable practices. Nutritious and healthy pistachios are great as part of an overall healthy diet. Pistachios are also a good source of plant-based protein. And in addition to tasting great, a single serving includes about 49 pistachios, enough to satisfy your snacking needs. Note: Contains Tree Nuts (pistachios)",
     bullets: ["SIZE: This 24 ounce re-sealable bag is the perfect snack to have around the house and for on-the-go. Pistachios are gluten free, nutritious, and protein powered.",
@@ -2336,10 +3106,15 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     category_id: 7
   ) 
 
+  139.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/pistachios.jpg"),
+    filename: "pistachios"
+  )  
+
 
   #140
 
-  Product.create!(
+  140 = Product.create!(
     product_name: "Orgain Organic Vegan Protein Powder, Creamy Chocolate Fudge - 21g of Plant Based Protein, Low Net Carbs, Non Dairy, Gluten Free, No Sugar Added, Soy Free, Kosher, Non-GMO, 2.03 Lb (Packaging May Vary)",
     description: "Orgain organic creamy chocolate fudge protein powder is a naturally smooth and delicious nourishment drink with 21 grams of organic protein and 7 grams of organic fiber per serving. Each serving is USDA organic, gluten free, kosher, vegan, non-GMO, soy free. No artificial flavors, colors or preservatives. This protein shake powder is great to mix with water or milk post workout or while you're on the go through your busy day. This is great for the entire family, including kids.",
     bullets: ["New look and label, same great product! Includes 1 (2.03 Lb) Orgain Organic Plant Based Protein Powder, Creamy Chocolate Fudge",
@@ -2352,10 +3127,15 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     category_id: 7
   ) 
 
+  140.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/proteim.jpg"),
+    filename: "orgain-protein"
+  )    
+
 
   #141
 
-  Product.create!(
+  141 = Product.create!(
     product_name: "Nature Nate’s 100% Pure, Raw & Unfiltered Honey; 32oz. Squeeze Bottle; Award-Winning Taste",
     description: "Enjoy Nature Nate’s 100% Pure, Raw & Unfiltered Honey on anything needing a little natural sweetness – morning coffee or tea, oatmeal, granola, or as a better-for-you sweetener in baked goods. Nature Nate's raw & unfiltered honey delivers a promise of the highest quality honey. Through rigorous testing and careful handling, we ensure every bottle of Nature Nate's honey is the highest quality from the inside out: no additives, no preservatives, never pasteurized, pollens intact, crafted for exceptional taste, and no sticky bottles. Our ultimate goal is to leave the world a little better than we found it by fostering happy hives and happy lives, giving of our time and resources from bees to beyond the bottle in communities of need.",
     bullets: ["Nature Nate's 100% Pure, Raw & Unfiltered Honey is a sweetener as nature intended. One ingredient: Honey. All we add is the bottle",
@@ -2367,9 +3147,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     category_id: 7
   ) 
 
+  141.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/honey.jpg"),
+    filename: "honey"
+  )     
+
   #142
   
-  Product.create!(
+  142 = Product.create!(
     product_name: "Amazon Brand - Happy Belly California Walnuts, Halves and Pieces, 40 Ounce",
     description: "Happy Belly California Walnuts are of the premium Chandler variety, which means they have a large, smooth, and oval shape. Harvested in California’s Central Valley, the Mediterranean-like climate and abundance of rich soil is ideal for growing. We've kept this bag unroasted and unsalted to let the walnuts' rich, sweet flavor stand out. A resealable bag helps ensure maximum freshness, all the way down to the last handful. May contain an occasional nut shell fragment.",
     bullets: ["Happy Belly Walnuts feature a rich, sweet flavor balanced with a hint of bitterness from the edible papery skin",
@@ -2383,9 +3168,15 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     category_id: 7
   ) 
 
+  142.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/amazon-walnuts.jpg"),
+    filename: "amazon-walnuts"
+  )    
+
+
   #143
 
-  Product.create!(
+  143 = Product.create!(
     product_name: "Daechun(Choi's1), Roasted Seaweed, Gim, Sushi Nori (50 Full Sheets), Resealable, Gold Grade, Product of Korea",
     description: "DAECHUN roasted seaweed is the highest grade seaweed(gim) with natural umami flavor. We procure the raw materials from our suppliers. We have been working with our raw material supplier more than 20 years.
 Our roasted seaweed is roasted twice and has a crispy texture. We have a robust food safety management system in place that meets the requirements of our customers. For your information, we put the manufactured and expiration date on the back of the package.",
@@ -2399,9 +3190,16 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
     category_id: 7
   ) 
 
+  143.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/daechun-seaweed.jpg"),
+    filename: "daechun-seaweed"
+  )    
+
+
+
   #144
   
-  Product.create!(
+  144 = Product.create!(
     product_name: "Albanese World's Best 12 Flavor Gummi Bears, 5lbs of Candy, A Great Easter Gift",
     description: "World’s Best – it’s not just on our bag, it’s at the heart of everything we do. From sourcing the best available ingredients, to making our gummies right here in the USA, we focus on doing things right - from start to finish. And we know that you'll taste the difference. From the first bite, you’ll notice a soft chew that makes our gummies a real treat to eat. Then you’ll be amazed by our fresh fruit flavors, flavors so good you’ll be calling your favorites by their names - Cherry, Pink Grapefruit, Watermelon, Strawberry, Orange, Blue Raspberry, Lime, Grape, Green Apple, Mango, Pineapple, and Lemon. So, while you can spell it gummi bears or gummy bears, remember there is only one way to spell World’s Best – Albanese! Don’t just take our word for it, grab a bag and taste the best for yourself. The Albanese family has been making gummi bears, gummi worms, specialty gummi shapes, individual flavor gummies, and of course our gourmet chocolates right here in the United States for over 30 years. During that time we've focused on creating the perfect gummies and one of a kind chocolates. Once our fans got a taste, they couldn’t get enough. Soon fans were stocking up on their favorite 12 Flavor Gummi Bears and Gummi Worms!  Lucky for you, it’s easier than ever to treat yourself to the World’s Best Albanese Candies. Forget the drive and order online today.",
     bullets: ["12 Flavor Gummi Bears: Fan-favorite gummy bear candy in 12 distinctive fruit flavors offer a soft, delicious chew unlike other gummies; It only takes one bite to taste the difference; Every bag includes 12 fruity flavors",
@@ -2415,10 +3213,15 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
     category_id: 7
   ) 
 
+  144.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/albanese-gummy.jpg"),
+    filename: "albanese-gummy"
+  ) 
+
 
   #145
   
-  Product.create!(
+  145 = Product.create!(
     product_name: "HARIBO Gummi Candy, Original Goldbears, 3 lb. Bag",
     description: "From a small sweets company to a global market leader, the HARIBO brand is unique. Started as a humble home kitchen, over the past 100 we have grown to a successful family business. Kids and grown-ups love it so, the happy world of HARIBO!",
     bullets: ["There is no better companion than our original HARIBO Goldbears, loved by old and young alike",
@@ -2429,12 +3232,18 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
     price: 10.88,
     inventory: 20,
     category_id: 7
+  )
+
+  145.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/haribo-gummy.jpg"),
+    filename: "haribo-gummy"
   ) 
+
 
 
   #146
   
-  Product.create!(
+  146 = Product.create!(
     product_name: "Kinder Joy Eggs, Sweet Cream and Chocolatey Wafers with Toy Inside, Great for Easter Egg Hunts, 4.2 oz, 6 Eggs",
     description: "Treat + Toy, twice the Joy! Open up the iconic Kinder JOY egg and share a moment of surprise and delight. One side holds a delicious treat: two layers of milky sweet creams, topped with two crispy wafer bites filled with cocoa cream. The other side holds an exciting mystery toy, made to extend the fun of playing beyond the excitement of discovery.",
     bullets: ["TREAT + TOY: Discover the fun of Kinder Joy and enjoy the delicious treat on one side of the egg and a surprise real toy on the other. Great for pantry storage, this pack includes a total of 6 individually wrapped​ Kinder Joy eggs",
@@ -2447,9 +3256,14 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
     category_id: 7
   ) 
 
+  146.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kinder-joy.jpg"),
+    filename: "kinder-joy-egg"
+  )   
+
   #147
   
-  Product.create!(
+  147 = Product.create!(
     product_name: "HERSHEY'S Milk Chocolate Candy, Gluten Free, 16 oz Gift Bar",
     description: "There's happy, and then there's HERSHEY'S happy. Made of the delectable, creamy milk chocolate that's been a classic for decades, HERSHEY'S milk chocolate bars make life more delicious whether they're enjoyed alone or shared with loved ones. That goes double for giant 1-pound bars with the same amazing taste. This massive candy bar is the perfect treat for countless special and everyday occasions. HERSHEY'S 1-pound milk chocolate candy bars can be used to as Christmas presents, Halloween costume party prizes, Easter basket fillings and Valentine's Day gifts. Keep one on hand for important giving moments and store some in your pantry for convenient snacking when the mood strikes. Show up to movie night with a 1-pound HERSHEY'S bar to share with the whole crowd and perfect the night's snack selection. You can even sweeten up your favorite baked desserts with these chocolates by topping cupcakes, brownies and cookies with a section or two. Everyone is excited when they're reaching for HERSHEY'S milk chocolate, and now you can be too!",
     bullets: ["Contains one (1) 16-ounce HERSHEY'S Milk Chocolate Candy Gift Bar",
@@ -2460,11 +3274,16 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
     price: 11.90,
     inventory: 8,
     category_id: 7
-  ) 
+  )
+
+  147.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/hershey.jpg"),
+    filename: "hersheys"
+  )     
 
   #148
 
-  Product.create!(
+  148 = Product.create!(
     product_name: "Chocolate Covered Strawberries, Original Love Berries, 12 Count",
     description: "A dozen ways to show you care or wish happy Valentine's day in the most scrumptious possible style. Our giant strawberries are lavishly hand-dipped in premium dark, milk and cupid pink white chocolate in our own kitchen, then decorated with heart sprinkles and chocolate drizzles for a heartfelt gift. All of our dipped strawberries are beautifully packed in our signature gift box with ice packs, then shipped overnight to ensure perfect arrival.",
     bullets: ["A sweet way to send your love for Valentines Day or any occasion. 12 Fresh strawberries are lavishly hand-dipped in premium dark, milk and pink-tinted white chocolate confection, and decorated with drizzles and heart sprinkles.",
@@ -2479,10 +3298,15 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
     inventory: 94,
     category_id: 7
   )
+  
+  148.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/strawberry-chocolate.jpg"),
+    filename: "chocolate-strawberries"
+  )   
 
   #149
 
-  Product.create!(
+  149 = Product.create!(
     product_name: "Godivas Belgium Goldmark Assorted chocolate 10.9 OZ",
     description: "Godiva Belgium Goldmark Assorted chocolate 10.9 OZ",
     bullets: ["Country Of Origin: United States",
@@ -2493,9 +3317,15 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
     category_id: 7
   )
 
+  149.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/godiva.jpg"),
+    filename: "godiva-chocolates"
+  )    
+
+
   #150
 
-  Product.create!(
+  150 = Product.create!(
     product_name: "POPPI Sparkling Prebiotic Soda w/ Gut Health & Immunity Benefits, Beverages w/ Apple Cider Vinegar, Seltzer Water & Fruit Juice, Low Calorie & Low Sugar Drinks, Fun Favs Variety Pack, 12oz (12 Pack) (Packaging & Flavors May Vary)",
     description: "Make no mistake, soda is delicious. But most are loaded with empty calories and chemicals. So we made a better one! poppi combines fresh fruit juice with the prebiotic powerhouse apple cider vinegar (ACV) to create a modern soda that tastes amazing and helps you maintain a happy gut. Every can is made with 1 tablespoon of ACV and contains less than 20 calories and under 5g of sugar. And, there’s NOTHING artificial, so you can feel good about drinking it. Apple cider vinegar has been known to help boost immunity, aid digestion, support glowing skin, and naturally detoxify. From Texas to your taste buds, with love. Cheers!",
     bullets: ["Contains natural prebiotics from unfiltered Apple Cider Vinegar -- a digestive health powerhouse - to keep your gut happy, your immune system feeling healthy, and your skin glowing. Experience the fun(ctional) side of poppi!",
@@ -2508,10 +3338,15 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
     category_id: 7
   )
 
+  150.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/poppi.jpg"),
+    filename: "poppi-soda"
+  )    
+
 
   #151
 
-  Product.create!(
+  151 = Product.create!(
     product_name: "Pure Leaf Iced Real Brewed Black Tea, Extra Sweet, 18.5 Fl Oz (Pack of 12)",
     description: "At pure leaf, we believe the best things in life are real and simple. But sometimes, simplicity takes a little more work. Before each pure leaf brew is freshly bottled and sealed, our tea leaves are given a lot of love and attention, resulting in refreshing, leaf brewed tea (not from powder or concentrate).",
     bullets: ["Brewed from real tea leaves picked at their freshest, never from powder or concentrate",
@@ -2524,10 +3359,15 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
     category_id: 7
   )
 
+  151.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/pure-leaf.jpg"),
+    filename: "pure-leaf"
+  )  
+
 
   #152
 
-  Product.create!(
+  152 = Product.create!(
     product_name: "Vita Coco Coconut Water, Pure Organic | Refreshing Coconut Taste | Natural Electrolytes | Vital Nutrients | 16.9 Oz (Pack Of 12)",
     description: "Not so long ago, you had to use a machete if you wanted a sip of pure coconut water. We’ve taken the machete out of the equation, which is good, because those things are dangerous. Now all that’s left is mother nature’s most hydrating, refreshing, vitamin- and mineral-rich nectar. Vita Coco is never made from concentrate. That means we pick, crack, and pack fresh young coconuts directly at the source. After the coconuts are cleaned, the delicate water inside is flash pasteurized (and occasionally mixed with all-natural fruit puree) then poured into a shelf-stable Tetra Pak. The entire process from tree to Pak doesn't exceed 72 hours. We hear the end result is a lot like sticking a straw in a coconut.",
     bullets: ["TASTE OF THE TROPICS | Not long ago you needed a ladder and a machete to get great-tasting coconut water. Now all you have to do is crack open a Vita Coco, the WORLD'S BEST-SELLING coconut water",
@@ -2541,9 +3381,14 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
     category_id: 7
   )
 
+  152.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/vita-coco.jpg"),
+    filename: "vita-coco"
+  )    
+
   #153
 
-  Product.create!(
+  153 = Product.create!(
     product_name: "Purina Fancy Feast Grain Free Pate Wet Cat Food Variety Pack, Poultry & Beef Collection - (30) 3 oz. Cans",
     description: "Fill your cat's dish with the savory flavors she loves when you offer her selections from this Purina Fancy Feast Poultry and Beef Classic Pate Collection wet cat food variety pack. Three delicious recipes featuring real, high quality turkey, chicken or beef provide your cat companion with a host of mealtime options, and the smooth, tender texture invites her to happily nibble to her heart's content. Each gourmet wet cat food recipe delivers a flavor filled dining experience your feline friend is sure to appreciate, while the grain free formulas let you feel good about the foods you present to your precious feline. She gets essential vitamins and minerals in every serving, along with the tastes she can't get enough of. Serve up a different entree from this variety pack at every feeding, and watch as she delights in every delectable bite. Let your cat try Purina Fancy Feast wet cat food today, and show her just how much you love her.",
     bullets: ["Thirty (30) 3 oz. Cans - Purina Fancy Feast Grain Free Pate Wet Cat Food Variety Pack, Poultry & Beef Collection",
@@ -2556,10 +3401,16 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
     category_id: 8
   )
 
+  153.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/fancy-feast-cat.jpg"),
+    filename: "fancy-feast-cat"
+  )    
+
+
 
   #154
 
-  Product.create!(
+  154 = Product.create!(
     product_name: "Hill's Science Diet Dry Cat Food, Adult, Chicken Recipe, 7 lb. Bag",
     description: "Your adult cat needs a pet food that supports healthy digestion, shiny fur, lean muscles and a healthy immune system. Hill's Science Diet Adult dry cat food is made with high-quality, easy-to-digest ingredients and is specially formulated to fuel the energy needs of cats during the prime of their life. A cat food made with natural ingredients, Hill's Science Diet Adult provides vitamin E plus omega-3 and omega-6 fatty acids to nourish your cat's skin. Packed with high-quality protein, this premium cat food also helps your grown cat maintain lean muscles. Additionally, this adult dry cat kibble provides your grown cat with essential taurine and balanced minerals to support heart health, bladder function and kidney function.  There’s more to love with the new look of Science Diet. Some of our products also have new names, new kibble shapes & new formulas. Calorie content - 4021 kcal/kg (502 kcal/cup) Hill’s Pet Nutrition’s Mission: To help enrich and lengthen the special relationships between people and their pets. More than 220 veterinarians, food scientists, technicians and Ph.D. nutritionists at Hill's develop all of Hill's pet foods to meet the needs of your pets. Hill’s only accepts ingredients from suppliers whose facilities meet stringent quality standards and who are approved by Hill's. Not only is each ingredient examined to ensure its safety, we also analyze each product's ingredient profile for essential nutrients to ensure your pet gets the stringent, precise formulation they need. Hill’s uses only high-quality ingredients including real chicken, lamb or salmon protein. Hill’s dry pet foods have quality protein as the first ingredient and provide clinically proven antioxidant benefits. Plus, they’re made with natural ingredients (plus vitamins, minerals & amino acids) and never contain artificial colors, flavors, preservatives or chicken by-product meal. Hill’s food, shelter & love program donates food to shelters across the country, providing the proper nutrition that helps pets find their way to loving homes. With every purchase of Science Diet you help feed over 100,000 homeless pets every day, 365 days a year.",
     bullets: ["Adult dry cat food with taurine for heart health, plus balanced minerals for kidney and bladder health",
@@ -2573,9 +3424,15 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
   )
 
 
+  154.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/hill-dry-cat.jpg"),
+    filename: "hill-dry-food"
+  )    
+
+
   #155
 
-  Product.create!(
+  155 = Product.create!(
     product_name: "IAMS PROACTIVE HEALTH Adult Indoor Weight Control & Hairball Care Dry Cat Food with Chicken & Turkey Cat Kibble, 16 lb. Bag",
     description: "Keep your cats at their best with IAMS PROACTIVE HEALTH Adult Indoor Weight & Hairball Care Dry Cat Food with Chicken & Turkey—a chicken-first recipe designed to help reduce hairballs before they start, and to help your indoor cat maintain a healthy weight. Formulated with l-carnitine to help your overweight cat slowly and healthily shed extra weight, this cat kibble is made from high quality proteins like chicken and turkey (chicken is the #1 ingredient) to support your cat’s healthy diet and weight-loss regimen. Plus, with its tailored fiber blend (featuring prebiotics and beet pulp) to help support healthy digestion, it might just be the hairball care your cat needs. If you’re looking for a hairball care cat food that will also help you with your cat’s weight management, get your paws on this—and keep your cat happy, healthy, and ready to pounce with IAMS Indoor Weight & Hairball Care Dry Cat Food.",
     bullets: ["Contains 16 pounds bag of IAMS Proactive health adult indoor weight and hairball care dry cat food with chicken and turkey",
@@ -2590,9 +3447,16 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
   )
 
 
+  155.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/iams-cat.jpg"),
+    filename: "iams-dry-food"
+  )    
+
+
+
   #156
 
-  Product.create!(
+  156 = Product.create!(
     product_name: "MeoHui Cat Toys, 2PCS Retractable Cat Wand Toy and 9PCS Cat Feather Toys Cat Teaser Toy Refills, Interactive Cat Toy Wand Kitten Toys for Indoor Cats to Play Chase Exercise",
     description: "As this is a interactive cat toy, we kindly suggest that supervise your cat when playing this toy all the time, in case they bite the toy. Keep it in a safe place that pets can’t reach it. Never leave your cat alone with this toy, because cats like to chew things like string and soft things.",
     bullets: ["1. EXCITING ENTERTAINMENT FOR CATS: Cats are crazy about chaser games! Combine string and feather into a great cat toys, this cat feather toys is an irresistible lure for cats! Swing the feathers 'lure' will get your cats excited and bring out the 'hunt instinct', making them running and jumping like a wild animal, driving your cats crazy with joy! Even adult cat play like a kitten again!",
@@ -2605,10 +3469,15 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
     category_id: 8
   )
 
+  156.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/cat-feather-toy.jpg"),
+    filename: "feather-cat-toy"
+  )    
+
 
   #157
 
-  Product.create!(
+  157 = Product.create!(
     product_name: "Kalimdor Interactive Cat Feather Toys,Retractable Cat Teaser Toy ，Hanging Interactive cat Toys for Indoor Cats Kitten Play Chase Exercise, Kitten Fun Mental Physical Exercise Kitten Toys (1 Pack)",
     description: "Cats are crazy about chasing games!
 
@@ -2629,9 +3498,15 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
     category_id: 8
   )
 
+  157.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/hanging-toy-cat.jpg"),
+    filename: "hanging-cat-toy"
+  )    
+
+
   #158
 
-  Product.create!(
+  158 = Product.create!(
     product_name: "Legendog 5Pcs Catnip Toy, Cat Chew Toy Bite Resistant Catnip Toys for Cats,Catnip Filled Cartoon Mice Cat Teething Chew Toy",
     description: "#654 in Pet Supplies ",
     bullets: ["Perfect Gift: The cat chew toy is filled with catnip and we choose the more breathable fabric to allow your cats smell the catnip easily and make your cats be more interested in palying with them.",
@@ -2644,9 +3519,15 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
     category_id: 8
   )
 
+  158.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/cat-chew-toy.jpg"),
+    filename: "cat-chew-toy"
+  )    
+
+
   #159
 
-  Product.create!(
+  159 = Product.create!(
     product_name: "Good'n'Fun Triple Flavor Kabobs 48 Ounce, Rawhide Snack For All Dogs",
     description: "Good ‘n’ Fun brand offers a tasty smorgasbord of flavors that dogs love. These delicious chews are made from the finest ingredients, including real beef hide and real chicken, to create truly delightful, long-lasting treats your dog will love. Tails will be wagging for flavor-packed Good ‘n’ Fun Triple Flavor Kabobs, made with a savory combination of five flavors that dogs love most. These delicious chew treats are made from the finest rawhide and pork hide, then wrapped with real, savory chicken, wholesome duck and hearty chicken liver flavor to create a truly delightful, long-lasting rawhide treat your dog will love. A great source of protein, Good ‘n’ Fun Triple Flavor Kabobs are a healthy and delicious way to satisfy your dog’s natural urge to chew. The natural action of chewing also helps reduce tartar buildup and remove plaque. Give your dog one Good ‘n’ Fun Triple Flavor Kabob rawhide chew per day. For supervised consumption only. Select a chew slightly larger than your pet’s mouth. Discard chunks or fragments. Always provide plenty of fresh drinking water and visit your veterinarian regularly.",
     bullets: ["FIVE FLAVORS DOGS LOVE: Made from rawhide and pork hide, then wrapped with real savory chicken, wholesome duck and hearty chicken liver flavor.",
@@ -2659,10 +3540,16 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
     category_id: 8
   )
 
+  
+  159.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/good-fun-dog-treat.jpg"),
+    filename: "good-fun-dogs"
+  )  
+
 
   #160
 
-  Product.create!(
+  160 = Product.create!(
     product_name: "Milk-Bone Original Dog Treats Biscuits for Large Dogs, 10 Pounds (Packaging May Vary)",
     description: "Make your dog′s life more fun with delicious dog snacks from a brand you can trust. Milk-Bone Original dog biscuits are prepared with care and will give your dog the simple, genuine joy that your dog gives you every day. How? A classic crunch with a wag-worthy taste — now with even MORE meaty taste compared to the Milk-Bone Original biscuits you know and love. Better yet, the crunchy texture of Milk-Bone dog biscuits helps freshen dogs′ breath and reduce tartar build-up, so you can fully enjoy all those sloppy doggie kisses. These tasty dog treats even contain vitamins and minerals — 12, to be exact. So you′ll be almost as happy to give them as your dog is to get them … almost.",
     bullets: ["Contains (1) 10 Pound box of Dog Treats for dogs over 50 Pounds (Packaging may vary)",
@@ -2674,6 +3561,11 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
     inventory: 64,
     category_id: 8
   )
+
+  160.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/milk-bone-dog.jpg"),
+    filename: "milk-bone-dogs"
+  )  
 
 
   #161
@@ -2692,21 +3584,36 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
   )
 
 
+  161.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/milk-soft-chewy-dog.jpg"),
+    filename: "milk-chew-dogs"
+  )  
+
+
   #162
 
-  # Product.create!(
-  #   product_name: "",
-  #   description: ,
-  #   bullets: [],
-  #   price: ,
-  #   inventory: ,
-  #   category_id: 8
-  # )
+  162 = Product.create!(
+    product_name: "GOOLA Dog Squeaky Toys, Cute Dragon Interactive Plush Stuffed Toy with 5 Squeakers and Crinkle Paper,Pet Rope Chew Toy for Puppy Small Medium Large Breed Dogs",
+    description: "GOOLA plush squeaky toy can help to release dogs' extra energy and satisfy their physiological needs and mental stimulation. Unique design brings more interesting games, keep the dogs busy can also solve their anxiety and boredom.",
+    bullets: ["Multifunction Brings More Happiness : As a perfect toss, chew, fetch and pull toy, the colorful lovely fire dragon shape satisfied dog's natural hunting instinct. Different ways of playing provide lasting games, keeping their attention at all times, relieve the depression,boredom and anxiety when they are alone.",
+    "Sounds keeps the dog focused: Squeaky dog toys will create 2 loud crisp sounds when you squeeze it. Its wings were made of crinkle paper, and its has 5 squeakers in all parts of the body. The sounds attracting pet's attention, making them busy and curious, enjoys a longer game time.",
+    "More Interaction: Unique design of pulling limbs, arms and feet pull back and forth through the plush toys body adding in an element of variety. Play dogs favorite tug-of-war to increase the affection between you and your pet.",
+    "Durable Safe Material: The chew proof plush toy made of premium natural cotton, two layers of durable fabric for extra toughness, non-toxic and tasteless soft material, which helps dogs clean teeth. It's machine washable.",
+    "Lifetime Replacement Guarantee : GOOLA Durable dog toy has a lightweight firedragon shape design,which is perfect for puppy,small,middle and large dogs(Do not recommend for extreme strong bite dogs), and is easy to throw it out and bring the pet into the game. For squeaky problematic toys, just click 'Contact Us' and we will be happy to help you with replacement or refund."],
+    price: 13.48,
+    inventory: 0,
+    category_id: 8
+  )
+
+  162.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/goola-dog-toy.jpg"),
+    filename: "goola-dog-toy"
+  )  
 
 
   #163
 
-  Product.create!(
+  163 = Product.create!(
     product_name: "Best Pet Supplies Crinkle Dog Toy for Small, Medium, and Large Breeds, Cute No Stuffing Duck with Soft Squeaker, Fun for Indoor Puppies and Senior Pups, Plush No Mess Chew and Play",
     description: "Give Your Dog an Active Play Outlet with a Soft Crinkle Paper Dog Toy from Best Pet Supplies We all want to give our dogs a healthy way to play, have fun, and enjoy staying active; especially when it comes to giving them toys that are less messy and stand up to all the biting, chewing, and tugging. That’s why we created these super cute, high-quality Best Pet Supplies Duck-Shaped Dog Toys with built-in squeaker and crinkle paper. These versatile toys for dogs give them multiple ways to play and stay engaged while satisfying their natural behavioral needs. And because there’s no stuffing you don’t have to worry about cleaning up a big mess the moment your dog rips into them. Product Details: Soft Duck Dog Toy Built-In Squeezable Squeaker Crinkle Paper Interior No Stuffing or Fluff Available in 6 Fun Colors Overall Length: 15”",
     bullets: ["Premium Soft Chew Toys for Dogs - These adorable dog crinkle toys no stuffing ducks provide your four-legged best friend with an interactive chew toy that makes noise, keeps them engaged, and is gentler on teeth, gums, and dental health",
@@ -2718,9 +3625,14 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
     category_id: 8
   )
 
+  163.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/duck-dog-toy.jpg"),
+    filename: "duck-dog-toy"
+  ) 
+
   #164
 
-  Product.create!(
+  164 = Product.create!(
     product_name: "Multipet Plush Dog Toy, Lambchop, 10 inch, White/Tan, Small",
     description: "Multipet now offers Lambchop as a dog toy. Lambchop is 10 tall and this Shari Lewis TV puppet was a classic during the 60's and is now back as a great plush toy that squeaks for your dog.",
     bullets: ["Shari Lewis classic and beloved lamb is adored by dogs",
@@ -2734,9 +3646,14 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
     category_id: 8
   )
 
+  164.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/lambchop-dog-toy.jpg"),
+    filename: "lambchop-dog-toy"
+  )  
+
   #165
 
-  Product.create!(
+  165 = Product.create!(
     product_name: "Dog Chew Toys for Aggressive Chewers, Indestructible Tough Durable Squeaky Interactive Dog Toys, Puppy Teeth Chew Corn Stick Toy for Small Meduium Large Breed",
     description: "Dog toys for large dogs, when dog playing with this toy at the first time or giving the toy to a large dog, we reconmmend to control the playing time with in 15 minutes, after which it can be increased to 20-30 minutes per day.",
     bullets: ["Unique Design: The newly designed corn zigzag-shaped molars can be brushed to pet dog's calculus both horizontally and vertically.",
@@ -2749,9 +3666,14 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
     category_id: 8
   )
 
+  165.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/corn-dog-toy.jpg"),
+    filename: "corn-dog-toy"
+  )   
+
   #166
 
-  Product.create!(
+  166 = Product.create!(
     product_name: "CESAR Wet Dog Food Classic Loaf in Sauce Beef Recipe, Filet Mignon, Grilled Chicken and Porterhouse Steak Variety Pack,. Easy Peel Trays. 3.5 Ounce (Pack of 24)",
     description: "Dogs with sophisticated palates will enjoy a rich culinary experience with CESAR Canine Cuisine Gourmet Wet Dog Food. With Beef or US Chicken as the #1 ingredient, these irresistible recipes will make your furry friend's mouth water and tail wag. CESAR Canine Cuisine Classic Loaf in Sauce Variety Pack Dog Food delights with a tantalizing texture, and is enhanced with vitamins and minerals for complete and balanced nutrition. Served in convenient trays with no-fuss, peel-away freshness seals, CESAR Adult Dog Food makes mealtime easy. Our gourmet wet dog food also uses ingredients formulated to meet nutritional levels established by the AAFCO dog food nutrient profiles for maintenance.",
     bullets: ["Contains one (1) 24 count case of 3.5 oz. trays of CESAR Wet Dog Food Classic Loaf in Sauce Beef Recipe, Filet Mignon, Grilled Chicken, and Porterhouse Steak Flavors Variety Pack: (6) Beef Recipe, (6) Filet Mignon Flavor, (6) Grilled Chicken Flavor, (6) Porterhouse Steak Flavor",
@@ -2764,9 +3686,15 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
     category_id: 8
   )
 
+  166.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/cesar-dog-food.jpg"),
+    filename: "cesar-dog-food"
+  )   
+
+
   #167
 
-  Product.create!(
+  167 = Product.create!(
     product_name: "Royal Canin Small Breed Adult Dry Dog Food, 14 lb bag",
     description: "With countless dog food options out there that feature formulas focused on ingredients, how do you know what nutrition is right for your pet? No matter how big or small your dog is, Royal Canin has a right-sized diet, made with the precise amount of nutrients needed for every stage of their magnificent life. Your small dog has some big nutritional needs. That’s because small breed dogs have higher energy requirements than big dogs. Not only that, these mini pooches have unique traits, and are pretty picky when it comes to what’s put in their bowl. Royal Canin Small Breed Adult Dry Dog Food is formulated to meet the unique nutritional needs of small dog breeds, as they require higher levels of calories per pound of body weight than large dogs. L-carnitine helps metabolize fat to help your dog maintain a healthy weight. Ideal levels of EPA and DHA support healthy skin and a beautiful, shiny coat. Plus, enhanced palatability helps satisfy even the pickiest eaters. Add a variety in texture with Royal Canin Adult Beauty Wet Dog Food. When your dog reaches their later years, there’s Royal Canin Small Adult 8+ and Small Aging 12+ to help keep them happy and healthy as they age. With over 50 years of scientific research and observation, Royal Canin continues to deliver targeted nutrition to feed every pet’s magnificence. Not satisfied? Then neither are we. Our formulas are 100% satisfaction guaranteed.",
     bullets: ["SMALL BREED DOG FOOD: Royal Canin Small Breed Adult Dry Dog Food is precise nutrition specifically made for small dogs 10 months to 8 years old weighing 9–22 lb",
@@ -2779,9 +3707,14 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
     category_id: 8
   )
 
+  167.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/royal-canin-dog-food.jpg"),
+    filename: "royal-canin-dog-food"
+  )   
+
   #168
 
-  Product.create!(
+  168 = Product.create!(
     product_name: "PEDIGREE CHOICE CUTS in Gravy Adult Soft Wet Meaty Dog Food Variety Pack, (18) 3.5 oz. Pouches",
     description: "Dogs love a meaty feast, and PEDIGREE CHOICE CUTS in Gravy Filet Mignon Flavor Adult Wet Dog Food gives them the flavors they crave with the nutrition they need. Made with real ingredients including flavorful morsels of real chicken or beef in delectable gravy sauce, our hearty moist dog food provides the perfect balance of oils and minerals for healthy skin and a glistening coat. Each recipe is 100% complete and balanced for canines, so you know they are getting the most from their wet dog food. Help your dog grow happy and healthy with PEDIGREE CHOICE CUTS Food for Dogs.",
     bullets: ["Contains eighteen (18) 3.5 oz. pouches in PEDIGREE CHOICE CUTS in Gravy Adult Wet Dog Food Variety Pack: (6) Beef, Noodle & Vegetables Flavor in Sauce (6) Grilled Chicken Flavor in Sauce, (6) Filet Mignon Flavor in Gravy",
@@ -2795,6 +3728,12 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
     inventory: 0,
     category_id: 8
   )
+
+  168.photo.attach(
+    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/pedigree-dog.jpg"),
+    filename: "pedigree-dog-food"
+  )   
+
 
   puts "Done!"
 
