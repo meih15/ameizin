@@ -25,7 +25,7 @@ const Carousel = ({products}) => {
             {productsList.map((product, i) => {
                 return(
                     <SwiperSlide className='product-box' key={product.id}>
-                        <ProductContainer key={i} productId={product.id}/>
+                        <ProductContainer key={i} product={product}/>
                     </SwiperSlide>
                 )
             })}
