@@ -64,8 +64,9 @@ function ProductShowPage() {
                             {dropQuantity.map(qty => <option key={qty} id='dropdown-number' value={qty}>{`Qty: ${qty}`}</option> )}
                         </select>
 
+    // if (product) debugger 
 
-    return (
+    return ( 
         <div className='entire-product-page'>
             <div className='product-header'>
                 <Header />
@@ -74,7 +75,7 @@ function ProductShowPage() {
             <div className='pageElements'>
                 <div className='top-of-page'>
                     <div id="productImage">
-                        <img id='fillerImage' src={switch2Pic} alt='filler-pic'/>
+                        <img id='fillerImage' src={product.photourl} alt='filler-pic'/>
                     </div>
                     <div id='product-info-section'>
                         <div id='product-title'>{product.productName}</div>

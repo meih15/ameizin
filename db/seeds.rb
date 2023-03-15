@@ -187,7 +187,7 @@ The Paldea Region is home to a prestigious school where people from all sorts of
 
   p6.photo.attach({
     io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/logitech-white.jpg'),
-    filename: "logitech-white"
+    filename: "logitech-white.jpg"
   })
 
 
