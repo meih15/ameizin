@@ -10,6 +10,7 @@ import {fetchProducts, getProducts} from '../../store/products';
 import { useEffect } from 'react';
 import ProductContainer from '../ProductContainer';
 import CategoryNavBar from '../CategoryNavBar';
+import FourItem from './FourItem';
 
 function HomePage() {
     const homePageImages = [
@@ -28,9 +29,11 @@ function HomePage() {
 
     const productsList = useSelector(getProducts);
     const products = [...productsList] || [];
-    const shuffledProducts = products.sort(() => Math.random() - 0.5).slice(0, 8);
+    const shuffledProducts = products.sort(() => Math.random() - 0.5).slice(0, 16);
     const firstFour = shuffledProducts.slice(0, 4);
-    const lastFour = shuffledProducts.slice(-4);
+    const secondFour = shuffledProducts.slice(4, 8);
+    const thirdFour = shuffledProducts.slice(8, 12);
+    const lastFour = shuffledProducts.slice(12, 16);
 
     useEffect(() => {
         dispatch(fetchProducts())
@@ -49,10 +52,23 @@ function HomePage() {
                         <ImageSlider images={homePageImages} imageLinks={homePageImageLinks} />
                         <div className='product-show-home'>
                             <div className='first-four-grid'>
-                                {firstFour.map(prdct => <ProductContainer key={prdct.id} productId={prdct.id}/>)}
+                                <div id='first-container'>
+                                    <p id='title-grid'>Items to consider</p>
+                                    <FourItem id='grid-products' products={firstFour} />
+                                </div>
+                                <div id='first-container'>
+                                    <p id='title-grid'>Popular Products</p>
+                                    <FourItem id='grid-products' products={secondFour} />
+                                </div>
+                                <div id='first-container'>
+                                    <FourItem id='grid-products' products={thirdFour} />
+                                </div>
+                                <div id='first-container'>
+                                    <FourItem id='grid-products' products={lastFour} />
+                                </div>
                             </div>
                             <div className='carouselOne'>
-                                <Carousel products={productsList}/>
+                                {/* <Carousel products={productsList}/> */}
                             </div>
                             <div className='last-four-grid'>
                                 {lastFour.map(prdct => <ProductContainer key={prdct.id} productId={prdct.id}/>)}

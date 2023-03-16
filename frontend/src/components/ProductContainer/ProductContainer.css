@@ -11,3 +11,29 @@
     color: black;
     font-family: ember;
 }
+
+#container-product-name {
+    text-align: 'left';
+     display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    text-overflow: ellipsis !important;
+    white-space: normal;
+    overflow: hidden;
+    min-width: 130px;
+    max-width: 160px;
+}
+
+#home-page-photos-container{
+    min-width: 130px;
+    max-width: 160px;
+    height: 154px;
+    text-align: left;
+    font-family: rg-ember;
+    font-size: 12px;
+}
+
+#home-page-photos {
+    width: auto;
+    height: 100%;
+}
