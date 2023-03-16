@@ -1,0 +1,11 @@
+#four-item-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(135px, 165px));
+    grid-row-gap: 0px;
+}
+
+#four-item {
+    height: 180px;
+    background-color: white;
+    /* padding: 8px; */
+}

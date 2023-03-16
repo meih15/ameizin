@@ -52,11 +52,23 @@ function HomePage() {
                         <ImageSlider images={homePageImages} imageLinks={homePageImageLinks} />
                         <div className='product-show-home'>
                             <div className='first-four-grid'>
-                                {/* {firstFour.map(prdct => <ProductContainer key={prdct.id} productId={prdct.id}/>)} */}
-                                <FourItem products={firstFour} />
+                                <div id='first-container'>
+                                    <p id='title-grid'>Items to consider</p>
+                                    <FourItem id='grid-products' products={firstFour} />
+                                </div>
+                                <div id='first-container'>
+                                    <p id='title-grid'>Popular Products</p>
+                                    <FourItem id='grid-products' products={secondFour} />
+                                </div>
+                                <div id='first-container'>
+                                    <FourItem id='grid-products' products={thirdFour} />
+                                </div>
+                                <div id='first-container'>
+                                    <FourItem id='grid-products' products={lastFour} />
+                                </div>
                             </div>
                             <div className='carouselOne'>
-                                <Carousel products={productsList}/>
+                                {/* <Carousel products={productsList}/> */}
                             </div>
                             <div className='last-four-grid'>
                                 {lastFour.map(prdct => <ProductContainer key={prdct.id} productId={prdct.id}/>)}

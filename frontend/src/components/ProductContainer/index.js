@@ -23,10 +23,14 @@ const ProductContainer = ( {product} ) => {
         <>
             <div className='product-container'>
                 <Link to={`/products/${product.id}`}>
-                    <img id='home-page-photos' src={switch2Pic} alt='homepg-products'></img>
+                    <div id='home-page-photos-container'>
+                        <img id='home-page-photos' src={switch2Pic} alt='homepg-products'></img>
+                    </div>
                 </Link>
                 <Link id='name-product-box' to={`/products/${product.id}`}>
-                    <h1 id='container-product-name'>{product.productName}</h1>
+                    <div id='home-page-photos-container'>
+                        <h1 id='container-product-name'>{product.productName}</h1>
+                    </div>
                 </Link>
             </div>
         </>

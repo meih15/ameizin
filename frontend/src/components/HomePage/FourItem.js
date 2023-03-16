@@ -1,10 +1,11 @@
 import ProductContainer from "../ProductContainer";
+import './FourItem.css'
 
 const FourItem = ({products}) => {
     if (!products) return null;
 
     const fourGrid = products.map(product => {
-            return <div id='cat-item' key={product.id}>
+            return <div id='four-item' key={product.id}>
                         <ProductContainer key={product.id} product={product}/>
                     </div>
     })
