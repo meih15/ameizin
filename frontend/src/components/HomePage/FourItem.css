@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(135px, 165px));
     grid-row-gap: 0px;
+    grid-column-gap: 4px;
 }
 
 #four-item {

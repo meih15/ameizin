@@ -20,8 +20,6 @@
     text-overflow: ellipsis !important;
     white-space: normal;
     overflow: hidden;
-    min-width: 130px;
-    max-width: 160px;
 }
 
 #home-page-photos-container{
@@ -32,6 +30,17 @@
     font-family: rg-ember;
     font-size: 12px;
 }
+
+
+#home-page-photos-container-text {
+    text-align: left;
+    font-family: rg-ember;
+    font-size: 12px;
+    min-width: 130px;
+    max-width: 150px;
+}
+
+
 
 #home-page-photos {
     width: auto;

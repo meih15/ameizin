@@ -1,0 +1,36 @@
+.product-individual {
+    /* width: 320px; */
+    /* height: 430px; */
+    
+}
+
+#individual-image {
+    width: auto;
+    height: 300px;
+}
+
+#individual-product-name {
+    text-align: 'left';
+    display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    text-overflow: ellipsis !important;
+    white-space: normal;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+#single-container {
+    padding: 10px;
+    width: auto;
+    text-align: left;
+    font-family: rg-ember;
+    font-size: 13px;
+}
+
+#no-decoration {
+    text-decoration: none;
+    color: black;
+    font-family: ember;
+        
+}
