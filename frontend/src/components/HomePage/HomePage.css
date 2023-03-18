@@ -28,7 +28,7 @@
 }
 
 
-.first-four-grid{
+.first-four-grid {
     max-width: 1400px;
     width: auto;
     display: grid;
@@ -44,6 +44,7 @@
             grid-template-columns: repeat(3, minmax(300px, 360px));
     }
 }
+
 
 .second-four-grid {
     margin-top: 20px;
@@ -79,6 +80,8 @@
     padding-bottom: 5px;
 }
 
+
+
 #second-container {
     background-color: white;
     height: 430px;
@@ -107,4 +110,31 @@
  
 .carouselOne {
     margin-top: 20px;
+    background-color: white;
+}
+
+#category-title {
+    font-family: bolded-ember;
+    font-size: 21px;
+    text-align: left;
+    margin-left: 20px;
+    padding-top: 20px;
+}
+
+.first-four-grid-two {
+    max-width: 1400px;
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-columns: repeat(4, minmax(300px, 430px)); */
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 1400px) {
+    .first-four-grid-two {
+        /* grid-template-columns: repeat(3, 1fr); */
+        grid-template-columns: repeat(3, minmax(300px, 360px));
+    }
 }
