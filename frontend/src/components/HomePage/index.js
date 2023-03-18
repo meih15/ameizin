@@ -12,6 +12,7 @@ import ProductContainer from '../ProductContainer';
 import CategoryNavBar from '../CategoryNavBar';
 import FourItem from './FourItem';
 import IndividualProduct from './IndividualProduct';
+import { fetchCategories, getCategories } from '../../store/category';
 
 function HomePage() {
     const homePageImages = [
@@ -25,23 +26,38 @@ function HomePage() {
     ]
     
     const dispatch = useDispatch();
-    // const categoriesList = useSelector(getCategories);
-    // const categories = [...categoriesList] || [];
+    const categoriesList = useSelector(getCategories);
+    const categories = [...categoriesList] || [];
 
     const productsList = useSelector(getProducts);
     const products = [...productsList] || [];
+
+    // shuffling products and displaying random ones on homepage
     const shuffledProducts = products.sort(() => Math.random() - 0.5).slice(0, 20);
     const firstFour = shuffledProducts.slice(0, 4);
     const secondFour = shuffledProducts.slice(4, 8);
     const thirdFour = shuffledProducts.slice(8, 12);
     const lastFour = shuffledProducts.slice(12, 16);
-    const fourBoxProducts = shuffledProducts.slice(16, 20)
+    const fourBoxProducts = shuffledProducts.slice(16, 20);
+
+    // shuffling categories, and displaying products from random categories on homepage
+    const shuffledCategories =  categories.sort(() => Math.random() - 0.5);
+
+    const filtering = (products, cId) => {
+        Object.freeze(products);
+        return products.filter(product => product.categoryId === parseInt(cId));
+    };
+
+    const firstCategory = filtering(products, shuffledCategories[0]?.id);
+    const firstCategoryProducts = firstCategory.slice(0, 10);
 
     useEffect(() => {
         dispatch(fetchProducts())
-    }, [dispatch])
+        dispatch(fetchCategories())
+    }, [dispatch]);
 
     if (!productsList) return null;
+    if (!categoriesList) return null;
 
     return (
         <>
@@ -91,7 +107,7 @@ function HomePage() {
                                 </div>
                             </div>
                             <div className='carouselOne'>
-                                {/* <Carousel products={productsList}/> */}
+                                <Carousel products={firstCategoryProducts}/>
                             </div>
                             <div className='last-four-grid'>
                                 {lastFour.map(prdct => <ProductContainer key={prdct.id} productId={prdct.id}/>)}

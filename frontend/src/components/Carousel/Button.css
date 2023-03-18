@@ -1,0 +1,54 @@
+.custom-nav-buttons {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    /* margin-left: 20px;
+    margin-right: 20px; */
+    /* padding-left: 10px;
+    padding-right: 10px; */
+    width: 100%;
+    top: 30%;
+    left: 0;
+    right: 0;
+}
+
+.custom-prev-button, .custom-next-button {
+    /* position: absolute; */
+        top: 55px;
+        background-color: #fff;
+        height: 100px;
+        line-height: 100px;
+        width: 45px;
+        text-align: center;
+        box-shadow: 0 1px 3px #888;
+        /* user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;
+        display: none; */
+}
+
+.custom-prev-button {
+    left: 0;
+    border-radius: 0 3px 3px 0;
+    clip: rect(-10px, 55px, 110px, 0);
+    padding-right: 5px;
+}
+
+.custom-next-button {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    clip: rect(-10px, 45px, 110px, -10px);
+    padding-left: 5px;
+}
+
+.custom-next-button:disabled, .custom-prev-button:disabled {
+    opacity: .5;
+}
+
+
+.custom-next-button:active,
+.custom-prev-button:active {
+    outline: 2px solid #007185;
+    outline-offset: -3px;
+}

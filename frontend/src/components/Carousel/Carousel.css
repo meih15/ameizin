@@ -1,6 +1,8 @@
-.adjust-carousel-width {
-        min-width: 1000px;
-        width: auto;
+/* .adjust-carousel-width {
+    max-width: 1400px;
+    width: auto;
+    position: relative;
+    height: 100%;
 }
 
 .product-box {
@@ -14,6 +16,49 @@
 
 .carousel-container {
     max-width: 1400px;
+    padding-right: 20px;
     width: auto;
     box-sizing: border-box;
+} */
+
+
+
+.adjust-carousel-width {
+    max-width: 1400px;
+    width: auto;
+    position: relative;
+    height: 100%;
 }
+
+.carousel-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1400px) {
+    .carousel-container {
+        max-width: 1150px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .carousel-container {
+        max-width: 1000px;
+    }
+
+}
+
+
+.product-box {
+    max-width: 360px;
+    margin: 0 10px;
+}
+
+.product-box img {
+    height: 300px;
+}
+

@@ -21,6 +21,7 @@ function ProductShowPage() {
     const cartItems = useSelector(getCartItems);
     const [selectedQuantity, setSelectedQuantity] = useState(1);
     const history = useHistory();
+    // debugger
 
     useEffect(() => {
         dispatch(fetchProduct(productId))
