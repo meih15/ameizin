@@ -84,6 +84,7 @@
     display: flex;
     justify-content: space-evenly;
     font-family: rg-ember;
+    margin-bottom: 65px;
 }
 
 #github-link-review,
@@ -119,4 +120,5 @@
 
 #done-reviewing-section {
     min-width: 800px;
+    margin-bottom: 500px;
 }

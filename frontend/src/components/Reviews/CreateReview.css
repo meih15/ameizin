@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     min-width: 800px;
+    margin-bottom: 150px;
 }
 
 .middle-of-review-form {
