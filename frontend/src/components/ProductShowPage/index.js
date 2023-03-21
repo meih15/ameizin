@@ -10,6 +10,7 @@ import { getCart, fetchCart } from '../../store/carts';
 import { getCartItems, fetchCartItems, updateCartItem, createCartItem } from '../../store/cartItems';
 import CategoryNavBar from '../CategoryNavBar';
 import ReviewShowPage from '../Reviews';
+import Footer from '../Footer/Footer';
 
 
 function ProductShowPage() {
@@ -76,7 +77,7 @@ function ProductShowPage() {
             <div className='pageElements'>
                 <div className='top-of-page'>
                     <div id="productImage">
-                        <img id='fillerImage' src={product.photourl} alt='filler-pic'/>
+                        <img id='fillerImage' src={switch2Pic} alt='filler-pic'/>
                     </div>
                     <div id='product-info-section'>
                         <div id='product-title'>{product.productName}</div>
@@ -134,6 +135,9 @@ function ProductShowPage() {
                 <div className='bottom-of-page'>
                     <ReviewShowPage productId={productId}/>
                 </div>
+            </div>
+            <div id='bottom'>
+                <Footer/>
             </div>
         </div>
     )

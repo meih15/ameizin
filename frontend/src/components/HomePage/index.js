@@ -5,14 +5,13 @@ import kindleBackground from '../../image/background1.jpg';
 import electronicsBackground from '../../image/background2.jpg';
 import Carousel from '../Carousel';
 import { useDispatch, useSelector } from 'react-redux';
-// import { getCategories, fetchCategories } from '../../store/category';
 import {fetchProducts, getProducts} from '../../store/products';
 import { useEffect } from 'react';
-import ProductContainer from '../ProductContainer';
 import CategoryNavBar from '../CategoryNavBar';
 import FourItem from './FourItem';
 import IndividualProduct from './IndividualProduct';
 import { fetchCategories, getCategories } from '../../store/category';
+import Footer from '../Footer/Footer';
 
 function HomePage() {
     const homePageImages = [
@@ -80,8 +79,8 @@ function HomePage() {
         <>
             <div className='whole-home-page'>
                 <div className='header-home'>
-                <Header />
-                <CategoryNavBar />
+                    <Header />
+                    <CategoryNavBar />
                 </div>
                 <main id='main-page'>
                     <div className='splash-page'>
@@ -156,6 +155,9 @@ function HomePage() {
                         </div>
                     </div>
                 </main>
+                <div id='bottom'>
+                    <Footer/>
+                </div>
             </div>
         </>
     )

@@ -9,6 +9,7 @@ import { deleteCartItem, fetchCartItems, getCartItems } from '../../store/cartIt
 import { Link, useHistory } from 'react-router-dom';
 import { fetchProducts, getProducts, updateProduct } from '../../store/products';
 import { createOrderHistoryItem } from '../../store/orderHistoryItems';
+import Footer from '../Footer/Footer';
 
 
 const CartShowPage = () => {
@@ -91,6 +92,7 @@ const CartShowPage = () => {
                     <p id='live-to-serve'>Your Shopping Cart lives to serve. Give it purpose — fill it with groceries, books, beauty supplies, electronics, and more.</p>
                     <div id='continue-shopping'>Continue shopping on the <Link id='cart-link-to-home' to='/'>Ameizin' homepage</Link></div>
                 </div>
+                <Footer/>
             </div>
             )
     } else {
@@ -161,7 +163,9 @@ const CartShowPage = () => {
                         <button id='checkout-button' onClick={handleCheckout}>Checkout</button>
                     </div>
                 </div>
-
+                <footer>
+                    <Footer/>
+                </footer>
             </div>
         )}
 

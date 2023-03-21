@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import Header from '../Header';
 import CategoryNavBar from '../CategoryNavBar';
 import CategoryItemContainer from '../CategoryItemContainer';
+import Footer from '../Footer/Footer';
 
 
 const CategoryShowPage = () => {
@@ -40,15 +41,20 @@ const CategoryShowPage = () => {
     const totalResults = filteredList.length
     
     return (
-        <div className='cat-show-page'>
+        <>
+            <div className='cat-show-page'>
 
-           <Header placeholder={category.categoryName}/>
-            <CategoryNavBar />
-            {totalResults > 1 ? <div id='category-number-result-container'>{totalResults} results for <p id='category-name'>"{category.categoryName}"</p></div> : <div id='category-number-result-container'>{totalResults} result for <p id='category-name'>"{category.categoryName}"</p></div>}
-            <div id='cat-item-container'>
-                {list}
+            <Header placeholder={category.categoryName}/>
+                <CategoryNavBar />
+                {totalResults > 1 ? <div id='category-number-result-container'>{totalResults} results for <p id='category-name'>"{category.categoryName}"</p></div> : <div id='category-number-result-container'>{totalResults} result for <p id='category-name'>"{category.categoryName}"</p></div>}
+                <div id='cat-item-container'>
+                    {list}
+                </div>
             </div>
-        </div>
+            <div className='cat-footer'>
+                <Footer />
+            </div>
+        </>
     );
 
 }
