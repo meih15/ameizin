@@ -8,6 +8,7 @@ import StarRating from "./StarRating";
 import switch2Pic from '../../image/oled-switch.jpeg';
 import { createReview } from "../../store/reviews";
 import './CreateReview.css'
+import Footer from "../Footer/Footer";
 
 const CreateReview = () => {
     const dispatch = useDispatch();
@@ -93,6 +94,7 @@ const CreateReview = () => {
                     </div>
                 </form>
             </div>
+            <Footer/>
         </div>
     )
 };

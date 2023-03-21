@@ -48,7 +48,7 @@ const OrderHistoryShowPage = () => {
                         </div>
                     </div>
                 </div>
-                {orderExist ? <div className='empty-footer'><Footer/></div> : <div><Footer /></div>}
+                {orderExist ? <div className='empty-footer'><Footer/></div> : <div id='history-footer'><Footer /></div>}
             </>
         )
 

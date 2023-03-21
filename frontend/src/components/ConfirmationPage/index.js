@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import { fetchOrderHistoryItems, getOrderHistoryItems } from '../../store/orderHistoryItems';
 import CategoryNavBar from '../CategoryNavBar';
+import Footer from '../Footer/Footer';
 import Header from '../Header';
 import './ConfirmationPage.css';
 import ConfirmedProductContainer from './ConfirmedProductContainer';
@@ -112,6 +113,7 @@ const ConfirmationPage = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 };
