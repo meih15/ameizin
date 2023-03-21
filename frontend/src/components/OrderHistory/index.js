@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchOrderHistoryItems, getOrderHistoryItems } from '../../store/orderHistoryItems';
 import CategoryNavBar from '../CategoryNavBar';
+import Footer from '../Footer/Footer';
 import Header from '../Header';
 import './OrderHistory.css';
 import OrderHistoryContainer from './OrderHistoryContainer';
@@ -30,22 +31,25 @@ const OrderHistoryShowPage = () => {
         const orderItemInfo = filtered[0]
         return <OrderHistoryContainer key={confirmation} filteredItems={filtered} confirmationNumber={confirmation} total={orderItemInfo?.orderTotal} date={orderItemInfo?.createdAt}/>
     })
-
+                // {orderExist ? <div><Footer/></div> : <div><Footer /></div>}
 
         return (
-            <div className='order-history-page'>
-                <div id='top-order-history'>
-                    <Header />
-                    <CategoryNavBar />
-                </div>
-                <div id='order-div'>
-                    <div id='order-history-section'>
-                        <h1 id='order-title'>Your Orders</h1>
-                        <div id='history-break'/>
-                        {orderExist ? <p className='empty-order-history'>Looks like you haven't placed an order yet.</p> : placedOrder}
+            <>
+                <div className='order-history-page'>
+                    <div id='top-order-history'>
+                        <Header />
+                        <CategoryNavBar />
+                    </div>
+                    <div id='order-div'>
+                        <div id='order-history-section'>
+                            <h1 id='order-title'>Your Orders</h1>
+                            <div id='history-break'/>
+                            {orderExist ? <p className='empty-order-history'>Looks like you haven't placed an order yet.</p> : placedOrder}
+                        </div>
                     </div>
                 </div>
-            </div>
+                {orderExist ? <div className='empty-footer'><Footer/></div> : <div><Footer /></div>}
+            </>
         )
 
 };

@@ -1,0 +1,89 @@
+#back-to-top {
+    height: 50px;
+    min-width: 1000px;
+    width: 100%;
+    background-color: #37475a;
+    color: white;
+    font-family: bolded-ember;
+    font-size: 13px;
+    padding: 15px 0px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#back-to-top:hover{
+    background-color: #4e6077;
+}
+
+
+#footer-section {
+    min-width: 1000px;
+    width: 100%;
+    background-color: #232F3E;
+    height: 180px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    color: rgb(236, 236, 236);
+}
+
+#footer-website {
+    font-size: 53px;
+    margin-bottom: 4px;
+}
+
+#github, #linkedin {
+    color: rgb(236, 236, 236);
+}
+
+#github {
+    margin-right: 180px;
+}
+
+#linkedin {
+    margin-right: 180px;
+}
+
+#footer-line {
+    border-top: 1px solid #3a4553;
+}
+
+.footer-logo {
+    min-width: 1000px;
+    width: 100%;
+    background-color: #232F3E;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer-Logo {
+    height: 50px;
+}
+
+#bot-footer-line {
+    color: #DDD;
+}
+
+.bottom-footer {
+    min-width: 1000px;
+    width: 100%;
+    background-color: #131a22;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: rgb(236, 236, 236);
+    font-family: rg-ember;
+    font-size: 12px;
+}
+
+#copyright {
+    margin-right: 3px;
+}
