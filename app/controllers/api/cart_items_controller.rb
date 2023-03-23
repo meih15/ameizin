@@ -12,6 +12,11 @@ class Api::CartItemsController < ApplicationController
             else
                 @cart_items = []
                 render :index
+
+                # @cart = Cart.create!
+                # session[:cart] = @cart.id
+                # @cart_items = @cart.cart_items
+                # render :index
             end
         end
     end

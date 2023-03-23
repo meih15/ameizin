@@ -25,7 +25,7 @@ const CartShowPage = () => {
         dispatch(fetchCart())
         dispatch(fetchCartItems())
         dispatch(fetchProducts())
-    }, [dispatch])
+    }, [])
 
     if (!cart) return <h1>Loading...</h1>
 

@@ -57,9 +57,14 @@
     align-items: flex-start;
 }
 
-
-
-#image-box{
-    min-height: 223px;
-    max-height: 278px;
+#image-box {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
 }
+
+#image-cat-size {
+    height: 278px;
+    width: 298px;
+}
+

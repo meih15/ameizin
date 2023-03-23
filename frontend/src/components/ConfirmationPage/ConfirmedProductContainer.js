@@ -11,7 +11,7 @@ const ConfirmedProductContainer = ({item}) => {
 
     useEffect(() => {
         dispatch(fetchProduct(item.productId))
-    }, [dispatch])
+    }, [])
 
     if (!item) return <p>Loading</p>
     if(!product) return <p>Loading</p>

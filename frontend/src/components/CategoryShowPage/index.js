@@ -22,7 +22,7 @@ const CategoryShowPage = () => {
         // dispatch(fetchCategories())
         dispatch(fetchProducts())
         dispatch(fetchCategory(categoryId))
-    }, [dispatch, categoryId]);
+    }, [categoryId]);
 
     const filtering = (products, cId) => {
         Object.freeze(products);

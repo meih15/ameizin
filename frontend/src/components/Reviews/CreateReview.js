@@ -28,7 +28,7 @@ const CreateReview = () => {
 
     useEffect(() => {
         dispatch(fetchProduct(productId))
-    }, [dispatch, productId]);
+    }, [productId]);
 
     const handleCreateReview = async (e) => {
         e.preventDefault();

@@ -27,7 +27,8 @@ function ProductShowPage() {
         dispatch(fetchProduct(productId))
         dispatch(fetchCart())
         dispatch(fetchCartItems())
-    }, [dispatch, productId]);
+        // eslint-disable-next-line
+    }, [productId]);
 
 
     if (!product) return <h1>Loading...</h1>
@@ -44,6 +45,13 @@ function ProductShowPage() {
             quantity: selectedQuantity + (matchingCartItem ? matchingCartItem.quantity : 0),
         };
 
+
+        const createNewCartItem = {
+            productId: product.id,
+            cartId: cart.id,
+            quantity: selectedQuantity
+        }
+
         if (matchingCartItem) {
             if ((selectedQuantity + matchingCartItem.quantity) > product.inventory) {
                 alert("Not enough inventory!");
@@ -51,7 +59,7 @@ function ProductShowPage() {
                 dispatch(updateCartItem(cart_item));
                 history.push("/cart")}
         } else {
-            dispatch(createCartItem(cart_item));
+            dispatch(createCartItem(createNewCartItem));
             history.push("/cart")
         }   
     };

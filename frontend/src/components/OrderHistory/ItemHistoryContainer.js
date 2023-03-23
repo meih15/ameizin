@@ -12,7 +12,7 @@ const ItemHistoryContainer = ({item}) => {
 
     useEffect(() => {
         dispatch(fetchProduct(item.productId))
-    }, [dispatch])
+    }, [])
 
 
     if (!product) return <p>Loading...</p>

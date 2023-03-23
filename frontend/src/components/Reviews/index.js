@@ -13,7 +13,7 @@ const ReviewShowPage = ({productId}) => {
 
     useEffect(() => {
         dispatch(fetchReviews())
-    }, [dispatch])
+    }, [])
 
     const filteringReviews = (reviews, productId) => {
         Object.freeze(reviews);

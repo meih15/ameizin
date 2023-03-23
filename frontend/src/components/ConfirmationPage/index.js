@@ -16,7 +16,7 @@ const ConfirmationPage = () => {
 
     useEffect(() => {
         dispatch(fetchOrderHistoryItems())
-    }, [dispatch])
+    }, [])
 
 
     const filteringConfirmedItems = (items, confirmationNumber) => {

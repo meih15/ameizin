@@ -15,7 +15,7 @@ const SingleReview = ({review}) => {
 
     useEffect (() => {
         dispatch(fetchUser(review.userId))
-    }, [dispatch, review]);
+    }, [review]);
 
     const reviewDate = new Date(review.createdAt).toLocaleDateString('en-US', {
         month: 'long',

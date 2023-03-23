@@ -21,7 +21,7 @@ const SearchShowPage = () => {
 
     useEffect(() => {
         dispatch(fetchProducts())
-    }, [dispatch]);
+    }, []);
 
     const filteringItems = (items, search) => {
         Object.freeze(items);

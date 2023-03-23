@@ -12,7 +12,7 @@ const CategoryNavBar = () => {
 
     useEffect(() => {
         dispatch(fetchCategories())
-    }, [dispatch]);
+    }, []);
 
     const categoryListIndex = categories.map(category => {
         return   <Link key={category.id} id='cat' to={`/categories/${category.id}`}>

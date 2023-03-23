@@ -70,7 +70,7 @@ function HomePage() {
     useEffect(() => {
         dispatch(fetchProducts())
         dispatch(fetchCategories())
-    }, [dispatch]);
+    }, []);
 
     if (!productsList) return null;
     if (!categoriesList) return null;

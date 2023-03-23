@@ -12,7 +12,7 @@ const SearchProduct = ({product}) => {
 
     useEffect(() => {
         dispatch(fetchReviews())
-    }, [dispatch])
+    }, [])
 
     const filteringReviews = (reviews, productId) => {
         Object.freeze(reviews);

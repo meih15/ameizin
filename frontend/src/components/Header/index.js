@@ -41,7 +41,7 @@ function Header({placeholder}) {
     useEffect(() => {
         dispatch(fetchCart())
         dispatch(fetchCartItems())
-    }, [dispatch]);
+    }, []);
 
     const loggedInOrder =   (<Link to='/orderhistory' className='ordersLink'>
                                 <div id='return-order'>

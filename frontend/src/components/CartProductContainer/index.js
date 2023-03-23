@@ -17,7 +17,7 @@ const CartProductContainer = ({cartItem}) => {
     useEffect(() => {
         dispatch(fetchProduct(cartItem.productId))
         setSelectedQuantity(cartItem.quantity)
-    }, [dispatch, cartItem])
+    }, [cartItem])
 
     if (!product) return <p>Loading</p>
 

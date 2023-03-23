@@ -13,7 +13,7 @@ const OrderHistoryShowPage = () => {
 
     useEffect(() => {
         dispatch(fetchOrderHistoryItems())
-    }, [dispatch])
+    }, [])
 
     if (!orders) return <p>Loading...</p>
 

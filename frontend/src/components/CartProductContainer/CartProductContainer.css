@@ -18,6 +18,7 @@
     height: 200px;
     display: flex;
     margin-right: 10px;
+    object-fit: contain;
 }
 
 #cart-product-middle-section {

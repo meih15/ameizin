@@ -13,7 +13,7 @@ const CategoryItemContainer = ({product}) => {
 
     useEffect(() => {
         dispatch(fetchReviews())
-    }, [dispatch])
+    }, [])
 
     const filteringReviews = (reviews, productId) => {
         Object.freeze(reviews);
@@ -24,9 +24,11 @@ const CategoryItemContainer = ({product}) => {
 
     return (
             <div className='category-product-container'>
-                <Link to={`/products/${product.id}`}>
-                    <img id='image-box' src={product.photourl} alt='product'></img>
-                </Link>
+                <div id='image-cat-size'>
+                    <Link to={`/products/${product.id}`}>
+                        <img id='image-box' src={product.photourl} alt='product'></img>
+                    </Link>
+                </div>
                 <div id='cat-product-info'>
                     <Link id='category-product-name' to={`/products/${product.id}`}>
                         <h1 id='category-product-name'>{product.productName}</h1>
