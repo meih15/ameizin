@@ -10,12 +10,12 @@ require "open-uri"
 ApplicationRecord.transaction do 
   puts "Destroying tables..."
   # Unnecessary if using `rails db:seed:replant`
-  User.destroy_all
+  Cart.destroy_all
   Category.destroy_all
   Product.destroy_all
-  Cart.destroy_all
   CartItem.destroy_all
   Review.destroy_all
+  User.destroy_all
   
 
   puts "Resetting primary keys..."
