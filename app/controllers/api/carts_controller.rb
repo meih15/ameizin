@@ -2,7 +2,7 @@ class Api::CartsController < ApplicationController
 
 
     def show
-        if current_user
+        if current_user&.cart
             @cart = current_user.cart
             render :show
         else
