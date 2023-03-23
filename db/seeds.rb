@@ -14,7 +14,7 @@ ApplicationRecord.transaction do
   Category.destroy_all
   Product.destroy_all
   CartItem.destroy_all
-  Review.destroy_all
+  Review.destroy_alldw
   User.destroy_all
   
 

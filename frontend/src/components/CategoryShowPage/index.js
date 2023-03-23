@@ -44,7 +44,7 @@ const CategoryShowPage = () => {
         <>
             <div className='cat-show-page'>
 
-            <Header placeholder={category.categoryName}/>
+            <Header placeholder={"Search Ameizin'"}/>
                 <CategoryNavBar />
                 {totalResults > 1 ? <div id='category-number-result-container'>{totalResults} results for <p id='category-name'>"{category.categoryName}"</p></div> : <div id='category-number-result-container'>{totalResults} result for <p id='category-name'>"{category.categoryName}"</p></div>}
                 <div id='cat-item-container'>
