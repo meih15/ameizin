@@ -5,7 +5,6 @@ import { getProduct, fetchProduct } from '../../store/products';
 import './ProductShowPage.css';
 import Header from '../Header';
 // import switchPic from '../../image/oled-model.avif';
-import switch2Pic from '../../image/oled-switch.jpeg';
 import { getCart, fetchCart } from '../../store/carts';
 import { getCartItems, fetchCartItems, updateCartItem, createCartItem } from '../../store/cartItems';
 import CategoryNavBar from '../CategoryNavBar';
@@ -66,6 +65,8 @@ function ProductShowPage() {
                             {dropQuantity.map(qty => <option key={qty} id='dropdown-number' value={qty}>{`Qty: ${qty}`}</option> )}
                         </select>
 
+    console.log(product)
+    console.log(product.photourl)
     // if (product) debugger 
 
     return ( 
@@ -77,7 +78,7 @@ function ProductShowPage() {
             <div className='pageElements'>
                 <div className='top-of-page'>
                     <div id="productImage">
-                        <img id='fillerImage' src={switch2Pic} alt='filler-pic'/>
+                        <img id='fillerImage' src={product.photourl} alt='filler-pic'/>
                     </div>
                     <div id='product-info-section'>
                         <div id='product-title'>{product.productName}</div>

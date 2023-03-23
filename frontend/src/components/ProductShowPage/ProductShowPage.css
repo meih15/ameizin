@@ -30,16 +30,17 @@
 #productImage {
     float: left;
     display: block;
-    width: 40%;
-    max-width: fit-content;
-    min-width: max-content;
-    margin-right: 2%;
-}
-
-img#fillerImage {
     max-width: 500px;
     min-width: 300px;
+    margin-right: 3%;
+    margin-left: 15px;
+}
+
+#fillerImage {
+    /* max-width: 500px;
+    min-width: 300px; */
     height: auto;
+    width: 100%;
     object-fit: contain;
 }
 

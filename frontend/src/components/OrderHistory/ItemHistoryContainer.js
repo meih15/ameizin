@@ -27,7 +27,7 @@ const ItemHistoryContainer = ({item}) => {
             <div className='placed-product-section'>
                 <div className='left-side-history'>
                     <Link to={`/products/${product.id}`}>
-                        <img src={switch2Pic} id='history-product-image' alt='history-product'/>
+                        <img src={product.photourl} id='history-product-image' alt='history-product'/>
                     </Link>
                     <Link id='name-link' to={`/products/${product.id}`}>
                         <p id='history-product-name'>{product.productName}</p>

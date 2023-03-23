@@ -17,6 +17,7 @@
     width: 200px;
     height: 200px;
     display: flex;
+    margin-right: 10px;
 }
 
 #cart-product-middle-section {
@@ -39,9 +40,10 @@
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 5px;
+    padding-right: 10px;
 }
 
-#name-link {
+#cart-name-link {
     text-decoration: none;
 }
 
