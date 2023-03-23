@@ -48,6 +48,18 @@
     margin-right: 180px;
 }
 
+ #footer-website:hover {
+    color: #C45500;
+    /* font-size: 70px; */
+    cursor: pointer;
+}
+
+#footer-github:hover,
+#footer-linkedin:hover {
+    color: #C45500;
+    /* font-size: 80px; */
+}
+
 #footer-line {
     border-top: 1px solid #3a4553;
 }

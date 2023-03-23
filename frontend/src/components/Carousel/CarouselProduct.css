@@ -1,7 +1,7 @@
 #individual-carousel-image {
     max-width: 100%;
-    /* max-height: 100%; */
-    height: auto;
+    max-height: 100%;
+    object-fit: contain;
     padding: 20px;
     box-sizing: border-box;
 }
