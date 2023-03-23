@@ -37,13 +37,13 @@ ApplicationRecord.transaction do
   )
 
   # More users
-  # 10.times do 
-  #   User.create!({
-  #     user_name: Faker::Internet.unique.username(specifier: 3),
-  #     email: Faker::Internet.unique.email,
-  #     password: 'password'
-  #   }) 
-  # end
+  10.times do 
+    User.create!({
+      user_name: Faker::Internet.unique.username(specifier: 3),
+      email: Faker::Internet.unique.email,
+      password: 'password'
+    }) 
+  end
 
 
   puts "Creating categories..."
