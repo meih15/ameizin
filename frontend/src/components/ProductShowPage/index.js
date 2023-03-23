@@ -65,9 +65,8 @@ function ProductShowPage() {
                             {dropQuantity.map(qty => <option key={qty} id='dropdown-number' value={qty}>{`Qty: ${qty}`}</option> )}
                         </select>
 
-    console.log(product)
-    console.log(product.photourl)
-    // if (product) debugger 
+
+
 
     return ( 
         <div className='entire-product-page'>
