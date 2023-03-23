@@ -43,6 +43,7 @@
 
 
 #home-page-photos {
-    width: auto;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 5px;
 }

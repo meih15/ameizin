@@ -48,10 +48,10 @@ const CartProductContainer = ({cartItem}) => {
                 <div className='cart-product-box'>
                     <div className='left-pls'>
                     <Link to={`/products/${product.id}`}>
-                        <img src={switch2Pic} id='cart-product-image' alt='cart-product'/>
+                        <img src={product.photourl} id='cart-product-image' alt='cart-product'/>
                     </Link>
                     <div id='cart-product-middle-section'>
-                        <Link id='name-link' to={`/products/${product.id}`}>
+                        <Link id='cart-name-link' to={`/products/${product.id}`}>
                             <p id='cart-product-name'>{product.productName}</p>
                         </Link>
                         <div id='cart-dynamic-stock'>

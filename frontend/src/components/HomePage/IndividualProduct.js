@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import switch2Pic from '../../image/oled-switch.jpeg';
+// import switch2Pic from '../../image/oled-switch.jpeg';
 import './IndividualProduct.css'
 
 const IndividualProduct = ({product}) => {
@@ -9,7 +9,7 @@ const IndividualProduct = ({product}) => {
         <div className="product-individual">
             <Link to={`/products/${product.id}`}>
                 <div id=''>
-                    <img id='individual-image' src={switch2Pic} alt='homepg-products'></img>
+                    <img id='individual-image' src={product.photourl} alt='homepg-products'></img>
                 </div>
             </Link>
             <Link id='no-decoration' to={`/products/${product.id}`}>

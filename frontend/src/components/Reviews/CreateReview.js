@@ -69,7 +69,7 @@ const CreateReview = () => {
                 <form className="middle-of-review-form">
                     <h1 id="create-review">Create Reviews</h1>
                     <div className="review-form-product-info">
-                        <img id='fillerReviewImage' src={switch2Pic} alt='filler-pic'/>
+                        <img id='fillerReviewImage' src={product.photourl} alt='filler-pic'/>
                         <h2 id="review-product-name">{product.productName}</h2>
                     </div>
                     <div className='create-review-break'></div>

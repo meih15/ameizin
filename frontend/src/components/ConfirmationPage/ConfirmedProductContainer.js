@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchProduct, getProduct } from '../../store/products';
-import switch2Pic from '../../image/oled-switch.jpeg';
 import './ConfirmedProductContainer.css';
 
 const ConfirmedProductContainer = ({item}) => {
@@ -21,7 +20,7 @@ const ConfirmedProductContainer = ({item}) => {
         <div className='confirmed-item-container'>
             <div id='confirmed-item-left-side'>
                 <Link to={`/products/${product.id}`}>
-                    <img src={switch2Pic} id='confirmed-product-image' alt='confirmed-product'/>
+                    <img src={product.photourl} id='confirmed-product-image' alt='confirmed-product'/>
                 </Link>
                 <div id='confirmed-product-middle-section'>
                     <div id='product-name-confirmed'>

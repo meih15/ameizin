@@ -21,7 +21,7 @@ ApplicationRecord.transaction do
   puts "Resetting primary keys..."
   # For easy testing, so that after seeding, the first `User` has `id` of 1
   ApplicationRecord.connection.reset_pk_sequence!('users')
-  ApplicationRecord.connection.reset_pk_sequence!('categories')
+  ApplicationRecord.connection.reset_pk_sequence!('categories') 
   ApplicationRecord.connection.reset_pk_sequence!('products')
   ApplicationRecord.connection.reset_pk_sequence!('carts')
   ApplicationRecord.connection.reset_pk_sequence!('carts')
@@ -78,13 +78,14 @@ Play at home on the TV or on-the-go with a vibrant 7-inch OLED screen with the N
     "Wide adjustable stand – Freely angle the system’s wide, adjustable stand for comfortable viewing in Tabletop mode. Nintendo Switch – OLED Model supports all Joy-Con controllers and Nintendo Switch software"],     
     price: 349.99,          
     inventory: 100,       
-    category_id: 1 
+    category_id: 1,
+    photourl: 'https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/nintendo-switch-white-joycon.jpg'
   )
 
-  p1.photo.attach({
-    io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/nintendo-switch-white-joycon.jpg'),
-    filename: "white-nintendo"
-  })
+  # p1.photo.attach({
+  #   io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/nintendo-switch-white-joycon.jpg'),
+  #   filename: "white-nintendo"
+  # })
 
   #2
 
@@ -97,13 +98,14 @@ Play at home on the TV or on-the-go with a vibrant 7-inch OLED screen with the N
     "Xbox Smart delivery ensures you play the best available version of your game no matter which Console you're playing on."],    
     price: 499.99,          
     inventory: 0,      
-    category_id: 1
+    category_id: 1,
+    photourl: 'https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/xbox-series-x.jpg'
   )
 
-  p2.photo.attach({
-    io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/xbox-series-x.jpg'),
-    filename: "xbox"
-  })
+  # p2.photo.attach({
+  #   io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/xbox-series-x.jpg'),
+  #   filename: "xbox"
+  # })
 
   #3
 
@@ -121,13 +123,14 @@ The Paldea Region is home to a prestigious school where people from all sorts of
               ],    
     price: 52.00,          
     inventory: 19,      
-    category_id: 1
+    category_id: 1,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/pokemon-violet.jpg"
   )
 
-  p3.photo.attach({
-    io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/pokemon-violet.jpg'),
-    filename: "pokemon-violet"
-  })
+  # p3.photo.attach({
+  #   io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/pokemon-violet.jpg'),
+  #   filename: "pokemon-violet"
+  # })
 
   #4
   p4 = Product.create!(
@@ -144,13 +147,14 @@ The Paldea Region is home to a prestigious school where people from all sorts of
               ],    
     price: 52.00,          
     inventory: 18,      
-    category_id: 1
+    category_id: 1,
+    photourl: 'https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/pokemon-scarlet.jpg'
   )  
 
-  p4.photo.attach({
-    io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/pokemon-scarlet.jpg'),
-    filename: 'pokemon-scarlet'
-  })
+  # p4.photo.attach({
+  #   io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/pokemon-scarlet.jpg'),
+  #   filename: 'pokemon-scarlet'
+  # })
 
   #5
   p5 = Product.create!(
@@ -162,13 +166,14 @@ The Paldea Region is home to a prestigious school where people from all sorts of
   "Lightning Speed - Harness the power of a custom CPU, GPU, and SSD with Integrated I/O that rewrite the rules of what a PlayStation console can do."],     
     price: 499.00,          
     inventory: 2,       
-    category_id: 1 
+    category_id: 1,
+    photourl: 'https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/playstation-5.jpg'
   )
 
-  p5.photo.attach({
-    io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/playstation-5.jpg'),
-    filename: "playstation-5"
-  })
+  # p5.photo.attach({
+  #   io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/playstation-5.jpg'),
+  #   filename: "playstation-5"
+  # })
 
     #6
   p6 = Product.create!(
@@ -182,13 +187,14 @@ The Paldea Region is home to a prestigious school where people from all sorts of
 "Play On: Rechargeable wireless gaming mouse with a long-lasting battery (with full lighting) for up to 40 gaming-hours, Logitech LIGHTSPEED wireless technology and Bluetooth enabled"],    
     price: 269.98,          
     inventory: 100,      
-    category_id: 1
+    category_id: 1,
+    photourl: 'https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/logitech-white.jpg'
   )
 
-  p6.photo.attach({
-    io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/logitech-white.jpg'),
-    filename: "logitech-white.jpg"
-  })
+  # p6.photo.attach({
+  #   io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/logitech-white.jpg'),
+  #   filename: "logitech-white.jpg"
+  # })
 
 
   #7
@@ -215,13 +221,14 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
   "Bring along friends* to play on the same system and choose characters like King Dedede, Meta Knight, and Bandana Waddle Dee. You can even play as four Kirbys!"],    
     price: 59.99,          
     inventory: 10,      
-    category_id: 1
+    category_id: 1,
+    photourl: 'https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kirby-switch.jpg'
   )
 
-  p7.photo.attach({
-    io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kirby-switch.jpg'),
-    filename: "kirby-switch"
-  })
+  # p7.photo.attach({
+  #   io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kirby-switch.jpg'),
+  #   filename: "kirby-switch"
+  # })
 
 
   # 8
@@ -238,13 +245,14 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
 "Designed with sustainability in mind. This Kindle uses 30-75% recycled plastics and 90% recycled magnesium and has 100% recyclable device packaging."],    
     price: 99.99,          
     inventory: 100,      
-    category_id: 1
+    category_id: 1,
+    photourl: 'https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kindle.jpg'
   )
 
-  p8.photo.attach({
-    io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kindle.jpg'),
-    filename: "kindle"
-  })
+  # p8.photo.attach({
+  #   io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kindle.jpg'),
+  #   filename: "kindle"
+  # })
 
   # 9
 
@@ -258,13 +266,14 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
     description: "Access live over-the-air channels and streaming with this 24-inch TV—and control it all with your voice. Ask Alexa to launch apps, search for titles and more. An HD experience in 720p provides crystal clear images. You won’t miss a second with the Insignia NS-24F201NA23 24 inches Class F20 Series LED HD Smart Fire TV.",
     price: 89.99,
     inventory: 200,
-    category_id: 1
+    category_id: 1,
+    photourl: 'https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/insignia-tv.jpg'
   )
 
-  p9.photo.attach({
-    io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/insignia-tv.jpg'),
-    filename: "insignia-tv"
-  })
+  # p9.photo.attach({
+  #   io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/insignia-tv.jpg'),
+  #   filename: "insignia-tv"
+  # })
 
 
   #10
@@ -281,13 +290,14 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
     description: "Echo Show 5",
     price: 84.99,
     inventory: 400,
-    category_id: 1
+    category_id: 1,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/echo-dot-5.jpg"
   )
 
-  p10.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/echo-dot-5.jpg"),
-    filename: "echo-5"
-  })
+  # p10.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/echo-dot-5.jpg"),
+  #   filename: "echo-5"
+  # })
 
 
   #11
@@ -302,13 +312,14 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
 "【Operating System】 Windows 11 Home in S mode comes with advanced security features built right in, which can protect your rights and interests when you are online."],
     price: 299.99,
     inventory: 400,
-    category_id: 1
+    category_id: 1,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/lenovo-2023.jpg"
   )
 
-  p11.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/lenovo-2023.jpg"),
-    filename: "lenovo-2023"
-  })
+  # p11.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/lenovo-2023.jpg"),
+  #   filename: "lenovo-2023"
+  # })
 
 
   #12
@@ -325,13 +336,14 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
     "Connect your Ring doorbell with Alexa to hear announcements on your compatible Echo device when your doorbell is pressed and see a live view of your camera if you have an Echo device with a screen. Talk to visitors by saying “Alexa, talk to the front door.” With a Ring Protect Plan (subscription sold separately), Alexa can also make voice announcements and automatically show live video feed on an Echo Show, Fire TV, or Fire Tablet when your Ring Video Doorbell 3 Plus detects a person."],
     price: 149.99,
     inventory: 100,
-    category_id: 1
+    category_id: 1,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/ring-doorbell-3.jpg"
   )
 
-  p12.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/ring-doorbell-3.jpg"),
-    filename: "ring-doorbell-3"
-  })
+  # p12.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/ring-doorbell-3.jpg"),
+  #   filename: "ring-doorbell-3"
+  # })
 
 
   #13
@@ -345,13 +357,14 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
     "Windows 10 Home in S mode included. Battery life Up to 11 hours (video playback), 13.27inches x 8.9inches x 0.7inches, 3.17 lbs. 3x USB Type-A Ports, 1x HDMI, 1x Media Card Reader, 1x Headphone Jack. Wireless-AC + Bluetooth 4.2, Rose Pink, Bonus 128GB SnowBell USB Card."],
     price: 299.00,
     inventory: 100,
-    category_id: 1
+    category_id: 1,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/2021-hp-stream.jpg"
   )
 
-  p13.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/2021-hp-stream.jpg"),
-    filename: "2021-hp-stream"
-  })
+  # p13.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/2021-hp-stream.jpg"),
+  #   filename: "2021-hp-stream"
+  # })
 
   #14
 
@@ -370,13 +383,14 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
     "Bundle: Get 30 days of Xbox Game Pass for PC with purchase (Active subscription required; continues until canceled; game catalog varies over time. Requires Windows 10/11)"],
     price: 1149.99,
     inventory: 10,
-    category_id: 1
+    category_id: 1,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/asus-laptop-2022.jpg"
   )
 
-  p14.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/asus-laptop-2022.jpg"),
-    filename: "asus-2022"
-  })
+  # p14.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/asus-laptop-2022.jpg"),
+  #   filename: "asus-2022"
+  # })
 
 
   #15
@@ -391,13 +405,14 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
     "Ultra-light and portable, the apps you use every day, premium materials and a choice of must-have colours will make this your go-to laptop."],
     price: 264.95,
     inventory: 5,
-    category_id: 1
+    category_id: 1,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/microsoft-laptop.jpg"
   )
 
-  p15.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/microsoft-laptop.jpg"),
-    filename: "microsoft-laptop"
-  })
+  # p15.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/microsoft-laptop.jpg"),
+  #   filename: "microsoft-laptop"
+  # })
 
   # 16
 
@@ -411,13 +426,14 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
     " Peace-Of-Mind Design: Our hydrocolloid patches are UV sterilized, and allergy tested. Each box comes with 36 medium dots (12 millimeters) on easy-peel perforated sheets."],
     price: 12.99,
     inventory: 99,
-    category_id: 2
+    category_id: 2,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/mighty-patches.jpg"
   )
 
-  p16.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/mighty-patches.jpg"),
-    filename: "mighty-patches"
-  })
+  # p16.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/mighty-patches.jpg"),
+  #   filename: "mighty-patches"
+  # })
 
 
   # 17
@@ -432,13 +448,14 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
     "Paula's Choice Skincare makes products that work. No fragrance, no parabens, no fluff. Just effective, science-backed formulas that target any concern from wrinkles to breakouts."],
     price: 13.00,
     inventory: 20,
-    category_id: 2
+    category_id: 2,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/paulas-choice-exfoliant.jpg"
   )
 
-  p17.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/paulas-choice-exfoliant.jpg"),
-    filename: "paula-exfoliant"
-  })
+  # p17.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/paulas-choice-exfoliant.jpg"),
+  #   filename: "paula-exfoliant"
+  # })
 
 
   # 18
@@ -453,13 +470,14 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
     "COSRX Standards: All COSRX products are formulated with skin-friendly ingredients that alleviate irritated skin. Hypoallergenic, Dermatologist tested, Animal Testing-FREE, Parabens-FREE, Sulfates-FREE, Phthalates-FREE. Please inform that the expiration date on the product is written in the South Korean format, which goes by Year/ Month/ Date (YY.MM.DD)"],
     price: 19.95,
     inventory: 5,
-    category_id: 2
+    category_id: 2,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/snail-mucin-essence.jpg"
   )
 
-  p18.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/snail-mucin-essence.jpg"),
-    filename: "snail-mucin"
-  })
+  # p18.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/snail-mucin-essence.jpg"),
+  #   filename: "snail-mucin"
+  # })
 
 
   # 19
@@ -472,13 +490,14 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
     "For dry, oily, or sensitive skin"],
     price: 9.99,
     inventory: 0,
-    category_id: 2
+    category_id: 2,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/celavi-face-mask.jpg"
   )
 
-  p19.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/celavi-face-mask.jpg"),
-    filename: "celavi-mask"
-  })
+  # p19.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/celavi-face-mask.jpg"),
+  #   filename: "celavi-mask"
+  # })
 
 
   #20
@@ -498,13 +517,14 @@ You can use your ice roller both morning and evening. It is great for helping th
 "Self-care Gift: The ice roller for face does a great job at reducing buildup fluid and toning the skin. You can use it as a morning wake-up call and it's an amazing pick-me-up to get your day started. The face sculpting tool a perfect gift choice to give to yourself or to friends"],
     price: 8.49,
     inventory: 35,
-    category_id: 2
+    category_id: 2,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/ice-roller.jpg"
   )
 
-  p20.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/ice-roller.jpg"),
-    filename: "ice-roller"
-  })
+  # p20.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/ice-roller.jpg"),
+  #   filename: "ice-roller"
+  # })
 
 
 
@@ -519,13 +539,14 @@ You can use your ice roller both morning and evening. It is great for helping th
     "[ GENTLE DAILY MOISTURIZER ] For face and body or can be used as a hand cream for dry skin relief. Holds National Eczema Association (NEA) Seal of Acceptance. Fragrance free, paraben free, allergy-tested, and non-comedogenic."],
     price: 15.48,
     inventory: 99,
-    category_id: 2
+    category_id: 2,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/cerave-cream.jpg"
   )
 
-  p21.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/cerave-cream.jpg"),
-    filename: "cerave-moisturizing-cream"
-  })
+  # p21.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/cerave-cream.jpg"),
+  #   filename: "cerave-moisturizing-cream"
+  # })
 
 
 
@@ -540,13 +561,14 @@ You can use your ice roller both morning and evening. It is great for helping th
     "Both PABA-free and non-comedogenic, this lightweight sunscreen is suitable for all skin types and provides powerful face and body sun protection without the heavy finish"],
     price: 8.97,
     inventory: 99,
-    category_id: 2
+    category_id: 2,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/neutragena-sunscreen.jpg"
   )
 
-  p22.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/neutragena-sunscreen.jpg"),
-    filename: "neutrogena-sunscreen"
-  })
+  # p22.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/neutragena-sunscreen.jpg"),
+  #   filename: "neutrogena-sunscreen"
+  # })
 
 
   #23
@@ -561,13 +583,14 @@ You can use your ice roller both morning and evening. It is great for helping th
     "Reveal a Heavenly Glow - Use our Korean scrub mitts to fight back against dry, bumpy skin caused by keratosis pilaris. Your arms, legs, and body will look smoother and fresher than ever before."],
     price: 9.99,
     inventory: 99,
-    category_id: 2
+    category_id: 2,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/seraphic-exfoliating-mitts.jpg"
   )
 
-  p23.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/seraphic-exfoliating-mitts.jpg"),
-    filename: "seraphic-exfoliating-mitts"
-  })
+  # p23.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/seraphic-exfoliating-mitts.jpg"),
+  #   filename: "seraphic-exfoliating-mitts"
+  # })
 
 
   #24
@@ -582,13 +605,14 @@ You can use your ice roller both morning and evening. It is great for helping th
     "Dermatologist Tested: Our vegan & cruelty-free exfoliating body scrub is also gluten-free, nut-free, oil-free, soy-free, silicone-free, safe for sensitive skin and nano-free"],
     price: 12.00,
     inventory: 99,
-    category_id: 2
+    category_id: 2,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/first-aid-exfoliant.jpg"
   )
 
-  p24.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/first-aid-exfoliant.jpg"),
-    filename: "first-aid-exfoliant"
-  })
+  # p24.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/first-aid-exfoliant.jpg"),
+  #   filename: "first-aid-exfoliant"
+  # })
 
 
   #25
@@ -602,13 +626,14 @@ You can use your ice roller both morning and evening. It is great for helping th
     "Includes a dual-ended brush and a large mirror housed inside travel-friendly packaging"],
     price: 45.00,
     inventory: 120,
-    category_id: 2
+    category_id: 2,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/soft-glam-eyeshadow.jpg"
   )
 
-  p25.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/soft-glam-eyeshadow.jpg"),
-    filename: "soft-glam-eyeshadow"
-  })
+  # p25.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/soft-glam-eyeshadow.jpg"),
+  #   filename: "soft-glam-eyeshadow"
+  # })
 
 
   #26
@@ -622,13 +647,14 @@ You can use your ice roller both morning and evening. It is great for helping th
     "Discover NYX Professional Makeup: Try all of our professional makeup products today from eyeshadow, eyeliner, and false lashes to liquid lipstick, lip gloss, primer, concealer, setting sprays and eyebrow makeup"],
     price: 18.00,
     inventory: 0,
-    category_id: 2
+    category_id: 2,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/nyx-ultimate-queen-eyeshadow.jpg"
   )
 
-  p26.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/nyx-ultimate-queen-eyeshadow.jpg"),
-    filename: "nyx-ultimate-queen-eyeshadow"
-  })
+  # p26.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/nyx-ultimate-queen-eyeshadow.jpg"),
+  #   filename: "nyx-ultimate-queen-eyeshadow"
+  # })
 
 
   #27
@@ -640,13 +666,14 @@ You can use your ice roller both morning and evening. It is great for helping th
     "This duo of perfectly complementary contouring powders delivers a flawlessly sculpted face in no time flat. The deeper color defines while the lighter color highlights your best features, leaving you at your nofilter best, whatever the occasion."],
     price: 4.28,
     inventory: 20,
-    category_id: 2
+    category_id: 2,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/wet-n-wild-contouring.jpg"
   )
 
-  p27.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/wet-n-wild-contouring.jpg"),
-    filename: "wet-n-wild-contouring"
-  })
+  # p27.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/wet-n-wild-contouring.jpg"),
+  #   filename: "wet-n-wild-contouring"
+  # })
 
 
   #28
@@ -660,13 +687,14 @@ You can use your ice roller both morning and evening. It is great for helping th
     "BY WOMEN FOR WOMEN: Mielle Organics aims to empower women of all hair types and styles with powerful products and gentle, organic ingredients that amplify your natural beauty and are the “root to results” that leave you looking and feeling your best"],
     price: 9.99,
     inventory: 200,
-    category_id: 2
+    category_id: 2,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/mielle-hair.jpg"
   )
 
-  p28.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/mielle-hair.jpg"),
-    filename: "mielle-hair"
-  })
+  # p28.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/mielle-hair.jpg"),
+  #   filename: "mielle-hair"
+  # })
 
 
 
@@ -681,13 +709,14 @@ You can use your ice roller both morning and evening. It is great for helping th
     "A Great Self Care Gift - Looking to prepare a self care package for a friend or loved one? Make sure you include this sponge face wash headband! It'll make an great present on any special occasion"],
     price: 6.99,
     inventory: 100,
-    category_id: 2
+    category_id: 2,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/mimi-headband.jpg"
   )
 
-  p29.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/mimi-headband.jpg"),
-    filename: "mimi-headband"
-  })
+  # p29.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/mimi-headband.jpg"),
+  #   filename: "mimi-headband"
+  # })
 
 
 
@@ -704,13 +733,14 @@ They are suitable for men, women, kids and the people who have thick heavy hair.
     "【Great for Kids and Women】The brown hair ties are simple but practical, they can hold your ponytail well for your daily use. They can be applied in various occasions such as school, home, office or using them when you are working out."],
     price: 5.94,
     inventory: 100,
-    category_id: 2
+    category_id: 2,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/hairties.jpg"
   )
 
-  p30.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/hairties.jpg"),
-    filename: "hairties"
-  })
+  # p30.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/hairties.jpg"),
+  #   filename: "hairties"
+  # })
 
 
   #31
@@ -725,13 +755,14 @@ They are suitable for men, women, kids and the people who have thick heavy hair.
     "Remove Maybelline Makeup With Micellar Water: Use Garnier Micellar Water as a gentle makeup remover at night, and as a facial cleanser in the morning to prep skin for Maybelline makeup"],
     price: 8.80,
     inventory: 100,
-    category_id: 2
+    category_id: 2,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/maybellione-rewind.jpg"
   )
 
-  p31.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/maybellione-rewind.jpg"),
-    filename: "maybelline-rewind"
-  })
+  # p31.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/maybellione-rewind.jpg"),
+  #   filename: "maybelline-rewind"
+  # })
 
 
   #32
@@ -745,13 +776,14 @@ They are suitable for men, women, kids and the people who have thick heavy hair.
     "Cruelty-free, vegan and 100% free from Phthalates, Parabens, Nonylphenol, Ethoxylates, Triclosan, triclocarban."],
     price: 9.99,
     inventory: 100,
-    category_id: 2
+    category_id: 2,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/elf-primer.jpg"
   )
 
-  p32.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/elf-primer.jpg"),
-    filename: "elf-primer"
-  })
+  # p32.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/elf-primer.jpg"),
+  #   filename: "elf-primer"
+  # })
 
 
   #33
@@ -765,13 +797,14 @@ They are suitable for men, women, kids and the people who have thick heavy hair.
     "SKIN-LOVING INGREDIENTS: All e.l.f. products are made from skin-loving ingredients you want, minus the toxins you don’t—all at good-for-you prices. All e.l.f. products are 100% cruelty-free and Vegan."],
     price: 6.00,
     inventory: 100,
-    category_id: 2
+    category_id: 2, 
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/elf-foundation.jpg"
   )
 
-  p33.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/elf-foundation.jpg"),
-    filename: "elf-foundation"
-  })
+  # p33.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/elf-foundation.jpg"),
+  #   filename: "elf-foundation"
+  # })
 
 
   #34
@@ -785,13 +818,14 @@ They are suitable for men, women, kids and the people who have thick heavy hair.
     "CRUELTY-FREE – All Physicians Formula foundations, eye makeup, lipsticks, and other cosmetics are always cruelty-free and never test on animals"],
     price: 10.12,
     inventory: 30,
-    category_id: 2
+    category_id: 2, 
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/physician-bronzer.jpg"
   )
 
-  p34.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/physician-bronzer.jpg"),
-    filename: "physicians-bronzer"
-  })
+  # p34.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/physician-bronzer.jpg"),
+  #   filename: "physicians-bronzer"
+  # })
 
 
 
@@ -806,13 +840,14 @@ They are suitable for men, women, kids and the people who have thick heavy hair.
     "Discover NYX Professional Makeup: Try all of our professional makeup products today from eyeshadow, eyeliner, and false lashes to liquid lipstick, lip gloss, primer, concealer, setting sprays and eyebrow makeup"],
     price: 4.96,
     inventory: 20,
-    category_id: 2
+    category_id: 2, 
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/nyx-pencil.jpg"
   )
 
-  p35.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/nyx-pencil.jpg"),
-    filename: "nyx-pencil"
-  })
+  # p35.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/nyx-pencil.jpg"),
+  #   filename: "nyx-pencil"
+  # })
 
 
   #36
@@ -826,13 +861,14 @@ They are suitable for men, women, kids and the people who have thick heavy hair.
     "[FUN AND FLIRTY COLORS] A collection of colors that fits every complexion. Find your signature color from our wide selection of gorgeous shades!"],
     price: 9.85,
     inventory: 15,
-    category_id: 2
+    category_id: 2, 
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/peripera-ink-velet-rosy-nude.jpg"
   )
 
-  p36.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/peripera-ink-velet-rosy-nude.jpg"),
-    filename: "peripera-lip"
-  })
+  # p36.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/peripera-ink-velet-rosy-nude.jpg"),
+  #   filename: "peripera-lip"
+  # })
 
 
   #37
@@ -849,13 +885,14 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
     "1. It was produced in a safe manufacturing facility certified by GMP. 2. All product booking boxes are manufactured using FSC-certified paper. 3. This product is cruelty-free and is against animal experiments. 4. We did not use artificial fragrance and colorants, essential oil, mineral oil, etc., that may irritate sensitive skin."],
     price: 17.95,
     inventory: 1,
-    category_id: 2
+    category_id: 2, 
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/joseon-sunscreen.jpg"
   )
 
-  p37.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/joseon-sunscreen.jpg"),
-    filename: "joseon-sunscreen"
-  })
+  # p37.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/joseon-sunscreen.jpg"),
+  #   filename: "joseon-sunscreen"
+  # })
 
 
   #38
@@ -869,13 +906,14 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
     "From a Dermatologist-recommended brand for over 65 years, Aveeno Protect + hydrate body sunscreen helps prevent sunburn And decreases the risk of skin cancer and Early aging caused by the sun when used as directed with other sun protection measures"],
     price: 25.95,
     inventory: 0,
-    category_id: 2
+    category_id: 2,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/aveno-sunscreen.jpg"
   )
 
-  p38.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/aveno-sunscreen.jpg"),
-    filename: "aveeno-sunscreen"
-  })
+  # p38.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/aveno-sunscreen.jpg"),
+  #   filename: "aveeno-sunscreen"
+  # })
 
 
 
@@ -892,13 +930,14 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
     "Note: Apply to pulse points: wrist, chest and neck."],
     price: 65.00,
     inventory: 100,
-    category_id: 2
+    category_id: 2,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/ariana-cloud.jpg"
   )
 
-  p39.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/ariana-cloud.jpg"),
-    filename: "ariana-cloud"
-  })  
+  # p39.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/ariana-cloud.jpg"),
+  #   filename: "ariana-cloud"
+  # })  
 
 
   #40
@@ -912,13 +951,14 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
     "The heart is enhanced with floral notes of violet, rose, apple blossom & jasmine"],
     price: 72.99,
     inventory: 100,
-    category_id: 2
+    category_id: 2,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/daisy.jpg"
   )
 
-  p40.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/daisy.jpg"),
-    filename: "daisy-perfume"
-  })  
+  # p40.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/daisy.jpg"),
+  #   filename: "daisy-perfume"
+  # })  
 
 
   #41
@@ -930,13 +970,14 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
     "Ships same day.", "International Shipping Available"],
     price: 66.92,
     inventory: 100,
-    category_id: 2
+    category_id: 2,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kenzo.jpg"
   )
 
-  p41.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kenzo.jpg"),
-    filename: "kenzo-flower"
-  })   
+  # p41.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kenzo.jpg"),
+  #   filename: "kenzo-flower"
+  # })   
 
 
   #42
@@ -950,13 +991,14 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
     "Discover NYX Professional Makeup: Try all of our professional makeup products today from eyeshadow, eyeliner, and false lashes to liquid lipstick, lip gloss, primer, concealer, setting sprays and eyebrow makeup"],
     price: 4.97,
     inventory: 100,
-    category_id: 2
+    category_id: 2,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/nyx-butter-gloss.jpg"
   )
 
-  p42.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/nyx-butter-gloss.jpg"),
-    filename: "nyx-butter-lip"
-  })   
+  # p42.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/nyx-butter-gloss.jpg"),
+  #   filename: "nyx-butter-lip"
+  # })   
 
 
   #43
@@ -968,13 +1010,14 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
     "Type: Eau De Toilette"],
     price: 34.99,
     inventory: 100,
-    category_id: 2
+    category_id: 2,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/dreamer-versace.jpg"
   )
 
-  p43.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/dreamer-versace.jpg"),
-    filename: "dreamer-versace"
-  })   
+  # p43.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/dreamer-versace.jpg"),
+  #   filename: "dreamer-versace"
+  # })   
 
 
   #44
@@ -987,13 +1030,14 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
     "NAUTICA FRAGRANCES: Scents that support your curiosity for life, so that you are ready to take on the day, wherever it takes you."],
     price: 18.90,
     inventory: 30,
-    category_id: 2
+    category_id: 2,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/nautica.jpg"
   )
 
-  p44.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/nautica.jpg"),
-    filename: "nautica"
-  })   
+  # p44.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/nautica.jpg"),
+  #   filename: "nautica"
+  # })   
 
 
   #45
@@ -1006,13 +1050,14 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
     "The package dimension of the product is 8.9cmL x 8.9cmW x 18.1cmH"],
     price: 77.24,
     inventory: 100,
-    category_id: 2
+    category_id: 2,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/jean-paul-perfume.jpg"
   )
 
-  p45.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/jean-paul-perfume.jpg"),
-    filename: "jean-paul-perfume"
-  })  
+  # p45.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/jean-paul-perfume.jpg"),
+  #   filename: "jean-paul-perfume"
+  # })  
 
 
   #46
@@ -1024,13 +1069,14 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
     "Base Notes: Vanilla, AMbergris, Patchouli"],
     price: 60.00,
     inventory: 18,
-    category_id: 2
+    category_id: 2,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/armaf.jpg"
   )
 
-  p46.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/armaf.jpg"),
-    filename: "armaf-perfume"
-  })  
+  # p46.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/armaf.jpg"),
+  #   filename: "armaf-perfume"
+  # })  
 
 
   #47
@@ -1045,13 +1091,14 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
     "100% recyclable packaging"],
     price: 19.99,
     inventory: 100,
-    category_id: 2
+    category_id: 2,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/razor-bic.jpg"
   )
 
-  p47.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/razor-bic.jpg"),
-    filename: "razor-bic"
-  })  
+  # p47.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/razor-bic.jpg"),
+  #   filename: "razor-bic"
+  # })  
 
 
   #48
@@ -1061,13 +1108,14 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
     bullets: ["Atomic Habits will reshape the way you think about progress and success, and give you the tools and strategies you need to transform your habits--whether you are a team looking to win a championship, an organization hoping to redefine an industry, or simply an individual who wishes to quit smoking, lose weight, reduce stress, or achieve any other goal."],
     price: 14.11,
     inventory: 100,
-    category_id: 3
+    category_id: 3,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/atomic-habits.jpg"
   )
 
-  p48.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/atomic-habits.jpg"),
-    filename: "atomic-habits"
-  })  
+  # p48.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/atomic-habits.jpg"),
+  #   filename: "atomic-habits"
+  # })  
 
 
   #49
@@ -1083,13 +1131,14 @@ Laugh-out-loud funny, shrewdly observant, and studded with a dazzling cast of su
     "“The most delightful novel I read this year...fresh and surprising...I laughed out loud!”—Philip Galanes, The New York Times"],
     price: 18.26,
     inventory: 10,
-    category_id: 3
+    category_id: 3,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/lessons-in-chem.jpg"
   )
 
-  p49.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/lessons-in-chem.jpg"),
-    filename: "lesson-chemistry"
-  })    
+  # p49.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/lessons-in-chem.jpg"),
+  #   filename: "lesson-chemistry"
+  # })    
 
 
   #50
@@ -1103,13 +1152,14 @@ Switching between the perspectives of Lily and Atlas, It Starts with Us picks up
     bullets: ["Before It Ends with Us, it started with Atlas. Colleen Hoover tells fan favorite Atlas’s side of the story and shares what comes next in this long-anticipated sequel to the “glorious and touching” (USA TODAY) #1 New York Times bestseller It Ends with Us."],
     price: 10.49,
     inventory: 20,
-    category_id: 3
+    category_id: 3,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/It-Starts-with-Us-2.jpg"
   )
 
-  p50.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/It-Starts-with-Us-2.jpg"),
-    filename: "starts-with-us-2"
-  })      
+  # p50.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/It-Starts-with-Us-2.jpg"),
+  #   filename: "starts-with-us-2"
+  # })      
 
 
   #51
@@ -1125,13 +1175,14 @@ An honest, evocative, and tender novel, It Ends with Us is “a glorious and tou
     bullets: ["From the #1 New York Times bestselling author of It Starts with Us and All Your Perfects, a “brave and heartbreaking novel that digs its claws into you and doesn’t let go, long after you’ve finished it” (Anna Todd, New York Times bestselling author) about a workaholic with a too-good-to-be-true romance can’t stop thinking about her first love—soon to be a major motion picture starring Blake Lively and Justin Baldoni."],
     price: 9.99,
     inventory: 35,
-    category_id: 3
+    category_id: 3,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/it-ends-with-us-2.jpg"
   )
 
-  p51.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/it-ends-with-us-2.jpg"),
-    filename: "ends-with-us-1"
-  })     
+  # p51.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/it-ends-with-us-2.jpg"),
+  #   filename: "ends-with-us-1"
+  # })     
 
 
   #52
@@ -1151,13 +1202,14 @@ Summoned to Evelyn’s luxurious apartment, Monique listens in fascination as th
 From the New York Times bestselling author of Daisy Jones & the Six—an entrancing and “wildly addictive journey of a reclusive Hollywood starlet” (PopSugar) as she reflects on her relentless rise to the top and the risks she took, the loves she lost, and the long-held secrets the public could never imagine."],
     price: 9.42,
     inventory: 99,
-    category_id: 3
+    category_id: 3,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/7-husbands.jpg"
   )
 
-  p52.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/7-husbands.jpg"),
-    filename: "7-husband"
-  })       
+  # p52.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/7-husbands.jpg"),
+  #   filename: "7-husband"
+  # })       
 
 
   #53
@@ -1171,13 +1223,14 @@ From the New York Times bestselling author of Daisy Jones & the Six—an entranc
     "LONGLISTED FOR THE PORCHLIGHT BUSINESS BOOK AWARD • ONE OF THE BEST BOOKS OF THE YEAR: The Wall Street Journal, Mashable"],
     price: 14.34,
     inventory: 100,
-    category_id: 3
+    category_id: 3,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/bittersweet.jpg"
   ) 
 
-  p53.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/bittersweet.jpg"),
-    filename: "bittersweet"
-  })      
+  # p53.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/bittersweet.jpg"),
+  #   filename: "bittersweet"
+  # })      
 
 
   #54
@@ -1190,13 +1243,14 @@ From the New York Times bestselling author of Daisy Jones & the Six—an entranc
     "From Valentine’s Day to Christmas Day and every day in between, the bestselling You’re My Little series is cute as can be—and festive too! Each spread of these chunky board books shows a child and parent pair with adorable illustrations by Natalie Marshall, as well as shaped cut-outs and raised elements. Perfect for cuddling up with your little one, these sweet rhyming stories celebrates a parent’s love for their child."],
     price: 7.74,
     inventory: 100,
-    category_id: 3
+    category_id: 3,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/cuddlebug.jpg"
   ) 
 
-  p54.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/cuddlebug.jpg"),
-    filename: "cuddlebug"
-  })      
+  # p54.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/cuddlebug.jpg"),
+  #   filename: "cuddlebug"
+  # })      
 
 
   #55
@@ -1207,13 +1261,14 @@ From the New York Times bestselling author of Daisy Jones & the Six—an entranc
     "The sun rises, and a bear and cub begin their day together. They splash in the water, climb mountains, watch the colorful lights in the shimmering sky, and play with friends. They show their love for each other by touching noses, chasing each other, and, of course, hugging and snuggling before bed. A sweet, gentle rhyme, perfect for sharing with a special little one that also includes a 'To' and 'From' personalization page in the front of the book, making this heartwarming book an ideal gift."],
     price: 4.76,
     inventory: 99,
-    category_id: 3
+    category_id: 3,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/moon-n-back.jpg"
   )
 
-  p55.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/moon-n-back.jpg"),
-    filename: "moon-n-back"
-  })     
+  # p55.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/moon-n-back.jpg"),
+  #   filename: "moon-n-back"
+  # })     
 
 
   #56
@@ -1228,13 +1283,14 @@ From the New York Times bestselling author of Daisy Jones & the Six—an entranc
     "Includes the Couple's Personal Profile assessment so you can discover your love language and that of your loved one."],
     price: 8.35,
     inventory: 0,
-    category_id: 3
+    category_id: 3,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/5-love-languages.jpg"
   ) 
 
-  p56.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/5-love-languages.jpg"),
-    filename: "5-love-languages"
-  })    
+  # p56.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/5-love-languages.jpg"),
+  #   filename: "5-love-languages"
+  # })    
 
 
   #57
@@ -1246,13 +1302,14 @@ From the New York Times bestselling author of Daisy Jones & the Six—an entranc
     "Translated into 46 languages worldwide"],
     price: 7.74,
     inventory: 0,
-    category_id: 3
+    category_id: 3,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/4-agreememts.jpg"
   ) 
 
-  p57.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/4-agreememts.jpg"),
-    filename: "4-agreements"
-  })  
+  # p57.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/4-agreememts.jpg"),
+  #   filename: "4-agreements"
+  # })  
 
 
   #58
@@ -1263,13 +1320,14 @@ From the New York Times bestselling author of Daisy Jones & the Six—an entranc
     "THE all-time classic picture book, from generation to generation, sold somewhere in the world every 30 seconds! A sturdy and beautiful book to give as a gift for new babies, baby showers, birthdays, and other new beginnings!"],
     price: 6.56,
     inventory: 0,
-    category_id: 3
+    category_id: 3,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/caterpillar.jpg"
   ) 
 
-  p58.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/caterpillar.jpg"),
-    filename: "hungry-caterpillar"
-  })   
+  # p58.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/caterpillar.jpg"),
+  #   filename: "hungry-caterpillar"
+  # })   
 
 
   #59
@@ -1287,13 +1345,14 @@ There’s a reason Knox doesn’t do complications or high-maintenance women, es
 At least, that’s the plan until the trouble turns to real danger."],
     price: 10.94,
     inventory: 12,
-    category_id: 3
+    category_id: 3,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/things-we-never-got-over.jpg"
   ) 
 
-  p59.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/things-we-never-got-over.jpg"),
-    filename: "things-we-never-got-over"
-  })  
+  # p59.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/things-we-never-got-over.jpg"),
+  #   filename: "things-we-never-got-over"
+  # })  
 
 
   #60
@@ -1306,13 +1365,14 @@ At least, that’s the plan until the trouble turns to real danger."],
 Too bad Lina's got secrets of her own, and if Nash finds out the real reason she's in town, he'll never forgive her. Besides, she doesn't do relationships. Ever. A hot, short-term fling with a local cop? Absolutely. Sign her up. A relationship with a man who expects her to plant roots? No freaking way. Once she gets what she's after, she has no intention of sticking around. But Knockemout has a way of getting under people's skin. And once Nash decides to make Lina his, he's not about to be dissuaded…even if it means facing the danger that nearly killed him."],
     price: 13.52,
     inventory: 100,
-    category_id: 3
+    category_id: 3,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/things-we-hide.jpg"
   ) 
 
-  p60.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/things-we-hide.jpg"),
-    filename: "things-we-hide"
-  })    
+  # p60.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/things-we-hide.jpg"),
+  #   filename: "things-we-hide"
+  # })    
 
 
   #61
@@ -1325,13 +1385,14 @@ Too bad Lina's got secrets of her own, and if Nash finds out the real reason she
     "Spanning thirty years, from Cambridge, Massachusetts, to Venice Beach, California, and lands in between and far beyond, Gabrielle Zevin’s Tomorrow, and Tomorrow, and Tomorrow examines the multifarious nature of identity, disability, failure, the redemptive possibilities in play, and above all, our need to connect: to be loved and to love."],
     price: 15.49,
     inventory: 20,
-    category_id: 3
+    category_id: 3,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/tomorrow.webp"
   ) 
 
-  p61.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/tomorrow.webp"),
-    filename: "tomorrow"
-  })     
+  # p61.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/tomorrow.webp"),
+  #   filename: "tomorrow"
+  # })     
 
   #62
   p62 = Product.create!(
@@ -1342,13 +1403,14 @@ Too bad Lina's got secrets of her own, and if Nash finds out the real reason she
     "One of the most beloved books of all time, Goodnight Moon is a must for every bookshelf. This board book edition is the right size for little hands and is the perfect gift for baby showers, toddler birthday parties, and holidays."],
     price: 5.36,
     inventory: 99,
-    category_id: 3
+    category_id: 3,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/goodnight-moon.jpg"
   ) 
 
-  p62.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/goodnight-moon.jpg"),
-    filename: "goodnight-moon"
-  })  
+  # p62.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/goodnight-moon.jpg"),
+  #   filename: "goodnight-moon"
+  # })  
 
   #63
   p63 = Product.create!(
@@ -1361,13 +1423,14 @@ Too bad Lina's got secrets of her own, and if Nash finds out the real reason she
     "chieve your maximum potential—a must-read for the twenty-first century with more than 15 million copies sold!"],
     price: 10.40,
     inventory: 99,
-    category_id: 3
+    category_id: 3,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/win-friends.jpg"
   ) 
 
-  p63.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/win-friends.jpg"),
-    filename: "win-friends"
-  })  
+  # p63.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/win-friends.jpg"),
+  #   filename: "win-friends"
+  # })  
 
 
   #64
@@ -1378,13 +1441,14 @@ Too bad Lina's got secrets of her own, and if Nash finds out the real reason she
     "includes 54 cards"],
     price: 2.88,
     inventory: 99,
-    category_id: 3
+    category_id: 3,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/flas-cards.jpg"
   ) 
 
-  p64.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/flas-cards.jpg"),
-    filename: "flash-cards"
-  })  
+  # p64.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/flas-cards.jpg"),
+  #   filename: "flash-cards"
+  # })  
 
 
   #65 
@@ -1399,13 +1463,14 @@ Too bad Lina's got secrets of her own, and if Nash finds out the real reason she
     "There are only so many things we can give a f**k about so we need to figure out which ones really matter, Manson makes clear. While money is nice, caring about what you do with your life is better, because true wealth is about experience. A much-needed grab-you-by-the-shoulders-and-look-you-in-the-eye moment of real-talk, filled with entertaining stories and profane, ruthless humor, The Subtle Art of Not Giving a F**k is a refreshing slap for a generation to help them lead contented, grounded lives."],
     price: 25.99,
     inventory: 99,
-    category_id: 3
+    category_id: 3,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/subtle-art.jpg"
   ) 
 
-  p65.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/subtle-art.jpg"),
-    filename: "subtle-art"
-  })  
+  # p65.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/subtle-art.jpg"),
+  #   filename: "subtle-art"
+  # })  
 
 
   #66 
@@ -1421,13 +1486,14 @@ Too bad Lina's got secrets of her own, and if Nash finds out the real reason she
     "【Customer First】 Every customer who purchases a CHAOKE exercise bike is entitled to a one-month free return and exchange guarantee, and we promise one year of free accessories replacement. Meeting customer needs is our service tenet. Please contact us with any questions, it is our pleasure to serve you."],
     price: 249.99,
     inventory: 5,
-    category_id: 4
+    category_id: 4,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/chaoke-bike.jpg"
   ) 
 
-  p66.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/chaoke-bike.jpg"),
-    filename: "chaoke-art"
-  })    
+  # p66.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/chaoke-bike.jpg"),
+  #   filename: "chaoke-art"
+  # })    
 
   #67
   
@@ -1441,13 +1507,14 @@ Too bad Lina's got secrets of her own, and if Nash finds out the real reason she
     "【Easy Assembly】: Pedal exerciser with all supplied accessories, in few minutes and without asking for any tools. The anti-slip pedal and the non-slip bike foot provide excellent attachment and will not slip during exercise."],
     price: 49.99,
     inventory: 2,
-    category_id: 4
+    category_id: 4,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/mini-bike-himaly.jpg"
   ) 
 
-  p67.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/mini-bike-himaly.jpg"),
-    filename: "mini-bike-himaly"
-  })   
+  # p67.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/mini-bike-himaly.jpg"),
+  #   filename: "mini-bike-himaly"
+  # })   
   
   #68
 
@@ -1462,13 +1529,14 @@ Too bad Lina's got secrets of her own, and if Nash finds out the real reason she
     "【What You Get】A YOSUDA exercise bike, all tools and instructions are in the package. Online instruction video can help you complete the assembly within 30 minutes. ONE YEAR FREE parts replacement."],
     price: 209.99,
     inventory: 0,
-    category_id: 4
+    category_id: 4,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/yosuda-bike.jpg"
   ) 
 
-  p68.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/yosuda-bike.jpg"),
-    filename: "yosuda-bike"
-  })   
+  # p68.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/yosuda-bike.jpg"),
+  #   filename: "yosuda-bike"
+  # })   
 
 
   #69
@@ -1483,13 +1551,14 @@ Too bad Lina's got secrets of her own, and if Nash finds out the real reason she
     "300-Pound User Capacity; Protected With A 10-Year Frame Assurance, 2-Year Parts Assurance, And 1-Year Labor Assurance; 54 inches H X 36 inches W X 73.5 inches L"],
     price: 699.00,
     inventory: 100,
-    category_id: 4
+    category_id: 4,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/nordic-treadmill.jpg"
   ) 
 
-  p69.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/nordic-treadmill.jpg"),
-    filename: "nordic-treadmill"
-  })  
+  # p69.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/nordic-treadmill.jpg"),
+  #   filename: "nordic-treadmill"
+  # })  
 
 
   #70
@@ -1517,13 +1586,14 @@ Product Features
     "☆Foldable Design & Low Noise Motor and Safety Emergency: Foldable designand transportation wheels allow for easy move and storage. This foldable treadmill comes with built in safety key to ensure instant shut-off under emergency situation.The 2.5HP motor ensures perfect performance for walking, jogging, running and cardio workout at home. Provide safe and quiet workout experience."],
     price: 99.00,
     inventory: 99,
-    category_id: 4
+    category_id: 4,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/home-foldable-treadmill.jpg"
   ) 
 
-  p70.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/home-foldable-treadmill.jpg"),
-    filename: "home-foldable-treadmill"
-  })  
+  # p70.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/home-foldable-treadmill.jpg"),
+  #   filename: "home-foldable-treadmill"
+  # })  
 
 
   #71
@@ -1538,13 +1608,14 @@ Product Features
     "Product dimensions: 12.5 x 5.3 x 4.6 inches (LxWxH) with 1.4-inch grip diameter"],
     price: 40.93,
     inventory: 100,
-    category_id: 4
+    category_id: 4,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/weight-training-dumbbell.jpg"
   ) 
 
-  p71.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/weight-training-dumbbell.jpg"),
-    filename: "amazon-dumbbell"
-  })  
+  # p71.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/weight-training-dumbbell.jpg"),
+  #   filename: "amazon-dumbbell"
+  # })  
 
 
   #72
@@ -1559,13 +1630,14 @@ Product Features
     "【Great Gift】: This easy-to-adjust dumbbell is an excellent choice for a healthy gift for family, friends and yourself in terms of appearance, quality and function."],
     price: 98.99,
     inventory: 9,
-    category_id: 4
+    category_id: 4,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/adjustable-dumbbell.jpg"
   ) 
 
-  p72.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/adjustable-dumbbell.jpg"),
-    filename: "adjustable-dumbbell"
-  })  
+  # p72.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/adjustable-dumbbell.jpg"),
+  #   filename: "adjustable-dumbbell"
+  # })  
 
   #73
 
@@ -1583,13 +1655,14 @@ This is the perfect set for your home gym and for fitness enthusiasts.",
     "FEATURES – The original hex shaped heads prevent rolling. The medium depth knurling on the handle provides essential grip and security during use. Rubber coating is a durable and effective finish"],
     price: 225.00,
     inventory: 0,
-    category_id: 4
+    category_id: 4,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/dumbbell-storage-rack.jpg"
   ) 
 
-  p73.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/dumbbell-storage-rack.jpg"),
-    filename: "dumbbell-storage-rack"
-  })  
+  # p73.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/dumbbell-storage-rack.jpg"),
+  #   filename: "dumbbell-storage-rack"
+  # })  
 
 
   #74
@@ -1604,13 +1677,14 @@ This is the perfect set for your home gym and for fitness enthusiasts.",
     "Great idea for a gift-It can meet your workout need for anyone looking to expand a home gym, build a fitness regimen, exercise on the go, or physical therapy whether you are a beginner or not."],
     price: 19.99,
     inventory: 10,
-    category_id: 4
+    category_id: 4,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/alllvocles.jpg"
   ) 
 
-  p74.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/alllvocles.jpg"),
-    filename: "alllvocles"
-  })  
+  # p74.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/alllvocles.jpg"),
+  #   filename: "alllvocles"
+  # })  
 
 
   #75
@@ -1625,13 +1699,14 @@ This is the perfect set for your home gym and for fitness enthusiasts.",
     "What You Get: Five Exercise Bands With Color-Coded Resistance Levels, Portable Travel Carry Bag And Instruction Guide."],
     price: 12.95,
     inventory: 0,
-    category_id: 4
+    category_id: 4,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/fit-simplify-band.jpg"
   ) 
 
-  p75.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/fit-simplify-band.jpg"),
-    filename: "fit-simplify-band"
-  })  
+  # p75.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/fit-simplify-band.jpg"),
+  #   filename: "fit-simplify-band"
+  # })  
 
 
   #76
@@ -1646,13 +1721,14 @@ This is the perfect set for your home gym and for fitness enthusiasts.",
     "【Customer Service】: If you are not satisfied with RENRANRING resistance bands set, please feel free to contact us, we will fully refund. And we hope customers to give suggestions for improvement."],
     price: 8.45,
     inventory: 99,
-    category_id: 4
+    category_id: 4,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/resistance-band-set.jpg"
   ) 
 
-  p76.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/resistance-band-set.jpg"),
-    filename: "resistance-band-set"
-  })  
+  # p76.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/resistance-band-set.jpg"),
+  #   filename: "resistance-band-set"
+  # })  
 
 
   #77
@@ -1670,13 +1746,14 @@ This is the perfect set for your home gym and for fitness enthusiasts.",
     "Dimensions: 74 x 24 x .5 inches"],
     price: 25.56,
     inventory: 20,
-    category_id: 4
+    category_id: 4,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/amazon-basic-mat.jpg"
   ) 
 
-  p77.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/amazon-basic-mat.jpg"),
-    filename: "amazon-basic-mat"
-  })  
+  # p77.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/amazon-basic-mat.jpg"),
+  #   filename: "amazon-basic-mat"
+  # })  
 
 
   #78
@@ -1691,13 +1768,14 @@ This is the perfect set for your home gym and for fitness enthusiasts.",
     "HIGH-QUALITY FOAM - High-density EVA foam provides excellent support and cushion; Contains NO toxic phthalates. Excellent alternative to rubber floor mats."],
     price: 25.89,
     inventory: 40,
-    category_id: 4
+    category_id: 4,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/prosource-puzzle-mat.jpg"
   ) 
 
-  p78.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/prosource-puzzle-mat.jpg"),
-    filename: "prosource-puzzle-mat"
-  })  
+  # p78.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/prosource-puzzle-mat.jpg"),
+  #   filename: "prosource-puzzle-mat"
+  # })  
 
 
   #79
@@ -1712,7 +1790,8 @@ This is the perfect set for your home gym and for fitness enthusiasts.",
     "3 COLOR OPTIONS - Comes in blue, grey, and black. Dimensions: 72 inch Lx 24 inchW x 1 1/2 inch T. Material - PVC and EPE foam"],
     price: 40.99,
     inventory: 15,
-    category_id: 4
+    category_id: 4,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/tri-fold-mat.jpg"
   ) 
 
   p79.photo.attach({
@@ -1733,13 +1812,14 @@ This is the perfect set for your home gym and for fitness enthusiasts.",
     "EASY TO CLEAN: Solana is easy to keep clean and fresh for your next workout. Use a mix of gentle soap and water, wipe clean, and hang it to dry. Do not submerge."],
     price: 35.56,
     inventory: 3,
-    category_id: 4
+    category_id: 4,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/retrospec-mat.jpg"
   ) 
 
-  p80.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/retrospec-mat.jpg"),
-    filename: "retrospec-mat"
-  })  
+  # p80.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/retrospec-mat.jpg"),
+  #   filename: "retrospec-mat"
+  # })  
 
 
   #81
@@ -1758,13 +1838,14 @@ Built to last, our solid core massage roller with EVA tread is made from top gra
     "eBook Companion Guide - Please download our companion eBook right here on this page, under the section called 'Product guides and documents' or eBook can be downloaded for free via the manufacture’s website, also arrives as an email attachment"],
     price: 28.99,
     inventory: 45,
-    category_id: 4
+    category_id: 4,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/321-roller.jpg"
   ) 
 
-  p81.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/321-roller.jpg"),
-    filename: "321-foam-roller"
-  }) 
+  # p81.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/321-roller.jpg"),
+  #   filename: "321-foam-roller"
+  # }) 
 
 
   #82
@@ -1779,13 +1860,14 @@ Built to last, our solid core massage roller with EVA tread is made from top gra
     "EASY TO USE: Roll the back pressure away in less than 5 minutes a day. Simply sit down, place the wheel at your back, and lean back for the perfect at-home massage. Our back stretcher wheel can be used on the ground or while sitting down in your favorite chair, so you can do what feels ideal on your back! Pick your pressure, the smaller the wheel, the more targeted the pressure; the larger the wheel, the greater the opening effect in the chest."],
     price: 59.99,
     inventory: 9,
-    category_id: 4
+    category_id: 4,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/wheel-roller.jpg"
   ) 
 
-  p82.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/wheel-roller.jpg"),
-    filename: "wheel-roller"
-  }) 
+  # p82.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/wheel-roller.jpg"),
+  #   filename: "wheel-roller"
+  # }) 
 
 
   #83
@@ -1800,13 +1882,14 @@ Built to last, our solid core massage roller with EVA tread is made from top gra
     "Normally you will need 1-3 days to adapt to this pillow, because your neck needs time to familiar with the new corrector curvature. You will enjoy an extreme comfort after you get used to it!"],
     price: 19.99,
     inventory: 9,
-    category_id: 4
+    category_id: 4,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/neck-relaxer.jpg"
   ) 
 
-  p83.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/neck-relaxer.jpg"),
-    filename: "neck-relaxer"
-  }) 
+  # p83.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/neck-relaxer.jpg"),
+  #   filename: "neck-relaxer"
+  # }) 
 
 
   #84
@@ -1823,13 +1906,14 @@ Built to last, our solid core massage roller with EVA tread is made from top gra
     "IDEAL FOR ANY AGE OR GENDER: Wide range of weights ideal for anyone wanting to improve fitness. Used for swings, deadlifts, squats, get-ups & snatches to work out many muscle groups and body parts including biceps, shoulders, legs, & more"],
     price: 20.59,
     inventory: 8,
-    category_id: 4
+    category_id: 4,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kettleball.jpg"
   ) 
 
-  p84.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kettleball.jpg"),
-    filename: "kettleball"
-  }) 
+  # p84.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kettleball.jpg"),
+  #   filename: "kettleball"
+  # }) 
 
 
 
@@ -1845,13 +1929,14 @@ Built to last, our solid core massage roller with EVA tread is made from top gra
     "Product dimensions: 6.88 x 4.3 x 7.5 inches (LxWxH)"],
     price: 26.00,
     inventory: 6,
-    category_id: 4
+    category_id: 4,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/amazon-kettleball.jpg"
   ) 
 
-  p85.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/amazon-kettleball.jpg"),
-    filename: "amazon-kettleball"
-  }) 
+  # p85.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/amazon-kettleball.jpg"),
+  #   filename: "amazon-kettleball"
+  # }) 
 
 
 
@@ -1867,13 +1952,14 @@ Built to last, our solid core massage roller with EVA tread is made from top gra
     "【Portable & Easy to Carry】 You can easily carry jump ropes for fitness with you. Put it in your pocket and jump rope for workout with it when needed, it’s that convenient. We are also happy to serve you! If you have any questions, please contact us and we’ll give a satisfying solution."],
     price: 8.99,
     inventory: 8,
-    category_id: 4
+    category_id: 4,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/jumprope.jpg"
   ) 
 
-  p86.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/jumprope.jpg"),
-    filename: "jumprope"
-  }) 
+  # p86.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/jumprope.jpg"),
+  #   filename: "jumprope"
+  # }) 
 
 
 
@@ -1889,13 +1975,14 @@ Built to last, our solid core massage roller with EVA tread is made from top gra
     "【Some Tips】These gold jewelry for women are packaged with nice BOX and ideal as a gift for women And we offer 60 days free return or exchange if you have any question,we will reply you in within 24 hours."],
     price: 15.99,
     inventory: 50,
-    category_id: 5
+    category_id: 5,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/Reoxvo+bracelets.jpg"
   ) 
 
-  p87.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/Reoxvo+bracelets.jpg"),
-    filename: "reoxvo-bracelets"
-  }) 
+  # p87.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/Reoxvo+bracelets.jpg"),
+  #   filename: "reoxvo-bracelets"
+  # }) 
 
 
   #88
@@ -1910,14 +1997,15 @@ Built to last, our solid core massage roller with EVA tread is made from top gra
     "GIVE THE GIFT OF JEWELRY: A timeless & traditional holiday or anniversary gift for a woman or girl of any age, Ross-Simons jewelry in luminous 14kt gold, 18kt gold, or 925 sterling silver, is the perfect gift to let her know just how much you care. Due to the naturally occurring characteristics of gemstones, each is unique and may exhibit imperfections such as inclusions , blemishes and cloudiness, as well as color variations."],
     price: 119.00,
     inventory: 88,
-    category_id: 5
+    category_id: 5,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/jade-ross.jpg"
   ) 
 
 
-  p88.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/jade-ross.jpg"),
-    filename: "jade-ross"
-  }) 
+  # p88.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/jade-ross.jpg"),
+  #   filename: "jade-ross"
+  # }) 
 
   
   #89
@@ -1934,13 +2022,14 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
     "🎁 THE LOVE PROMISE 🎁 : HEALING TRUST is committed to providing life-changing spiritual gifts for women and men. These healing crystal gifts such as wealth abundance jewelry, protection bracelet, pulseras para hombres, chakra bracelets and pulseras de mujer are for the soul. Jade for woman and jade for man, bracelets for teen girls, everyone can wear it. Aim to create beautiful beaded bracelets for women and men to give HAPPY MOOD."],
     price: 17.92,
     inventory: 7,
-    category_id: 5
+    category_id: 5,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/healing-jade.jpg"
   ) 
 
-  p89.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/healing-jade.jpg"),
-    filename: "healing-jade"
-  }) 
+  # p89.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/healing-jade.jpg"),
+  #   filename: "healing-jade"
+  # }) 
 
   #90
 
@@ -1954,13 +2043,14 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
     "Easy to match: 2 different styles are available, you can select your favorite style to match with your outfits, giving a nice feeling with you all day"],
     price: 8.99,
     inventory: 6,
-    category_id: 5
+    category_id: 5,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/howlite-bracelet.jpg"
   ) 
 
-  p90.photo.attach(
-    {io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/howlite-bracelet.jpg"),
-    filename: "howlite-jade"}
-  ) 
+  # p90.photo.attach(
+  #   {io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/howlite-bracelet.jpg"),
+  #   filename: "howlite-jade"}
+  # ) 
 
   #91
 
@@ -1972,13 +2062,14 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
     "Direct Manufacturer Prices & Free Certificate of Authenticity"],
     price: 19800.00,
     inventory: 80,
-    category_id: 5
+    category_id: 5,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/expensive-bracelets.jpg"
   ) 
 
-  p91.photo.attach(
-    {io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/expensive-bracelets.jpg"),
-    filename: "diamond-tennis-bracelet"}
-  )   
+  # p91.photo.attach(
+  #   {io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/expensive-bracelets.jpg"),
+  #   filename: "diamond-tennis-bracelet"}
+  # )   
 
 
   #92
@@ -1993,14 +2084,15 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
     "Want a different quality or looking for nicer earrings? We have over 10,000 earrings options available that you can purchase."],
     price: 12520.00,
     inventory: 15,
-    category_id: 5
+    category_id: 5,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/earring-expensive-1.jpg"
   ) 
 
 
-  p92.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/earring-expensive-1.jpg"),
-    filename: "diamond-stud-earrings"
-  })    
+  # p92.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/earring-expensive-1.jpg"),
+  #   filename: "diamond-stud-earrings"
+  # })    
 
   #93
 
@@ -2014,14 +2106,15 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
     "✦ PROUDLY AMERICAN-OWNED ✦"],
     price: 13.95,
     inventory: 35,
-    category_id: 5
+    category_id: 5,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/gold-earring.jpg"
   ) 
 
 
-  p93.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/gold-earring.jpg"),
-    filename: "gold-hoop-earrings"
-  })    
+  # p93.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/gold-earring.jpg"),
+  #   filename: "gold-hoop-earrings"
+  # })    
 
   #94
   
@@ -2035,14 +2128,15 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
     "How to Care for Your Kendra Scott Jewelry: To protect the plating, remove your jewelry prior to hand washing, swimming, exercising, cleaning, and before applying any kind personal body products. Maintain your jewelry’s high shine by avoiding contact with soap, perfume, lotion, makeup, hair & cleaning products."],
     price: 55.00,
     inventory: 55,
-    category_id: 5
+    category_id: 5,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kendra-pink-necklace.jpg"
   ) 
 
 
-  p94.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kendra-pink-necklace.jpg"),
-    filename: "kendra-pendant-necklace"
-  })    
+  # p94.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kendra-pink-necklace.jpg"),
+  #   filename: "kendra-pendant-necklace"
+  # })    
 
   # 95
   
@@ -2056,14 +2150,15 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
     "GIFT BOX INCLUDED - Miabella jewelry is shipped in an elegant gift box, ready to treat yourself or a loved one for any anniversary, Birthday, Christmas, Father’s Day, Mother's Day, Valentine’s Day, Wedding, Graduation and any other holiday or special occasion gifting. From cool modern to classic vintage, Miabella offers high quality affordable sterling silver jewelry for men and women, comfortable for everyday wear and for all occasions. 30-day, 100% money-back guarantee."],
     price: 39.90,
     inventory: 39,
-    category_id: 5
+    category_id: 5,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/chain-necklace.jpg"
   ) 
 
 
-  p95.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/chain-necklace.jpg"),
-    filename: "miabella-necklace"
-  })    
+  # p95.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/chain-necklace.jpg"),
+  #   filename: "miabella-necklace"
+  # })    
 
 
   #96
@@ -2078,13 +2173,14 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
     "Product Warranty and Customer Service: We provide 48-day money-back and 24-month warranty. So feel free to contact us if you have any question"],
     price: 7.99,
     inventory: 9,
-    category_id: 5
+    category_id: 5,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/black-velvet-choker.jpg"
   ) 
 
-  p96.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/black-velvet-choker.jpg"),
-    filename: "choker-necklaces"
-  })    
+  # p96.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/black-velvet-choker.jpg"),
+  #   filename: "choker-necklaces"
+  # })    
 
 
 
@@ -2100,13 +2196,14 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
     "✿AFTER-SALES SERVICE ✿: We will be responsible for our own products. Any questions can be answered and resolved within 12 hours, Thank you very much for your support to our products and brands.And we desire to know your true ideas of all details about the items, so that we can do better at products&service."],
     price: 13.99,
     inventory: 15,
-    category_id: 5
+    category_id: 5,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/rings.jpg"
   ) 
 
-  p97.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/rings.jpg"),
-    filename: "silver-rings"
-  })    
+  # p97.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/rings.jpg"),
+  #   filename: "silver-rings"
+  # })    
 
 
   #98
@@ -2121,13 +2218,14 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
     "Satisfactory after-sales Service - Each earring and ear stud from Tustrion comes with worry-free 12 months of after-sales service. A replacement or refund is allowed if you are not satisfied with the product, please feel free to contact me to replace the product or get a refund."],
     price: 14.99,
     inventory: 20,
-    category_id: 5
+    category_id: 5,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/men-earrings.jpg"
   ) 
 
-  p98.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/men-earrings.jpg"),
-    filename: "men-earrings"
-  })    
+  # p98.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/men-earrings.jpg"),
+  #   filename: "men-earrings"
+  # })    
 
 
   #99
@@ -2142,14 +2240,15 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
     "【100% MONEY BACK GUARANTEED】- 60-day hassle free return. Reply within 24 hours. There are a variety of tie clip styles to choose from."],
     price: 12.99,
     inventory: 3,
-    category_id: 5
+    category_id: 5,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/mozeto-tie-clips.jpg"
   ) 
 
 
-  p99.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/mozeto-tie-clips.jpg"),
-    filename: "mozeto-tie-clips"
-  })    
+  # p99.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/mozeto-tie-clips.jpg"),
+  #   filename: "mozeto-tie-clips"
+  # })    
 
 
   #100
@@ -2164,13 +2263,14 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
     "100% Money Back Guarantee – With this 100% Money Back Guarantee you can rest assured that even if the slightest thing won’t match your expectations, you can easily get your money back."],
     price: 9.99,
     inventory: 0,
-    category_id: 5
+    category_id: 5,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/men-ring.jpg"
   ) 
 
-  p100.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/men-ring.jpg"),
-    filename: "silicone-ring-men"
-  })     
+  # p100.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/men-ring.jpg"),
+  #   filename: "silicone-ring-men"
+  # })     
 
 
   #101
@@ -2185,13 +2285,14 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
     "90 DAY MONEY BACK GUARANTEE-100% satisfaction guaranteed. That is our promise. So, if you're not completely happy with your purchase within the first 90 days, just let us know. We will do whatever it takes to make it right"],
     price: 10.99,
     inventory: 2,
-    category_id: 5
+    category_id: 5,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/men-bracelet.jpg"
   ) 
 
-  p101.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/men-bracelet.jpg"),
-    filename: "genuine-leather-men"
-  })     
+  # p101.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/men-bracelet.jpg"),
+  #   filename: "genuine-leather-men"
+  # })     
 
 
   #102
@@ -2209,13 +2310,14 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
     "There Are Two Different Style Of This Women Casual Short Dress: . Please Pay Attention About That, To Create More Relaxed And Casual Feelings Of This Women Elegant Dress, This Bottom Of The Dress Doesn¡¯t Sew The Hem, That's The Original Design"],
     price: 32.99,
     inventory: 20,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/btfbm-dress.jpg"
   ) 
 
-  p102.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/btfbm-dress.jpg"),
-    filename: "btfbm-dress"
-  })    
+  # p102.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/btfbm-dress.jpg"),
+  #   filename: "btfbm-dress"
+  # })    
 
 
   #103
@@ -2233,13 +2335,14 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
     "★Occasions: Party, dating, cocktail, wedding, shopping, hang-out, night-out, vacation, holiday, fall, winter, spring and summer."],
     price: 40.99,
     inventory: 15,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/consonen-dress.jpg"
   ) 
 
-  p103.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/consonen-dress.jpg"),
-    filename: "cosonsen-dress"
-  })    
+  # p103.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/consonen-dress.jpg"),
+  #   filename: "cosonsen-dress"
+  # })    
 
 
   #104
@@ -2259,13 +2362,14 @@ This panel accentuates the waist beautifully, and because it’s higher up on th
     "Washing Care - It’s washing by hand or machine with cold water, do not bleach. hang or line dry."],
     price: 37.99,
     inventory: 30,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/ecowish-dress.jpg"
   ) 
 
-  p104.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/ecowish-dress.jpg"),
-    filename: "ecowish-dress"
-  })    
+  # p104.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/ecowish-dress.jpg"),
+  #   filename: "ecowish-dress"
+  # })    
 
 
 
@@ -2285,13 +2389,14 @@ This panel accentuates the waist beautifully, and because it’s higher up on th
     "MEROKEETY is an USA registered brand,we accept 30 days free returns."],
     price: 50.99,
     inventory: 50,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/lace-dress.jpg"
   ) 
 
-  p105.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/lace-dress.jpg"),
-    filename: "merokeety-lace-dress"
-  }) 
+  # p105.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/lace-dress.jpg"),
+  #   filename: "merokeety-lace-dress"
+  # }) 
 
 
   #106
@@ -2309,13 +2414,14 @@ This panel accentuates the waist beautifully, and because it’s higher up on th
     "Occasions: suitable for casual daily wear"],
     price: 49.99,
     inventory: 0,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/leather-women-pants.jpg"
   ) 
 
-  p106.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/leather-women-pants.jpg"),
-    filename: "leather-jeans-women"
-  }) 
+  # p106.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/leather-women-pants.jpg"),
+  #   filename: "leather-jeans-women"
+  # }) 
 
 
 
@@ -2332,14 +2438,15 @@ This panel accentuates the waist beautifully, and because it’s higher up on th
     "High Rise Ankle length skinny. Made with soft, premium fabrics"],
     price: 49.94,
     inventory: 10,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/democracy-jeans.jpg"
   ) 
 
 
-  p107.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/democracy-jeans.jpg"),
-    filename: "democracy-high-rise-jeans"
-  }) 
+  # p107.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/democracy-jeans.jpg"),
+  #   filename: "democracy-high-rise-jeans"
+  # }) 
 
 
   #108
@@ -2357,13 +2464,14 @@ This panel accentuates the waist beautifully, and because it’s higher up on th
     "The model in the image is 5 feet 9 inch and is wearing 27 x 28."],
     price: 47.10,
     inventory: 66,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/levi-jean-straight.jpg"
   )
 
-  p108.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/levi-jean-straight.jpg"),
-    filename: "levi-women-straight-jeans"
-  }) 
+  # p108.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/levi-jean-straight.jpg"),
+  #   filename: "levi-women-straight-jeans"
+  # }) 
 
 
 
@@ -2382,13 +2490,14 @@ This panel accentuates the waist beautifully, and because it’s higher up on th
     "BRAND - Effortlessly fun and stylish Gloria Vanderbilt is a versatile yet classic look that attracts and connects with the modern sensibility of consumers of all ages."],
     price: 14.99,
     inventory: 20,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/gloria-jean.jpg"
   ) 
 
-  p109.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/gloria-jean.jpg"),
-    filename: "gloria-vanderbilt-jean"
-  }) 
+  # p109.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/gloria-jean.jpg"),
+  #   filename: "gloria-vanderbilt-jean"
+  # }) 
 
 
 
@@ -2408,13 +2517,14 @@ This panel accentuates the waist beautifully, and because it’s higher up on th
     "★Note: Machine washable/Hand wash cold recommended, do not bleach. Please let us know if there is any question or problem of the jacket, we would response you timely with 24 hours."],
     price: 32.98,
     inventory: 0,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/automet-plaid.jpg"
   ) 
 
-  p110.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/automet-plaid.jpg"),
-    filename: "automet-plaid"
-  }) 
+  # p110.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/automet-plaid.jpg"),
+  #   filename: "automet-plaid"
+  # }) 
 
 
 
@@ -2434,13 +2544,14 @@ This panel accentuates the waist beautifully, and because it’s higher up on th
     "Washing Instruction: Machine washable, recommend with a laundry bag, do not iron, do not bleach, hang or line dry."],
     price: 20.99,
     inventory: 89,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/sweetheart+crop+top.jpg"
   ) 
 
-  p111.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/sweetheart+crop+top.jpg"),
-    filename: "sweetheart-crop-top"
-  }) 
+  # p111.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/sweetheart+crop+top.jpg"),
+  #   filename: "sweetheart-crop-top"
+  # }) 
 
 
 
@@ -2462,13 +2573,14 @@ This panel accentuates the waist beautifully, and because it’s higher up on th
     "COLD WATER WASH – Hanes recommends machine washing this women's shirt in cold water to help reduce energy consumption."],
     price: 14.77,
     inventory: 7,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/hanes-polo-shirt.jpg"
   ) 
 
-  p112.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/hanes-polo-shirt.jpg"),
-    filename: "hanes-polo-shirt"
-  }) 
+  # p112.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/hanes-polo-shirt.jpg"),
+  #   filename: "hanes-polo-shirt"
+  # }) 
 
 
   #113
@@ -2485,13 +2597,14 @@ This panel accentuates the waist beautifully, and because it’s higher up on th
     "[ About us ] FREE returns up to 10 days. Chicwish cares for its customers most and we would love to hear any voice from you. If you have any question, suggestion or concern, don't hesitate to speak with us. Thank you for all your support."],
     price: 69.90,
     inventory: 66,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/chiwish-jacket.jpg"
   ) 
 
-  p113.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/chiwish-jacket.jpg"),
-    filename: "chicwish-coat"
-  })   
+  # p113.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/chiwish-jacket.jpg"),
+  #   filename: "chicwish-coat"
+  # })   
 
 
   #114
@@ -2512,13 +2625,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     "Oversize cutting sweaters are suitable for most women, size S/M=US 4-10, L/XL=US 12-18; Note: Hand wash recommended with cold water; Machine wash cold gentle cycle. Hang or line dry"],
     price: 32.99,
     inventory: 45,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/ugerlov-sweater.jpg"
   ) 
 
-  p114.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/ugerlov-sweater.jpg"),
-    filename: "ugerlov-sweater"
-  })   
+  # p114.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/ugerlov-sweater.jpg"),
+  #   filename: "ugerlov-sweater"
+  # })   
 
 
   #115
@@ -2536,13 +2650,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     "Washing Instruction: Machine wash,recommend with a laundry bag, do not bleach, do not iron, hang or line dry."],
     price: 41.99,
     inventory: 36,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/womens-turtleneckl.jpg"
   ) 
 
-  p115.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/womens-turtleneckl.jpg"),
-    filename: "turtleneck-sweater"
-  })   
+  # p115.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/womens-turtleneckl.jpg"),
+  #   filename: "turtleneck-sweater"
+  # })   
 
 
   #116
@@ -2560,13 +2675,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     "Garment Care: Hand Wash Recommended With Cold Water / Do Not Bleach / Hang wash Or Line Dry."],
     price: 26.99,
     inventory: 88,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/shermie-heart-sweater.jpg"
   ) 
 
-  p116.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/shermie-heart-sweater.jpg"),
-    filename: "shermie-sweater"
-  })   
+  # p116.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/shermie-heart-sweater.jpg"),
+  #   filename: "shermie-sweater"
+  # })   
 
 
   #117
@@ -2585,13 +2701,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     "Garment Care: Machine wash cold separately on gentle cycle with a laundry bag; Hand wash recommended, using a mild gentle soap, no bleach or dry."],
     price: 79.99,
     inventory: 65,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/puffer-jacket-merokeety.jpg"
   ) 
 
-  p117.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/puffer-jacket-merokeety.jpg"),
-    filename: "puffer-merokeety-jacket"
-  })     
+  # p117.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/puffer-jacket-merokeety.jpg"),
+  #   filename: "puffer-merokeety-jacket"
+  # })     
 
 
   #118
@@ -2611,13 +2728,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     "Warm Tips - The women crop puffer vest will be folded and compacted inside of the package when delivery, lightly pat the Vest jacket with your hands and then have it hang under the sun for some hours, it will become puffer again"],
     price: 36.97,
     inventory: 88,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/crop-vest.jpg"
   ) 
 
-  p118.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/crop-vest.jpg"),
-    filename: "crop-vest"
-  })     
+  # p118.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/crop-vest.jpg"),
+  #   filename: "crop-vest"
+  # })     
 
 
   #119
@@ -2636,13 +2754,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     "An Amazon Brand"],
     price: 7.70,
     inventory: 66,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/women-amazon-socks.jpg"
   ) 
 
-  p119.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/women-amazon-socks.jpg"),
-    filename: "amazon-socks"
-  })  
+  # p119.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/women-amazon-socks.jpg"),
+  #   filename: "amazon-socks"
+  # })  
 
 
   #120
@@ -2658,13 +2777,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     "Arch support for a secure fit."],
     price: 19.90,
     inventory: 55,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/nike-socks.jpg"
   )
 
-  p120.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/nike-socks.jpg"),
-    filename: "nike-socks"
-  })  
+  # p120.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/nike-socks.jpg"),
+  #   filename: "nike-socks"
+  # })  
 
 
 
@@ -2685,14 +2805,15 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     "Lay-flat collar"],
     price: 18.99,
     inventory: 12,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/men-crew-pack.jpg"
   ) 
 
 
-  p121.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/men-crew-pack.jpg"),
-    filename: "crew-pack"
-  })    
+  # p121.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/men-crew-pack.jpg"),
+  #   filename: "crew-pack"
+  # })    
 
   #122
 
@@ -2710,13 +2831,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     "Warm Tips --- Washing Max Temperature 40°C. Machine and hand wash are both available for the mens floral hawaiian shirts. Please refer to our size chart carefully before you order."],
     price: 29.99,
     inventory: 50,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/tropical-green-shirt.jpg"
   ) 
 
-  p122.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/tropical-green-shirt.jpg"),
-    filename: "hawaiian-floral-shirt"
-  })    
+  # p122.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/tropical-green-shirt.jpg"),
+  #   filename: "hawaiian-floral-shirt"
+  # })    
 
 
   #123
@@ -2734,13 +2856,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     "【Customer Service】Any problem about our product, please feel free to contact with us,we will respond and resolve your issues in a timely manner.Look forward to your choice"],
     price: 22.99,
     inventory: 0,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/white-jver-shirt.jpg"
   ) 
 
-  p123.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/white-jver-shirt.jpg"),
-    filename: "jver-white-shirt"
-  })  
+  # p123.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/white-jver-shirt.jpg"),
+  #   filename: "jver-white-shirt"
+  # })  
 
   #124
 
@@ -2756,13 +2879,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     "We make jeans, outerwear, school & work uniforms, sports shirts, kids wear, hats, socks, underwear, boots, gloves, belts, eyewear, backpacks, bags & much more."],
     price: 18.99,
     inventory: 15,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/dickies-tee.jpg"
   ) 
 
-  p124.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/dickies-tee.jpg"),
-    filename: "dickies-tee"
-  })  
+  # p124.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/dickies-tee.jpg"),
+  #   filename: "dickies-tee"
+  # })  
 
 
   #125
@@ -2783,13 +2907,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     "EASY MACHINE WASHING - Throw in the washer, tumble dry low."],
     price: 13.56,
     inventory: 66,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/champion-shirt.jpg"
   ) 
 
-  p125.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/champion-shirt.jpg"),
-    filename: "champion-shirt"
-  })    
+  # p125.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/champion-shirt.jpg"),
+  #   filename: "champion-shirt"
+  # })    
 
 
   #126
@@ -2808,13 +2933,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     "LIVE THE GOOD LIFE – At vineyard vines, we think every day should feel this good! We are family owned and operated since 1998. For over 20 years, we’ve been sharing the gift of the Vineyard with everyone we can."],
     price: 32.40,
     inventory: 50,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/vineyard-pullover.jpg"
   ) 
 
-  p126.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/vineyard-pullover.jpg"),
-    filename: "vineyard-pullover"
-  })    
+  # p126.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/vineyard-pullover.jpg"),
+  #   filename: "vineyard-pullover"
+  # })    
 
 
   #127
@@ -2832,13 +2958,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     "❤️❤ 【Soft Fall Sweater】: If it not fit you or have any other question about the comfy casual sweater , we can exchange it for free or refund. If you have any problems, please contact us by email first, our customer service will solve your problems as soon as possible."],
     price: 48.99,
     inventory: 48,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/vineyard-pullover.jpg"
   ) 
 
-  p127.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/vineyard-pullover.jpg"),
-    filename: "vineyard-pullover"
-  })    
+  # p127.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/vineyard-pullover.jpg"),
+  #   filename: "vineyard-pullover"
+  # })    
 
 
   #128
@@ -2855,13 +2982,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     "Machine wash with cold water. Do not bleach, do not iron, please hang dry or tumble dry low."],
     price: 30.99,
     inventory: 8,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kallspin-sweater.jpg"
   ) 
 
-  p128.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kallspin-sweater.jpg"),
-    filename: "kallspin-sweater"
-  })    
+  # p128.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kallspin-sweater.jpg"),
+  #   filename: "kallspin-sweater"
+  # })    
 
 
 
@@ -2881,13 +3009,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     "NO IRON: Whether you are at the office our out on the weekend the easy care of eliminating the need to iron will make this your favorite casual pant!"],
     price: 55.00,
     inventory: 65,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/haggar-men-pants.jpg"
   ) 
 
-  p129.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/haggar-men-pants.jpg"),
-    filename: "haggar-men-pants"
-  })    
+  # p129.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/haggar-men-pants.jpg"),
+  #   filename: "haggar-men-pants"
+  # })    
 
   #130
 
@@ -2906,14 +3035,15 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     "Notice: Belt not included, please buy separately"],
     price: 39.99,
     inventory: 31,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/match-men-cargo-pants.jpg"
   ) 
 
 
-  p130.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/match-men-cargo-pants.jpg"),
-    filename: "match-man-cargo"
-  })    
+  # p130.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/match-men-cargo-pants.jpg"),
+  #   filename: "match-man-cargo"
+  # })    
 
 
   #131
@@ -2931,13 +3061,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     "The model in the image is and is wearing 44 x 32."],
     price: 48.65,
     inventory: 19,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/levi-men.jpg"
   ) 
 
-  p131.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/levi-men.jpg"),
-    filename: "levi-men"
-  })      
+  # p131.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/levi-men.jpg"),
+  #   filename: "levi-men"
+  # })      
 
 
   #132
@@ -2956,13 +3087,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     "SPECIFICATIONS. Zipper fly with button closure, signature label at back waistband, leg opening: 15.75 inches."],
     price: 44.22,
     inventory: 0,
-    category_id: 6
+    category_id: 6,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/lee-tan-jean.jpg"
   ) 
 
-  p132.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/lee-tan-jean.jpg"),
-    filename: "lee-tan-jean"
-  })  
+  # p132.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/lee-tan-jean.jpg"),
+  #   filename: "lee-tan-jean"
+  # })  
 
 
   #133
@@ -2977,13 +3109,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     "Enjoy the great taste of Dunkin’ at home"],
     price: 18.97,
     inventory: 66,
-    category_id: 7
+    category_id: 7,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/dunkin-coffee.jpg"
   ) 
 
-  p133.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/dunkin-coffee.jpg"),
-    filename: "dunkin"
-  }) 
+  # p133.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/dunkin-coffee.jpg"),
+  #   filename: "dunkin"
+  # }) 
 
 
   #134
@@ -2998,13 +3131,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     "Two Rivers Coffee is not affiliated or endorsed by Keurig Dr Pepper. Keurig Dr Pepper, Keurig, K-Cup and Green Mountain are registered trademarks of Keurig Dr Pepper."],
     price: 21.95,
     inventory: 88,
-    category_id: 7
+    category_id: 7,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/keurig-coffee.jpg"
   ) 
 
-  p134.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/keurig-coffee.jpg"),
-    filename: "keurig-coffee"
-  }) 
+  # p134.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/keurig-coffee.jpg"),
+  #   filename: "keurig-coffee"
+  # }) 
 
 
   #135
@@ -3019,14 +3153,15 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     "ETHICALLY SOURCED—Starbucks is committed to 100% ethical coffee sourcing in partnership with Conservation International"],
     price: 55.97,
     inventory: 66,
-    category_id: 7
+    category_id: 7,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/starbucks.jpg"
   ) 
 
 
-  p135.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/starbucks.jpg"),
-    filename: "starbucks-coffee"
-  })   
+  # p135.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/starbucks.jpg"),
+  #   filename: "starbucks-coffee"
+  # })   
 
 
   #136
@@ -3041,13 +3176,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     "Perfect tasty snack for school lunches, sporting games, the office and more"],
     price: 9.49,
     inventory: 14,
-    category_id: 7
+    category_id: 7,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/welch.jpg"
   ) 
 
-  p136.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/welch.jpg"),
-    filename: "welch-fruit-snacks"
-  })  
+  # p136.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/welch.jpg"),
+  #   filename: "welch-fruit-snacks"
+  # })  
 
 
   #137
@@ -3062,13 +3198,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     "Convenient on-the-go snacks great for a busy lifestyle, at work, kids' lunch snacks and much more"],
     price: 17.99,
     inventory: 99,
-    category_id: 7
+    category_id: 7,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/popcorners.jpg"
   ) 
 
-  p137.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/popcorners.jpg"),
-    filename: "popcorners"
-  })  
+  # p137.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/popcorners.jpg"),
+  #   filename: "popcorners"
+  # })  
 
 
 
@@ -3084,14 +3221,15 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     "Each pack contains 2 cookies and has 100 – 120 calories per pack"],
     price: 22.58,
     inventory: 54,
-    category_id: 7
+    category_id: 7,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/oreo.jpg"
   ) 
 
 
-  p138.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/oreo.jpg"),
-    filename: "oreos"
-  })  
+  # p138.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/oreo.jpg"),
+  #   filename: "oreos"
+  # })  
 
 
 
@@ -3107,13 +3245,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     "Gluten Free, Non-GMO Project Verified, contains tree nuts (pistachios), has 130 mg of phosphorus and 280 mg of potassium per serving, and contains only pistachios and sea salt."],
     price: 15.98,
     inventory: 35,
-    category_id: 7
+    category_id: 7,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/pistachios.jpg"
   ) 
 
-  p139.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/pistachios.jpg"),
-    filename: "pistachios"
-  })  
+  # p139.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/pistachios.jpg"),
+  #   filename: "pistachios"
+  # })  
 
 
   #140
@@ -3128,13 +3267,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     "Ideal for healthy, on the go nutrition for men, women, and kids. These are great for meal replacement, smoothie boosters, muscle recovery, and pre or post workouts"],
     price: 26.99,
     inventory: 66,
-    category_id: 7
+    category_id: 7,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/proteim.jpg"
   ) 
 
-  p140.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/proteim.jpg"),
-    filename: "orgain-protein"
-  })    
+  # p140.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/proteim.jpg"),
+  #   filename: "orgain-protein"
+  # })    
 
 
   #141
@@ -3148,13 +3288,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     "Our honey is raw & unfiltered meaning it is gently warmed for pourability and unfiltered to keep the natural good stuff like pollen intact"],
     price: 10.63,
     inventory: 55,
-    category_id: 7
+    category_id: 7,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/honey.jpg"
   ) 
 
-  p141.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/honey.jpg"),
-    filename: "honey"
-  })     
+  # p141.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/honey.jpg"),
+  #   filename: "honey"
+  # })     
 
   #142
   
@@ -3169,13 +3310,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
     "An Amazon brand"],
     price: 9.94,
     inventory: 10,
-    category_id: 7
+    category_id: 7,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/amazon-walnuts.jpg"
   ) 
 
-  p142.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/amazon-walnuts.jpg"),
-    filename: "amazon-walnuts"
-  })    
+  # p142.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/amazon-walnuts.jpg"),
+  #   filename: "amazon-walnuts"
+  # })    
 
 
   #143
@@ -3191,13 +3333,14 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
     "FRESHNESS : DAECHUN seaweed is harvested from the Clean West Sea of Korea. The Freshness of our products is our highest priority. We possess hygienic production lines that can continuously product high quality and fresh seaweed"],
     price: 13.99,
     inventory: 54,
-    category_id: 7
+    category_id: 7,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/daechun-seaweed.jpg"
   ) 
 
-  p143.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/daechun-seaweed.jpg"),
-    filename: "daechun-seaweed"
-  })    
+  # p143.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/daechun-seaweed.jpg"),
+  #   filename: "daechun-seaweed"
+  # })    
 
 
 
@@ -3214,13 +3357,14 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
     "Product Note: Exposure to heat or sunlight may lead to melting/damage of product. Hence customers are expected to be available during the product delivery"],
     price: 15.05,
     inventory: 64,
-    category_id: 7
+    category_id: 7,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/albanese-gummy.jpg"
   ) 
 
-  p144.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/albanese-gummy.jpg"),
-    filename: "albanese-gummy"
-  }) 
+  # p144.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/albanese-gummy.jpg"),
+  #   filename: "albanese-gummy"
+  # }) 
 
 
   #145
@@ -3235,13 +3379,14 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
     "HARIBO Original Goldbears Gummi Candy, 3 Pound Bag"],
     price: 10.88,
     inventory: 20,
-    category_id: 7
+    category_id: 7,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/haribo-gummy.jpg"
   )
 
-  p145.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/haribo-gummy.jpg"),
-    filename: "haribo-gummy"
-  }) 
+  # p145.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/haribo-gummy.jpg"),
+  #   filename: "haribo-gummy"
+  # }) 
 
 
 
@@ -3257,13 +3402,14 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
     "EASTER GIFTS FOR KIDS: Add Easter joy to your holiday with an Easter gift for kids that's the perfect Easter basket stuffer"],
     price: 6.48,
     inventory: 35,
-    category_id: 7
+    category_id: 7,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kinder-joy.jpg"
   ) 
 
-  p146.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kinder-joy.jpg"),
-    filename: "kinder-joy-egg"
-  })   
+  # p146.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kinder-joy.jpg"),
+  #   filename: "kinder-joy-egg"
+  # })   
 
   #147
   
@@ -3277,13 +3423,14 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
     "Enjoy a giant bar of the classic, creamy HERSHEY'S milk chocolate Christmas, Valentine's Day, Easter and Halloween candy the world has known and loved for decades"],
     price: 11.90,
     inventory: 8,
-    category_id: 7
+    category_id: 7,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/hershey.jpg"
   )
 
-  p147.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/hershey.jpg"),
-    filename: "hersheys"
-  })     
+  # p147.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/hershey.jpg"),
+  #   filename: "hersheys"
+  # })     
 
   #148
 
@@ -3300,13 +3447,14 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
     "Specialty: vegetarian"],
     price: 36.51,
     inventory: 94,
-    category_id: 7
+    category_id: 7,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/strawberry-chocolate.jpg"
   )
   
-  p148.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/strawberry-chocolate.jpg"),
-    filename: "chocolate-strawberries"
-  })   
+  # p148.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/strawberry-chocolate.jpg"),
+  #   filename: "chocolate-strawberries"
+  # })   
 
   #149
 
@@ -3318,13 +3466,14 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
     "Item Package Dimension: 5.31cm L x 22.5cm W x 30.99cm H"],
     price: 28.91,
     inventory: 19,
-    category_id: 7
+    category_id: 7,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/godiva.jpg"
   )
 
-  p149.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/godiva.jpg"),
-    filename: "godiva-chocolates"
-  })    
+  # p149.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/godiva.jpg"),
+  #   filename: "godiva-chocolates"
+  # })    
 
 
   #150
@@ -3339,13 +3488,14 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
     "Verified SHARK TANK brand. Join the poppi movement!"],
     price: 26.99,
     inventory: 89,
-    category_id: 7
+    category_id: 7,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/poppi.jpg"
   )
 
-  p150.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/poppi.jpg"),
-    filename: "poppi-soda"
-  })    
+  # p150.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/poppi.jpg"),
+  #   filename: "poppi-soda"
+  # })    
 
 
   #151
@@ -3360,13 +3510,14 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
     "Includes twelve 18.5 ounce bottles"],
     price: 18.00,
     inventory: 45,
-    category_id: 7
+    category_id: 7,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/pure-leaf.jpg"
   )
 
-  p151.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/pure-leaf.jpg"),
-    filename: "pure-leaf"
-  })  
+  # p151.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/pure-leaf.jpg"),
+  #   filename: "pure-leaf"
+  # })  
 
 
   #152
@@ -3382,13 +3533,14 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
     "Please check expiration dates before consuming product (expiration date can be found on the top of our cartons.)"],
     price: 29.88,
     inventory: 55,
-    category_id: 7
+    category_id: 7,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/vita-coco.jpg"
   )
 
-  p152.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/vita-coco.jpg"),
-    filename: "vita-coco"
-  })    
+  # p152.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/vita-coco.jpg"),
+  #   filename: "vita-coco"
+  # })    
 
   #153
 
@@ -3402,13 +3554,14 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
     "Delicious tastes she's sure to adore. Multi-can variety pack makes it easy to stock your pantry"],
     price: 21.97,
     inventory: 63,
-    category_id: 8
+    category_id: 8,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/fancy-feast-cat.jpg"
   )
 
-  p153.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/fancy-feast-cat.jpg"),
-    filename: "fancy-feast-cat"
-  })    
+  # p153.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/fancy-feast-cat.jpg"),
+  #   filename: "fancy-feast-cat"
+  # })    
 
 
 
@@ -3424,14 +3577,15 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
     "Made in the USA with global ingredients you can trust"],
     price: 30.87,
     inventory: 99,
-    category_id: 8
+    category_id: 8,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/hill-dry-cat.jpg"
   )
 
 
-  p154.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/hill-dry-cat.jpg"),
-    filename: "hill-dry-food"
-  })    
+  # p154.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/hill-dry-cat.jpg"),
+  #   filename: "hill-dry-food"
+  # })    
 
 
   #155
@@ -3447,14 +3601,15 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
     "10percent less fat compared to IAMS Healthy adult original with chicken, so your cat can enjoy a high quality protein meal"],
     price: 30.38,
     inventory: 2,
-    category_id: 8
+    category_id: 8,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/iams-cat.jpg"
   )
 
 
-  p155.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/iams-cat.jpg"),
-    filename: "iams-dry-food"
-  })    
+  # p155.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/iams-cat.jpg"),
+  #   filename: "iams-dry-food"
+  # })    
 
 
 
@@ -3470,13 +3625,14 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
     "5. CONSIDERATIONS: As this is an interactive cat toy, we kindly suggest supervise your cat all the time when playing this toy, in case they bite the string and handle. Never leave your cat alone with this toy, Keep it in a safe place pets can’t reach. For any questions, please feel free to reach us, we will help you."],
     price: 11.58,
     inventory: 55,
-    category_id: 8
+    category_id: 8,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/cat-feather-toy.jpg"
   )
 
-  p156.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/cat-feather-toy.jpg"),
-    filename: "feather-cat-toy"
-  })    
+  # p156.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/cat-feather-toy.jpg"),
+  #   filename: "feather-cat-toy"
+  # })    
 
 
   #157
@@ -3499,13 +3655,14 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
     "【Risk-free purchase】While not every cat will like this door frame cat toy, young, curious, or active cats will be more excited about it. We offer a 30-day free return policy, so if your pet doesn't like the toy, contact us for a satisfied solution."],
     price: 6.99,
     inventory: 10,
-    category_id: 8
+    category_id: 8,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/hanging-toy-cat.jpg"
   )
 
-  p157.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/hanging-toy-cat.jpg"),
-    filename: "hanging-cat-toy"
-  })    
+  # p157.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/hanging-toy-cat.jpg"),
+  #   filename: "hanging-cat-toy"
+  # })    
 
 
   #158
@@ -3520,13 +3677,14 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
     "SERVICE - 100% refund or replace will be supported if not satisfied and just be free to contact us if any questions."],
     price: 8.97,
     inventory: 88,
-    category_id: 8
+    category_id: 8,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/cat-chew-toy.jpg"
   )
 
-  p158.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/cat-chew-toy.jpg"),
-    filename: "cat-chew-toy"
-  })    
+  # p158.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/cat-chew-toy.jpg"),
+  #   filename: "cat-chew-toy"
+  # })    
 
 
   #159
@@ -3541,14 +3699,15 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
     "KABOB SHAPE: Wrapped with premium cuts of real chicken, duck and chicken liver flavor canines crave."],
     price: 33.98,
     inventory: 42,
-    category_id: 8
+    category_id: 8,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/good-fun-dog-treat.jpg"
   )
 
   
-  p159.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/good-fun-dog-treat.jpg"),
-    filename: "good-fun-dogs"
-  })  
+  # p159.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/good-fun-dog-treat.jpg"),
+  #   filename: "good-fun-dogs"
+  # })  
 
 
   #160
@@ -3563,13 +3722,14 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
     "Bone-shaped deliciousness that makes dog life more fun"],
     price: 14.23,
     inventory: 64,
-    category_id: 8
+    category_id: 8,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/milk-bone-dog.jpg"
   )
 
-  p160.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/milk-bone-dog.jpg"),
-    filename: "milk-bone-dogs"
-  })  
+  # p160.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/milk-bone-dog.jpg"),
+  #   filename: "milk-bone-dogs"
+  # })  
 
 
   #161
@@ -3584,14 +3744,15 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
     "Loved since 1908"],
     price: 13.76,
     inventory: 22,
-    category_id: 8
+    category_id: 8,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/milk-soft-chewy-dog.jpg"
   )
 
 
-  p161.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/milk-soft-chewy-dog.jpg"),
-    filename: "milk-chew-dogs"
-  })  
+  # p161.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/milk-soft-chewy-dog.jpg"),
+  #   filename: "milk-chew-dogs"
+  # })  
 
 
   #162
@@ -3606,13 +3767,14 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
     "Lifetime Replacement Guarantee : GOOLA Durable dog toy has a lightweight firedragon shape design,which is perfect for puppy,small,middle and large dogs(Do not recommend for extreme strong bite dogs), and is easy to throw it out and bring the pet into the game. For squeaky problematic toys, just click 'Contact Us' and we will be happy to help you with replacement or refund."],
     price: 13.48,
     inventory: 0,
-    category_id: 8
+    category_id: 8,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/goola-dog-toy.jpg"
   )
 
-  p162.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/goola-dog-toy.jpg"),
-    filename: "goola-dog-toy"
-  })  
+  # p162.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/goola-dog-toy.jpg"),
+  #   filename: "goola-dog-toy"
+  # })  
 
 
   #163
@@ -3626,13 +3788,14 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
     "Active Play, Tossing, and Retrieving - Our cute duck chew toys for dogs can be used for bonding with your puppy, reducing stress or separation anxiety, or simply giving them an active outlet for channeling aggression or intense play"],
     price: 5.99,
     inventory: 18,
-    category_id: 8
+    category_id: 8,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/duck-dog-toy.jpg"
   )
 
-  p163.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/duck-dog-toy.jpg"),
-    filename: "duck-dog-toy"
-  }) 
+  # p163.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/duck-dog-toy.jpg"),
+  #   filename: "duck-dog-toy"
+  # }) 
 
   #164
 
@@ -3647,13 +3810,14 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
     "You will receive one item"],
     price: 6.19,
     inventory: 88,
-    category_id: 8
+    category_id: 8,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/lambchop-dog-toy.jpg"
   )
 
-  p164.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/lambchop-dog-toy.jpg"),
-    filename: "lambchop-dog-toy"
-  })  
+  # p164.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/lambchop-dog-toy.jpg"),
+  #   filename: "lambchop-dog-toy"
+  # })  
 
   #165
 
@@ -3667,13 +3831,14 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
     "Satisfactory Service: Our dog chew toys have been strictly tested, please don’t worry the quality of our products. We provide satisfactory after-sales service."],
     price: 15.99,
     inventory: 31,
-    category_id: 8
+    category_id: 8,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/corn-dog-toy.jpg"
   )
 
-  p165.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/corn-dog-toy.jpg"),
-    filename: "corn-dog-toy"
-  })   
+  # p165.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/corn-dog-toy.jpg"),
+  #   filename: "corn-dog-toy"
+  # })   
 
   #166
 
@@ -3687,13 +3852,14 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
     "This gourmet soft dog food is served in convenient trays with easy, peel-away freshness seals"],
     price: 27.96,
     inventory: 21,
-    category_id: 8
+    category_id: 8,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/cesar-dog-food.jpg"
   )
 
-  p166.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/cesar-dog-food.jpg"),
-    filename: "cesar-dog-food"
-  })   
+  # p166.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/cesar-dog-food.jpg"),
+  #   filename: "cesar-dog-food"
+  # })   
 
 
   #167
@@ -3708,13 +3874,14 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
     "GREAT FOR PICKY EATERS: Enhanced palatable dog food satisfies the fussy appetites of small dogs"],
     price: 56.99,
     inventory: 12,
-    category_id: 8
+    category_id: 8,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/royal-canin-dog-food.jpg"
   )
 
-  p167.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/royal-canin-dog-food.jpg"),
-    filename: "royal-canin-dog-food"
-  })   
+  # p167.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/royal-canin-dog-food.jpg"),
+  #   filename: "royal-canin-dog-food"
+  # })   
 
   #168
 
@@ -3730,13 +3897,14 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
     "Add PEDIGREE CHOICE CUTS in Gravy Wet Dog Food to your dog’s diet, and feed the good"],
     price: 15.97,
     inventory: 0,
-    category_id: 8
+    category_id: 8,
+    photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/pedigree-dog.jpg"
   )
 
-  p168.photo.attach({
-    io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/pedigree-dog.jpg"),
-    filename: "pedigree-dog-food"
-  })   
+  # p168.photo.attach({
+  #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/pedigree-dog.jpg"),
+  #   filename: "pedigree-dog-food"
+  # })   
 
 
   puts "Done!"

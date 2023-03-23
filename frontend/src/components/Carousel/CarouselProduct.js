@@ -5,9 +5,9 @@ import './CarouselProduct.css'
 const CarouselProduct = ({product}) => {
 
     return (
-        <div>
+        <div id='image-carousel'>
             <Link id='carousel-link' to={`/products/${product.id}`}>
-                <img id='individual-carousel-image' src={switch2Pic} alt='homepg-products'></img>
+                <img id='individual-carousel-image' src={product.photourl} alt='homepg-products'></img>
             </Link>
         </div>
     )

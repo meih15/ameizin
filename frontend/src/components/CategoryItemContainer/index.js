@@ -25,7 +25,7 @@ const CategoryItemContainer = ({product}) => {
     return (
             <div className='category-product-container'>
                 <Link to={`/products/${product.id}`}>
-                    <img id='image-box' src={switch2Pic} alt=''></img>
+                    <img id='image-box' src={product.photourl} alt='product'></img>
                 </Link>
                 <div id='cat-product-info'>
                     <Link id='category-product-name' to={`/products/${product.id}`}>
