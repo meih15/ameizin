@@ -32,7 +32,7 @@ const SearchProduct = ({product}) => {
     return (
         <div className="search-result-product-container">
             <Link to={`/products/${product.id}`}>
-                <img id='searchResultReviewImage' src={switch2Pic} alt='filler-pic'/>
+                <img id='searchResultReviewImage' src={product.photourl} alt='filler-pic'/>
             </Link>
             <div id='search-product-info'>
                 <Link id='search-product-name' to={`/products/${product.id}`}>
