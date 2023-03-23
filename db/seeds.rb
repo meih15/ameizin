@@ -24,7 +24,6 @@ ApplicationRecord.transaction do
   ApplicationRecord.connection.reset_pk_sequence!('categories') 
   ApplicationRecord.connection.reset_pk_sequence!('products')
   ApplicationRecord.connection.reset_pk_sequence!('carts')
-  ApplicationRecord.connection.reset_pk_sequence!('carts')
   ApplicationRecord.connection.reset_pk_sequence!('cart_items')
   ApplicationRecord.connection.reset_pk_sequence!('reviews')
 
