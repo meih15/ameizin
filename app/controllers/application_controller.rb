@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::API
     include ActionController::RequestForgeryProtection
+    include ActionController::Cookies
     protect_from_forgery with: :exception
     before_action :snake_case_params, :attach_authenticity_token
     rescue_from StandardError, with: :unhandled_error
@@ -15,23 +16,23 @@ class ApplicationController < ActionController::API
     #     if logged_in?
     #         @cart = current_user.cart
     #     else
-    #         if session[:cart]
-    #             @cart = Cart.find_by(id: session[:cart])
+    #         if cookies[:cart]
+    #             @cart = Cart.find_by(id: cookies[:cart])
     #         else
     #             @cart = Cart.create!
-    #             session[:cart] = @cart.id
+    #             cookies[:cart] = @cart.id
     #         end
     #     end
     # end
 
     def persist_cart_items_through_login
-        if session[:cart]
+        if cookies[:cart]
             if current_user.cart == nil
                 user_cart = Cart.create!(user_id: current_user.id)
             else
                 user_cart = current_user.cart
             end
-            guest_cart = Cart.find(session[:cart])
+            guest_cart = Cart.find(cookies[:cart])
             guest_cart.cart_items.each {|item| CartItem.create(
                 cart_id: user_cart.id,
                 product_id: item.product_id,
@@ -40,7 +41,7 @@ class ApplicationController < ActionController::API
             cart_items = CartItem.all
             cart_items.each {|item| item.delete if item.cart.user_id == nil}
             guest_cart.destroy
-            session[:cart] = nil
+            cookies[:cart] = nil
         end
     end
 

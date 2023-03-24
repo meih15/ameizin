@@ -1,17 +1,16 @@
 class Api::CartsController < ApplicationController
 
-
     def show
         if current_user&.cart
             @cart = current_user.cart
             render :show
         else
-            if session[:cart] 
-                @cart = Cart.find(session[:cart])
+            if cookies[:cart]
+                @cart = Cart.find(cookies[:cart])
                 render :show
             else
                 @cart = Cart.create!
-                session[:cart] = @cart.id
+                cookies[:cart] = @cart.id
                 render :show
             end
         end

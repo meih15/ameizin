@@ -5,8 +5,8 @@ class Api::CartItemsController < ApplicationController
             @cart_items = current_user.cart.cart_items 
             render :index
         else
-            if session[:cart]
-                @cart = Cart.find(session[:cart])
+            if cookies[:cart]
+                @cart = Cart.find(cookies[:cart])
                 @cart_items = @cart.cart_items
                 render :index
             else
@@ -14,7 +14,7 @@ class Api::CartItemsController < ApplicationController
                 render :index
 
                 # @cart = Cart.create!
-                # session[:cart] = @cart.id
+                # cookies[:cart] = @cart.id
                 # @cart_items = @cart.cart_items
                 # render :index
             end
@@ -70,7 +70,7 @@ class Api::CartItemsController < ApplicationController
     #     if current_user
     #         @cart = current_user.cart
     #     else
-    #         @cart = Cart.find(session[:cart]) if session[:cart]
+    #         @cart = Cart.find(cookies[:cart]) if cookies[:cart]
     #     end
     # end
 

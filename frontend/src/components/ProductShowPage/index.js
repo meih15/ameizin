@@ -45,7 +45,6 @@ function ProductShowPage() {
             quantity: selectedQuantity + (matchingCartItem ? matchingCartItem.quantity : 0),
         };
 
-
         const createNewCartItem = {
             productId: product.id,
             cartId: cart.id,
@@ -59,9 +58,10 @@ function ProductShowPage() {
                 dispatch(updateCartItem(cart_item));
                 history.push("/cart")}
         } else {
-            dispatch(createCartItem(createNewCartItem));
-            history.push("/cart")
-        }   
+            dispatch(createCartItem(createNewCartItem)).then(res => {
+                history.push("/cart");
+            });
+        } 
     };
 
     const handleQuantityChange = e => {

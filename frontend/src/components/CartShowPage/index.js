@@ -14,17 +14,17 @@ import Footer from '../Footer/Footer';
 
 const CartShowPage = () => {
     const dispatch = useDispatch();
+    const history = useHistory();
+    const products = useSelector(getProducts);
     const cart = useSelector(getCart());
     const allItems = useSelector(getCartItems);
-    const products = useSelector(getProducts);
-    const history = useHistory();
     const currentUser = useSelector(state => state.session.user);
 
     
     useEffect(() => {
+        dispatch(fetchProducts())
         dispatch(fetchCart())
         dispatch(fetchCartItems())
-        dispatch(fetchProducts())
     }, [])
 
     if (!cart) return <h1>Loading...</h1>
