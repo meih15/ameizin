@@ -15,10 +15,10 @@ function SignupFormPage() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState([]);
 
-  const nameError = errors.find(error => error.includes('User'));
-  const emailError = errors.find(error => error.includes('Email'));
-  const passwordError = errors.find(error => error.includes('Password '));
-  const passMatchError = errors.find(error => error.includes('match'));
+  const nameError = errors.find(error => error?.includes('User'));
+  const emailError = errors.find(error => error?.includes('Email'));
+  const passwordError = errors.find(error => error?.includes('Password '));
+  const passMatchError = errors.find(error => error?.includes('match'));
 
   if (sessionUser) return <Redirect to="/" />;
 

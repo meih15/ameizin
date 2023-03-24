@@ -22,7 +22,7 @@ const CreateReview = () => {
     const [rating, setRating] = useState(0);
     const [errors, setErrors] = useState([]);
 
-    console.log(errors)
+    // console.log(errors)
     const headlineError = errors.find(error => error.toLowerCase().includes('headline'));
     const ratingError = errors.find(error => error.toLowerCase().includes('rating'))
 
