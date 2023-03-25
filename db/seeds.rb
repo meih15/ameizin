@@ -89,6 +89,7 @@ ApplicationRecord.transaction do
     password: '123456'
   )
 
+  
   puts "Creating categories..."
 
   Category.create!(category_name: 'Electronics');
