@@ -13,8 +13,9 @@ function LoginFormPage() {
   const [errors, setErrors] = useState([]);
   const history = useHistory();
 
-  const emailError = errors.find(error => error.includes('email'));
-  const passwordError = errors.find(error => error.includes('password'));
+  const emailError = errors.length > 0 ? errors.find(error => typeof error === 'string' && error.includes('email')) : null;
+  const passwordError = errors.length > 0 ? errors.find(error => typeof error === 'string' && error.includes('password')) : null;
+
 
 
   if (sessionUser) return <Redirect to="/" />;

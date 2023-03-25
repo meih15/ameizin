@@ -33,26 +33,19 @@ ApplicationRecord.transaction do
 
   #1
   User.create!(
-    user_name: 'Demo User', 
+    user_name: 'Demo-lition', 
     email: 'demo@user.io', 
     password: 'password'
   )
 
-  # More users
-  # 10.times do 
-  #   User.create!({
-  #     user_name: Faker::Internet.unique.username(specifier: 3),
-  #     email: Faker::Internet.unique.email,
-  #     password: 'password'
-  #   }) 
-  # end
 
   #2
   User.create!(
-    user_name:'Rachel Green',
+    user_name: 'Rachel Green',
     email: 'rachelgreen@user.com',
     password: '123456'
   )
+
 
   #3
   User.create!(
@@ -60,6 +53,8 @@ ApplicationRecord.transaction do
     email: 'monicageller@user.com',
     password: '123456'
   )
+
+
 
   #4
   User.create!(
@@ -87,6 +82,37 @@ ApplicationRecord.transaction do
     user_name: 'Chandler Bing',
     email: 'chandlerbing@user.com',
     password: '123456'
+  )
+
+
+  puts "Creating carts..."
+
+  Cart.create!(
+    user_id: 1
+  )
+
+  Cart.create!(
+    user_id: 2
+  )
+
+  Cart.create!(
+    user_id: 3
+  )
+
+  Cart.create!(
+    user_id: 4
+  )
+
+  Cart.create!(
+    user_id: 5
+  )
+
+  Cart.create!(
+    user_id: 6
+  )
+
+  Cart.create!(
+    user_id: 7
   )
 
   
