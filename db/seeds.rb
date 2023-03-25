@@ -241,7 +241,7 @@ The Paldea Region is home to a prestigious school where people from all sorts of
 
   Review.create!(
     user_id: 6,
-    product_id: 2,
+    product_id: 3,
     rating: 5, 
     headline: "This has been one of my favorite entries into the franchise.",
     comment: "So the obvious thing that I have to address, is that this game had technical issues on release. It’s inexcusable to release an unfinished game on launch. I will say that the recent patches have helped fixed those problems and have made the gameplay experience better.
@@ -253,7 +253,7 @@ The break in the standard formula of gameplay, is an interesting change of pace.
 
   Review.create!(
     user_id: 7,
-    product_id: 2,
+    product_id: 3,
     rating: 5, 
     headline: " It’s a Pokémon game.",
     comment: "There’s not much to review here that hasn’t already been said or that you couldn’t learn from a walkthrough or let’s play or any YouTube video, but I will say that the open world is, (for me) too much to deal with, I miss the linear style of older Pokémon games, my kids however love it, and I bought it to play with them so I’ll be using their opinion in my star rating. Kids think it’s 10/10 so 5 stars is what it’ll get"
@@ -261,7 +261,7 @@ The break in the standard formula of gameplay, is an interesting change of pace.
 
   Review.create!(
     user_id: 1,
-    product_id: 2,
+    product_id: 3,
     rating: 4, 
     headline: "Nice game! But glitches!",
     comment: "The game is really nice, and it's quite refreshing for an open world concept pokemon game.
@@ -294,7 +294,7 @@ The Paldea Region is home to a prestigious school where people from all sorts of
 
   Review.create!(
     user_id: 5,
-    product_id: 3,
+    product_id: 4,
     rating: 5,
     headline: "Been playing since the beginning and my favorite game since silver and gold!",
     comment: "I have been playing Pokémon since the original games and I loved this game! The story and gameplay are great but the best thing that made this game great for me was the ease of being able to play cooperatively with my friends and family. This more than any other Pokémon game is built to be played with others and I only hope that is the new precedent for the franchise going forward."
@@ -302,7 +302,7 @@ The Paldea Region is home to a prestigious school where people from all sorts of
 
   Review.create!(
     user_id: 1,
-    product_id: 3,
+    product_id: 4,
     rating: 4,
     headline: " Glad I bought it, but the bad reviews weren't wrong",
     comment: "I nearly skipped this game because of the other reviews. Okay first of all, they are not kidding - this is the roughest Pokemon game I have ever seen. The graphics are so crunchy, my partner is shocked when he looks at my screen at how bad it is. It is so slow in handheld mode - I hear it's even worse docked, which I haven't tried.
@@ -336,7 +336,7 @@ I love this game, the graphics are laughably bad.
 
   Review.create!(
     user_id: 2,
-    product_id: 4,
+    product_id: 5,
     rating: 4,
     headline: "Ugly and Cool Piece of Hardware",
     comment:"Well, I think everything that could have been said about the PS5 has been said already, so I will just add my two cents from an Xbox guy point of view: That thing looks like if a drunk cable modem had mated with some night club lights. It's horrible, big, heavy and seems like it's gonna take off at any moment. Having said that, it's a cool piece of hardware. The OS, as usual, is clean and smooth and you can update it and keep playing. The one selling point I see over the Xbox Series X is the controllers. The haptic feedback is awesome and the sensors are pretty accurate. I also see legit uses to the speaker/mic too. The exclusive games list is extensive and full of interesting titles, and you can find very good deals in the store. In my opinion, though, the Xbox Series X is superior in all aspects, except for the controllers and the exclusive titles. If you are thinking on buying a console, and this is your first, I recommend the Xbox, but if you decide to buy a PS5, you won't be disappointed either."
@@ -344,7 +344,7 @@ I love this game, the graphics are laughably bad.
 
   Review.create!(
     user_id: 1,
-    product_id: 4,
+    product_id: 5,
     rating: 5,
     headline: "So fast, so sharp",
     comment: "The graphics are a huge upgrade from ps4, even with ps4 games. Everything is faster and smoother. And long blue screens on games like ark are no longer a thing. If a game crashes you can usually load back in before your character logs out from the online server. Make sure to use the HDMI cable that comes with it as well and make sure to have your TV settings set right to take advantage of what the ps5 can really do."
@@ -828,7 +828,7 @@ The Ring Video Doorbell 3 is extremely user friendly and provides a quality expe
 
   Review.create!(
     user_id: 1,
-    product_id: 15,
+    product_id: 18,
     rating: 4,
     headline: "My K-Beauty Routine",
     comment: "At 32 I had stubborn hormonal acne and dry flaky skin (thanks in part to the dry climate in Colorado) I was tired of constantly fighting my skin and embarked on a journey to get the clear youthful skin I deserved. I was pleased to find that the skin of my dreams in a Korean beauty inspired routine. The best part is that nearly all the products I tried were relatively inexpensive and readily available from amazon. My acne is non-existent now and the tone and texture of my skin is so supple and smooth. I have provided a list of my routine below which includes this product. I’m not saying this is the best or only way to achieve my results, I just thought others would be interested in what I used."
