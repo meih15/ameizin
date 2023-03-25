@@ -27,17 +27,20 @@ class ApplicationController < ActionController::API
 
     def persist_cart_items_through_login
         if cookies[:cart]
+            debugger
             if current_user.cart == nil
                 user_cart = Cart.create!(user_id: current_user.id)
             else
                 user_cart = current_user.cart
             end
+            debugger
             guest_cart = Cart.find(cookies[:cart])
             guest_cart.cart_items.each {|item| CartItem.create(
                 cart_id: user_cart.id,
                 product_id: item.product_id,
                 quantity: item.quantity
             )}
+            debugger
             cart_items = CartItem.all
             cart_items.each {|item| item.delete if item.cart.user_id == nil}
             guest_cart.destroy
@@ -59,7 +62,6 @@ class ApplicationController < ActionController::API
         current_user.reset_session_token!
         session[:session_token] = nil
         @current_user = nil
-
     end
 
     def require_logged_in

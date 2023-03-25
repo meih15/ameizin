@@ -5,18 +5,13 @@ class Api::CartItemsController < ApplicationController
             @cart_items = current_user.cart.cart_items 
             render :index
         else
-            if cookies[:cart]
+            if cookies[:cart] && cookies[:cart] != ""
                 @cart = Cart.find(cookies[:cart])
                 @cart_items = @cart.cart_items
                 render :index
             else
                 @cart_items = []
                 render :index
-
-                # @cart = Cart.create!
-                # cookies[:cart] = @cart.id
-                # @cart_items = @cart.cart_items
-                # render :index
             end
         end
     end
@@ -31,7 +26,7 @@ class Api::CartItemsController < ApplicationController
     end
 
     def create
-        @cart_item = CartItem.create(cart_item_params)
+        @cart_item = CartItem.new(cart_item_params)
 
         if @cart_item.save
             render :show
