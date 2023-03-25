@@ -120,14 +120,6 @@ const SingleReview = ({review}) => {
                 <p id='comment'>{review?.comment}</p>
                 {/* picture */}
                 {/* helpful */}
-                {/* <div className='single-review-buttons'>
-                    <div className='update-single-review-button-div'>
-                        <button onClick={handleSingleReviewUpdate} id='update-single-review'>Update</button>
-                    </div>            
-                    <div className='delete-single-review-button-div'>
-                        <button onClick={handleSingleReviewDelete} id='delete-single-review'>Delete</button>
-                    </div>
-                </div> */}
                 {showbuttons() ? buttons : <br></br>}
         </div>
     )}
