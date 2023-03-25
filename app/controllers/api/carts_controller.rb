@@ -1,6 +1,8 @@
 class Api::CartsController < ApplicationController
 
+
     def show
+
         if current_user&.cart
             @cart = current_user.cart
             render :show
@@ -11,6 +13,7 @@ class Api::CartsController < ApplicationController
             else
                 @cart = Cart.create!
                 cookies[:cart] = @cart.id
+
                 render :show
             end
         end

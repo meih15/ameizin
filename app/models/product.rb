@@ -16,7 +16,8 @@ class Product < ApplicationRecord
 
     has_one :category,
         foreign_key: :category_id,
-        class_name: :Category
+        class_name: :Category,
+        dependent: :destroy
 
     has_many :cart_items, 
         foreign_key: :product_id,
