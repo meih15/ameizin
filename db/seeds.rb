@@ -33,7 +33,7 @@ ApplicationRecord.transaction do
 
   #1
   User.create!(
-    user_name: 'Demo-lition', 
+    user_name: 'Demo User', 
     email: 'demo@user.io', 
     password: 'password'
   )

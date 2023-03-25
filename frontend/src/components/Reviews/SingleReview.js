@@ -11,6 +11,7 @@ const SingleReview = ({review}) => {
     const [editMode, setEditMode] = useState(false);
     const [updatedReview, setUpdatedReview] = useState({...review});
     const [rating, setRating] = useState(review.rating);
+    const currentUser = useSelector(state => state.session.user);
 
 
     useEffect (() => {
@@ -57,6 +58,23 @@ const SingleReview = ({review}) => {
         setEditMode(false)
     }
 
+    const buttons = (
+        <div className='single-review-buttons'>
+            <div className='update-single-review-button-div'>
+                <button onClick={handleSingleReviewUpdate} id='update-single-review'>Update</button>
+            </div>            
+            <div className='delete-single-review-button-div'>
+                <button onClick={handleSingleReviewDelete} id='delete-single-review'>Delete</button>
+            </div>
+        </div>
+    );
+
+    
+    const showbuttons = () => {
+        return currentUser && currentUser.id === review.userId;
+    }
+
+
     if (!user) return null;
 
     if (editMode) {
@@ -102,14 +120,15 @@ const SingleReview = ({review}) => {
                 <p id='comment'>{review?.comment}</p>
                 {/* picture */}
                 {/* helpful */}
-                <div className='single-review-buttons'>
+                {/* <div className='single-review-buttons'>
                     <div className='update-single-review-button-div'>
                         <button onClick={handleSingleReviewUpdate} id='update-single-review'>Update</button>
                     </div>            
                     <div className='delete-single-review-button-div'>
                         <button onClick={handleSingleReviewDelete} id='delete-single-review'>Delete</button>
                     </div>
-                </div>
+                </div> */}
+                {showbuttons() ? buttons : <br></br>}
         </div>
     )}
 };

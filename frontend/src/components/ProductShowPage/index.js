@@ -69,9 +69,9 @@ function ProductShowPage() {
     };
 
     let dropQuantity = [...Array(Math.min(product.inventory, 30) + 1).keys()].slice(1);
-    const dropdown = <select className='dropdown-quantity' value={selectedQuantity} onChange={handleQuantityChange}>
+    const dropdown = (<select className='dropdown-quantity' value={selectedQuantity} onChange={handleQuantityChange}>
                             {dropQuantity.map(qty => <option key={qty} id='dropdown-number' value={qty}>{`Qty: ${qty}`}</option> )}
-                        </select>
+                        </select>)
 
 
 
