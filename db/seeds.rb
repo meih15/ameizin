@@ -568,7 +568,7 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
     product_id: 10,
     rating: 4,
     headline: "Excellent Smarthome addition",
-    comment: "Great device. Very clear full colour screen. Good size screen, touch screen works great with fingers or stylus, easy volume and camera privacy adjustments. Use the included power cord or one that has a "C" style end. Sound is very good even for music. Does everything they say it will. Great size for a bedside table. Highly recommend!!!"
+    comment: "Great device. Very clear full colour screen. Good size screen, touch screen works great with fingers or stylus, easy volume and camera privacy adjustments. Use the included power cord or one that has a C style end. Sound is very good even for music. Does everything they say it will. Great size for a bedside table. Highly recommend!!!"
   )  
 
   Review.create!(
@@ -932,13 +932,6 @@ You can use your ice roller both morning and evening. It is great for helping th
   #   filename: "neutrogena-sunscreen"
   # })
 
-  Review.create!(
-    user_id:,
-    product_id:,
-    rating:,
-    headline:,
-    comment:
-  )
 
 
   #23
@@ -962,13 +955,7 @@ You can use your ice roller both morning and evening. It is great for helping th
   #   filename: "seraphic-exfoliating-mitts"
   # })
 
-  Review.create!(
-    user_id:,
-    product_id:,
-    rating:,
-    headline:,
-    comment:
-  )
+
 
   #24
 
@@ -991,13 +978,6 @@ You can use your ice roller both morning and evening. It is great for helping th
   #   filename: "first-aid-exfoliant"
   # })
 
-  Review.create!(
-    user_id:,
-    product_id:,
-    rating:,
-    headline:,
-    comment:
-  )
 
   #25
 
@@ -1019,13 +999,7 @@ You can use your ice roller both morning and evening. It is great for helping th
   #   filename: "soft-glam-eyeshadow"
   # })
 
-  Review.create!(
-    user_id:,
-    product_id:,
-    rating:,
-    headline:,
-    comment:
-  )  
+
 
   #26
   p26 = Product.create!(
@@ -1066,14 +1040,6 @@ You can use your ice roller both morning and evening. It is great for helping th
   #   filename: "wet-n-wild-contouring"
   # })
 
-  Review.create!(
-    user_id:,
-    product_id:,
-    rating:,
-    headline:,
-    comment:
-  )  
-
   #28
   p28 = Product.create!(
     product_name: "Mielle Organics Rosemary Mint Scalp & Hair Strengthening Oil With Biotin & Essential Oils, Nourishing Treatment for Split Ends and Dry Scalp for All Hair Types, 2-Fluid Ounces",
@@ -1094,21 +1060,7 @@ You can use your ice roller both morning and evening. It is great for helping th
   #   filename: "mielle-hair"
   # })
 
-  Review.create!(
-    user_id:,
-    product_id:,
-    rating:,
-    headline:,
-    comment:
-  )
 
-    Review.create!(
-    user_id:,
-    product_id:,
-    rating:,
-    headline:,
-    comment:
-  )
 
 
   #29
@@ -1131,13 +1083,6 @@ You can use your ice roller both morning and evening. It is great for helping th
   #   filename: "mimi-headband"
   # })
 
-  Review.create!(
-    user_id:,
-    product_id:,
-    rating:,
-    headline:,
-    comment:
-  )
 
   #30
   p30 = Product.create!(
@@ -1182,14 +1127,6 @@ They are suitable for men, women, kids and the people who have thick heavy hair.
   #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/maybellione-rewind.jpg"),
   #   filename: "maybelline-rewind"
   # })
-
-  Review.create!(
-    user_id:,
-    product_id:,
-    rating:,
-    headline:,
-    comment:
-  )  
 
   #32
   p32 = Product.create!(
