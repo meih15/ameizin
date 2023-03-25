@@ -30,6 +30,8 @@ ApplicationRecord.transaction do
 
   puts "Creating users..."
   # Create one user with an easy to remember username, email, and password:
+
+  #1
   User.create!(
     user_name: 'Demo-lition', 
     email: 'demo@user.io', 
@@ -37,14 +39,55 @@ ApplicationRecord.transaction do
   )
 
   # More users
-  10.times do 
-    User.create!({
-      user_name: Faker::Internet.unique.username(specifier: 3),
-      email: Faker::Internet.unique.email,
-      password: 'password'
-    }) 
-  end
+  # 10.times do 
+  #   User.create!({
+  #     user_name: Faker::Internet.unique.username(specifier: 3),
+  #     email: Faker::Internet.unique.email,
+  #     password: 'password'
+  #   }) 
+  # end
 
+  #2
+  User.create!(
+    user_name:'Rachel Green',
+    email: 'rachelgreen@user.com',
+    password: '123456'
+  )
+
+  #3
+  User.create!(
+    user_name: 'Monica Geller',
+    email: 'monicageller@user.com',
+    password: '123456'
+  )
+
+  #4
+  User.create!(
+    user_name: 'Phoebe Buffay',
+    email: 'phoebebuffay@user.com',
+    password: '123456'
+  )
+
+  #5
+  User.create!(
+    user_name: 'Joey Tribbiani',
+    email: 'joey@user.com',
+    password: '123456'
+  )
+
+  #6
+  User.create!(
+    user_name: 'Ross Geller',
+    email: 'rossgeller@user.com',
+    password: '123456'
+  )
+
+  #7
+  User.create!(
+    user_name: 'Chandler Bing',
+    email: 'chandlerbing@user.com',
+    password: '123456'
+  )
 
   puts "Creating categories..."
 
@@ -86,6 +129,42 @@ Play at home on the TV or on-the-go with a vibrant 7-inch OLED screen with the N
   #   filename: "white-nintendo"
   # })
 
+  Review.create!(
+    user_id: 1,
+    product_id: 1,
+    rating: 4,
+    headline: "A lot of fun and very versatile play",
+    comment: "I absolutely love how versatile this system is. You can play handheld with controllers attached to the screen, with the controllers separate from the screen and attached to a handheld game controller adapter, or you can dock the screen and play on your TV. It makes it a great activity for my son on long car rides. The screen is bright and colorful. I definitely recommend getting a glass screen protector and carrying case for it, though. The screen is a bit heavy and wouldn't be very hard for a kid to drop this, even while they're playing it. The graphics aren't quite as good on the screen as they are on the TV but that's sort of expected. On the TV, the graphics are excellent depending on the game. Mariokart in particular looks awesome."
+  )
+
+  Review.create!(
+    user_id: 6, 
+    product_id: 1, 
+    rating: 5,
+    headline: "My Son Loves it!", 
+    comment: "I purchased for my son at his request, and he really loves it. I cannot personally tell you much about it as I never used it, but my son is happy with it, and this is just another device added to the collection of many.
+
+*Note: It seems that it is not uncommon for Switch to get hot. Not to worry, they sell cooling devices specifically for the Switch and all is well, no more heating up."
+  )
+
+    Review.create!(
+    user_id: 5, 
+    product_id: 1, 
+    rating: 5,
+    headline: "I love this console", 
+    comment: "I bought really late into the switch’s life cycle but man was it worth it. Games look absolutely gorgeous on the tablet it looks like a next gen upgrade just by how good the colors look and pop. Makes games look much better when handheld which is how I mainly play my switch and is what I recommend for those who plan on using it mainly handheld, but likes the option to use the dock to play with friends on games like Mario party or Mario kart on a TV.
+Great console and was worth it even this late."
+  )
+
+    Review.create!(
+    user_id: 7, 
+    product_id: 1, 
+    rating: 5,
+    headline: "Absolutely worth the upgrade for handheld users, and worth considering for docked users too.", 
+    comment: "I watched and read several reviews of this product before purchasing, and I can tell you that if you primarily use your switch in the handheld configuration, it is absolutely worth the price. The display is much sharper, more vibrant, and has far better low-light characteristics compared to my regular switch, and it almost feels like it is higher-resolution despite being the same. The construction feels higher quality as well, with the surfaces you mainly interact with being made of metal. The kickstand is what the og switch should've had, feels much sturdier and offers adjustable angles. All that and the built in storage is 64 gb instead of the 32 gb the og switch offers, and the dock is allegedly less prone to scratching the screen and body when inserting and removing the switch from the dock compared to the dock that comes with the original. All in all, stellar product, worth the increased price if you're a handheld user. There isn't any noticeable difference when playing in docked mode, so if you're either planning on using or currently use your switch in docked mode, I would still recommend this over the og switch because of the increased internal storage, and the Ethernet port that is built into the dock.
+It's worth the price difference. Very satisfied with this product."
+  )
+
   #2
 
   p2 = Product.create!(
@@ -105,6 +184,35 @@ Play at home on the TV or on-the-go with a vibrant 7-inch OLED screen with the N
   #   io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/xbox-series-x.jpg'),
   #   filename: "xbox"
   # })
+
+  Review.create!(
+    user_id: 7,
+    product_id: 2,
+    rating: 5, 
+    headline: "Powerhouse Gaming System",
+    comment: "I went from an Xbox One S to this and the difference is incredible. The load times are so much faster and the graphics are stunning. The detail and shading and light that some of the games can now offer on this system are amazing. The setup was easy, the controller is comfortable with the added texture on the grips, the potential game library is vast thanks to backwards compatibility, and the ability to play 4K Blu-ray is an added bonus. The only complaint that comes to mind is the amount of storage space for games. I very quickly filled the internal drive and hate to pay for the expensive expansion storage cards."
+  )
+
+  Review.create!(
+    user_id: 6,
+    product_id: 2,
+    rating: 4, 
+    headline: " New look, New hardware, same old feel",
+    comment: "I must say I'm always questioning my purchase of this console. The hardware is different but the software and UI make me feel like I got a reskinned Xbox One. Performance... well, I can't really see much difference. It seems perhaps mere seconds faster than the last generation. I'm still on 1080p at 60hz though so I guess I won't be seeing much graphical change. But all the hype about terraflops and this and that, I expected much much more as a casual gamer. For the most part I feel like I took my car to the detailer and drove away in a 'new car.'
+There's not many X/S games out right now that scale up to what this device was built for either ... so I'd encourage people to save their money and wait until that time comes (but I totally get it, since the shortages).
+One major issue I'm already coming across is storage. Some of my favorite games are 100+GB (Ark was 151+Dlc)... so my 1TB (800GB drive) can't really store that much. And since your X/S game has to be native to play ... I'm really concerned....especially seeing how MS wants to charge half a console for its upgraded solution."
+  )
+
+
+  Review.create!(
+    user_id: 1,
+    product_id: 2,
+    rating: 5, 
+    headline: "Next-Gen Gaming!",
+    comment: "This console is an absolute beast! I finally managed to get my hands on it through Amazon’s invite after 2 years of the chip shortage and scalping issues. It arrived a couple days later as scheduled, no problems. Set up was simple and was kinda surprised by the weight of the console. It’s a THICC BOI for sure. The login process took less than 10 min, quick and easy. Installed games then instantly felt the difference. Loading times is literally insane, first time experiencing an SSD as fast as this. Unfortunately, I have a ton of big titles so the 1 TB of storage filled up shortly after. I later decided to get the Seagate expansion card which was $20 off on sale. The card is a great accessory to complement the console, I use it to store the Optimized Series X games and then a 4 TB hard drive for the older games. I also really enjoy the controller, it feels really good in the hands. Playing Overwatch 2 and MW2 at 120 FPS on my 4K HDR TV was an absolute experience! Game-pass is also great to add to the experience, great value with a large library of games with diverse genres. Overall, the console is great! Playing games has never been better for a competitive gamer like me. Sometimes I feel like I’m cheating with how powerful this thing is for only $500. However, I do wish there were more exclusives for the Series X but I feel like this console will get better as time goes on. Microsoft and the Xbox team outdid themselves in delivering such a beast of a console for this next generation. Whichever side of the console war you’re on, at the end of the day it’s a preference. I really feel like that not one side of the fandom will regret in getting any of these new consoles (Series X/PS5)."
+  )
+
+
 
   #3
 
@@ -131,6 +239,35 @@ The Paldea Region is home to a prestigious school where people from all sorts of
   #   filename: "pokemon-violet"
   # })
 
+  Review.create!(
+    user_id: 6,
+    product_id: 2,
+    rating: 5, 
+    headline: "This has been one of my favorite entries into the franchise.",
+    comment: "So the obvious thing that I have to address, is that this game had technical issues on release. It’s inexcusable to release an unfinished game on launch. I will say that the recent patches have helped fixed those problems and have made the gameplay experience better.
+
+Honestly this is game has been a lot of fun and despite the technical issues, I can tell that Gamefreak put a lot of love into this game. This entry has to have some of the best variety in availability in catchable Pokémon. It seems like a lot of fan favorites are available and are so much easier to encounter and catch than they’ve ever been before. It’s almost difficult to settle on a team.
+
+The break in the standard formula of gameplay, is an interesting change of pace. I found myself getting sidetracked in all the game has to offer, that I’ve barely even scratched the surface of the main storylines. If you’ve enjoyed the experience of freedom and exploration in Zelda: Breath of The Wild, then I think you’ll feel a similar level of enjoyment with this latest Pokémon game."
+  )
+
+  Review.create!(
+    user_id: 7,
+    product_id: 2,
+    rating: 5, 
+    headline: " It’s a Pokémon game.",
+    comment: "There’s not much to review here that hasn’t already been said or that you couldn’t learn from a walkthrough or let’s play or any YouTube video, but I will say that the open world is, (for me) too much to deal with, I miss the linear style of older Pokémon games, my kids however love it, and I bought it to play with them so I’ll be using their opinion in my star rating. Kids think it’s 10/10 so 5 stars is what it’ll get"
+  )
+
+  Review.create!(
+    user_id: 1,
+    product_id: 2,
+    rating: 4, 
+    headline: "Nice game! But glitches!",
+    comment: "The game is really nice, and it's quite refreshing for an open world concept pokemon game.
+But this game does come across as 'rushed work', and there are many glitches in the game, which is quite unacceptable for a game of this price. But nonetheless, as pokemon fans, its a great game! I enjoyed this much more than sword and shield."
+  )
+
   #4
   p4 = Product.create!(
     product_name: 'Pokémon Scarlet - Nintendo Switch',       
@@ -155,6 +292,29 @@ The Paldea Region is home to a prestigious school where people from all sorts of
   #   filename: 'pokemon-scarlet'
   # })
 
+  Review.create!(
+    user_id: 5,
+    product_id: 3,
+    rating: 5,
+    headline: "Been playing since the beginning and my favorite game since silver and gold!",
+    comment: "I have been playing Pokémon since the original games and I loved this game! The story and gameplay are great but the best thing that made this game great for me was the ease of being able to play cooperatively with my friends and family. This more than any other Pokémon game is built to be played with others and I only hope that is the new precedent for the franchise going forward."
+  )
+
+  Review.create!(
+    user_id: 1,
+    product_id: 3,
+    rating: 4,
+    headline: " Glad I bought it, but the bad reviews weren't wrong",
+    comment: "I nearly skipped this game because of the other reviews. Okay first of all, they are not kidding - this is the roughest Pokemon game I have ever seen. The graphics are so crunchy, my partner is shocked when he looks at my screen at how bad it is. It is so slow in handheld mode - I hear it's even worse docked, which I haven't tried.
+
+But the game itself is one of the best Pokemon games I've ever played. It has just the right amount of guidance and independence for me to pick it up and have an excellent playthrough.
+
+The story was a cut above the typical pokemon game. It was so good.
+
+I love this game, the graphics are laughably bad.
+2 people found this helpful"
+  )
+
   #5
   p5 = Product.create!(
     product_name: 'PlayStation 5 Console CFI-1215A01X',       
@@ -173,6 +333,23 @@ The Paldea Region is home to a prestigious school where people from all sorts of
   #   io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/playstation-5.jpg'),
   #   filename: "playstation-5"
   # })
+
+  Review.create!(
+    user_id: 2,
+    product_id: 4,
+    rating: 4,
+    headline: "Ugly and Cool Piece of Hardware",
+    comment:"Well, I think everything that could have been said about the PS5 has been said already, so I will just add my two cents from an Xbox guy point of view: That thing looks like if a drunk cable modem had mated with some night club lights. It's horrible, big, heavy and seems like it's gonna take off at any moment. Having said that, it's a cool piece of hardware. The OS, as usual, is clean and smooth and you can update it and keep playing. The one selling point I see over the Xbox Series X is the controllers. The haptic feedback is awesome and the sensors are pretty accurate. I also see legit uses to the speaker/mic too. The exclusive games list is extensive and full of interesting titles, and you can find very good deals in the store. In my opinion, though, the Xbox Series X is superior in all aspects, except for the controllers and the exclusive titles. If you are thinking on buying a console, and this is your first, I recommend the Xbox, but if you decide to buy a PS5, you won't be disappointed either."
+  )
+
+  Review.create!(
+    user_id: 1,
+    product_id: 4,
+    rating: 5,
+    headline: "So fast, so sharp",
+    comment: "The graphics are a huge upgrade from ps4, even with ps4 games. Everything is faster and smoother. And long blue screens on games like ark are no longer a thing. If a game crashes you can usually load back in before your character logs out from the online server. Make sure to use the HDMI cable that comes with it as well and make sure to have your TV settings set right to take advantage of what the ps5 can really do."
+  )
+
 
     #6
   p6 = Product.create!(
@@ -194,6 +371,38 @@ The Paldea Region is home to a prestigious school where people from all sorts of
   #   io: URI.open('https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/logitech-white.jpg'),
   #   filename: "logitech-white.jpg"
   # })
+
+  Review.create!(
+    user_id: 2,
+    product_id: 6,
+    rating: 5,
+    headline: "Love it so much, New fav keyboard",
+    comment: "I wanted this keyboard for a while now so when I was finally able to get it I didn’t even think twice, I had these cinnamoroll key caps I really wanted to use so I ended up replacing the ones the keyboard came with’ with them. Only thing I do wish is that the backlight or rgb lights of the keyboard was a bit brighter but overall it’s great, even the sound of me clicking is so satisfying. I went with linear because I feel as though it’s much quieter but also smoother… hard to explain but if you know anything about switches you’d understand just what I mean! LOL. The wrist rest is an adjustment to get used to since I’ve never really used one, usually when i’m playing anything FPS it makes the use of my hands feel slower in a way so i won’t be using it. for visuals and having it be compact it was worth the value"
+  )
+
+  Review.create!(
+    user_id: 4,
+    product_id: 6,
+    rating: 5,
+    headline: "So cute !",
+    comment: "I love the keyboard so much it’s so cute and amazing quality you can change out the plates and the keys to boot!!! The lighting is beautiful and it is small I love everything about it and it has so many cool features that I’m not even done playing with"
+  )
+
+  Review.create!(
+    user_id: 3,
+    product_id: 6,
+    rating: 5,
+    headline: "I'm in love!",
+    comment: "Choices were SO LIMITED when looking for white keyboards, but I'm so happy with this purchase!!! It looks perfect on my desk, works like a dream, and it was very easy to change the colors of each key. The keys are sensitive and very responsive when gaming (huge difference from my previous keyboard where I had to press the keys hard), I feel like it's really upped my game. I'm just in love!!"
+  )
+
+  Review.create!(
+    user_id: 1,
+    product_id: 6,
+    rating: 5,
+    headline: "Great buy!",
+    comment: "Wanted to upgrade my keyboard and mouse and came upon this product on some website. Upon reading the reviews and watching some videos I decided to purchase it. Got the wired keyboard and wireless mouse. Easy set up, downloaded the logitech g hub to customize the led light, a lot of options."
+  )
 
 
   #7
@@ -229,6 +438,30 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
   #   filename: "kirby-switch"
   # })
 
+  Review.create!(
+    user_id: 4,
+    product_id: 7,
+    rating: 5,
+    headline: "Amazing Kirby Game",
+    comment: "This is a very nice remaster. Fluid game play and beautiful game. I love Kirby."
+  )
+
+  Review.create!(
+    user_id: 5,
+    product_id: 7,
+    rating: 5,
+    headline: "Very good",
+    comment: "Very good"
+  )
+
+  Review.create!(
+    user_id: 1,
+    product_id: 7,
+    rating: 5,
+    headline: "Very fun game",
+    comment: "I was worried the game case would be damaged when it arrived but thankfully it wasn’t. As for the game it is very fun."
+  )
+
 
   # 8
 
@@ -253,6 +486,22 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
   #   filename: "kindle"
   # })
 
+  Review.create!(
+    user_id: 1,
+    product_id: 8,
+    rating: 3,
+    headline: "It’s ok",
+    comment: "The quality was poor. I was very disappointed because I’ve had a kindle years ago that was cheap but had great quality…some kindles allow you to download a few other apps this one does not..I found it difficult to go to a previous page and also limitations concerning settings…because there were not a lot of options Actually my iPad kindle has more options…The reason I purchased this device was because it was cheap and my iPad was broken…But for me this was a waste of money..I still end up using my kindle app on my phone…I think I throw this kindle device away….Not sure what I did with it…Now I have a new iPad which I am extremely happy with it and the kindle app"
+  )
+
+  Review.create!(
+    user_id: 4,
+    product_id: 8,
+    rating: 5,
+    headline: "Perfect size for portability",
+    comment: "I really love the size and weight of this kindle. I have the Oasis which I have used for years now, but I bought this one because I wanted to have a kindle I could easily throw in a bag or a coat pocket. It’s perfect for that, but it’s actually much more pleasant to hold while reading than the Oasis is. That’s while using the clear case on it. It’s a little slippery and hard to grip without the case. I imagine the case with a cover would make it even easier to hold. I definitely recommend this Kindle over the Oasis and possibly the Paperwhite (which I haven’t tried) because it’s so comfortable to hold for hours at a time. I would go without the premium features of the other Kindles I mentioned just to have a Kindle that is this lightweight and small. I can only imagine how much I would love it if this little Kindle did come with those features. It would be absolutely perfect. As it is, it’s a delight."
+  )
+
   # 9
 
   p9 = Product.create!(
@@ -274,6 +523,21 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
   #   filename: "insignia-tv"
   # })
 
+  Review.create!(
+    user_id: 1,
+    product_id: 9,
+    rating: 4,
+    headline: "Great Budget TV",
+    comment: "I bought this for our bedroom on a very tight budget. It's a great TV. I can stream my movies and videos through our wifi and it comes with Alexa built-in, which is great. So far, my only complaints are that the sound could be better and I'm finding the home menu somewhat cluttered and difficult to navigate at first. I'm nearsighted. So trying to read menu items from the bed without puting my glasses on is difficult. The home menu is cluttered with buttons for channels and apps that I don't even use and many of those are small. Also because the sound quality is less than perfect and we have no carpet or curtains in our bedroom to buffer it, some channels that I watch tend to sound pretty hollow. The sound quality would probably be fine in a carpeted room. But otherwise, I would recommend adding a sound bar that would direct the sound straight forward instead of out the back of the TV. :)"
+  )
+
+  Review.create!(
+    user_id: 4,
+    product_id: 9,
+    rating: 4,
+    headline: "Quick setup",
+    comment: "Ordered for pickup same day from Best Buy. It took less than 10 minutes to intially set up. The picture quality is nice but there is some issues at times downloading apps. We mounted it via HelloTech for less than $60 with a coupon. A 32 inch smart tv with multi-year warranty less than $130 outside of deal season is pretty good."
+  )  
 
   #10
 
@@ -299,6 +563,24 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
   # })
 
 
+  Review.create!(
+    user_id: 1,
+    product_id: 10,
+    rating: 4,
+    headline: "Excellent Smarthome addition",
+    comment: "Great device. Very clear full colour screen. Good size screen, touch screen works great with fingers or stylus, easy volume and camera privacy adjustments. Use the included power cord or one that has a "C" style end. Sound is very good even for music. Does everything they say it will. Great size for a bedside table. Highly recommend!!!"
+  )  
+
+  Review.create!(
+    user_id: 7,
+    product_id: 10,
+    rating: 3,
+    headline: "Mixed feelings",
+    comment: "I bought it so it would display song lyrics --- but it rarely does, even when asked. The Echo show sometimes starts talking and interrupting with no one has said the code word. I wanted it to play my music playlist, but it plays the same songs every day (even on shuffle), and I have a hundred songs on my list. Sometimes it ignores us when we tell it to set a timer. (It shows that it is listening, but it doesn't set the timer.) Sometimes. So It is not reliable, and I choose to use something else. I want it to display pictures, but it gives me ads and wants to tell me jokes. Mixed feelings."
+  )  
+
+
+
   #11
 
   p11 = Product.create!(
@@ -320,6 +602,21 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
   #   filename: "lenovo-2023"
   # })
 
+  Review.create!(
+    user_id: 3,
+    product_id: 11,
+    rating: 4,
+    headline: "Good Buy",
+    comment: "It was a gift for my recent graduate son. He loves it. I've notice some functions like the touch screen, and processing preform at the price point. With that said, good buy."
+  )  
+
+  Review.create!(
+    user_id: 1,
+    product_id: 11,
+    rating: 1,
+    headline: "Hates the internet.",
+    comment: "Cute little device. Lots of possibilities. Won’t stay connected to the internet. Makes it hard to do much…"
+  )    
 
   #12
 
@@ -344,6 +641,24 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
   #   filename: "ring-doorbell-3"
   # })
 
+  Review.create!(
+    user_id: 1,
+    product_id: 12,
+    rating: 5,
+    headline: "Exceeds Expectations",
+    comment: "The Ring Video Doorbell 3 is a must-have home security device that delivers quickly and exceeds expectations. It offers a robust set of features to keep your home safe and secure, including motion-activated recording and two-way audio. While the base of Ring v1 is not compatible with Ring v3, it was still relatively easy to swap out.
+
+The Ring Video Doorbell 3 is extremely user friendly and provides a quality experience. It is simple to install and the two-way audio feature allows you to communicate with visitors even when you’re not home. The motion-activated recording is also great for capturing any suspicious activity."
+  )  
+
+  Review.create!(
+    user_id: 3,
+    product_id: 12,
+    rating: 4,
+    headline: " Still learning how to use it.",
+    comment: "This is one of the best investments I have made. I am still learning how to get it to work the way I want but nice to have. For some reason I can not get the setting right to get it to record when motion starts till it ends. We miss some things in our set area and get others that are outside the set area. I hope with time I can get it working the way I want but till then, it is nice to have some security."
+  )    
+
 
   #13
   p13 = Product.create!(
@@ -364,6 +679,14 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
   #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/2021-hp-stream.jpg"),
   #   filename: "2021-hp-stream"
   # })
+
+  Review.create!(
+    user_id: 1,
+    product_id: 13,
+    rating: 4,
+    headline: "You definitely get your moneys worth",
+    comment: "I have only had this laptop for 3 days. I purchased it for school but I can not give an honest review until I actually start school in 2 weeks and see how the laptop holds up to all the work I plan on doing on it. From the reviews I have read on this product it does seem to be the perfect option for a school laptop within my price range."
+  ) 
 
   #14
 
@@ -413,6 +736,7 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
   #   filename: "microsoft-laptop"
   # })
 
+
   # 16
 
   p16 = Product.create!(
@@ -435,6 +759,22 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
   # })
 
 
+  Review.create!(
+    user_id: 1,
+    product_id: 16,
+    rating: 5,
+    headline: "Amazing for cystic acne!!!!",
+    comment: "I struggle with an array of skin issues! I have cystic acne large pores redness acne scars and aging to top it all off! My skin is a struggle. I’ve tried tons of acne products for my cystic acne and it always ended up scaring my skin in the end which made me even more embarrassed. I found this item on google in a few articles I’ve read. I put this on my cystic acne at night and in the morning my spots are greatly reduced in size. It definitely helps pull out that gunk for me. So I don’t pick on it or use things that scar my skin! Definitely willl continue to use this. It doesn’t always get rid of everything all the time you need to have realistic expectations when purchasing skin products. But I will say it pulls the gunk out without scaring my skin."
+  ) 
+
+  Review.create!(
+    user_id: 6,
+    product_id: 16,
+    rating: 1,
+    headline: "Terrible, will increase your healing time because they will peel off after any water/sweat exposure",
+    comment: "These are terrible and I should have known not to trust some random beauty products company. Hydrocolloid bandages only work if they can stay on the wound for multiple days undisturbed. If you're using these for acne, I can understand they work well to conceal it, but because of how easily the adhesive on these dissolves it will only increase your healing time. Removing them after any water or sweat exposure (which can mean many times a day depending on your lifestyle) will rip the topmost layer of cells off that were just created to replace your damaged skin. Doing this also triggers an inflammatory response which increases the risk of developing scar tissue and, for darker people, hyperpigmentation."
+  )   
+
   # 17
   
   p17 = Product.create!(
@@ -455,6 +795,14 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
   #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/paulas-choice-exfoliant.jpg"),
   #   filename: "paula-exfoliant"
   # })
+  
+  Review.create!(
+    user_id: 1,
+    product_id: 17,
+    rating: 1,
+    headline: "Unsatisfied with the cost",
+    comment: "It was too expensive for the amount"
+  ) 
 
 
   # 18
@@ -477,6 +825,14 @@ Travel from Planet Popstar to Merry Magoland with the press of a button to share
   #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/snail-mucin-essence.jpg"),
   #   filename: "snail-mucin"
   # })
+
+  Review.create!(
+    user_id: 1,
+    product_id: 15,
+    rating: 4,
+    headline: "My K-Beauty Routine",
+    comment: "At 32 I had stubborn hormonal acne and dry flaky skin (thanks in part to the dry climate in Colorado) I was tired of constantly fighting my skin and embarked on a journey to get the clear youthful skin I deserved. I was pleased to find that the skin of my dreams in a Korean beauty inspired routine. The best part is that nearly all the products I tried were relatively inexpensive and readily available from amazon. My acne is non-existent now and the tone and texture of my skin is so supple and smooth. I have provided a list of my routine below which includes this product. I’m not saying this is the best or only way to achieve my results, I just thought others would be interested in what I used."
+  ) 
 
 
   # 19
@@ -548,6 +904,13 @@ You can use your ice roller both morning and evening. It is great for helping th
   # })
 
 
+  Review.create!(
+    user_id: 1,
+    product_id: 21,
+    rating: 5,
+    headline: "Helped Restore My Skin",
+    comment: "I have had good skin my entire life and then found myself with eczema on my face at 62 years old. The dermatologist prescribed eucrisa which burned and really did not give much relief. Our Pharmacist suggested if I could find a natural way to treat it, he felt it would be safer. I read up and looked at Amazon for reviews of lotions to restore the oil barrier to my skin. Sunflower oil and CereVe cream did the trick. Within a week of adding the Cereve to my new regimin and washing my face with Cetaphil Cleanser, my skin started to return to normal. CereVe is too thick to wear when I go out so I use it when I am home and especially at bedtime. Highly recommend!"
+  ) 
 
   #22
   p22 = Product.create!(
@@ -568,6 +931,14 @@ You can use your ice roller both morning and evening. It is great for helping th
   #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/neutragena-sunscreen.jpg"),
   #   filename: "neutrogena-sunscreen"
   # })
+
+  Review.create!(
+    user_id:,
+    product_id:,
+    rating:,
+    headline:,
+    comment:
+  )
 
 
   #23
@@ -591,6 +962,13 @@ You can use your ice roller both morning and evening. It is great for helping th
   #   filename: "seraphic-exfoliating-mitts"
   # })
 
+  Review.create!(
+    user_id:,
+    product_id:,
+    rating:,
+    headline:,
+    comment:
+  )
 
   #24
 
@@ -613,6 +991,13 @@ You can use your ice roller both morning and evening. It is great for helping th
   #   filename: "first-aid-exfoliant"
   # })
 
+  Review.create!(
+    user_id:,
+    product_id:,
+    rating:,
+    headline:,
+    comment:
+  )
 
   #25
 
@@ -634,6 +1019,13 @@ You can use your ice roller both morning and evening. It is great for helping th
   #   filename: "soft-glam-eyeshadow"
   # })
 
+  Review.create!(
+    user_id:,
+    product_id:,
+    rating:,
+    headline:,
+    comment:
+  )  
 
   #26
   p26 = Product.create!(
@@ -674,6 +1066,13 @@ You can use your ice roller both morning and evening. It is great for helping th
   #   filename: "wet-n-wild-contouring"
   # })
 
+  Review.create!(
+    user_id:,
+    product_id:,
+    rating:,
+    headline:,
+    comment:
+  )  
 
   #28
   p28 = Product.create!(
@@ -695,6 +1094,21 @@ You can use your ice roller both morning and evening. It is great for helping th
   #   filename: "mielle-hair"
   # })
 
+  Review.create!(
+    user_id:,
+    product_id:,
+    rating:,
+    headline:,
+    comment:
+  )
+
+    Review.create!(
+    user_id:,
+    product_id:,
+    rating:,
+    headline:,
+    comment:
+  )
 
 
   #29
@@ -717,7 +1131,13 @@ You can use your ice roller both morning and evening. It is great for helping th
   #   filename: "mimi-headband"
   # })
 
-
+  Review.create!(
+    user_id:,
+    product_id:,
+    rating:,
+    headline:,
+    comment:
+  )
 
   #30
   p30 = Product.create!(
@@ -763,6 +1183,13 @@ They are suitable for men, women, kids and the people who have thick heavy hair.
   #   filename: "maybelline-rewind"
   # })
 
+  Review.create!(
+    user_id:,
+    product_id:,
+    rating:,
+    headline:,
+    comment:
+  )  
 
   #32
   p32 = Product.create!(
@@ -894,6 +1321,7 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
   # })
 
 
+
   #38
   p38 = Product.create!(
     product_name: "Aveeno Protect + Hydrate Moisturizing Body Sunscreen Lotion With Broad Spectrum Spf 60 & Prebiotic Oat, Weightless, Paraben-free, Oil-free & Oxybenzone-free, Pump Bottle, 12.0 ounces",
@@ -978,6 +1406,29 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
   #   filename: "kenzo-flower"
   # })   
 
+  Review.create!(
+    user_id: 1,
+    product_id: 41,
+    rating: 5,
+    headline: "Lasting",
+    comment: "This fragrance make me fill sexy , this is my second time having it . The first time I received it as a gift ."
+  )
+
+  Review.create!(
+    user_id: 4,
+    product_id: 41,
+    rating: 5,
+    headline: "persistent scent",
+    comment: "this is a good product. i like that its scent is very persistent."
+  )
+
+  Review.create!(
+    user_id: 3,
+    product_id: 41,
+    rating: 5,
+    headline: "Great smell",
+    comment: "I found this on a cruise and have loved it ever since. Was very happy to find it again"
+  )  
 
   #42
   p42 = Product.create!(
@@ -1039,6 +1490,7 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
   # })   
 
 
+
   #45
   p45 = Product.create!(
     product_name: "Le Male by Jean Paul Gaultier for Men - 4.2 Ounce EDT Spray, Eau De Toilette Spray",
@@ -1077,6 +1529,13 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
   #   filename: "armaf-perfume"
   # })  
 
+  Review.create!(
+    user_id: 6,
+    product_id: 46,
+    rating: 4,
+    headline: " I'm not a fan of the scent",
+    comment: "I'm not really a fan of the scent, but I do enjoy the look of the bottle itself. It may be a little too fancy, but it's still does what its suppose to. I think $33 usd is overpriced, but if there are people who love it than why change it. I more of a fan of the Nautica Voyage scent, but Armaf Club still can hold its ground when combined with the Nautica."
+  )  
 
   #47
   p47 = Product.create!(
@@ -1116,6 +1575,17 @@ It has a light moisturizing cream texture, so it doesn't rub off on makeup and t
   #   filename: "atomic-habits"
   # })  
 
+  Review.create!(
+    user_id: 1,
+    product_id: 48,
+    rating: 3,
+    headline: "You know everything already.",
+    comment: "I bought this book as I listened to an interview with James Clear on a podcast and found him interesting. His book, however was disappointing. It follows the typical self-help formula of common sense and old ideas combined with overly simplistic charts and celebrity anecdotes to remind you of what you already know.
+
+That said, sometimes you do need the reminder. And I did pick up a few useful tips. So it’s worth the read. But don’t expect anything special."
+  )  
+
+  
 
   #49
   p49 = Product.create!(
@@ -1139,6 +1609,14 @@ Laugh-out-loud funny, shrewdly observant, and studded with a dazzling cast of su
   #   filename: "lesson-chemistry"
   # })    
 
+  Review.create!(
+    user_id: 6,
+    product_id: 49,
+    rating: 4,
+    headline: "Can Four Stars incorporate a mixed review?",
+    comment: "I feel quite ambivalent about this book; on the one hand, wit and humour were there in spades, on the other, the proselytising on women grated at times and I say that as a committed and lifelong feminist. If I’m honest , the ending did cause me to smile but I equally frowned just a little at how neatly everything was wrapped up, especially as so much of the novel was about the unexpected events life throws at people. I guess the tone of the book should have been a good indicator of its end so perhaps that’s fair enough. Without doubt, I did enjoy it although, as I have read elsewhere, there was a little too much “tell” and not quite enough “show”; it is a first novel and a pretty original one for that and on that basis, I’d certainly buy BG’s next if/when it appears.
+I do agree with another reviewer who asked why Elizabeth Zott had to be so beautiful; someone without her physical beauty might have been even more interesting especially as it was her mind and intellect she wanted to be noted for. Despite these possible shortcomings, I read it avidly and mostly with great pleasure."
+  ) 
 
   #50
   p50 = Product.create!(
@@ -1160,6 +1638,13 @@ Switching between the perspectives of Lily and Atlas, It Starts with Us picks up
   #   filename: "starts-with-us-2"
   # })      
 
+  Review.create!(
+    user_id: 2,
+    product_id: 50,
+    rating: 5,
+    headline: "It starts with us.",
+    comment: "These were fantastic! I think that these two books offer a realistic description of domestic violence. Not having experienced it, I'm glad to have this small understanding of how deeply it messes with your mind. Few people have the kind of support that Lily has here though, so for any woman to make it out of an abusive relationship is some kind of miracle -- a miracle of luck, desperation and immense strength. I hope that reading a book like this will encourage all of us to reach out to support anyone we know who may be experiencing abuse of any kind. Let's let that support, that change, start with us."
+  )   
 
   #51
   p51 = Product.create!(
@@ -1231,6 +1716,13 @@ From the New York Times bestselling author of Daisy Jones & the Six—an entranc
   #   filename: "bittersweet"
   # })      
 
+  Review.create!(
+    user_id: 7,
+    product_id: 53,
+    rating: 4,
+    headline: "Emotional",
+    comment: "Susan Cain brings out the sorrow and longing. The loss of childhood of lost generations and the quest for immortality. Susan Cain is a good writer and the bittersweet test is really revealing. You laugh and you cry with her and the line between bitter and sweet, sorrow and longing, grief and impermanence, death is a window, not a wall. It is a good journey into the bittersweet."
+  ) 
 
   #54
   p54 = Product.create!(
@@ -1251,6 +1743,13 @@ From the New York Times bestselling author of Daisy Jones & the Six—an entranc
   #   filename: "cuddlebug"
   # })      
 
+  Review.create!(
+    user_id: 3,
+    product_id: 54,
+    rating: 5,
+    headline: "Such a cute book!!!",
+    comment: "We're about to adopt our daughter (almost 1yr old) and bought this as a gift for her on the day that we signed adoption papers. Maybe it was more the occasion than the book, but I found myself tearing up as I read it to her. She loved the vibrant colors and patted each page affectionately. We read it every night. My toddler son enjoys it as well."
+  ) 
 
   #55
   p55 = Product.create!(
@@ -1353,6 +1852,13 @@ At least, that’s the plan until the trouble turns to real danger."],
   #   filename: "things-we-never-got-over"
   # })  
 
+  Review.create!(
+    user_id: 2,
+    product_id: 59,
+    rating: 4,
+    headline: "This book was a ride and I loved it.",
+    comment: "The town had it's own personality. From Knox, Nash and Liza J, to the bikers and barbers to the library patrons, each person played a part in giving the town personality. Naomi is a character I can emphasize with. She has spent her whole life doing what she thought she had to do to make people love her and be proud. And this town helps her realize that SHE needs to live for herself. Knox was completely Oscar the Grouch and fighting feelings. Seeing his backstory, it is understandable why he fights so hard, but it hurt Naomi and my heart hurt during these interactions. Waylay was awesome. She was adorable and I loved that she and Naomi become their family and their rocks. Overall this was a very enjoyable book!"
+  ) 
 
   #60
   p60 = Product.create!(
@@ -1409,7 +1915,15 @@ Too bad Lina's got secrets of her own, and if Nash finds out the real reason she
   # p62.photo.attach({
   #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/goodnight-moon.jpg"),
   #   filename: "goodnight-moon"
-  # })  
+  # }) 
+
+  Review.create!(
+    user_id: 4,
+    product_id: 62,
+    rating: 4,
+    headline: "Goodnight",
+    comment: "This is a cute story of happiness from within. Saying good night to all things happy in your heart. Great"
+  )   
 
   #63
   p63 = Product.create!(
@@ -1471,6 +1985,14 @@ Too bad Lina's got secrets of her own, and if Nash finds out the real reason she
   #   filename: "subtle-art"
   # })  
 
+  Review.create!(
+    user_id: 5,
+    product_id: 65,
+    rating: 5,
+    headline: "I struggled reading it, but now I want to read it again",
+    comment: "I am a non-fiction fan, I love every marketing-business-finance-self improvement book walking around there. But this book is something different.
+I started reading it because I always saw it recommended in a lot of book rankings, so I gave it an opportunity. I must confess that often I struggled reading it, not because it was a boring book, but because it was something different to what I was used to. Some subjects touched by the book weren’t relevant to me, but those that were relevant blew completely my mind. After every reading session I found my self thinking and even meditating about what I just read. Somebody can call this book a live changing document, but is not that, it is just a book, a book that can help you starting to see things a little different, a book that can change just the moment you are living on."
+  )   
 
   #66 
 
@@ -1492,7 +2014,15 @@ Too bad Lina's got secrets of her own, and if Nash finds out the real reason she
   # p66.photo.attach({
   #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/chaoke-bike.jpg"),
   #   filename: "chaoke-art"
-  # })    
+  # })  
+
+  Review.create!(
+    user_id: 5,
+    product_id: 66,
+    rating: 5,
+    headline: " Get Ready to Sweat!",
+    comment: "Great spin bike....get ready to sweat! The only thing is that even with no resistance, you have a good resistance and feels like a climb all the time which is okay to me. As an update, I was able to adjust the resistance....before you assemble the bike, make sure that the minimum resistance is where you feel comfortable by screwing up or down the magnet....see the photo with yellow arrows, that's where you can decrease the minimum resistance by adjusting the magnet away from the wheel....BTW. I forgot to mention the great customer service...Thank you!"
+  )   
 
   #67
   
@@ -1515,6 +2045,14 @@ Too bad Lina's got secrets of her own, and if Nash finds out the real reason she
   #   filename: "mini-bike-himaly"
   # })   
   
+  Review.create!(
+    user_id: 7,
+    product_id: 67,
+    rating: 4,
+    headline: "Easy to use",
+    comment: "I use this almost every night while watching tv. The main issue I have found is that it slowly slides forward so you need to brace it against something heavy or a wall. It gets a little warm after a while but you can still easily pick it up to move once you’re done with it. Putting it together was super simple and came with all the pieces!"
+  ) 
+
   #68
 
   p68 = Product.create!(
@@ -1594,6 +2132,13 @@ Product Features
   #   filename: "home-foldable-treadmill"
   # })  
 
+  Review.create!(
+    user_id: 6,
+    product_id: 70,
+    rating: 4,
+    headline: "Perfect for a small space",
+    comment: "I bought this treadmill and put it together myself. It was pretty easy to assemble in just 30 minutes. It comes with the tools needed to do so. After I set it up and turned it on, I had to adjust the track tightness to get it to run smoothly without skipping. I also had to use the entire bottle of lubricant included in the box. I'll be ordering more so I have it on hand when it's time to reapply. It does get a little sluggish on lower speeds with my weight on it, but it seems to work fine otherwise. I bought this one because it was affordable and had a ledge for me to set my ipad on which it holds without issue. The only cons are that the pulse readers are inaccurate (no way my heart rate is only 85 after walking 20 minutes) and the water bottle holders are at the wrong angle so I can't really put my bottle in there. Maybe one of the mini bottles would fit but everything else falls out. One of the benefits of this treadmill is its size. It's small but the track is wide and long enough for a normal stride. It also folds up and releases back down very easily. It takes up very little space when folded up. Overall, great purchase and I think it'll last me a long time."
+  )   
 
   #71
 
@@ -1616,6 +2161,13 @@ Product Features
   #   filename: "amazon-dumbbell"
   # })  
 
+  Review.create!(
+    user_id: 1,
+    product_id: 71,
+    rating: 5,
+    headline: "Good quality",
+    comment: "I've been using TruGrit Dumbbells for a few years now and decided to try these ones out because they're cheaper. They're basically the same product. The only difference I can see or feel is that these don't have the TruGrit logo on them. So far I'm happy with them and will update this review if I see any issues with long-term use."
+  )   
 
   #72
 
@@ -1663,6 +2215,14 @@ This is the perfect set for your home gym and for fitness enthusiasts.",
   #   filename: "dumbbell-storage-rack"
   # })  
 
+  Review.create!(
+    user_id: 1,
+    product_id: 73,
+    rating: 5,
+    headline: "Nice quality and value",
+    comment: "These weights are great, nice quality for the price. It’s a good set for a beginner or moderate workout.
+The stand wasn’t too difficult to put together. A couple minor drawbacks- if your hands are large, racking the weight could pose a pinch hazard as it’s a narrow space and the set smells like a tire shop but will probably fade soon."
+  )   
 
   #74
 
@@ -1685,6 +2245,18 @@ This is the perfect set for your home gym and for fitness enthusiasts.",
   #   filename: "alllvocles"
   # })  
 
+
+  Review.create!(
+    user_id: 1,
+    product_id: 74,
+    rating: 5,
+    headline: "Great bands to challenge, support and assist.",
+    comment: "It's been a couple of months since I purchased this resistance band set and I am absolutely happy with my purchase! These bands are an excellent addition to any workout routine and I am impressed with the range of exercises that can be performed with them.
+
+What I love most about these resistance bands is how reliable and durable they are. I have no doubt that they will last me for many workouts to come. They also come in a range of resistance levels, so I was able to choose the perfect level of resistance to suit my fitness goals and level of experience.
+
+I have found the resistance band set to be incredibly versatile, allowing me to target nearly every muscle group in my body. From bicep curls and tricep extensions to squats and lunges, the possibilities are endless. Plus, they are lightweight and easy to pack, making them perfect for taking with me when I travel."
+  ) 
 
   #75
 
@@ -1754,6 +2326,18 @@ This is the perfect set for your home gym and for fitness enthusiasts.",
   #   filename: "amazon-basic-mat"
   # })  
 
+  Review.create!(
+    user_id: 3,
+    product_id: 77,
+    rating: 1,
+    headline: "Just a thick Sponge, Not a yoga mat !",
+    comment: "Do not buy!
+The only plus point about this mat is that it is thick. But that is it
+It is just a thick piece of sponge, not a yoga mat.
+It does not have the grip that a yoga mat must have. Keeps slipping.
+Also, after hardly 2 months of use, it has developed scratches and tears.
+It also expands in every direction and makes doing yoga more difficult rather than easy !"
+  )   
 
   #78
   
@@ -1820,6 +2404,13 @@ This is the perfect set for your home gym and for fitness enthusiasts.",
   #   filename: "retrospec-mat"
   # })  
 
+  Review.create!(
+    user_id: 1,
+    product_id: 80,
+    rating: 4,
+    headline: "Great mat. Poor carry strap.",
+    comment: "The carry strap had a small tear in it on arrival. It is getting worse with use and will be unusable soon. Can strap be replaced?"
+  )   
 
   #81
   
@@ -1846,6 +2437,14 @@ Built to last, our solid core massage roller with EVA tread is made from top gra
   #   filename: "321-foam-roller"
   # }) 
 
+
+  Review.create!(
+    user_id: 3,
+    product_id: 81,
+    rating: 5,
+    headline: "Great quality and very effective!",
+    comment: "I bought this roller to roll out my thighs. I ended up using it on my back, hips and legs. It’s sturdy and applies pressure just where you need it. You could travel with it - it’s not huge but it’s bigger than I want to travel with at this point."
+  )   
 
   #82
   
@@ -1960,7 +2559,14 @@ Built to last, our solid core massage roller with EVA tread is made from top gra
   #   filename: "jumprope"
   # }) 
 
-
+  Review.create!(
+    user_id: 6,
+    product_id: 86,
+    rating: 5,
+    headline: "Just what I was hoping for!",
+    comment: "I got the two pack of these jump ropes. One for me, and one for my 9 year old who has been trying to learn. However, previously she was trying to learn on one of the mesh type flimsy ropes that you can’t ever get any momentum with. Once I realized what her struggle was, I immediately went to Amazon to order these.
+Once I received them I was so please. The weight was great. They rotate effortlessly. I am 5’5” and the length was perfect for me. However we did have to cut my 9 year olds. But the cutting process was super simple, easy, and the instructions were easy to follow. It only took a couple of minutes. Highly recommend. Great purchase at an even more fantastic price!!"
+  ) 
 
   #87
 
@@ -1983,6 +2589,13 @@ Built to last, our solid core massage roller with EVA tread is made from top gra
   #   filename: "reoxvo-bracelets"
   # }) 
 
+  Review.create!(
+    user_id: 4,
+    product_id: 87,
+    rating: 5,
+    headline: "Great buy",
+    comment: "I was looking for some good value gold chain bracelets and let me tell u that I’m not disappointed one bit I have been using 2 of the set of bracelets for about 3 weeks and I wash dishes and even shower with them on and no rust or change color at all they are good quality are really nice it was worth the price good value for your money and it’s great for a gift"
+  )   
 
   #88
 
@@ -2006,6 +2619,13 @@ Built to last, our solid core massage roller with EVA tread is made from top gra
   #   filename: "jade-ross"
   # }) 
 
+  Review.create!(
+    user_id: 1,
+    product_id: 88,
+    rating: 3,
+    headline: "Very pretty but a Terrible clasp.",
+    comment: "The bracelet is pretty but it feels like the clasp is plastic. Very cheap and hard to close."
+  )   
   
   #89
 
@@ -2030,6 +2650,14 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
   #   filename: "healing-jade"
   # }) 
 
+  Review.create!(
+    user_id: 2,
+    product_id: 89,
+    rating: 4,
+    headline: "Pretty",
+    comment: "The beads are very pretty but it’s not comfortable to wear if you’re working at your desk or on a desk top computer"
+  ) 
+
   #90
 
   p90 = Product.create!(
@@ -2050,6 +2678,14 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
   #   {io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/howlite-bracelet.jpg"),
   #   filename: "howlite-jade"}
   # ) 
+
+  Review.create!(
+    user_id: 1,
+    product_id: 90,
+    rating: 4,
+    headline: "Most about it",
+    comment: 'it’s a very nice gift to give to someone, i had given it to my girlfriend but only 3 weeks in the little tie that made it tighter came loose and it had just broke from her wearing it in everyday activities. as for mine it broke about 2 months in while doing outdoor activities. they’re very nice but they don’t last very long, find a more expensive better quality bracelet.'
+  ) 
 
   #91
 
@@ -2091,7 +2727,19 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
   # p92.photo.attach({
   #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/earring-expensive-1.jpg"),
   #   filename: "diamond-stud-earrings"
-  # })    
+  # }) 
+
+  Review.create!(
+    user_id: 7,
+    product_id: 92,
+    rating: 5,
+    headline: "Better than the Store. Very Satisfied",
+    comment: "The only thing better than the diamonds are how they look on my partner; she looks absolutely stunning.
+
+I had always bought diamonds in person and let's be honest, we look at the 4 Cs and if they are solid, the diamond usually is as well.
+
+Very satisfied."
+  )   
 
   #93
 
@@ -2131,11 +2779,19 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
     photourl: "https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kendra-pink-necklace.jpg"
   ) 
 
-
   # p94.photo.attach({
   #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/kendra-pink-necklace.jpg"),
   #   filename: "kendra-pendant-necklace"
-  # })    
+  # })   
+
+
+  Review.create!(
+    user_id: 1,
+    product_id: 94,
+    rating: 4,
+    headline: "Not the best.",
+    comment: "The necklace is beautiful and goes with anything but the chain is constantly kinking since the first time I took it out of the package. Also, this is one of those items where you are paying for the name, not the quality."
+  )   
 
   # 95
   
@@ -2226,6 +2882,14 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
   #   filename: "men-earrings"
   # })    
 
+  Review.create!(
+    user_id: 1,
+    product_id: 98,
+    rating: 4,
+    headline: "Great value",
+    comment: "The small hoop earrings are difficult to get open and snap close. Other than that I am very satisfied with my purchase"
+  ) 
+
 
   #99
 
@@ -2270,6 +2934,14 @@ From the bespoke quality of beads to the strategic placement of each bead and sp
   #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/men-ring.jpg"),
   #   filename: "silicone-ring-men"
   # })     
+
+  Review.create!(
+    user_id: 5,
+    product_id: 100,
+    rating: 5,
+    headline: "Flexible, Comfortable",
+    comment: "I bought this hoping to have an everyday ring. I was surprised at how comfortable it was and loved the guarantee the company has. It was comfortable, didn’t pinch, was very flexible and fit my aesthetic completely. On top of that. I was able to replace it for a larger size with no problem. Definitely recommend to others with all size hands who want something comfortable."
+  ) 
 
 
   #101
@@ -2370,6 +3042,13 @@ This panel accentuates the waist beautifully, and because it’s higher up on th
   #   filename: "ecowish-dress"
   # })    
 
+  Review.create!(
+    user_id: 4,
+    product_id: 104,
+    rating: 4,
+    headline: "Ideal Spring/Summer Dress",
+    comment: "It is a beautiful dress. It fit as expected. The colours are just as advertised. I ordered a medium. You are gonna love this dress. This is one of my favs."
+  )
 
 
   #105
@@ -2397,6 +3076,13 @@ This panel accentuates the waist beautifully, and because it’s higher up on th
   #   filename: "merokeety-lace-dress"
   # }) 
 
+  Review.create!(
+    user_id: 2,
+    product_id: 105,
+    rating: 4,
+    headline: "Cute and fits well",
+    comment: "I’m ready between sizes and I might have gone down one size to have a tight fit, but the size I got that’s fine. The quality seems decent. It doesn’t feel cheap. The lace is soft. I haven’t worn it yet but I’m looking forward to it."
+  )
 
   #106
 
@@ -2447,6 +3133,13 @@ This panel accentuates the waist beautifully, and because it’s higher up on th
   #   filename: "democracy-high-rise-jeans"
   # }) 
 
+  Review.create!(
+    user_id: 3,
+    product_id: 107,
+    rating: 5,
+    headline: "So comfortable",
+    comment: "These pants are amazing! I bought my first pair at a department store and loved them. I love the waist band. It is a wider elastic to give the right amount of stretch. They are the most comfortable pants ever! I bought them in several colors. This is my new favorite brand. Highly recommend. Will definitely buy more."
+  )  
 
   #108
 
@@ -2472,7 +3165,13 @@ This panel accentuates the waist beautifully, and because it’s higher up on th
   #   filename: "levi-women-straight-jeans"
   # }) 
 
-
+  Review.create!(
+    user_id: 3,
+    product_id: 108,
+    rating: 5,
+    headline: "All time FAVORITE jeans!!! BUY THESE",
+    comment: "I absolutely LOVE these jeans. Button fly is flattering for the low belly, hits at the perfect spot. Very flattering of the backside and perfect bagginess so that it fits like a true straight jean. I have recommended them to all my friends. Worth the money very durable and actually had a good stretch to them. I consider these my “sitting jeans” aka I’m comfortable enough to eat dinner in them."
+  )
 
   #109
 
@@ -2552,7 +3251,13 @@ This panel accentuates the waist beautifully, and because it’s higher up on th
   #   filename: "sweetheart-crop-top"
   # }) 
 
-
+  Review.create!(
+    user_id: 1,
+    product_id: 111,
+    rating: 4,
+    headline: "Comfy and perfect for summer",
+    comment: "I love how much this top suits my body style! It’s not too cropped either so i can tuck it into pants and get that cute but business-y look! It does slide down a little bit after walking but it doesn’t take much to keep it up."
+  )
 
   #112
 
@@ -2605,6 +3310,14 @@ This panel accentuates the waist beautifully, and because it’s higher up on th
   #   filename: "chicwish-coat"
   # })   
 
+  Review.create!(
+    user_id: 1,
+    product_id: 113,
+    rating: 4,
+    headline: "Condition 👍",
+    comment: "The fabric is very comfortable and warm. Definitely something you can dress up or down! It’s a must have in your closet."
+  )
+
 
   #114
 
@@ -2633,6 +3346,13 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
   #   filename: "ugerlov-sweater"
   # })   
 
+  Review.create!(
+    user_id: 1,
+    product_id: 114,
+    rating: 5,
+    headline: "Awesome oversized shirt",
+    comment: "I like that it is very oversized, I paired it with dress pants and it’s super cute."
+  )
 
   #115
 
@@ -2659,6 +3379,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
   # })   
 
 
+  Review.create!(
+    user_id: 2,
+    product_id: 115,
+    rating: 4,
+    headline: "Pretty but a bit itchy",
+    comment: "This sweater is very pretty but is not as soft as I like and the turtle neck is pretty long for my short neck.I love the color and have gotten lots of compliments when I've worn it."
+  )
+
   #116
 
   p116 = Product.create!(
@@ -2683,6 +3411,13 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
   #   filename: "shermie-sweater"
   # })   
 
+  Review.create!(
+    user_id: 1,
+    product_id: 116,
+    rating: 5,
+    headline: "Elbow Heart patch sweater",
+    comment: "This sweater is so cute! It is very light weight and the knitting is thin and airy, but not see through. It is oversized fit. I got my normal size medium and it was a tad oversized. However I think I would stick with the medium because I like the way it tucks into jeans. It would be a great sweater for leggings as well!"
+  )  
 
   #117
 
@@ -2708,6 +3443,15 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
   #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/puffer-jacket-merokeety.jpg"),
   #   filename: "puffer-merokeety-jacket"
   # })     
+
+  Review.create!(
+    user_id: 4,
+    product_id: 117,
+    rating: 4,
+    headline: "Big, poofy, and warm",
+    comment: "I was skeptical at first upon certain reviews, but my order came in perfect. The outside is polyester, I figured it would be shiny by the feel of the fabric,
+but it’s still quite a matte look which is what I was hoping for. The zippers do feel a bit cheap, but as of now they are fine. Upon trying this on it was very warm and fluffy. I started burning up in a matter of seconds. It isn’t very flattering for the shape of your torso if that is what you were hoping for. But it’s perfect for cold days. I think it’s a great buy, especially since I’ll be walking around a college campus a lot."
+  )
 
 
   #118
@@ -2735,6 +3479,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
   #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/crop-vest.jpg"),
   #   filename: "crop-vest"
   # })     
+
+  Review.create!(
+    user_id: 2,
+    product_id: 118,
+    rating: 5,
+    headline: " Perfect!",
+    comment: "I’m a big snob when it comes to quality of items. And for a reason! For the price, this vest does not look or feel cheap at all and makes me look good! Just wish it had pockets and that I bought it sooner!"
+  )
 
 
   #119
@@ -2839,6 +3591,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
   #   filename: "hawaiian-floral-shirt"
   # })    
 
+  Review.create!(
+    user_id: 5,
+    product_id: 122,
+    rating: 5,
+    headline: "Beautiful lines and the cotton blend is perfect",
+    comment: "Strong, but cool cotton blend, good fit."
+  )
+
 
   #123
 
@@ -2915,6 +3675,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
   #   filename: "champion-shirt"
   # })    
 
+  Review.create!(
+    user_id: 5,
+    product_id: 125,
+    rating: 5,
+    headline: "Amazing",
+    comment: "Champion material is so comfy"
+  )
+
 
   #126
 
@@ -2941,6 +3709,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
   #   filename: "vineyard-pullover"
   # })    
 
+  Review.create!(
+    user_id: 7,
+    product_id: 126,
+    rating: 5,
+    headline: "perfect fit",
+    comment: "After one wash shirt looks as good as new. Nice and soft we did not have to iron the shirt and it still looked good."
+  )
+
 
   #127
 
@@ -2966,6 +3742,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
   #   filename: "vineyard-pullover"
   # })    
 
+
+  Review.create!(
+    user_id: 2,
+    product_id: 127,
+    rating: 5,
+    headline: "Pills easily",
+    comment: "Pilling was pretty bad and happened quickly. My son loves it though."
+  )
 
   #128
 
@@ -3017,6 +3801,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
   #   filename: "haggar-men-pants"
   # })    
 
+  Review.create!(
+    user_id: 7,
+    product_id: 129,
+    rating: 4,
+    headline: "overall a good pair of pants",
+    comment: "been wearing these to work for several years now, and they last pretty well. I usually throw them out when my wallet begins to wear a hole in the left rear pocket. I only had one pair over the past few years that the hem kept coming undone on one of the legs, even after repairing the seam. black color lasts pretty well, and they hang up nicely right out of the dryer with few wrinkles. the navy blue does not last quite as long as the black."
+  )  
+
   #130
 
   p130 = Product.create!(
@@ -3043,6 +3835,15 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
   #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/match-men-cargo-pants.jpg"),
   #   filename: "match-man-cargo"
   # })    
+
+  Review.create!(
+    user_id: 1,
+    product_id: 130,
+    rating: 4,
+    headline: "Comfy, but a little bit of a hassle",
+    comment: "The pants are comfy! While they are a little tight on the thigh (with stuff in my pockets), my curvy girlies get that. The waistband is adjustable, it just sits a little weirdly because you have to physically tie it. It's not like it feeds through the pants, so it sits on your stomach.
+Overall, these pants are great! They didn't get caught while I hopped over a fence(shhh). But, I can definitely see them get worn down if you use these for a labor-intensive job. Great for everyday fits though!"
+  )
 
 
   #131
@@ -3095,6 +3896,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
   #   filename: "lee-tan-jean"
   # })  
 
+  Review.create!(
+    user_id: 3,
+    product_id: 132,
+    rating: 5,
+    headline: "Comfy and flattering!",
+    comment: "He claims they’re the most comfortable jeans he’s ever owned and I’m here to testify that they’re very flattering as well!! I bought him a pair from Kohl’s originally. When he told me how much he loved them I had to order him another pair. Sale price at Kohl’s was $45, Amazon sale price was $29 for the exact same pants!"
+  )
+
 
   #133
 
@@ -3116,6 +3925,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
   #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/dunkin-coffee.jpg"),
   #   filename: "dunkin"
   # }) 
+
+  Review.create!(
+    user_id: 5,
+    product_id: 133,
+    rating: 5,
+    headline: "Dunkin' Original Blend Medium Roast Ground Coffee",
+    comment: "Delicious, rich, smooth, and with no bitterness. Don't talk to me til I've had my Dunkin'!"
+  )
 
 
   #134
@@ -3162,6 +3979,18 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
   #   filename: "starbucks-coffee"
   # })   
 
+  Review.create!(
+    user_id: 2,
+    product_id: 135,
+    rating: 5,
+    headline: "Great coffee",
+    comment: "This is one of my favorites hands down
+Love the taste cannot say enough of good about it
+The price is a little steep which is bothersome to me
+People struggle everyday to make ends meat and they up the prices on everything
+I save my money every week so I can order it’s a treat for me and I won’t give this coffee up"
+  )  
+
 
   #136
 
@@ -3206,7 +4035,15 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
   #   filename: "popcorners"
   # })  
 
+  Review.create!(
+    user_id: 1,
+    product_id: 137,
+    rating: 5,
+    headline: "We had some samples come in at work, I had to buy more!",
+    comment: "This variety pack is great. I keep a stash of these at my desk at work to snack on when I get hungry. All three flavors are good, so it's not like I'll end up with something I don't like.
 
+If you haven't tried them, think of them like a rice cake, but crispier and in a Dorito triangle. They're really good."
+  )
 
   #138
 
@@ -3230,7 +4067,13 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
   #   filename: "oreos"
   # })  
 
-
+  Review.create!(
+    user_id: 4,
+    product_id: 138,
+    rating: 5,
+    headline: "Quality of cookies",
+    comment: "These are great for kid snacks for lunch just the right amount good with a glass of milk or a coffee break"
+  )
 
   #139
 
@@ -3252,6 +4095,14 @@ The knit oversize sweater is our take on what a modern day women would wear. Dre
   #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/pistachios.jpg"),
   #   filename: "pistachios"
   # })  
+
+  Review.create!(
+    user_id: 6,
+    product_id: 139,
+    rating: 5,
+    headline: "DELICIOUS! best snack",
+    comment: "Wonderful pistachios are perfectly named because they are truly wonderful. They are fresh, crunchy with a light salt flavor. A perfect pick me up snack for the afternoon to get some protein in, or a delicious treat in the evening if dinner is running late, they are a nice tie over. They are the perfect size and so different from almonds, cashews, or peanuts that you would have in a cocktail dish or charcuterie board. Cashews are so heavy tasting and far more fattening, Almonds are typically much more of a mouth full and if you select Diamond Almonds or something similar, you have a whole mouth full of the flavoring, and not just the nuts. Cocktail peanuts typically make us more thirsty and add more calories in drinking and such. These pistachios are the perfect blend of nutty, light, and tasty. I am thrilled to have found the perfect snack. My children, grandchildren and husband all agree that it is quite tasty and enjoy Wonderful Pistachios daily with me. I share them with everyone so they, too can get addicted to these fabulous nuts. Amazon has the best pricing on Wonderful Pistachios. No, I do not work for them and am not an employee. Just found these yummy treats and now I can't live without them, they are so good."
+  )  
 
 
   #140
@@ -3341,7 +4192,13 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
   #   filename: "daechun-seaweed"
   # })    
 
-
+  Review.create!(
+    user_id: 1,
+    product_id: 143,
+    rating: 5,
+    headline: "Loved it!",
+    comment: "These are great for making your own sushi rolls at home and tastes really good. And I loved that the packet is resealable so it’s very convenient to use it for later and stays fresh! Will definitely buy more of these!"
+  )
 
   #144
   
@@ -3365,6 +4222,15 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
   #   filename: "albanese-gummy"
   # }) 
 
+  Review.create!(
+    user_id: 3,
+    product_id: 144,
+    rating: 5,
+    headline: "Great gummie snack",
+    comment: "I cannot get enough of these gummy bears, they taste great and look great.
+They are not to hair like haribo gummies or to soft. And the taste is the best part of them plus they are “sugar free”. Always recommended"
+  )
+
 
   #145
   
@@ -3387,7 +4253,13 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
   #   filename: "haribo-gummy"
   # }) 
 
-
+  Review.create!(
+    user_id: 4,
+    product_id: 145,
+    rating: 5,
+    headline: "lots of product and very fresh!",
+    comment: "very good and fresh!"
+  )
 
   #146
   
@@ -3455,6 +4327,14 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
   #   filename: "chocolate-strawberries"
   # })   
 
+  Review.create!(
+    user_id: 6,
+    product_id: 148,
+    rating: 5,
+    headline: "Best berries EVER",
+    comment: "We absolutely loved these berries! The shipping was fast and they came in cold and delicious! Not to mention, beautiful! They are also very affordable which was a huge plus! I have tried Edible Arrangements and Shari’s Berries. These berries beat both of them! The only thing that was wrong is that one of them had a minor crack on the chocolate. But, since they are shipped, we didn’t expect perfection. We are so glad that we ordered these berries! This company has won our business. Thank you so much for making cold, delicious, beautiful and affordable berries!"
+  )
+
   #149
 
   p149 = Product.create!(
@@ -3473,6 +4353,14 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
   #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/godiva.jpg"),
   #   filename: "godiva-chocolates"
   # })    
+
+  Review.create!(
+    user_id: 6,
+    product_id: 149,
+    rating: 5,
+    headline: "Worked like a charm",
+    comment: "These chocolates worked like a charm. I bought them for my wife while I was out of town for 12 days with the boys. When I got home she couldn't keep her hands off me!"
+  )
 
 
   #150
@@ -3496,6 +4384,13 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
   #   filename: "poppi-soda"
   # })    
 
+  Review.create!(
+    user_id: 1,
+    product_id: 150,
+    rating: 5,
+    headline: "Poppi Soda",
+    comment: "I really like these 'sodas'! I would consider them more of a sparkling water though. I won't lie they definitely help my tummy if it's feeling off and unsettled. I normally wind down the night with these. They are also awesome with mixing into other beverages! Cocktails, mocktails, juices! I rarely can drink a whole one cause I'm not much of a carbonation person. The flavors are good but you can definitely tell that the flavor is just a tad more than a hint. I will compare it to a White Claw, but more flavor and taste."
+  )
 
   #151
 
@@ -3539,7 +4434,15 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
   # p152.photo.attach({
   #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/vita-coco.jpg"),
   #   filename: "vita-coco"
-  # })    
+  # }) 
+
+  Review.create!(
+    user_id: 5,
+    product_id: 152,
+    rating: 5,
+    headline: "Delicious",
+    comment: "Delicious and very hydrating"
+  )  
 
   #153
 
@@ -3562,7 +4465,13 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
   #   filename: "fancy-feast-cat"
   # })    
 
-
+  Review.create!(
+    user_id: 1,
+    product_id: 153,
+    rating: 5,
+    headline: "They lick their plates clean!",
+    comment: "This is the only food my cats lick their plates clean. I was feeding them Friskies Shreds, they never cleaned their plates like they are with Fancy Feast Seafood. I have 4 cats, so I give them half a can each morning and they have dry food all the time. So nice to see them eat all their food!"
+  )
 
   #154
 
@@ -3585,6 +4494,14 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
   #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/hill-dry-cat.jpg"),
   #   filename: "hill-dry-food"
   # })    
+
+  Review.create!(
+    user_id: 1,
+    product_id: 154,
+    rating: 5,
+    headline: "Pretty sure my cat likes this better than her wet food",
+    comment: "This is expensive but worth your companion’s health. This came highly recommended by my vet. This is a premium product but you get what you pay for. Their wet food is much more pricey so I am still on the hunt for something of better quality (and that she thinks is really tasty) than what I have been buying currently. She has an automatic feeder that puts 2 small portions daily of this dry food and we also give her Sheba pate because it is ridiculously easy to just clean her dish and put this in there and throw out the container. Hills has a pouch almost like a tuna pouch but it’s less convenient to place for her and has a higher cost for less food. I got both the Sheba pate on here and the automatic feeder as well. The feeder is cool because it has a cat proof top locking lid and you can record your own voice to talk to them every time it dispenses food. Pretty cool! There’s also a square see through little bubbler fountain they have on here, too."
+  )
 
 
   #155
@@ -3632,6 +4549,14 @@ Our roasted seaweed is roasted twice and has a crispy texture. We have a robust 
   #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/cat-feather-toy.jpg"),
   #   filename: "feather-cat-toy"
   # })    
+
+  Review.create!(
+    user_id: 1,
+    product_id: 156,
+    rating: 4,
+    headline: "Without breaking the bank",
+    comment: "I really like this product. My cat loves feathers and worm like toys so this was an easy choice to buy. The durability of it is very strong, not because of the construction of it because I’m unsure how the wand itself will hold up, but the “string” is actually fishing line which kind gives the attached toys this almost like floating effect. The toy itself is essentially a small fishing pole. Maybe the retractable pole is made of similar material of an actual fishing rod. I do recommend it for someone who wants something simple for what it does, that is to entertain the cat. Simple as that."
+  )
 
 
   #157
@@ -3686,6 +4611,14 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
   # })    
 
 
+  Review.create!(
+    user_id: 1,
+    product_id: 158,
+    rating: 4,
+    headline: "works good for a while.",
+    comment: "My cat likes these toys, but it looses the catnip attraction within a few days, then she pretty much ignores it until you cover it in more catnip."
+  )
+
   #159
 
   p159 = Product.create!(
@@ -3730,6 +4663,14 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
   #   filename: "milk-bone-dogs"
   # })  
 
+  Review.create!(
+    user_id: 3,
+    product_id: 160,
+    rating: 5,
+    headline: " Your dog deserves this big box of treats, good price too",
+    comment: "This is a really good value. Compare to the big box stores and you will see this is a lot of great treats for the money. The medium size biscuits is perfect for a large or medium dog, maybe even a small one. 10 lbs is a lot so make sure you have room in the pantry for this big box and get ready to see your best pal smile every time you open the door."
+  )
+
 
   #161
 
@@ -3754,6 +4695,14 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
   # })  
 
 
+  Review.create!(
+    user_id: 7,
+    product_id: 161,
+    rating: 3,
+    headline: "Dogs love them",
+    comment: "Very overpriced but dogs love these treats."
+  )
+
   #162
 
   p162 = Product.create!(
@@ -3775,6 +4724,14 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
   #   filename: "goola-dog-toy"
   # })  
 
+  Review.create!(
+    user_id: 6,
+    product_id: 162,
+    rating: 1,
+    headline: "Spend the extra money for a better one!",
+    comment: "Toys didn’t last a week with my medium sized dog. The squeaker was also super hard to squeak. I have no idea how my dog was able to do it!"
+  )
+
 
   #163
 
@@ -3795,6 +4752,15 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
   #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/duck-dog-toy.jpg"),
   #   filename: "duck-dog-toy"
   # }) 
+
+  Review.create!(
+    user_id: 3,
+    product_id: 163,
+    rating: 3,
+    headline: "Not suitable for power chewers",
+    comment: "Did my dog love this toy? Absolutely! Did she destroy it in a few days? Also, yes. I would not recommend this toy for owners of power chewers since my Pitbull puppy tore this apart easily. Plus, it’s advertised as not having stuffing, but there’s stuffing in the beak. Still gave 3 stars since she did enjoy the process!"
+  )
+
 
   #164
 
@@ -3818,6 +4784,15 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
   #   filename: "lambchop-dog-toy"
   # })  
 
+  Review.create!(
+    user_id: 3,
+    product_id: 164,
+    rating: 5,
+    headline: "My dog's favorite toy",
+    comment: "A friend gifted my dog with his very first Lamb Chop. He subsequently received mini versions over the years. Even though his toy box is full of other stuffies, Lamb Chop is his favorite and the first one he will pull out even if it's on the bottom. I like that there are squeakers in the middle as well as the tips of all the legs. My little 15 lb. dog doesn't shred his toys as quickly as my friend's 60 lb. boxer so I put up Lamb Chop when the boxer visits. This purchase was a replacement for the previous one that the boxer de-stuffed the filling."
+  )
+
+
   #165
 
   p165 = Product.create!(
@@ -3838,6 +4813,8 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
   #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/corn-dog-toy.jpg"),
   #   filename: "corn-dog-toy"
   # })   
+
+
 
   #166
 
@@ -3882,6 +4859,14 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
   #   filename: "royal-canin-dog-food"
   # })   
 
+  Review.create!(
+    user_id: 1,
+    product_id: 167,
+    rating: 5,
+    headline: "Excellent product and service",
+    comment: "Im very satisfied with delivery and produce."
+  )
+
   #168
 
   p168 = Product.create!(
@@ -3903,8 +4888,16 @@ This feather cat toys make a good interactive fun exerciser.in the meantime, it 
   # p168.photo.attach({
   #   io: URI.open("https://ameizin-seeds.s3.amazonaws.com/ameizin-seeds/pedigree-dog.jpg"),
   #   filename: "pedigree-dog-food"
-  # })   
+  # })  
 
+
+  Review.create!(
+    user_id: 1,
+    product_id: 168,
+    rating: 5,
+    headline: "Flavor",
+    comment: "My dog loves this flavor and being that it has gravy it is even better."
+  )
 
   puts "Done!"
 
