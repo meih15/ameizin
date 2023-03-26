@@ -85,35 +85,35 @@ ApplicationRecord.transaction do
   )
 
 
-  # puts "Creating carts..."
+  puts "Creating carts..."
 
-  # Cart.create!(
-  #   user_id: 1
-  # )
+  Cart.create!(
+    user_id: 1
+  )
 
-  # Cart.create!(
-  #   user_id: 2
-  # )
+  Cart.create!(
+    user_id: 2
+  )
 
-  # Cart.create!(
-  #   user_id: 3
-  # )
+  Cart.create!(
+    user_id: 3
+  )
 
-  # Cart.create!(
-  #   user_id: 4
-  # )
+  Cart.create!(
+    user_id: 4
+  )
 
-  # Cart.create!(
-  #   user_id: 5
-  # )
+  Cart.create!(
+    user_id: 5
+  )
 
-  # Cart.create!(
-  #   user_id: 6
-  # )
+  Cart.create!(
+    user_id: 6
+  )
 
-  # Cart.create!(
-  #   user_id: 7
-  # )
+  Cart.create!(
+    user_id: 7
+  )
 
   
   puts "Creating categories..."

@@ -8,7 +8,6 @@ class Api::CartsController < ApplicationController
             render :show
         else
             if cookies[:cart] && cookies[:cart] != ""
-        
                 @cart = Cart.find(cookies[:cart])
                 render :show
             else
