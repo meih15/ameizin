@@ -11,8 +11,8 @@ ApplicationRecord.transaction do
   puts "Destroying tables..."
   # Unnecessary if using `rails db:seed:replant`
   Review.destroy_all
-  Product.destroy_all
   Category.destroy_all
+  Product.destroy_all
   CartItem.destroy_all
   Cart.destroy_all
   User.destroy_all
@@ -23,8 +23,8 @@ ApplicationRecord.transaction do
   ApplicationRecord.connection.reset_pk_sequence!('users')
   ApplicationRecord.connection.reset_pk_sequence!('carts')
   ApplicationRecord.connection.reset_pk_sequence!('cart_items')
-  ApplicationRecord.connection.reset_pk_sequence!('categories') 
   ApplicationRecord.connection.reset_pk_sequence!('products')
+  ApplicationRecord.connection.reset_pk_sequence!('categories') 
   ApplicationRecord.connection.reset_pk_sequence!('reviews')
 
 
