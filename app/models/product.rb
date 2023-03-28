@@ -14,7 +14,7 @@
 #
 class Product < ApplicationRecord
 
-    has_one :category,
+    helongs_to :category,
         foreign_key: :category_id,
         class_name: :Category,
         dependent: :destroy

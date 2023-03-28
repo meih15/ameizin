@@ -13,8 +13,8 @@ ApplicationRecord.transaction do
   Review.destroy_all
   CartItem.destroy_all
   Cart.destroy_all
-  Product.destroy_all
   Category.destroy_all
+  Product.destroy_all
   User.destroy_all
   
 
