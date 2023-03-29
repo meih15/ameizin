@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import LoginFormPage from './components/LoginFormPage';
 import SignupFormPage from "./components/SignUpFormPage";
@@ -23,6 +23,12 @@ function App() {
     localStorage.setItem('isInitialLoad', 'true');
     window.location.reload();
   }
+
+  useEffect(() => {
+    window.addEventListener('beforeunload', () => {
+      localStorage.removeItem('isInitialLoad');
+    });
+  }, []);
 
   return (
     <>
