@@ -19,7 +19,7 @@ function App() {
   const isInitialLoad = localStorage.getItem('isInitialLoad');
 
   if (!isInitialLoad) {
-    console.log("reloded")
+    // console.log("reloded")
     localStorage.setItem('isInitialLoad', 'true');
     window.location.reload();
   }
