@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import LoginFormPage from './components/LoginFormPage';
 import SignupFormPage from "./components/SignUpFormPage";
@@ -16,6 +16,20 @@ import SearchShowPage from './components/Search/SearchShowPage';
 
 
 function App() {
+  const isInitialLoad = localStorage.getItem('isInitialLoad');
+
+  if (!isInitialLoad) {
+    console.log("reloded")
+    localStorage.setItem('isInitialLoad', 'true');
+    window.location.reload();
+  }
+
+  useEffect(() => {
+    window.addEventListener('beforeunload', () => {
+      localStorage.removeItem('isInitialLoad');
+    });
+  }, []);
+
   return (
     <>
       <Switch>
