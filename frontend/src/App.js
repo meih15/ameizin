@@ -16,6 +16,14 @@ import SearchShowPage from './components/Search/SearchShowPage';
 
 
 function App() {
+  const isInitialLoad = localStorage.getItem('isInitialLoad');
+
+  if (!isInitialLoad) {
+    console.log("reloded")
+    localStorage.setItem('isInitialLoad', 'true');
+    window.location.reload();
+  }
+
   return (
     <>
       <Switch>
