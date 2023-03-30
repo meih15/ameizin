@@ -19,9 +19,10 @@ function Header({placeholder}) {
 
     const logout = (e) => {
         e.preventDefault(); 
-        dispatch(sessionActions.logout());
-        history.push('/login')
-        };
+        dispatch(sessionActions.logout()).then(res => {
+            history.push('/login')
+        })
+    };
 
 
     const signedout = (
