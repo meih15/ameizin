@@ -27,6 +27,10 @@ function App() {
   useEffect(() => {
     window.addEventListener('beforeunload', () => {
       localStorage.removeItem('isInitialLoad');
+
+      window.addEventListener('unload', () => {
+        localStorage.removeItem('isInitialLoad');
+      });
     });
   }, []);
 
