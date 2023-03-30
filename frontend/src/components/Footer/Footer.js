@@ -13,8 +13,8 @@ const Footer = () => {
         <div className='whole-footer'>
             <button onClick={handleBackToTop} id='back-to-top'>Back to top</button>
             <div id='footer-section'>
-                <a id='github' href='https://github.com/meih15' ><i id='footer-github' className="fa-brands fa-square-github"/></a>
-                <a id='linkedin' href='https://www.linkedin.com/in/mei-huang-ba967a159'><i id='footer-linkedin' className="fa-brands fa-linkedin"/></a>
+                <a id='github' href='https://github.com/meih15' target='_blank' rel="noreferrer"><i id='footer-github' className="fa-brands fa-square-github"/></a>
+                <a id='linkedin' href='https://www.linkedin.com/in/mei-huang-ba967a159' target='_blank' rel="noreferrer"><i id='footer-linkedin' className="fa-brands fa-linkedin"/></a>
                 <i id='footer-website' className="fa-solid fa-user-tie"/>
             </div>
             <div id='footer-line'></div>
