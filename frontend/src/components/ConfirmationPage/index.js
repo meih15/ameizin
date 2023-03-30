@@ -99,14 +99,14 @@ const ConfirmationPage = () => {
                         <p className='check-it'>Check out these Ameizin' links:</p>
                         <div className='done-links'>
                             <p id='portfolio-link'>Portfolio</p>
-                            <a id='github-link' href='https://github.com/meih15' >Github</a>
-                            <a id='linkedin-link' href='https://www.linkedin.com/in/mei-huang-ba967a159'>Linkedin</a>
+                            <a id='github-link' href='https://github.com/meih15' target='_blank' rel="noreferrer">Github</a>
+                            <a id='linkedin-link' href='https://www.linkedin.com/in/mei-huang-ba967a159' target='_blank' rel="noreferrer">Linkedin</a>
                             <div className='description-link'>
-                                <a id='js-link' href='https://meih15.github.io/bobabreak/'>bobabreak</a>
+                                <a id='js-link' href='https://meih15.github.io/bobabreak/' target='_blank' rel="noreferrer">bobabreak</a>
                                 <p id='des'>Javascript Project</p>
                             </div>
                             <div className='description-link'>
-                                <a id='m-link' href='https://puppy-play-dates.onrender.com/'>Puppy Play Dates</a>
+                                <a id='m-link' href='https://puppy-play-dates.herokuapp.com/' target='_blank' rel="noreferrer">Puppy Play Dates</a>
                                 <p id='des'>MERN Stack Project</p>
                             </div>
                         </div>
