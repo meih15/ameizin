@@ -19,7 +19,8 @@ function Header({placeholder}) {
 
     const logout = (e) => {
         e.preventDefault(); 
-        dispatch(sessionActions.logout()).then(res => {
+        dispatch(sessionActions.logout())
+        .then(res => {
             history.push('/login')
         })
     };
@@ -42,7 +43,7 @@ function Header({placeholder}) {
     useEffect(() => {
         dispatch(fetchCart())
         dispatch(fetchCartItems())
-    }, []);
+    }, [sessionUser]);
 
     const loggedInOrder =   (<Link to='/orderhistory' className='ordersLink'>
                                 <div id='return-order'>
