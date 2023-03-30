@@ -16,23 +16,6 @@ import SearchShowPage from './components/Search/SearchShowPage';
 
 
 function App() {
-  const isInitialLoad = localStorage.getItem('isInitialLoad');
-
-  if (!isInitialLoad) {
-    // console.log("reloded")
-    localStorage.setItem('isInitialLoad', 'true');
-    window.location.reload();
-  }
-
-  useEffect(() => {
-    window.addEventListener('beforeunload', () => {
-      localStorage.removeItem('isInitialLoad');
-
-      window.addEventListener('unload', () => {
-        localStorage.removeItem('isInitialLoad');
-      });
-    });
-  }, []);
 
   return (
     <>
