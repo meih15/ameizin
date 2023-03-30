@@ -1,8 +1,8 @@
 import './HomePage.css';
 import Header from '../Header';
 import ImageSlider from '../ImageSlider';
-import kindleBackground from '../../image/background1.jpg';
-import electronicsBackground from '../../image/background2.jpg';
+import kindleBackground from '../../image/background8.jpg';
+import electronicsBackground from '../../image/background4.jpg';
 import Carousel from '../Carousel';
 import { useDispatch, useSelector } from 'react-redux';
 import {fetchProducts, getProducts} from '../../store/products';
@@ -20,8 +20,8 @@ function HomePage() {
     ];
 
     const homePageImageLinks = [
-        '/products/3',
-        '/products/4'
+        '/products/8',
+        '/products/12'
     ]
     
     const dispatch = useDispatch();

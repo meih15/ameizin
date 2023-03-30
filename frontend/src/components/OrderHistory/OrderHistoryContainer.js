@@ -30,7 +30,7 @@ const OrderHistoryContainer = ({filteredItems, confirmationNumber, total, date})
                         </div>
                         <div id='order-placed-total'>
                             <h3 className='placed-total'>TOTAL</h3>
-                            <h4 className='total-bought'>{total}</h4>
+                            <h4 className='total-bought'>${Number.isInteger(total) ? total.toFixed(2) : total}</h4>
                         </div>
                     </div>
                     <div id='order-placed-confirmation-number'>

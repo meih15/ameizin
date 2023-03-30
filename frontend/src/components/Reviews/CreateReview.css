@@ -30,6 +30,7 @@
     width: 100px;
     height: 100px;
     margin-right: 8px;
+    object-fit: contain;
 }
 
 

@@ -2,6 +2,7 @@
 #history-product-image {
     height: 100px;
     width: 100px;
+    object-fit: contain;
 }
 
 .placed-product-section {
