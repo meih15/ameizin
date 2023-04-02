@@ -60,15 +60,21 @@ function Header({placeholder}) {
                             </Link>);
 
 
+    const handleClick = (e) => {
+        e.preventDefault();
+        history.push('/');
+        window.location.reload();
+    }
+
     return (
         <div className='header'>
             <div className='nav-bar-left'>
                 <div id="headerLogo">
-                    <Link className='headLogo' to='/'>
+                    <button className='headLogo' onClick={handleClick}>
                         <img id='homePageHeaderLogo'
                         src={meiWhiteLogo}
                         alt="ameizin_logo"/>
-                    </Link>
+                    </button>
                 </div>
             </div>
             <div className='nav-bar-middle'>
