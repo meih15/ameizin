@@ -111,7 +111,7 @@ Users upon load-in to site are given a guest cart with a unique guest cart ID th
   
   Users can add items to their cart. When the add to cart button is clicked, a check is done to see if the item already exists in the cart by filtering through the cart items and seeing if there is a match. If there isn't, then an action is dispatched to create the cart item. If there is, another check is performed to ensure there is enough inventory left. If there isn't, the user will receive are warnng and will be unable to add that amount to their cart. If there is enough inventory, an action will be dispatched to update the item already in the cart to reflect the new total quanity. 
   
-  ``` ruby
+  ``` js
   
       const handleUpdateCart = e => {
         e.preventDefault();
