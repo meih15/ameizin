@@ -60,7 +60,7 @@
 
 ### Shopping Cart
 
-Users upon load-in to site are given a guest cart with a unique guest cart ID. Each account will also have their own unique cart ID that is associated with the account. This enables users to access all the cart functionalities (aside from checkout) without being logged-in.
+Users upon load-in to site are given a guest cart with a unique guest cart ID that is stored in the cookies. Each account will also have their own unique cart ID that is associated with the account. This enables users to access all the cart functionalities (aside from checkout) without being logged-in.
 
 ``` ruby
   # Carts controller
@@ -81,10 +81,73 @@ Users upon load-in to site are given a guest cart with a unique guest cart ID. E
     end
    ```
    
-   
+   When the user logs in, any items that the user has in their current guest cart will be persisted to their account cart. The guest cart will then be cleared and deleted. 
 
+``` ruby
+
+    def persist_cart_items_through_login
+        if cookies[:cart]
+
+            if current_user.cart == nil
+                user_cart = Cart.create!(user_id: current_user.id)
+            else
+                user_cart = current_user.cart
+            end
+        
+            guest_cart = Cart.find(cookies[:cart])
+            guest_cart.cart_items.each {|item| CartItem.create(
+                cart_id: user_cart.id,
+                product_id: item.product_id,
+                quantity: item.quantity
+            )}
     
+            cart_items = CartItem.all
+            cart_items.each {|item| item.delete if item.cart.user_id == nil}
+            guest_cart.destroy
+            cookies[:cart] = nil
+        end
+    end
+  ```
+  
+  Users can add items to their cart. When the add to cart button is clicked, a check is done to see if the item already exists in the cart by filtering through the cart items and seeing if there is a match. If there isn't, then an action is dispatched to create the cart item. If there is, another check is performed to ensure there is enough inventory left. If there isn't, the user will receive are warnng and will be unable to add that amount to their cart. If there is enough inventory, an action will be dispatched to update the item already in the cart to reflect the new total quanity. 
+  
+  ``` ruby
+  
+      const handleUpdateCart = e => {
+        e.preventDefault();
+        const matchingCartItem = cartItems.find(item => item.productId === product.id);
+      
+        const cart_item = {
+            id: matchingCartItem?.id,
+            productId: product.id,
+            cartId: cart.id,
+            quantity: selectedQuantity + (matchingCartItem ? matchingCartItem.quantity : 0),
+        };
 
+        const createNewCartItem = {
+            productId: product.id,
+            cartId: cart.id,
+            quantity: selectedQuantity
+        }
+
+        if (matchingCartItem) {
+            if ((selectedQuantity + matchingCartItem.quantity) > product.inventory) {
+                alert("Not enough inventory!");
+            } else {
+                dispatch(updateCartItem(cart_item));
+                history.push("/cart")}
+        } else {
+            dispatch(createCartItem(createNewCartItem)).then(res => {
+                history.push("/cart");
+            });
+        } 
+    };
+    
+    ```
+    
+    
+    
+ 
 
     
  
