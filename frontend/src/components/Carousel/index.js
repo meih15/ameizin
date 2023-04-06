@@ -8,21 +8,23 @@ import './Carousel.css';
 import CarouselProduct from "./CarouselProduct";
 import { CarouselNextButton, CarouselPrevButton } from "./Buttons";
 
-const Carousel = ({products}) => {   
+const Carousel = ({products, name}) => {   
     
     const productsList = [...products] || [];
+
+    const carouselClassName = `carousel-container-${name}`;
 
     return (
        <div className="adjust-carousel-width">
             <Swiper
-                className="carousel-container"
+                className={`carousel-container ${carouselClassName}`}
                 modules={[Navigation, A11y, Scrollbar]}
                 slidesPerView={window.innerWidth < 1400 ? 4 : 6}
                 spaceBetween={0}
                 style={{ width: "auto", height: '100%', background: 'white' }}
                 navigation={{
-                        nextEl: ".custom-next-button",
-                        prevEl: ".custom-prev-button",
+                        nextEl: `.${name}-custom-next-button`,
+                        prevEl: `.${name}-custom-prev-button`,
                     }}
                 scrollbar={{draggable: true}}
             >
@@ -36,8 +38,8 @@ const Carousel = ({products}) => {
                 
             </Swiper>
             <div className="custom-nav-buttons">
-				<CarouselPrevButton />
-				<CarouselNextButton />
+				<CarouselPrevButton name={name} className={carouselClassName}/>
+				<CarouselNextButton name={name} className={carouselClassName}/>
 			</div>
         </div> 
     )

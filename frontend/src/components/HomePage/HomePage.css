@@ -108,7 +108,7 @@
     text-align: left;
 }
  
-.carouselOne {
+.carouselOne, .carouselTwo {
     margin-top: 20px;
     background-color: white;
 }

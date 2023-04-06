@@ -122,13 +122,13 @@ function HomePage() {
                                     <IndividualProduct product={fourBoxProducts[3]} />
                                 </div>
                             </div>
-                            <div className='carouselOne'>
+                            <div className='carouselOne' key='carouselOne1'>
                                 <p id='category-title'>{shuffledCategories[0]?.categoryName} you may like</p>
-                                <Carousel products={firstCategoryProducts}/>
+                                <Carousel products={firstCategoryProducts} name={"one"}/>
                             </div>
-                            <div className='carouselOne'>
+                            <div className='carouselTwo' key='carouselTwo2'>
                                 <p id='category-title'>Consider these items from {shuffledCategories[1]?.categoryName}</p>
-                                <Carousel products={secondCategoryProducts}/>
+                                <Carousel products={secondCategoryProducts} name={"two"}/>
                             </div>
                             <div className='first-four-grid-two'>
                                 <div id='first-container'>
