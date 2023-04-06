@@ -149,7 +149,7 @@ Users upon load-in to site are given a guest cart with a unique guest cart ID th
  The products review feature has full CRUD functionality. There is also error handling in place, in the event that a required field was not filled out when creating a review. The error message are then displayed on the form with a ternary operation. 
  
  ```js
-     const headlineError = errors.find(error => error.toLowerCase().includes('headline'));
+    const headlineError = errors.find(error => error.toLowerCase().includes('headline'));
     const ratingError = errors.find(error => error.toLowerCase().includes('rating'))
 
     useEffect(() => {
@@ -182,7 +182,10 @@ Users upon load-in to site are given a guest cart with a unique guest cart ID th
     }
   ```
 
- 
+ ``` html 
+ {ratingError ? <div id="error-review"><i id='exclamation-review' className="fa-solid fa-circle-exclamation" />Please select a star rating</div> : <i id='errors-reviews' className="fa-solid fa-circle-exclamation" />}
+
+ ```
   
  
 
