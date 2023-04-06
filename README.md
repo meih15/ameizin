@@ -232,3 +232,8 @@ If the user selects the update function on the review, the review will turn into
 
 ![2023-04-05 (3)](https://user-images.githubusercontent.com/117603258/230254370-79f11a1b-8d38-49c2-8b41-018400c1cba8.png)
 
+
+## Future Functionalities
+- Ability to upload pictures and videos to a review
+- Add the option to view different photos from a listing
+- Adding the graph that shows percentage of each rating to reviews section
