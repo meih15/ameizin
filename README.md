@@ -144,8 +144,46 @@ Users upon load-in to site are given a guest cart with a unique guest cart ID th
     };
    ```
     
-    
-    
+ ### Reviews
+ 
+ The products review feature has full CRUD functionality. There is also error handling in place, in the event that a required field was not filled out when creating a review. The error message are then displayed on the form with a ternary operation. 
+ 
+ ```js
+     const headlineError = errors.find(error => error.toLowerCase().includes('headline'));
+    const ratingError = errors.find(error => error.toLowerCase().includes('rating'))
+
+    useEffect(() => {
+        dispatch(fetchProduct(productId))
+    }, [productId]);
+
+    const handleCreateReview = async (e) => {
+        e.preventDefault();
+        setErrors([]);
+        try {
+            await dispatch(createReview({
+                userId: currrentUser.id,
+                productId: productId,
+                headline: headline,
+                comment: comment,
+                rating: rating
+            }));
+            history.push(`/review-confirmation?productId=${productId}`);
+        } catch (err) {
+            let data;
+            try {
+                data = await err.clone().json();
+            } catch {
+                data = await err.text();
+            }
+            if (data?.errors) setErrors(data.errors);
+            else if (data) setErrors([data]);
+            else setErrors([err.statusText]);
+        }
+    }
+  ```
+
+ 
+  
  
 
     
