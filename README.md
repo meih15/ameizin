@@ -183,12 +183,13 @@ Users upon load-in to site are given a guest cart with a unique guest cart ID th
   ```
 
  ``` html 
+{/* html portion for the error handling */}
+
  {ratingError ? <div id="error-review"><i id='exclamation-review' className="fa-solid fa-circle-exclamation" />Please select a star rating</div> : <i id='errors-reviews' className="fa-solid fa-circle-exclamation" />}
 
+
+{headlineError ? <div id="error-review"><i id='exclamation-review' className="fa-solid fa-circle-exclamation" />Please enter your headline.</div> : <i id='errors-review' className="fa-solid fa-exclamation" />}
  ```
   
- 
-
-    
- 
+![2023-04-05 (1)](https://user-images.githubusercontent.com/117603258/230253094-af131e69-43e0-42bf-aaef-0a29c2286dd4.png)
 
