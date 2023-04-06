@@ -10,6 +10,8 @@ const ReviewShowPage = ({productId}) => {
     const dispatch = useDispatch();
     const history = useHistory();
     const reviews = useSelector(getReviews);
+    const currentUser = useSelector(state => state.session.user);
+
 
     useEffect(() => {
         dispatch(fetchReviews())
@@ -22,7 +24,12 @@ const ReviewShowPage = ({productId}) => {
 
     const handleWriteReview = e => {
         e.preventDefault();
-        history.push(`/createreview?productId=${productId}`);
+        if (currentUser) {
+            history.push(`/createreview?productId=${productId}`);
+        } else {
+            history.push('/login');
+        };
+        
     }
 
     if (!reviews) return null;

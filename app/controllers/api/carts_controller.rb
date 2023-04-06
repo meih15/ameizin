@@ -13,7 +13,7 @@ class Api::CartsController < ApplicationController
             else
                 @cart = Cart.create!
                 cookies[:cart] = @cart.id
-    
+
                 render :show
             end
         end
