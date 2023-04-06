@@ -63,6 +63,7 @@
 Users upon load-in to site are given a guest cart with a unique guest cart ID. Each account will also have their own unique cart ID that is associated with the account. This enables users to access all the cart functionalities (aside from checkout) without being logged-in.
 
 ``` ruby
+  # Carts controller
     def show
         if current_user&.cart
             @cart = current_user.cart
@@ -77,7 +78,9 @@ Users upon load-in to site are given a guest cart with a unique guest cart ID. E
                 render :show
             end
         end
-    end ```
+    end
+    
+
     
 
 
