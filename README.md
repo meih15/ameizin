@@ -1,24 +1,28 @@
-# README
+# Ameizin'
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**Ameizin'** is an Fullstack clone of Amazon that allows users to browse, search for, checkout and review products from a diverse range of categories. Users are also able to access their past orders through the order history functionality. 
 
-Things you may want to cover:
+[Live Link](https://ameizin.herokuapp.com/)
 
-* Ruby version
+## Technologies, Libraries, APIS Used
 
-* System dependencies
+- PostgreSQL
+- Ruby on Rails
+- JavaScript
+- React
+- Redux
+- HTML/CSS
+- Swiper
+- Amazon AWS
+- NPM and Webpack
 
-* Configuration
+## Functionality & MVPS
 
-* Database creation
+- User Authentication:
+  - Users are able to create and log-in/log-out of an account
+  - Utilizes CSRF tokens for protection against cross-site forgery
+  - Demo-user account allowing user to tour the application
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Search Functionality:
+  - Category Navigation Bar
+    - Accesible through most pages
