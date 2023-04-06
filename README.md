@@ -77,7 +77,9 @@ Users upon load-in to site are given a guest cart with a unique guest cart ID. E
                 render :show
             end
         end
-    end 
+    end ```
+    
+
 
     
  
