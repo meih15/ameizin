@@ -195,3 +195,40 @@ Users upon load-in to site are given a guest cart with a unique guest cart ID th
   
 ![2023-04-05 (1)](https://user-images.githubusercontent.com/117603258/230253094-af131e69-43e0-42bf-aaef-0a29c2286dd4.png)
 
+Each product show page has their review index on the bottom of the page. The products have an average rating that updates dynamically based on the product's reviews. 
+
+
+```js
+useEffect(() => {
+        if (!filteredReviews || filteredReviews.length === 0) {
+            setAverageRating(0);
+            setRoundedRating(0);
+            setHasHalfStar(false);
+            return;
+        }
+
+        const totalNumberReviews = filteredReviews?.length;
+
+        const ratingTotal = filteredReviews.reduce((total, review) => {
+        return total + review.rating;
+        }, 0);
+
+        const averageTotalRating = ratingTotal / totalNumberReviews;
+        const roundedRating = Math.round(averageTotalRating * 2) / 2;
+        const hasHalfStar = roundedRating % 1 !== 0;
+
+        setAverageRating(averageTotalRating);
+        setRoundedRating(roundedRating);
+        setHasHalfStar(hasHalfStar);
+    }, [filteredReviews]);
+    
+```
+
+If logged in, the user is able to see the update/delete option underneath the reviews they wrote. 
+
+![2023-04-05 (2)](https://user-images.githubusercontent.com/117603258/230253726-38aa10f0-2902-4c3f-96dd-bae469be9037.png)
+
+If the user selects the update function on the review, the review will turn into a form that the user can submit to update their review.
+
+![2023-04-05 (3)](https://user-images.githubusercontent.com/117603258/230254370-79f11a1b-8d38-49c2-8b41-018400c1cba8.png)
+
