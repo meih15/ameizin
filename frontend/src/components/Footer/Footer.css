@@ -36,7 +36,7 @@
     margin-bottom: 4px;
 }
 
-#github, #linkedin {
+#github, #linkedin, #portfolio {
     color: rgb(236, 236, 236);
 }
 
@@ -64,11 +64,17 @@
     border-top: 1px solid #3a4553;
 }
 
-.footer-logo {
+.footer-logo{
     min-width: 1000px;
     width: 100%;
     background-color: #232F3E;
     height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footLogo {
     display: flex;
     justify-content: center;
     align-items: center;

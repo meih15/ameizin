@@ -1,13 +1,22 @@
 import './Footer.css';
 import React from 'react';
-import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import meiWhiteLogo from '../../image/meiLogo_white.png';
 
 const Footer = () => {
+    const history = useHistory();
 
-    const handleBackToTop = () => {
+
+    const handleBackToTop = (e) => {
+        e.preventDefault();
         window.scrollTo(0, 0);
     };
+
+    const handleBackhome = (e) => {
+        e.preventDefault();
+        history.push('/');
+        window.location.reload();
+    }
 
     return (
         <div className='whole-footer'>
@@ -15,15 +24,15 @@ const Footer = () => {
             <div id='footer-section'>
                 <a id='github' href='https://github.com/meih15/ameizin' target='_blank' rel="noreferrer"><i id='footer-github' className="fa-brands fa-square-github"/></a>
                 <a id='linkedin' href='https://www.linkedin.com/in/mei-huang-ba967a159' target='_blank' rel="noreferrer"><i id='footer-linkedin' className="fa-brands fa-linkedin"/></a>
-                <i id='footer-website' className="fa-solid fa-user-tie"/>
+                <a id='portfolio' href='https://meihuang.me' target='_blank' rel="noreferrer"><i id='footer-website' className="fa-solid fa-user-tie"/></a>
             </div>
             <div id='footer-line'></div>
             <div className='footer-logo'>
-                <Link className='footLogo' to='/'>
+                <button className='footLogo' onClick={handleBackhome}>
                     <img id='footer-Logo'
                         src={meiWhiteLogo}
                         alt="ameizin_logo"/>
-                </Link>
+                </button>
             </div>
             <div id='bot-footer-line'></div>
             <div className='bottom-footer'>
