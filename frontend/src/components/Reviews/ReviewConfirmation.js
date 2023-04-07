@@ -27,7 +27,7 @@ const ReviewConfirmation = () => {
                 <p className='done-review'>Done Reviewing?</p>
                 <p className='check-it-review'>Check out these Ameizin' links:</p>
                 <div className='done-links-review'>
-                    <p id='portfolio-link-review'>Portfolio</p>
+                    <a id='portfolio-link-review' href='https://meihuang.me' target='_blank' rel="noreferrer">Portfolio</a>
                     <a id='github-link-review' href='https://github.com/meih15/ameizin' target='_blank' rel="noreferrer">Github</a>
                     <a id='linkedin-link-review' href='https://www.linkedin.com/in/mei-huang-ba967a159'target='_blank' rel="noreferrer">Linkedin</a>
                     <div className='description-link-review'>

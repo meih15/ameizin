@@ -15,6 +15,7 @@
     width: 200px;
     height: 200px;
     display: flex;
+    margin-right: 10px;
 }
 
 #product-name-confirmed,
@@ -59,4 +60,5 @@
     min-width: 380px;
     text-align: left;
     justify-content: left;
+    margin-left: 10px;
 }
