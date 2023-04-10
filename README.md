@@ -16,7 +16,7 @@
 - Amazon AWS
 - NPM and Webpack
 
-## Functionality & MVPS
+## Functionality
 
 - User Authentication:
   - Users are able to create and log-in/log-out of an account
